@@ -8,4 +8,5 @@ Foundations every developer needs — logic, discrete math, linear algebra, calc
 - [Linear Algebra](linear-algebra/index.md)
 - [Calculus](calculus/index.md)
 - [Probability & Statistics](probability-statistics/index.md)
+- [Number Systems](number-systems/index.md)
 - [Discrete Mathematics](discrete-math/index.md)

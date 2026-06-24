@@ -95,7 +95,11 @@ Every file and directory **must** follow this pattern:
 
 ### Rules
 
-- **Level** must be one of: `intro`, `beginner`, `intermediate`, `advanced`.
+- **Level** must be one of:
+  - `intro` — pure concepts, principles, and philosophy of the field itself. Explains *why* the field exists, its core mindset, and its foundational axioms. **Not** for specific sub-topics (those go to `beginner`).
+  - `beginner` — specific topics within the field, explained from the ground up.
+  - `intermediate` — deeper dives, practical application, common patterns.
+  - `advanced` — specialized, cutting-edge, or research-level content.
 - **Short description** is a hyphenated slug (e.g., `why-math.md`, `matrix-operations.md`).
 - Content files go only in level directories — never directly under a module or submodule.
 

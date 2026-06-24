@@ -44,7 +44,11 @@ No dependencies. No build step. No `npm install`.
 ```
 
 - **`index.md`** — every module and submodule **must** have an `index.md` that lists and links to its children.
-- **Level** — each content file sits in a difficulty level directory: `intro`, `beginner`, `intermediate`, or `advanced`.
+- **Level** — each content file sits in a difficulty level directory:
+  - `intro` — pure concepts, principles, and philosophy of the field itself. Not for specific sub-topics (those go to `beginner`).
+  - `beginner` — specific topics within the field, explained from the ground up.
+  - `intermediate` — deeper dives, practical application, common patterns.
+  - `advanced` — specialized or research-level content.
 - **Short description** — a hyphenated slug describing the topic (e.g., `why-math.md`, `linear-algebra.md`).
 
 ### Index Tree

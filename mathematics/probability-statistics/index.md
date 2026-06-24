@@ -4,3 +4,5 @@ The mathematics of uncertainty — probability, distributions, hypothesis testin
 
 - [What Is Probability & Statistics](intro/what-is-probability-statistics.md)
 - [Basic Probability](beginner/basic-probability.md)
+- [Distributions](beginner/distributions.md)
+- [Descriptive Statistics](beginner/descriptive-statistics.md)

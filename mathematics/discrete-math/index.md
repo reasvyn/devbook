@@ -4,3 +4,6 @@ The mathematics of countable structures — logic, sets, combinatorics, and grap
 
 - [What Is Discrete Mathematics](intro/what-is-discrete-math.md)
 - [Set Theory](beginner/set-theory.md)
+- [Graph Theory](beginner/graph-theory.md)
+- [Combinatorics](beginner/combinatorics.md)
+- [Modular Arithmetic](beginner/modular-arithmetic.md)

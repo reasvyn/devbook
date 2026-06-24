@@ -64,5 +64,5 @@ What an engineering manager should know — leading engineering teams, coaching 
 
 ## Next Steps
 
-- Director of Engineering — managing managers, organizational strategy
-- VP of Engineering — company-wide engineering leadership
+- [VP of Engineering](../executive/vp-engineering.md) — managing managers, organizational strategy
+- [CTO](../executive/cto.md) — technical vision and company-wide leadership

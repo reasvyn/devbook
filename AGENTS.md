@@ -44,7 +44,7 @@ The `roadmaps/` directory is a special directory that does **not** follow the mo
 
 ### Rules
 
-- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
+- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `manager`, `specialist`, `executive`.
 - Each level has an `index.md` listing all roles available at that level.
 - Each role file is a learning path using priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
 - `roadmaps/index.md` lists all levels (not individual roles).
@@ -58,7 +58,9 @@ The `roadmaps/` directory is a special directory that does **not** follow the mo
 | `junior/` | 0–2 years | Fundamentals, tooling basics, completing defined tasks with guidance |
 | `mid/` | 2–5 years | Independence, testing, design patterns, delivering features end-to-end |
 | `senior/` | 5+ years | Architecture, system design, mentoring, cross-team influence |
-| `specialist/` | varies | Deep expertise (architect, SRE, EM, security) — requires senior-level experience in a domain |
+| `manager/` | varies | Leading teams, product, and processes — EM, PM, People Ops, TPM |
+| `specialist/` | varies | Deep expertise (architect, SRE, security, data engineer) — requires senior-level experience in a domain |
+| `executive/` | varies | C-level, founders, investors, board members — requires extensive leadership experience |
 
 ## Index System
 

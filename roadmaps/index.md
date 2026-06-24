@@ -7,4 +7,6 @@ Curated learning paths organized by career level. Each roadmap groups skills by 
 - [Junior](junior/index.md) — 0–2 years, fundamentals and guided work
 - [Mid](mid/index.md) — 2–5 years, independence and ownership
 - [Senior](senior/index.md) — 5+ years, architecture and leadership
-- [Specialist](specialist/index.md) — deep expertise roles (architect, SRE, EM, etc.)
+- [Manager](manager/index.md) — leading teams, product, and processes
+- [Specialist](specialist/index.md) — deep expertise roles (architect, SRE, security, etc.)
+- [Executive](executive/index.md) — C-level, founders, and board members

@@ -107,7 +107,7 @@ Every file and directory **must** follow this pattern:
 
 The `roadmaps/` directory is a special directory that does **not** follow the module/submodule/level convention. It contains role-based learning paths organized by career level.
 
-- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
+- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `manager`, `specialist`, `executive`.
 - Each level has an `index.md` listing all roles at that level.
 - Files use a custom format with priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
 - Roadmaps reference existing DevBook files where possible.

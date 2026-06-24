@@ -123,8 +123,19 @@ devbook/
         ├── software-architect.md
         ├── sre.md
         ├── security-engineer.md
-        ├── data-engineer.md
-        └── engineering-manager.md
+        └── data-engineer.md
+    ├── manager/                          # team and product leadership
+    │   ├── index.md
+    │   ├── engineering-manager.md
+    │   ├── product-manager.md
+    │   ├── people-ops.md
+    │   └── technical-project-manager.md
+    └── executive/                        # C-level, founders, investors
+        ├── index.md
+        ├── cto.md
+        ├── vp-engineering.md
+        ├── ceo-founder.md
+        └── investor-board.md
 ```
 
 Every document follows a mandatory format:

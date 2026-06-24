@@ -2,7 +2,9 @@
 
 Language paradigms, design patterns, testing, debugging, and software craftsmanship.
 
-- [Why Programming](intro/what-is-programming.md)
+- [What Is Programming](intro/what-is-programming.md)
+- [Paradigms as Philosophy](intro/paradigms-as-philosophy.md)
+- [What Makes Good Code](intro/what-makes-good-code.md)
 - [JavaScript / TypeScript](javascript/index.md)
 - [Python](python/index.md)
 - [Java](java/index.md)

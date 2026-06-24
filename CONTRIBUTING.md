@@ -103,6 +103,15 @@ Every file and directory **must** follow this pattern:
 - **Short description** is a hyphenated slug (e.g., `why-math.md`, `matrix-operations.md`).
 - Content files go only in level directories — never directly under a module or submodule.
 
+### Roadmaps
+
+The `roadmaps/` directory is a special directory that does **not** follow the module/submodule/level convention. It contains role-based learning paths organized by career level.
+
+- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
+- Each level has an `index.md` listing all roles at that level.
+- Files use a custom format with priority labels: `[must-know]`, `[good-to-know]`, `[nice-to-have]`.
+- Roadmaps reference existing DevBook files where possible.
+
 ### Index System
 
 Every module and submodule **must** have an `index.md` that references its children.

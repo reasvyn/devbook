@@ -96,6 +96,35 @@ devbook/
 └── ai-ml/
     ├── index.md
     └── ...
+└── roadmaps/                           # role-based learning paths by career level
+    ├── index.md                          # → links to level indexes
+    ├── junior/                           # 0–2 years
+    │   ├── index.md
+    │   ├── frontend.md
+    │   ├── backend.md
+    │   ├── data-entry.md
+    │   └── qa-engineer.md
+    ├── mid/                              # 2–5 years
+    │   ├── index.md
+    │   ├── frontend.md
+    │   ├── backend.md
+    │   ├── full-stack.md
+    │   ├── devops.md
+    │   └── qa-engineer.md
+    ├── senior/                           # 5+ years
+    │   ├── index.md
+    │   ├── frontend.md
+    │   ├── backend.md
+    │   ├── full-stack.md
+    │   ├── devops.md
+    │   └── data-scientist.md
+    └── specialist/                      # deep expertise
+        ├── index.md
+        ├── software-architect.md
+        ├── sre.md
+        ├── security-engineer.md
+        ├── data-engineer.md
+        └── engineering-manager.md
 ```
 
 Every document follows a mandatory format:

@@ -38,6 +38,28 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 - **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `matrix-operations.md`).
 - Content files **never** sit directly under a module or submodule — they must be inside a level directory.
 
+## Roadmaps Directory
+
+The `roadmaps/` directory is a special directory that does **not** follow the module/submodule/level convention. It contains role-based learning paths organized by career level.
+
+### Rules
+
+- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
+- Each level has an `index.md` listing all roles available at that level.
+- Each role file is a learning path using priority labels: `[must-know]`, `[good-to-know]`, `[nice-to-have]`.
+- `roadmaps/index.md` lists all levels (not individual roles).
+- They are guides, not content modules — they reference existing DevBook files where possible.
+- The 9-section mandatory format does **not** apply to roadmap files.
+
+### Level reference
+
+| Level | Experience | Focus |
+|-------|-----------|-------|
+| `junior/` | 0–2 years | Fundamentals, tooling basics, completing defined tasks with guidance |
+| `mid/` | 2–5 years | Independence, testing, design patterns, delivering features end-to-end |
+| `senior/` | 5+ years | Architecture, system design, mentoring, cross-team influence |
+| `specialist/` | varies | Deep expertise (architect, SRE, EM, security) — requires senior-level experience in a domain |
+
 ## Index System
 
 Every `index.md` is a navigation hub. It must contain:

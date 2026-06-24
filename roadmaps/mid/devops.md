@@ -12,64 +12,64 @@ What a mid-level DevOps engineer should know — containerization, CI/CD pipelin
 
 ### Scripting & Automation
 
-- `[must-know]` Shell scripting — Bash or Zsh, pipes, redirection, cron
-- `[must-know]` Infrastructure as Code — Terraform or Pulumi
-- `[good-to-know]` Configuration management — Ansible, Chef, or Puppet
-- `[good-to-know]` Python or Go for automation tooling
+- `🔴 CRITICAL` Shell scripting — Bash or Zsh, pipes, redirection, cron
+- `🔴 CRITICAL` Infrastructure as Code — Terraform or Pulumi
+- `🟠 HIGH` Configuration management — Ansible, Chef, or Puppet
+- `🟠 HIGH` Python or Go for automation tooling
 
 ### Containers & Orchestration
 
-- `[must-know]` Docker — Dockerfiles, multi-stage builds, docker-compose
-- `[must-know]` Container registries — Docker Hub, ECR, GCR
-- `[must-know]` Kubernetes basics — pods, deployments, services, configmaps, secrets
-- `[good-to-know]` Helm — packaging Kubernetes applications
-- `[good-to-know]` kustomize, kubectl workflows
-- `[nice-to-have]` Service mesh basics — Istio, Linkerd
+- `🔴 CRITICAL` Docker — Dockerfiles, multi-stage builds, docker-compose
+- `🔴 CRITICAL` Container registries — Docker Hub, ECR, GCR
+- `🔴 CRITICAL` Kubernetes basics — pods, deployments, services, configmaps, secrets
+- `🟠 HIGH` Helm — packaging Kubernetes applications
+- `🟠 HIGH` kustomize, kubectl workflows
+- `🟢 LOW` Service mesh basics — Istio, Linkerd
 
 ### CI/CD
 
-- `[must-know]` CI/CD pipelines — GitHub Actions, GitLab CI, Jenkins
-- `[must-know]` Build, test, deploy stages
-- `[must-know]` Artifact management — storing and versioning builds
-- `[good-to-know]` Deployment strategies — blue/green, canary, rolling updates
-- `[good-to-know]` Feature flags — LaunchDarkly, Flagsmith
+- `🔴 CRITICAL` CI/CD pipelines — GitHub Actions, GitLab CI, Jenkins
+- `🔴 CRITICAL` Build, test, deploy stages
+- `🔴 CRITICAL` Artifact management — storing and versioning builds
+- `🟠 HIGH` Deployment strategies — blue/green, canary, rolling updates
+- `🟠 HIGH` Feature flags — LaunchDarkly, Flagsmith
 
 ### Cloud Platforms
 
 Pick **one** primary:
-- `[must-know]` **AWS** — EC2, S3, RDS, VPC, IAM
-- `[must-know]` **GCP** — Compute Engine, Cloud Storage, Cloud SQL, VPC, IAM
-- `[must-know]` **Azure** — VMs, Blob Storage, SQL Database, VNet, Entra ID
-- `[good-to-know]` Multi-cloud and cloud-agnostic strategies
+- `🔴 CRITICAL` **AWS** — EC2, S3, RDS, VPC, IAM
+- `🔴 CRITICAL` **GCP** — Compute Engine, Cloud Storage, Cloud SQL, VPC, IAM
+- `🔴 CRITICAL` **Azure** — VMs, Blob Storage, SQL Database, VNet, Entra ID
+- `🟠 HIGH` Multi-cloud and cloud-agnostic strategies
 
 ### Monitoring & Observability
 
-- `[must-know]` Infrastructure monitoring — CPU, memory, disk, network
-- `[must-know]` Application monitoring — Prometheus, Grafana
-- `[must-know]` Centralized logging — ELK, Loki, CloudWatch Logs
-- `[good-to-know]` Alerting — Alertmanager, PagerDuty, OpsGenie
-- `[good-to-know]` Distributed tracing — Jaeger, OpenTelemetry
+- `🔴 CRITICAL` Infrastructure monitoring — CPU, memory, disk, network
+- `🔴 CRITICAL` Application monitoring — Prometheus, Grafana
+- `🔴 CRITICAL` Centralized logging — ELK, Loki, CloudWatch Logs
+- `🟠 HIGH` Alerting — Alertmanager, PagerDuty, OpsGenie
+- `🟠 HIGH` Distributed tracing — Jaeger, OpenTelemetry
 
 ### Networking
 
-- `[must-know]` DNS — how it works, record types, troubleshooting
-- `[must-know]` Load balancing — ALB, Nginx, HAProxy
-- `[must-know]` Firewalls and security groups
-- `[good-to-know]` Reverse proxies — Nginx, Caddy, Traefik
-- `[good-to-know]` TLS/SSL — certificates, Let's Encrypt, cert-manager
+- `🔴 CRITICAL` DNS — how it works, record types, troubleshooting
+- `🔴 CRITICAL` Load balancing — ALB, Nginx, HAProxy
+- `🔴 CRITICAL` Firewalls and security groups
+- `🟠 HIGH` Reverse proxies — Nginx, Caddy, Traefik
+- `🟠 HIGH` TLS/SSL — certificates, Let's Encrypt, cert-manager
 
 ### Security
 
-- `[must-know]` Identity and Access Management (IAM) — least privilege
-- `[must-know]` Secrets management — HashiCorp Vault, AWS Secrets Manager
-- `[must-know]` Vulnerability scanning — container scanning, dependency scanning
-- `[good-to-know]` Network policies and zero-trust models
+- `🔴 CRITICAL` Identity and Access Management (IAM) — least privilege
+- `🔴 CRITICAL` Secrets management — HashiCorp Vault, AWS Secrets Manager
+- `🔴 CRITICAL` Vulnerability scanning — container scanning, dependency scanning
+- `🟠 HIGH` Network policies and zero-trust models
 
 ### Incident Response
 
-- `[must-know]` On-call rotations and escalation policies
-- `[must-know]` Runbooks — documenting incident response steps
-- `[good-to-know]` Post-mortems — blameless culture, action items
+- `🔴 CRITICAL` On-call rotations and escalation policies
+- `🔴 CRITICAL` Runbooks — documenting incident response steps
+- `🟠 HIGH` Post-mortems — blameless culture, action items
 
 ## Next Steps
 

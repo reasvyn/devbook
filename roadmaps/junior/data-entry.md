@@ -12,47 +12,47 @@ What a junior data entry professional should know — accurate data handling, sp
 
 ### Spreadsheets
 
-- `[must-know]` Excel / Google Sheets — cells, formulas, references (relative vs absolute)
-- `[must-know]` Sorting and filtering data
-- `[must-know]` Basic functions — SUM, AVERAGE, COUNT, IF, VLOOKUP
-- `[good-to-know]` Pivot tables — creating and interpreting summaries
-- `[good-to-know]` Conditional formatting — highlighting patterns and errors
-- `[nice-to-have]` Data validation — drop-down lists, input restrictions
+- `🔴 CRITICAL` Excel / Google Sheets — cells, formulas, references (relative vs absolute)
+- `🔴 CRITICAL` Sorting and filtering data
+- `🔴 CRITICAL` Basic functions — SUM, AVERAGE, COUNT, IF, VLOOKUP
+- `🟠 HIGH` Pivot tables — creating and interpreting summaries
+- `🟠 HIGH` Conditional formatting — highlighting patterns and errors
+- `🟡 MEDIUM` Data validation — drop-down lists, input restrictions
 
 ### Data Accuracy & Quality
 
-- `[must-know]` Double-entry verification — cross-checking data
-- `[must-know]` Common data entry errors — typos, transposition, duplication
-- `[must-know]` Following data entry standards — formats, conventions, templates
-- `[good-to-know]` Batch validation — finding inconsistencies across records
-- `[nice-to-have]` Data cleaning basics — removing duplicates, fixing formatting
+- `🔴 CRITICAL` Double-entry verification — cross-checking data
+- `🔴 CRITICAL` Common data entry errors — typos, transposition, duplication
+- `🔴 CRITICAL` Following data entry standards — formats, conventions, templates
+- `🟠 HIGH` Batch validation — finding inconsistencies across records
+- `🟡 MEDIUM` Data cleaning basics — removing duplicates, fixing formatting
 
 ### Data Formats
 
-- `[must-know]` CSV — structure, delimiters, escaping
-- `[must-know]` JSON — structure, key-value pairs, arrays
-- `[good-to-know]` XML basics
-- `[good-to-know]` File encoding — UTF-8, ASCII, common encoding issues
+- `🔴 CRITICAL` CSV — structure, delimiters, escaping
+- `🔴 CRITICAL` JSON — structure, key-value pairs, arrays
+- `🟠 HIGH` XML basics
+- `🟠 HIGH` File encoding — UTF-8, ASCII, common encoding issues
 
 ### Basic Automation
 
-- `[good-to-know]` Keyboard shortcuts — copy/paste, navigation, selection
-- `[good-to-know]` Find and replace — exact match, patterns
-- `[nice-to-have]` Simple scripts — Python for file manipulation, renaming, data cleaning
+- `🟠 HIGH` Keyboard shortcuts — copy/paste, navigation, selection
+- `🟠 HIGH` Find and replace — exact match, patterns
+- `🟡 MEDIUM` Simple scripts — Python for file manipulation, renaming, data cleaning
 
 ### Tools
 
-- `[must-know]` Using a text editor effectively — VS Code, Sublime Text
-- `[good-to-know]` Cloud storage — Google Drive, OneDrive, Dropbox
-- `[good-to-know]` Optical Character Recognition (OCR) tools basics
-- `[nice-to-have]` Airtable or similar no-code database tools
+- `🔴 CRITICAL` Using a text editor effectively — VS Code, Sublime Text
+- `🟠 HIGH` Cloud storage — Google Drive, OneDrive, Dropbox
+- `🟠 HIGH` Optical Character Recognition (OCR) tools basics
+- `🟢 LOW` Airtable or similar no-code database tools
 
 ### Soft Skills
 
-- `[must-know]` Attention to detail — catching small discrepancies
-- `[must-know]` Time management — meeting deadlines, prioritizing batches
-- `[must-know]` Communication — reporting issues, asking for clarification
-- `[good-to-know]` Typing speed and accuracy — 40+ WPM with 99% accuracy
+- `🔴 CRITICAL` Attention to detail — catching small discrepancies
+- `🔴 CRITICAL` Time management — meeting deadlines, prioritizing batches
+- `🔴 CRITICAL` Communication — reporting issues, asking for clarification
+- `🟠 HIGH` Typing speed and accuracy — 40+ WPM with 99% accuracy
 
 ## Next Steps
 

@@ -109,7 +109,7 @@ The `roadmaps/` directory is a special directory that does **not** follow the mo
 
 - Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
 - Each level has an `index.md` listing all roles at that level.
-- Files use a custom format with priority labels: `[must-know]`, `[good-to-know]`, `[nice-to-have]`.
+- Files use a custom format with priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
 - Roadmaps reference existing DevBook files where possible.
 
 ### Index System

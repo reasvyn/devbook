@@ -46,7 +46,7 @@ The `roadmaps/` directory is a special directory that does **not** follow the mo
 
 - Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `specialist`.
 - Each level has an `index.md` listing all roles available at that level.
-- Each role file is a learning path using priority labels: `[must-know]`, `[good-to-know]`, `[nice-to-have]`.
+- Each role file is a learning path using priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
 - `roadmaps/index.md` lists all levels (not individual roles).
 - They are guides, not content modules — they reference existing DevBook files where possible.
 - The 9-section mandatory format does **not** apply to roadmap files.

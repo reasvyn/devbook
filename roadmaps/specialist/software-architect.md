@@ -12,50 +12,50 @@ What a software architect should know — organization-wide technical strategy, 
 
 ### Strategic Thinking
 
-- `[must-know]` Translating business goals into technical strategy
-- `[must-know]` Technology radars — evaluating and adopting new technologies
-- `[must-know]` Build vs buy vs open source decision framework
-- `[must-know]` Technical debt management — when to pay down, when to carry
-- `[good-to-know]` OKRs and technical initiatives — aligning architecture to company goals
+- `🔴 CRITICAL` Translating business goals into technical strategy
+- `🔴 CRITICAL` Technology radars — evaluating and adopting new technologies
+- `🔴 CRITICAL` Build vs buy vs open source decision framework
+- `🔴 CRITICAL` Technical debt management — when to pay down, when to carry
+- `🟠 HIGH` OKRs and technical initiatives — aligning architecture to company goals
 
 ### System Architecture
 
-- `[must-know]` Architectural styles — event-driven, microservices, modular monolith
-- `[must-know]` API strategy — REST, GraphQL, gRPC, event-driven
-- `[must-know]` Data architecture — operational vs analytical stores, data flow
-- `[must-know]` Security architecture — zero-trust, defense in depth, threat modeling
-- `[good-to-know]` Multi-cloud and hybrid architectures
-- `[good-to-know]` Migration strategies — strangler fig, feature flags, parallel runs
+- `🔴 CRITICAL` Architectural styles — event-driven, microservices, modular monolith
+- `🔴 CRITICAL` API strategy — REST, GraphQL, gRPC, event-driven
+- `🔴 CRITICAL` Data architecture — operational vs analytical stores, data flow
+- `🔴 CRITICAL` Security architecture — zero-trust, defense in depth, threat modeling
+- `🟠 HIGH` Multi-cloud and hybrid architectures
+- `🟠 HIGH` Migration strategies — strangler fig, feature flags, parallel runs
 
 ### Large-Scale Systems
 
-- `[must-know]` Designing for reliability, scalability, and operability
-- `[must-know]` Trade-off analysis — consistency vs availability, latency vs throughput
-- `[must-know]` Cost modeling — understanding infrastructure and operational costs
-- `[good-to-know]` Global architecture — multi-region, data residency, edge computing
-- `[nice-to-have]` Chaos engineering and resilience testing
+- `🔴 CRITICAL` Designing for reliability, scalability, and operability
+- `🔴 CRITICAL` Trade-off analysis — consistency vs availability, latency vs throughput
+- `🔴 CRITICAL` Cost modeling — understanding infrastructure and operational costs
+- `🟠 HIGH` Global architecture — multi-region, data residency, edge computing
+- `🟡 MEDIUM` Chaos engineering and resilience testing
 
 ### Standards & Governance
 
-- `[must-know]` Architecture Decision Records (ADRs) — documenting decisions
-- `[must-know]` Engineering standards — coding, API design, observability
-- `[must-know]` Architecture reviews — reviewing proposals across teams
-- `[good-to-know]` Compliance and regulatory architecture — SOC2, GDPR, PCI
+- `🔴 CRITICAL` Architecture Decision Records (ADRs) — documenting decisions
+- `🔴 CRITICAL` Engineering standards — coding, API design, observability
+- `🔴 CRITICAL` Architecture reviews — reviewing proposals across teams
+- `🟠 HIGH` Compliance and regulatory architecture — SOC2, GDPR, PCI
 
 ### Communication & Influence
 
-- `[must-know]` Communicating architecture to non-technical stakeholders
+- `🔴 CRITICAL` Communicating architecture to non-technical stakeholders
 - `[must-know)]` Facilitating technical disagreements — driving to decisions
-- `[must-know]]` Technical writing — RFCs, design docs, white papers
-- `[good-to-know]` Conference talks and community presence
-- `[good-to-know]` Board and executive presentations
+- `🔴 CRITICAL` Technical writing — RFCs, design docs, white papers
+- `🟠 HIGH` Conference talks and community presence
+- `🟠 HIGH` Board and executive presentations
 
 ### Mentoring & Culture
 
-- `[must-know]] Growing senior engineers — creating technical growth paths
-- `[must-know]] Fostering engineering excellence — communities of practice, guilds
-- `[good-to-know]` Hiring for architecture roles — designing evaluation criteria
-- `[good-to-know]` Building a blameless, learning-oriented culture
+- `🔴 CRITICAL Growing senior engineers — creating technical growth paths
+- `🔴 CRITICAL Fostering engineering excellence — communities of practice, guilds
+- `🟠 HIGH` Hiring for architecture roles — designing evaluation criteria
+- `🟠 HIGH` Building a blameless, learning-oriented culture
 
 ## Next Steps
 

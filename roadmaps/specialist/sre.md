@@ -12,60 +12,60 @@ What an SRE should know — reliability engineering, incident management, capaci
 
 ### Reliability Engineering
 
-- `[must-know]` SLO/SLI/SLA design — defining meaningful targets
-- `[must-know]` Error budgets — balancing reliability with feature velocity
-- `[must-know]` Risk assessment — identifying failure modes, blast radius
-- `[must-know]` Capacity planning — load testing, right-sizing, forecasting
-- `[good-to-know]` Chaos engineering — Game Days, fault injection
-- `[nice-to-have]` Formal methods — TLA+ for distributed systems verification
+- `🔴 CRITICAL` SLO/SLI/SLA design — defining meaningful targets
+- `🔴 CRITICAL` Error budgets — balancing reliability with feature velocity
+- `🔴 CRITICAL` Risk assessment — identifying failure modes, blast radius
+- `🔴 CRITICAL` Capacity planning — load testing, right-sizing, forecasting
+- `🟠 HIGH` Chaos engineering — Game Days, fault injection
+- `🟢 LOW` Formal methods — TLA+ for distributed systems verification
 
 ### Incident Management
 
-- `[must-know]` Incident command system — roles (IC, comms, ops)
-- `[must-know]` Declaring and resolving incidents — severity levels, timelines
-- `[must-know]` Post-incident reviews — blameless culture, action items
-- `[must-know]` On-call excellence — runbooks, escalation, fatigue management
-- `[good-to-know]` Incident analysis — root cause vs contributing factors
-- `[good-to-know]` Measuring MTTR, MTTD, and driving improvement
+- `🔴 CRITICAL` Incident command system — roles (IC, comms, ops)
+- `🔴 CRITICAL` Declaring and resolving incidents — severity levels, timelines
+- `🔴 CRITICAL` Post-incident reviews — blameless culture, action items
+- `🔴 CRITICAL` On-call excellence — runbooks, escalation, fatigue management
+- `🟠 HIGH` Incident analysis — root cause vs contributing factors
+- `🟠 HIGH` Measuring MTTR, MTTD, and driving improvement
 
 ### Automation & Platform
 
-- `[must-know]` Automating operational toil — identifying, measuring, eliminating
-- `[must-know]` Infrastructure as Code — Terraform, Pulumi, Crossplane
-- `[must-know]` GitOps — declarative deployments, drift detection
-- `[good-to-know]` Self-healing systems — auto-remediation, Kubernetes operators
-- `[good-to-know]` Progressive delivery — canary, blue/green, feature flags
+- `🔴 CRITICAL` Automating operational toil — identifying, measuring, eliminating
+- `🔴 CRITICAL` Infrastructure as Code — Terraform, Pulumi, Crossplane
+- `🔴 CRITICAL` GitOps — declarative deployments, drift detection
+- `🟠 HIGH` Self-healing systems — auto-remediation, Kubernetes operators
+- `🟠 HIGH` Progressive delivery — canary, blue/green, feature flags
 
 ### Observability
 
-- `[must-know]` Distributed tracing — OpenTelemetry, sampling strategies
-- `[must-know]` Metrics — RED method (Rate, Errors, Duration), USE method
-- `[must-know]` Logging — structured, correlation IDs, log levels
-- `[must-know]` Dashboard design — actionable, hierarchical, minimal
-- `[good-to-know]` Alert fatigue — reducing noise, meaningful thresholds
-- `[nice-to-have]` AIOps — anomaly detection, automated RCA
+- `🔴 CRITICAL` Distributed tracing — OpenTelemetry, sampling strategies
+- `🔴 CRITICAL` Metrics — RED method (Rate, Errors, Duration), USE method
+- `🔴 CRITICAL` Logging — structured, correlation IDs, log levels
+- `🔴 CRITICAL` Dashboard design — actionable, hierarchical, minimal
+- `🟠 HIGH` Alert fatigue — reducing noise, meaningful thresholds
+- `🟢 LOW` AIOps — anomaly detection, automated RCA
 
 ### Performance & Scalability
 
-- `[must-know]` Performance testing strategy — load, stress, endurance
-- `[must-know]` Bottleneck identification — CPU, memory, I/O, network, locks
-- `[must-know]` Auto-scaling — horizontal, vertical, event-driven
-- `[good-to-know]` CDN and edge computing optimization
-- `[good-to-know]` Database performance — connection pooling, query optimization
+- `🔴 CRITICAL` Performance testing strategy — load, stress, endurance
+- `🔴 CRITICAL` Bottleneck identification — CPU, memory, I/O, network, locks
+- `🔴 CRITICAL` Auto-scaling — horizontal, vertical, event-driven
+- `🟠 HIGH` CDN and edge computing optimization
+- `🟠 HIGH` Database performance — connection pooling, query optimization
 
 ### Security & Compliance
 
-- `[must-know]` Zero-trust operations — secure deployment, least privilege
-- `[must-know]` Disaster recovery — RPO/RTO, backup validation, failover drills
-- `[good-to-know]` Supply chain security — SBOM, image signing, dependency scanning
-- `[good-to-know]` Compliance automation — audit-ready evidence collection
+- `🔴 CRITICAL` Zero-trust operations — secure deployment, least privilege
+- `🔴 CRITICAL` Disaster recovery — RPO/RTO, backup validation, failover drills
+- `🟠 HIGH` Supply chain security — SBOM, image signing, dependency scanning
+- `🟠 HIGH` Compliance automation — audit-ready evidence collection
 
 ### Culture & Leadership
 
-- `[must-know]` Building reliability culture across engineering teams
-- `[must-know]` Production readiness reviews — gates for launching services
-- `[must-know]` Mentoring ops and dev engineers — spreading SRE practices
-- `[good-to-know]` Vendor evaluation — observability, incident management platforms
+- `🔴 CRITICAL` Building reliability culture across engineering teams
+- `🔴 CRITICAL` Production readiness reviews — gates for launching services
+- `🔴 CRITICAL` Mentoring ops and dev engineers — spreading SRE practices
+- `🟠 HIGH` Vendor evaluation — observability, incident management platforms
 
 ## Next Steps
 

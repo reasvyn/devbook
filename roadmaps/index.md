@@ -1,6 +1,6 @@
 # Roadmaps
 
-Curated learning paths organized by career level. Each roadmap groups skills by priority — what you **must know**, what's **good to know**, and what's **nice to have**.
+Curated learning paths organized by career level. Each roadmap groups skills by priority — `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
 
 ## By Career Level
 

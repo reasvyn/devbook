@@ -12,50 +12,50 @@ What a senior backend developer should know — system design, scalability, reli
 
 ### System Design
 
-- `[must-know]` Distributed systems fundamentals — CAP theorem, consistency models
-- `[must-know]` Load balancing and horizontal scaling
-- `[must-know]` Database scaling — sharding, partitioning, replication
-- `[must-know]` Caching strategies — CDN, distributed cache, multi-layer cache
-- `[must-know]` Message queues and event-driven architecture
-- `[good-to-know]` Microservices vs monoliths — when to split, when to merge
-- `[good-to-know]` Circuit breakers, bulkheads, retries, timeouts
+- `🔴 CRITICAL` Distributed systems fundamentals — CAP theorem, consistency models
+- `🔴 CRITICAL` Load balancing and horizontal scaling
+- `🔴 CRITICAL` Database scaling — sharding, partitioning, replication
+- `🔴 CRITICAL` Caching strategies — CDN, distributed cache, multi-layer cache
+- `🔴 CRITICAL` Message queues and event-driven architecture
+- `🟠 HIGH` Microservices vs monoliths — when to split, when to merge
+- `🟠 HIGH` Circuit breakers, bulkheads, retries, timeouts
 
 ### Data Modeling
 
-- `[must-know]` Advanced database design — normalized vs denormalized trade-offs
-- `[must-know]` Event sourcing and CQRS
-- `[must-know]` Data consistency patterns — saga, two-phase commit, outbox
-- `[good-to-know]` Time-series and analytical databases
-- `[good-to-know]` Search infrastructure — Elasticsearch, Meilisearch
+- `🔴 CRITICAL` Advanced database design — normalized vs denormalized trade-offs
+- `🔴 CRITICAL` Event sourcing and CQRS
+- `🔴 CRITICAL` Data consistency patterns — saga, two-phase commit, outbox
+- `🟠 HIGH` Time-series and analytical databases
+- `🟠 HIGH` Search infrastructure — Elasticsearch, Meilisearch
 
 ### Reliability & Operations
 
 - `[must-known]` SLIs, SLOs, SLAs — defining and measuring reliability
-- `[must-know]` Incident management — on-call, post-mortems, blameless culture
-- `[must-know]` Disaster recovery — backups, failover, RPO/RTO
-- `[good-to-know]` Auto-scaling — horizontal pod autoscaler, event-driven scaling
-- `[good-to-know]` Graceful degradation and feature flags
+- `🔴 CRITICAL` Incident management — on-call, post-mortems, blameless culture
+- `🔴 CRITICAL` Disaster recovery — backups, failover, RPO/RTO
+- `🟠 HIGH` Auto-scaling — horizontal pod autoscaler, event-driven scaling
+- `🟠 HIGH` Graceful degradation and feature flags
 
 ### Security
 
-- `[must-know]` Threat modeling — STRIDE, DREAD
-- `[must-know]` OAuth2 and OpenID Connect in depth
-- `[must-know]` API security — rate limiting, input validation, CORS, CSRF
-- `[good-to-know]` Compliance — SOC2, GDPR, PCI-DSS considerations
+- `🔴 CRITICAL` Threat modeling — STRIDE, DREAD
+- `🔴 CRITICAL` OAuth2 and OpenID Connect in depth
+- `🔴 CRITICAL` API security — rate limiting, input validation, CORS, CSRF
+- `🟠 HIGH` Compliance — SOC2, GDPR, PCI-DSS considerations
 
 ### API Design
 
-- `[must-know]` API versioning strategies — URI, header, contract-based
-- `[must-know]` GraphQL — schema design, resolver optimization, DataLoader
-- `[must-know]` gRPC — protocol buffers, streaming, performance
-- `[good-to-know]` API gateways — Kong, Envoy, API Gateway patterns
+- `🔴 CRITICAL` API versioning strategies — URI, header, contract-based
+- `🔴 CRITICAL` GraphQL — schema design, resolver optimization, DataLoader
+- `🔴 CRITICAL` gRPC — protocol buffers, streaming, performance
+- `🟠 HIGH` API gateways — Kong, Envoy, API Gateway patterns
 
 ### Mentoring & Leadership
 
-- `[must-know]` Growing mid-level engineers — teaching system design, code review
-- `[must-know]] Driving technical decisions across teams — RFCs, ADRs
-- `[must-know]] Production incident leadership — coordinating response, communication
-- `[good-to-know]] Interviewing — designing and conducting technical interviews
+- `🔴 CRITICAL` Growing mid-level engineers — teaching system design, code review
+- `🔴 CRITICAL Driving technical decisions across teams — RFCs, ADRs
+- `🔴 CRITICAL Production incident leadership — coordinating response, communication
+- `🟠 HIGH Interviewing — designing and conducting technical interviews
 
 ## Next Steps
 

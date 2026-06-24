@@ -13,46 +13,46 @@ What a mid-level full-stack developer should know — owning features end to end
 
 ### Frontend
 
-- `[must-know]` Framework (React/Vue/Svelte) — components, state management, routing
-- `[must-know]` TypeScript — types, interfaces, generics
-- `[must-know]` CSS — responsive design, Flexbox, Grid, Tailwind
-- `[good-to-know]` Frontend testing — component tests, E2E
-- `[good-to-know]` Performance — lazy loading, bundle optimization
+- `🔴 CRITICAL` Framework (React/Vue/Svelte) — components, state management, routing
+- `🔴 CRITICAL` TypeScript — types, interfaces, generics
+- `🔴 CRITICAL` CSS — responsive design, Flexbox, Grid, Tailwind
+- `🟠 HIGH` Frontend testing — component tests, E2E
+- `🟠 HIGH` Performance — lazy loading, bundle optimization
 
 ### Backend
 
-- `[must-know]` REST API design — routes, validation, error handling
-- `[must-know]` Database — SQL, migrations, ORM
-- `[must-know]` Authentication — JWT, session auth, OAuth2
-- `[good-to-know]` Caching — Redis, HTTP caching
-- `[good-to-know]` Background jobs — queues, scheduled tasks
+- `🔴 CRITICAL` REST API design — routes, validation, error handling
+- `🔴 CRITICAL` Database — SQL, migrations, ORM
+- `🔴 CRITICAL` Authentication — JWT, session auth, OAuth2
+- `🟠 HIGH` Caching — Redis, HTTP caching
+- `🟠 HIGH` Background jobs — queues, scheduled tasks
 
 ### Integration
 
-- `[must-know]` Full-stack data flow — client → API → database → response
-- `[must-know]` Error handling — consistent error responses and UI feedback
-- `[must-know]` Environment configuration — dev, staging, production
-- `[good-to-know]` Real-time features — WebSockets, Server-Sent Events
-- `[good-to-know]` File upload — frontend upload, backend storage
+- `🔴 CRITICAL` Full-stack data flow — client → API → database → response
+- `🔴 CRITICAL` Error handling — consistent error responses and UI feedback
+- `🔴 CRITICAL` Environment configuration — dev, staging, production
+- `🟠 HIGH` Real-time features — WebSockets, Server-Sent Events
+- `🟠 HIGH` File upload — frontend upload, backend storage
 
 ### DevOps
 
-- `[must-know]` Docker — containerizing frontend and backend
-- `[good-to-know]` CI/CD — build, test, deploy pipeline
-- `[good-to-know]` Deployment — VPS, PaaS (Railway, Fly.io), serverless
-- `[nice-to-have]` Infrastructure as Code basics — Terraform, Pulumi
+- `🔴 CRITICAL` Docker — containerizing frontend and backend
+- `🟠 HIGH` CI/CD — build, test, deploy pipeline
+- `🟠 HIGH` Deployment — VPS, PaaS (Railway, Fly.io), serverless
+- `🟢 LOW` Infrastructure as Code basics — Terraform, Pulumi
 
 ### Testing
 
-- `[must-know]` Integration tests — testing the full stack together
-- `[must-know]` API tests — automated endpoint testing
-- `[good-to-know]` E2E testing — user flows across frontend and backend
+- `🔴 CRITICAL` Integration tests — testing the full stack together
+- `🔴 CRITICAL` API tests — automated endpoint testing
+- `🟠 HIGH` E2E testing — user flows across frontend and backend
 
 ### Soft Skills
 
-- `[must-know]` Owning features from spec to deployment
-- `[must-know]` Making technical trade-offs — when to cut scope
-- `[good-to-know]` Communicating across teams — backend, frontend, ops
+- `🔴 CRITICAL` Owning features from spec to deployment
+- `🔴 CRITICAL` Making technical trade-offs — when to cut scope
+- `🟠 HIGH` Communicating across teams — backend, frontend, ops
 
 ## Next Steps
 

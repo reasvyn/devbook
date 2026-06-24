@@ -23,6 +23,7 @@ Whether you're brushing up on fundamentals or diving into a new area, DevBook gi
 | **Financial** | Time value of money, financial statements, valuation, corporate finance, fundraising |
 | **Investment** | Risk & return, portfolio theory, asset classes, diversification, venture capital |
 | **Business** | Business models, pricing, unit economics, competitive strategy, product-market fit |
+| **Social** | Psychology, communication, human relations, teamwork, cognitive biases |
 
 ## Quick Start
 

@@ -15,4 +15,5 @@ Markdown-based learning resources for developers.
 - [Financial](financial/index.md)
 - [Investment](investment/index.md)
 - [Business](business/index.md)
+- [Social](social/index.md) — psychology, communication, human relations
 - [Roadmaps](roadmaps/index.md) — role-based learning paths

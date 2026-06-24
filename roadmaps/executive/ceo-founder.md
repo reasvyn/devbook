@@ -8,6 +8,7 @@ What a technical founder or CEO of a software company should know — building p
 
 - Strong technical background — enough to build and evaluate technology decisions
 - Willingness to take extreme ownership and ambiguity
+- [Starting a Software Business](../../business/beginner/starting-a-software-business.md) — comprehensive guide for technical founders
 
 ## Learning Path
 

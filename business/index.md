@@ -4,3 +4,4 @@ How companies create, deliver, and capture value — why developers who understa
 
 - [Why Business?](intro/why-business.md)
 - [Business Models](intro/business-models.md)
+- [Starting a Software Business](beginner/starting-a-software-business.md)

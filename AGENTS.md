@@ -28,6 +28,8 @@ DevBook is a Markdown-based learning library for developers. All content is in p
         └── {short-description}.md
 ```
 
+> The more modular your material, the better. Split large topics into smaller, focused files — each covering one coherent concept.
+
 - **Module** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
 - **Submodule** — optional grouping within a module (e.g., `linear-algebra` inside `mathematics`). Omit if the module is flat.
 - **Level** — exactly one of:

@@ -11,4 +11,8 @@ Markdown-based learning resources for developers.
 - [Systems Design](systems-design/index.md)
 - [Security](security/index.md)
 - [AI / ML](ai-ml/index.md)
+- [Economics](economics/index.md)
+- [Financial](financial/index.md)
+- [Investment](investment/index.md)
+- [Business](business/index.md)
 - [Roadmaps](roadmaps/index.md) — role-based learning paths

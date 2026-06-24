@@ -19,6 +19,10 @@ Whether you're brushing up on fundamentals or diving into a new area, DevBook gi
 | **Systems Design** | Scalability, consistency models, caching, CDNs, message queues, microservices, CAP theorem |
 | **Security** | OWASP Top 10, authentication, authorization, encryption, OAuth2, JWT, CSP, SQL injection prevention |
 | **AI / ML** | Neural networks, gradient descent, transformers, NLP, computer vision basics, MLOps fundamentals |
+| **Economics** | Scarcity, opportunity cost, supply & demand, market structures, incentives, game theory |
+| **Financial** | Time value of money, financial statements, valuation, corporate finance, fundraising |
+| **Investment** | Risk & return, portfolio theory, asset classes, diversification, venture capital |
+| **Business** | Business models, pricing, unit economics, competitive strategy, product-market fit |
 
 ## Quick Start
 
@@ -93,9 +97,29 @@ devbook/
 ├── security/
 │   ├── index.md
 │   └── ...
-└── ai-ml/
-    ├── index.md
-    └── ...
+├── ai-ml/
+│   ├── index.md
+│   └── ...
+├── economics/
+│   ├── index.md
+│   └── intro/
+│       ├── why-economics.md
+│       └── scarcity-and-choice.md
+├── financial/
+│   ├── index.md
+│   └── intro/
+│       ├── why-finance.md
+│       └── time-value-of-money.md
+├── investment/
+│   ├── index.md
+│   └── intro/
+│       ├── why-investment.md
+│       └── risk-and-return.md
+├── business/
+│   ├── index.md
+│   └── intro/
+│       ├── why-business.md
+│       └── business-models.md
 └── roadmaps/                           # role-based learning paths by career level
     ├── index.md                          # → links to level indexes
     ├── junior/                           # 0–2 years

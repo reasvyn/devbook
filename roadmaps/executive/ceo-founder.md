@@ -16,12 +16,12 @@ What a technical founder or CEO of a software company should know — from zero 
 
 The CEO's primary job is to ensure the company builds something people want.
 
-- `🔴 CRITICAL` **Finding product-market fit** — customer discovery, problem validation, iterative pivots, the Mom Test, Sean Ellis test
+- `🔴 CRITICAL` [**Customer Discovery & Validation**](../../business/entrepreneurship/beginner/customer-discovery.md) — problem validation, iterative pivots, the Mom Test, Sean Ellis test
 - `🔴 CRITICAL` **Defining vision & mission** — long-term direction, core values, company purpose beyond profit
 - `🔴 CRITICAL` **Market sizing** — TAM, SAM, SOM, bottom-up vs top-down, addressing serviceable markets
-- `🔴 CRITICAL` **Competitive strategy** — positioning, differentiation, Porter's Five Forces, competitive moats
-- `🔴 CRITICAL` **Product prioritization** — RICE, ICE, opportunity scoring, saying no to feature requests
-- `🟠 HIGH` **Pricing strategy** — value-based, cost-plus, freemium, tiers, willingness to pay analysis
+- `🔴 CRITICAL` [**Competitive Strategy**](../../business/entrepreneurship/beginner/competitive-strategy.md) — positioning, differentiation, Porter's Five Forces, competitive moats
+- `🔴 CRITICAL` [**Product Strategy**](../../business/entrepreneurship/beginner/product-strategy.md) — prioritization (RICE, ICE, opportunity scoring), saying no
+- `🟠 HIGH` [**Pricing Strategy**](../../business/entrepreneurship/beginner/pricing-strategy.md) — value-based, cost-plus, freemium, tiers, willingness to pay analysis
 - `🟠 HIGH` **User research** — qualitative interviews, surveys, usability testing, behavioral analytics
 - `🟠 HIGH` **Product analytics** — DAU/MAU, retention cohorts, activation rate, funnel analysis
 - `🟠 HIGH` **Product roadmapping** — outcome-driven roadmaps, themes vs features, stakeholder alignment
@@ -33,10 +33,10 @@ The CEO's primary job is to ensure the company builds something people want.
 
 Raising capital is a core CEO skill — from angel checks to public offerings.
 
-- `🔴 CRITICAL` **Fundraising stages** — pre-seed, seed, Series A, B, C+ mechanics and expectations
+- `🔴 CRITICAL` [**Fundraising**](../../business/entrepreneurship/beginner/fundraising.md) — pre-seed to Series C+, mechanics and expectations
 - `🔴 CRITICAL` **Pitch deck & narrative** — problem, solution, market, traction, team, ask — the investor story
 - `🔴 CRITICAL` **Investor targeting** — angels, micro-VCs, growth funds, strategic investors, rolling funds
-- `🔴 CRITICAL` **Unit economics** — LTV, CAC, gross margin, payback period, burn multiple
+- `🔴 CRITICAL` [**Unit Economics**](../../business/entrepreneurship/beginner/unit-economics.md) — LTV, CAC, gross margin, payback period, burn multiple
 - `🔴 CRITICAL` **Financial modeling** — revenue projections, expense build-up, scenario planning, runway
 - `🟠 HIGH` **Valuation methodology** — comparable analysis, discounted cash flow, venture capital method
 - `🟠 HIGH` **Term sheet negotiation** — valuation, liquidation preference, board seats, anti-dilution, vesting
@@ -52,12 +52,12 @@ Raising capital is a core CEO skill — from angel checks to public offerings.
 
 Foundational legal knowledge to avoid catastrophic mistakes.
 
-- `🔴 CRITICAL` **Entity formation** — C-Corp vs LLC, Delaware incorporation, foreign qualification
+- `🔴 CRITICAL` [**Incorporation & Legal**](../../business/entrepreneurship/beginner/incorporation-and-legal.md) — C-Corp vs LLC, Delaware incorporation, foreign qualification
 - `🔴 CRITICAL` **IP assignment** — founder IP agreements, employee assignment, contractor clauses
 - `🔴 CRITICAL` **Co-founder agreements** — equity split, vesting, cliffs, roles, dispute resolution
 - `🟠 HIGH` **Contracts** — customer MSAs, vendor agreements, NDAs, partnership agreements
 - `🟠 HIGH` **Board governance** — fiduciary duties, board resolutions, minutes, indemnification
-- `🟠 HIGH` **Regulatory compliance** — industry-specific regulations (fintech, healthtech, edtech)
+- `🟠 HIGH` [**Regulatory & Compliance**](../../business/entrepreneurship/beginner/regulatory-and-compliance.md) — industry-specific regulations (fintech, healthtech, edtech)
 - `🟡 MEDIUM` **Patent & trademark strategy** — filing strategy, defensive vs offensive, trade secrets
 - `🟡 MEDIUM` **Employee equity** — ISO vs NSO, early exercise, AMT implications, 83(b) elections
 - `🟡 MEDIUM` **M&A legal basics** — LOI, exclusivity, reps & warranties, escrow, indemnification
@@ -67,13 +67,13 @@ Foundational legal knowledge to avoid catastrophic mistakes.
 
 How customers find, buy, and stay with your product.
 
-- `🔴 CRITICAL` **Founder-led sales** — selling before you have a sales team, discovery calls, demos
-- `🔴 CRITICAL` **Customer discovery** — problem interviews, solution validation, jobs-to-be-done
-- `🔴 CRITICAL` **Go-to-market strategy** — TAM segmentation, beachhead market, channel selection
+- `🔴 CRITICAL` [**Founder-Led Sales**](../../business/entrepreneurship/beginner/founder-led-sales.md) — selling before you have a sales team, discovery calls, demos
+- `🔴 CRITICAL` [**Customer Discovery**](../../business/entrepreneurship/beginner/customer-discovery.md) — problem interviews, solution validation, jobs-to-be-done
+- `🔴 CRITICAL` [**Go-to-Market**](../../business/entrepreneurship/beginner/go-to-market.md) — TAM segmentation, beachhead market, channel selection
 - `🟠 HIGH` **Sales process** — pipeline management, qualification (BANT, MEDDIC), forecasting
 - `🟠 HIGH` **Enterprise sales** — procurement cycles, security reviews, POCs, evaluation teams
 - `🟠 HIGH` **Self-serve / PLG** — product-led growth, free trials, freemium, viral loops
-- `🟠 HIGH` **Brand & messaging** — positioning, narrative, visual identity, tone of voice
+- `🟠 HIGH` [**Marketing & Brand**](../../business/entrepreneurship/beginner/marketing-and-brand.md) — positioning, narrative, visual identity, tone of voice
 - `🟡 MEDIUM` **Content marketing** — blog, technical content, SEO, thought leadership
 - `🟡 MEDIUM` **PR & communications** — launch PR, media relationships, crisis communication
 - `🟡 MEDIUM` **Channel & partnerships** — resellers, integrations, referral programs, OEM deals
@@ -85,10 +85,10 @@ How customers find, buy, and stay with your product.
 
 Retention and expansion are the engine of sustainable growth.
 
-- `🔴 CRITICAL` **Customer onboarding** — time-to-value, activation milestones, health scoring
+- `🔴 CRITICAL` [**Customer Success**](../../business/entrepreneurship/beginner/customer-success.md) — onboarding, activation, health scores, NPS
 - `🟠 HIGH` **Retention & churn** — churn analysis, early warning signals, retention playbook
 - `🟠 HIGH` **Customer support scaling** — tiered support, SLAs, self-serve docs, AI-powered support
-- `🟠 HIGH` **NPS & customer sentiment** — survey design, closed-loop feedback, score interpretation
+- `🟠 HIGH` **Customer satisfaction** — survey design, closed-loop feedback, score interpretation
 - `🟡 MEDIUM` **Customer success organization** — CSMs, account management, expansion revenue, QBRs
 - `🟡 MEDIUM` **Professional services** — implementation consulting, training, services revenue
 
@@ -97,7 +97,7 @@ Retention and expansion are the engine of sustainable growth.
 Building the organization that builds the product.
 
 - `🔴 CRITICAL` **Co-founder selection** — complementary skills, shared values, conflict resolution mechanisms
-- `🔴 CRITICAL` **Hiring first 10-50** — finding A-players, interview process, culture add vs culture fit
+- `🔴 CRITICAL` [**Team & Culture**](../../business/entrepreneurship/beginner/team-and-culture.md) — hiring, culture setting, executive hiring
 - `🔴 CRITICAL` **Culture setting** — written values, behavioral norms, remote vs in-person philosophy
 - `🔴 CRITICAL` **Executive hiring** — CTO, VP Eng, CPO, CFO, CRO — when and how to recruit
 - `🟠 HIGH` **Performance management** — feedback systems, review cycles, PIPs, promotions
@@ -114,7 +114,7 @@ Building the organization that builds the product.
 
 The technical CEO must make sound technology decisions and lead engineering.
 
-- `🔴 CRITICAL` **Technology strategy** — architecture decisions for early-stage, monolith vs microservices
+- `🔴 CRITICAL` [**Technical Leadership**](../../business/entrepreneurship/beginner/technical-leadership.md) — architecture, build vs buy, technical debt, engineering velocity
 - `🔴 CRITICAL` **Build vs buy** — when to build in-house, use open-source, buy SaaS
 - `🔴 CRITICAL` **Technical debt management** — when debt is strategic vs destructive, refactoring ROI
 - `🟠 HIGH` **Engineering velocity** — shipping fast without chaos, CI/CD, developer experience
@@ -129,12 +129,12 @@ The technical CEO must make sound technology decisions and lead engineering.
 
 Run the company with data, process, and operational rigor.
 
-- `🔴 CRITICAL` **Company KPIs & metrics** — north star metric, OKRs, dashboard design, data-driven culture
+- `🔴 CRITICAL` [**Company Operations & Analytics**](../../business/entrepreneurship/beginner/company-operations.md) — KPIs, OKRs, dashboards, financial ops, board reporting
 - `🟠 HIGH` **Financial operations** — budgeting, cash flow management, expense policies, audit readiness
 - `🟠 HIGH` **Board reporting** — board deck structure, KPI reporting, narrative, ask for help
-- `🟠 HIGH` **Tools & systems** — CRM (Salesforce/HubSpot), ERP, HRIS, analytics — stack decisions
+- `🟠 HIGH` **Tools & systems** — CRM, HRIS, analytics stack decisions
 - `🟡 MEDIUM` **Process design** — when to document processes, when to let chaos reign
-- `🟡 MEDIUM` **Biz ops** — strategic projects, special initiatives, M&A evaluation, corporate development
+- `🟡 MEDIUM` **Biz ops** — strategic projects, M&A evaluation, corporate development
 - `🟡 MEDIUM` **Risk management** — insurance (D&O, E&O, cyber), business continuity, disaster recovery
 - `🟢 LOW` **ESG & sustainability** — environmental impact, governance reporting, social responsibility
 
@@ -153,7 +153,7 @@ A CEO must understand the macroeconomic environment in which the company operate
 
 When things go wrong — and they will.
 
-- `🔴 CRITICAL` **Cash crisis** — managing down rounds, layoffs, cost restructuring, extended runway
+- `🔴 CRITICAL` [**Crisis Management**](../../business/entrepreneurship/beginner/crisis-management.md) — cash crisis, security breach, PR crisis, team crisis, regulatory crisis
 - `🟠 HIGH` **Security breach** — incident response, customer communication, legal obligations (GDPR/SEC)
 - `🟠 HIGH` **PR crisis** — media management, internal communication, board briefing, legal coordination
 - `🟠 HIGH` **Co-founder / executive departure** — transition planning, messaging, board involvement
@@ -166,7 +166,7 @@ When things go wrong — and they will.
 
 The endgame — acquisition, IPO, or other liquidity events.
 
-- `🟠 HIGH` **M&A process** — finding buyers, LOI, exclusivity, diligence, negotiation, integration planning
+- `🟠 HIGH` [**Exit Strategies**](../../business/entrepreneurship/beginner/exit-strategies.md) — M&A process, offer evaluation, IPO readiness, liquidation waterfall
 - `🟠 HIGH` **Acquisition offer evaluation** — price, structure (cash vs stock), earnouts, retention packages
 - `🟠 HIGH` **Secondary transactions** — tender offers, secondary sales for early employees and founders
 - `🟡 MEDIUM` **IPO readiness** — financial audits, compliance, roadshow, underwriter selection, lockup
@@ -178,7 +178,7 @@ The endgame — acquisition, IPO, or other liquidity events.
 
 The CEO's most important tool is themselves.
 
-- `🔴 CRITICAL` **Decision-making frameworks** — first principles, second-order thinking, inversion, OODA loop
+- `🔴 CRITICAL` [**Founder Personal Development**](../../business/entrepreneurship/beginner/founder-development.md) — decision-making, time management, resilience, learning, leadership
 - `🔴 CRITICAL` **Time management** — what only you can do, energy management, delegation leverage
 - `🔴 CRITICAL` **Resilience** — managing rejection, loneliness of leadership, support systems
 - `🟠 HIGH` **Executive communication** — internal all-hands, board presentations, media training

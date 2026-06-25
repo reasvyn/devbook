@@ -32,6 +32,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 
 - **Module** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
 - **Submodule** — optional grouping within a module (e.g., `linear-algebra` inside `mathematics`). Omit if the module is flat.
+- **Must be a real branch of knowledge.** Modules and submodules must represent established fields of study or practice (e.g., mathematics, programming, entrepreneurship). Do not create modules or submodules for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
 - **Level** — exactly one of:
   - `intro` — pure concepts, principles, and philosophy of the field itself. Explains *why* the field exists, its core mindset, and its foundational axioms. **Not** for specific sub-topics (those go to `beginner`).
   - `beginner` — specific topics within the field, explained from the ground up.

@@ -66,7 +66,8 @@ Every document follows a mandatory format:
 6. **Study Cases** (Optional) — real-world walkthroughs
 7. **Examples** (Optional) — additional practical examples
 8. **Glossary** — key terms and definitions
-9. **Next Steps** — where to go from here
+9. **Quick References** (Optional) — verified external links to journals, books, blog posts, websites
+10. **Next Steps** — where to go from here
 
 ## Why Markdown?
 

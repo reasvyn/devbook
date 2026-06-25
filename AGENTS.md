@@ -161,6 +161,13 @@ Additional examples beyond the content section. Useful for edge cases or variati
 |------|------------|
 | Term | One-line definition |
 
+## Quick References (Optional)
+
+External resources — journals, books, blog posts, websites. Every link must be verified and accessible before inclusion.
+
+- [Title](URL) — one-line description
+- [Title](URL)
+
 ## Next Steps
 
 Where to go next. Link to related documents or suggest practice exercises.
@@ -169,7 +176,7 @@ Where to go next. Link to related documents or suggest practice exercises.
 - [Related Topic B](relative/path.md)
 ```
 
-> Do not skip, reorder, or rename sections. Sections marked "(Optional)" may be omitted if genuinely not needed.
+> Do not skip, reorder, or rename sections. Sections marked "(Optional)" may be omitted if genuinely not needed. Quick References items must be verified — every link must be valid and accessible before inclusion.
 
 ## Content Generation Rules
 
@@ -251,6 +258,7 @@ Before considering a task complete, verify:
 - [ ] **Line count 400–800** — every content file meets the minimum and is not too long.
 - [ ] **Glossary** defines every non-trivial term introduced.
 - [ ] **Next Steps** link to existing related documents.
+- [ ] **Quick References** items (if present) are verified — all external links are valid and accessible.
 - [ ] **index.md** files are updated — every new file is linked from its parent index.
 - [ ] **Directory structure** follows the convention exactly.
 - [ ] **No broken links** — all relative paths resolve.

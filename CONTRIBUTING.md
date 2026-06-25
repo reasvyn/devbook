@@ -78,12 +78,19 @@ Additional practical examples beyond what's in the Content section.
 | Term A | Definition of term A |
 | Term B | Definition of term B |
 
+## Quick References (Optional)
+
+External resources — journals, books, blog posts, websites. Items must be verified — every link must be valid and accessible before inclusion.
+
+- [Title](URL) — one-line description
+- [Title](URL)
+
 ## Next Steps
 
 Where to go from here — related topics, recommended reading order, or practice exercises.
 ```
 
-> **Note:** All documents must be written in **English**.
+> **Note:** All documents must be written in **English**. Sections marked "(Optional)" may be omitted if genuinely not needed. Quick References items must be verified — every link must be valid and accessible before inclusion.
 
 ## Directory Structure Convention
 

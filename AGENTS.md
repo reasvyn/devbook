@@ -181,6 +181,7 @@ Where to go next. Link to related documents or suggest practice exercises.
 - **Use Mermaid** for diagrams (flowcharts, sequence diagrams, graphs).
 - **Use LaTeX** (`$` inline, `$$` display) for math.
 - **Keep files focused.** A single document should cover one coherent topic. Split if it grows too long.
+- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents (e.g., `advanced/part-2.md` or a related sub-topic) and link them via Next Steps.
 
 ### Don'ts
 
@@ -246,6 +247,7 @@ Before considering a task complete, verify:
 - [ ] **Prerequisites** links exist and point to real files.
 - [ ] **Table of Contents** matches the actual section headings.
 - [ ] **Content** is substantive, practical, and code-rich where applicable.
+- [ ] **Line count 400–800** — every content file meets the minimum and is not too long.
 - [ ] **Glossary** defines every non-trivial term introduced.
 - [ ] **Next Steps** link to existing related documents.
 - [ ] **index.md** files are updated — every new file is linked from its parent index.

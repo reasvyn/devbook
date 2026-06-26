@@ -20,29 +20,29 @@ Pick **one** primary language:
 
 ### Database Basics
 
-- `🔴 CRITICAL` SQL — SELECT, INSERT, UPDATE, DELETE, WHERE, JOINs
-- `🔴 CRITICAL` Database design — tables, columns, primary keys, foreign keys
+- `🔴 CRITICAL` [SQL](../../data-databases/sql/querying-data.md) — SELECT, INSERT, UPDATE, DELETE, WHERE, JOINs
+- `🔴 CRITICAL` [Database design](../../data-databases/sql/database-design.md) — tables, columns, primary keys, foreign keys
 - `🟠 HIGH` Connecting to a database from code — connection strings, querying
-- `🟢 LOW` Basic indexing — what it is and why it matters
+- `🟢 LOW` [Basic indexing](../../data-databases/sql/database-design.md) — what it is and why it matters
 
 ### API Development
 
-- `🔴 CRITICAL` HTTP methods — GET, POST, PUT, DELETE, PATCH
-- `🔴 CRITICAL` RESTful API design — routes, status codes, request/response
+- `🔴 CRITICAL` [HTTP methods](../../networks/http-api/http-methods-and-status.md) — GET, POST, PUT, DELETE, PATCH
+- `🔴 CRITICAL` [RESTful API design](../../networks/http-api/rest-api-design.md) — routes, status codes, request/response
 - `🔴 CRITICAL` Request handling — query params, path params, request body
-- `🔴 CRITICAL` JSON — parsing, serialization, content-type headers
+- `🔴 CRITICAL` [JSON](../../networks/http-api/headers-body-and-json.md) — parsing, serialization, content-type headers
 - `🟠 HIGH` Input validation — sanitizing and validating request data
 - `🟠 HIGH` Error handling — meaningful error messages, error status codes
 
 ### Version Control
 
-- `🔴 CRITICAL` Git basics — add, commit, push, pull, branch, merge
+- `🔴 CRITICAL` [Git basics](../../software/version-control/git-basics.md) — add, commit, push, pull, branch, merge
 - `🔴 CRITICAL` Pull requests — creating and responding to review feedback
 - `🟠 HIGH` .gitignore — what to exclude from version control
 
 ### Testing
 
-- `🟠 HIGH` Writing unit tests for business logic
+- `🟠 HIGH` [Writing unit tests](../../software/software-testing/test-types.md) for business logic
 - `🟡 MEDIUM` API testing with Supertest, pytest, or httptest
 
 ### Security Basics

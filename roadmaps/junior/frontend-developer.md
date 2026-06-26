@@ -22,21 +22,21 @@ What a junior frontend developer should know — the fundamentals that every ent
 
 ### JavaScript
 
-- `🔴 CRITICAL` Variables, types, operators, control flow
-- `🔴 CRITICAL` Functions — declarations, expressions, arrow functions, scope
-- `🔴 CRITICAL` Arrays and objects — creation, iteration, methods (map, filter, reduce)
+- `🔴 CRITICAL` [Programming Fundamentals](../../programming/fundamentals/index.md) — variables, types, operators, control flow
+- `🔴 CRITICAL` [Functions](../../programming/fundamentals/functions.md) — declarations, expressions, arrow functions, scope
+- `🔴 CRITICAL` [Collections](../../programming/fundamentals/collections.md) — arrays, objects, creation, iteration, methods (map, filter, reduce)
 - `🔴 CRITICAL` DOM manipulation — selecting, creating, modifying elements
 - `🔴 CRITICAL` Events — addEventListener, event object, delegation
-- `🔴 CRITICAL` Fetch API — GET and POST requests, handling responses
+- `🔴 CRITICAL` [Fetch API](../../networks/http-api/http-methods-and-status.md) — GET and POST requests, handling responses
 - `🔴 CRITICAL` Promises and async/await basics
 - `🔴 CRITICAL` Debugging — browser DevTools (Elements, Console, Network, Sources)
 - `🟠 HIGH` ES6+ features — destructuring, spread/rest, template literals
-- `🟠 HIGH` Error handling — try/catch, throwing errors
+- `🟠 HIGH` [Error handling](../../programming/fundamentals/error-handling.md) — try/catch, throwing errors
 
 ### Version Control
 
-- `🔴 CRITICAL` Git basics — init, add, commit, push, pull, status, log
-- `🔴 CRITICAL` Branching — create, switch, merge branches
+- `🔴 CRITICAL` [Git basics](../../software/version-control/git-basics.md) — init, add, commit, push, pull, status, log
+- `🔴 CRITICAL` [Branching](../../software/version-control/branching-and-merging.md) — create, switch, merge branches
 - `🟠 HIGH` Pull requests — creating, reviewing, resolving simple conflicts
 
 ### Build Tools & Package Managers
@@ -53,8 +53,8 @@ What a junior frontend developer should know — the fundamentals that every ent
 
 ### Testing
 
-- `🟠 HIGH` What testing is and why it matters
-- `🟡 MEDIUM` Writing simple unit tests with Vitest or Jest
+- `🟠 HIGH` [What testing is and why it matters](../../software/software-testing/intro/what-is-software-testing.md)
+- `🟡 MEDIUM` [Writing simple unit tests](../../software/software-testing/test-types.md) with Vitest or Jest
 
 ### Soft Skills
 

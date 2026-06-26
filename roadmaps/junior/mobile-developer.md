@@ -52,15 +52,15 @@ Pick **one** primary path (or both over time):
 
 ### Networking
 
-- `🔴 CRITICAL` HTTP requests — Retrofit (Android), URLSession (iOS)
-- `🔴 CRITICAL` JSON parsing — serialization/deserialization
-- `🟠 HIGH` REST API integration — GET, POST, PUT, DELETE
+- `🔴 CRITICAL` [HTTP requests](../../networks/http-api/http-methods-and-status.md) — Retrofit (Android), URLSession (iOS)
+- `🔴 CRITICAL` [JSON parsing](../../networks/http-api/headers-body-and-json.md) — serialization/deserialization
+- `🟠 HIGH` [REST API integration](../../networks/http-api/rest-api-design.md) — GET, POST, PUT, DELETE
 - `🟠 HIGH` Handling network errors — timeouts, no connection, retry
 - `🟡 MEDIUM` Image loading libraries — Glide, Picasso, SDWebImage
 
 ### Version Control
 
-- `🔴 CRITICAL` Git basics — add, commit, push, pull, branch, merge
+- `🔴 CRITICAL` [Git basics](../../software/version-control/git-basics.md) — add, commit, push, pull, branch, merge
 - `🔴 CRITICAL` Pull requests — creating and responding to review feedback
 - `🟠 HIGH` .gitignore — platform-specific exclusions
 

@@ -12,7 +12,7 @@ What a junior QA engineer should know — manual testing fundamentals, bug repor
 
 ### Testing Fundamentals
 
-- `🔴 CRITICAL` What is software testing — purpose, goals, quality attributes
+- `🔴 CRITICAL` [What is software testing](../../software/software-testing/intro/what-is-software-testing.md) — purpose, goals, quality attributes
 - `🔴 CRITICAL` Manual testing — exploratory testing, ad-hoc testing
 - `🔴 CRITICAL` Test case design — happy path, edge cases, negative scenarios
 - `🔴 CRITICAL` Bug reporting — clear reproduction steps, expected vs actual, environment info
@@ -21,12 +21,12 @@ What a junior QA engineer should know — manual testing fundamentals, bug repor
 
 ### Types of Testing
 
-- `🔴 CRITICAL` Functional testing — verifying features work as specified
+- `🔴 CRITICAL` [Functional testing](../../software/software-testing/test-types.md) — verifying features work as specified
 - `🔴 CRITICAL` UI/UX testing — layout, responsiveness, usability
 - `🔴 CRITICAL` Cross-browser testing — Chrome, Firefox, Safari, Edge
 - `🔴 CRITICAL` Mobile testing basics — screen sizes, touch interactions
-- `🟠 HIGH` API testing — sending requests, verifying responses
-- `🟠 HIGH` Performance testing basics — load time, responsiveness
+- `🟠 HIGH` [API testing](../../networks/http-api/rest-api-design.md) — sending requests, verifying responses
+- `🟠 HIGH` [Performance testing basics](../../software/software-testing/test-types.md) — load time, responsiveness
 - `🟡 MEDIUM` Security testing basics — input validation, auth checks
 
 ### Tools
@@ -34,7 +34,7 @@ What a junior QA engineer should know — manual testing fundamentals, bug repor
 - `🔴 CRITICAL` Bug tracking — Jira, Linear, GitHub Issues (creating, triaging, updating)
 - `🔴 CRITICAL` Browser DevTools — Console, Network, Elements tabs
 - `🟠 HIGH` Test management — TestRail, Zephyr, or spreadsheets
-- `🟠 HIGH` API clients — Postman, Insomnia for manual API testing
+- `🟠 HIGH` [API clients](../../networks/http-api/http-methods-and-status.md) — Postman, Insomnia for manual API testing
 - `🟢 LOW` Screen recording and screenshot tools — Loom, Snagit
 
 ### Automation Awareness

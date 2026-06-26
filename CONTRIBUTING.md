@@ -54,6 +54,8 @@ Brief overview — what this covers and why a developer should care.
 - Concept A — link to related doc
 - Concept B — link to related doc
 
+Index files are valid prerequisite targets when the reader must understand the entire subject, module, or submodule. Example: a document about distributed consensus might list [Networks](networks/index.md) because it assumes mastery of all networking concepts.
+
 ## Table of Contents
 
 - [Section 1](#section-1)
@@ -97,61 +99,102 @@ Where to go from here — related topics, recommended reading order, or practice
 Every file and directory **must** follow this pattern:
 
 ```
-{module-name}/{submodule-name}/{level:intro|beginner|intermediate|advanced}/{short-description}.md
+{subject}/{intro(optional),module}/{submodule(optional),intro(optional)}/{short-description}.md
 ```
+
+A file can live at any valid combination:
+- `subject/intro/short-description.md` — subject-level intro
+- `subject/module/short-description.md` — content under a module
+- `subject/module/intro/short-description.md` — module-level intro
+- `subject/module/submodule/short-description.md` — content under a submodule
 
 ### Rules
 
-- **Level** must be one of:
-  - `intro` — pure concepts, principles, and philosophy of the field itself. Explains *why* the field exists, its core mindset, and its foundational axioms. **Not** for specific sub-topics (those go to `beginner`).
-  - `beginner` — specific topics within the field, explained from the ground up.
-  - `intermediate` — deeper dives, practical application, common patterns.
-  - `advanced` — specialized, cutting-edge, or research-level content.
-- **Short description** is a hyphenated slug (e.g., `why-math.md`, `matrix-operations.md`).
-- Content files go only in level directories — never directly under a module or submodule.
+- **Subject** — top-level directory (e.g., `mathematics`, `networks`).
+- **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`).
+- **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
+- **`intro/`** — a special directory for background, philosophy, principles, history, ethics, or official organizations about the field. Every subject and module **must** have an `intro/` directory.
+- **Short description** is a hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
+- Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
+- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice. Do not create entities for job roles, positions, or personas — role-based content belongs in `roadmaps/`.
+- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents.
 
 ### Roadmaps
 
-The `roadmaps/` directory is a special directory that does **not** follow the module/submodule/level convention. It contains role-based learning paths organized by career level.
+The `roadmaps/` directory is a special directory that does **not** follow the subject/module/submodule convention. It contains role-based learning paths organized by career level.
 
 - Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `manager`, `specialist`, `executive`.
 - Each level has an `index.md` listing all roles at that level.
-- Files use a custom format with priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
-- Roadmaps reference existing DevBook files where possible.
+- Each role file is a learning path using priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
+- `roadmaps/index.md` lists all levels (not individual roles).
+- They are guides, not content modules — they reference existing DevBook files where possible.
+- The 9-section mandatory format does **not** apply to roadmap files.
+- **Index references allowed.** Roadmaps may link to `index.md` files (subject, module, or submodule) to imply the reader should cover all content under that index. For example, a backend developer roadmap might list `[Networks](networks/index.md)` as a CRITICAL prerequisite, meaning every document under `networks/` must be mastered.
 
 ### Index System
 
-Every module and submodule **must** have an `index.md` that references its children.
+Every directory **must** have an `index.md` that lists and links to its children.
 
 ```
-mathematics/index.md                → links to submodule indexes
-mathematics/linear-algebra/index.md → links to level indexes
+mathematics/           ← subject
+└── linear-algebra/    ← module
+    └── vectors-and-matrices/  ← submodule
+        └── index.md   ← lists actual .md files
 ```
 
-An `index.md` uses relative links:
+Rules for index files:
+- **Every directory must be listed.** If a directory has content files, its `index.md` must link to them.
+- **Do not list directories** — list actual `.md` files.
+- **Use relative paths** only. Never absolute or full URLs for internal links.
+- **Keep the list ordered** by recommended reading order.
 
-```markdown
-# Mathematics
-
-- [Why Math?](intro/why-math.md)
-- [Set Theory](beginner/set-theory.md)
-- [Linear Algebra](linear-algebra/index.md)
-```
-
-The master `index.md` at the repository root references every top-level module:
+The master `index.md` at the repository root references every subject:
 
 ```markdown
 # DevBook
 
-- [Mathematics](mathematics/index.md)
-- [Physics](physics/index.md)
-- [English](english/index.md)
+Markdown-based learning resources for developers. Start with the roadmaps to find your path, then dive into any subject.
+
+- [Roadmaps](roadmaps/index.md)
 - [Computer Science](computer-science/index.md)
-- [Networks](networks/index.md)
 - [Programming](programming/index.md)
+- [Mathematics](mathematics/index.md)
+- [Networks](networks/index.md)
 - [Systems Design](systems-design/index.md)
 - [Security](security/index.md)
-- [AI / ML](ai-ml/index.md)
+- [Data & Databases](data-databases/index.md)
+- [AI / Machine Learning](ai-ml/index.md)
+- [Cloud & DevOps](cloud-devops/index.md)
+- [Software Engineering](software/index.md)
+- [UI/UX Design](ui-ux/index.md)
+- [Physics](physics/index.md)
+- [Hardware](hardware/index.md)
+- [Governance](governance/index.md)
+- [English](english/index.md)
+- [Business & Entrepreneurship](business/index.md)
+- [Social & Psychology](social/index.md)
+```
+
+A module `index.md` references its children:
+
+```markdown
+# Linear Algebra
+
+Vectors, matrices, and their applications in computing.
+
+- [Vectors & Matrices](vectors-and-matrices/index.md)
+- [Matrix Operations](matrix-operations/index.md)
+```
+
+A submodule `index.md` references actual content files:
+
+```markdown
+# Vectors & Matrices
+
+Representing data and transformations with arrays of numbers.
+
+- [Introduction](intro/vectors-and-matrices.md)
+- [Vector Operations](vector-operations.md)
 ```
 
 ## Style Guide

@@ -45,25 +45,24 @@ No dependencies. No build step. No `npm install`.
 ```
 {subject}/
 ├── index.md
-├── intro/                         ← subject-level intro (optional)
+├── intro/                         ← subject-level intro (required)
 └── {module}/
     ├── index.md
     ├── intro/                     ← module-level intro (required)
     └── {submodule}/               ← optional
         ├── index.md
-        ├── intro/                 ← submodule-level intro (required)
         └── {short-description}.md
 ```
 
 - **`index.md`** — every subject, module, and submodule **must** have an `index.md` that lists and links to its children.
-- **`intro/`** — required for every module and submodule. Contains background, principles, history, and philosophy.
+- **`intro/`** — required for every subject and module. Contains background, principles, history, and philosophy.
 - Content files sit flat under the module or submodule. `intro/` is the only subdirectory allowed at these levels.
 
 Every document follows a mandatory format:
 
 1. **Title** — document title
 2. **Description** — brief overview and why it matters
-3. **Prerequisites** — what you should know before reading
+3. **Prerequisites** — what you should know before reading (index files are valid targets when an entire subject/module/submodule is required)
 4. **Table of Contents** — section navigation
 5. **Content / Material** — the core material
 6. **Study Cases** (Optional) — real-world walkthroughs

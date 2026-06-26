@@ -22,14 +22,13 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 ```
 {subject}/
 ├── index.md
-├── intro/                         ← subject-level intro (optional)
+├── intro/                         ← subject-level intro (required)
 └── {module}/
     ├── index.md
     ├── intro/                     ← module-level intro (required)
     ├── {short-description}.md     ← content files (flat)
     └── {submodule}/               ← optional
         ├── index.md
-        ├── intro/                 ← submodule-level intro (required)
         └── {short-description}.md
 ```
 
@@ -39,7 +38,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 - **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`). Every subject must consist of one or more modules.
 - **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
 - **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice (e.g., mathematics, linear algebra, vector spaces). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
-- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every module and submodule **must** have an `intro/` directory. `intro/` is also allowed at the subject level.
+- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory.
 - **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
 - Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
 
@@ -55,6 +54,7 @@ The `roadmaps/` directory is a special directory that does **not** follow the su
 - `roadmaps/index.md` lists all levels (not individual roles).
 - They are guides, not content modules — they reference existing DevBook files where possible.
 - The 9-section mandatory format does **not** apply to roadmap files.
+- **Index references allowed.** Roadmaps may link to `index.md` files (subject, module, or submodule) to imply the reader should cover all content under that index. For example, a backend developer roadmap might list `[Networks](networks/index.md)` as a CRITICAL prerequisite, meaning every document under `networks/` must be mastered. This avoids listing every file individually when a whole module is required.
 
 ### Level reference
 
@@ -150,6 +150,8 @@ Brief overview — what this covers and why a developer should care. 1–3 sente
 
 - [Concept A](relative/path.md) — what the reader should know first
 - [Concept B](relative/path.md)
+
+Index files are valid prerequisite targets when the reader must understand the entire subject, module, or submodule. Example: a document about distributed consensus might list `[Networks](networks/index.md)` because it assumes mastery of all networking concepts.
 
 ## Table of Contents
 

@@ -12,7 +12,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 |---|---|
 | **Language** | All content must be written in **English**. |
 | **Format** | Every document must follow the 9-section mandatory format (see below). |
-| **Structure** | `{module}/{submodule}/{level:intro\|beginner\|intermediate\|advanced}/{slug}.md` |
+| **Structure** | `{subject}/{module}/{submodule(optional),intro}/{short-description}.md` |
 | **Indexes** | Every module and submodule must have an `index.md`. The root also has an `index.md`. |
 | **No orphans** | A content file must be referenced by its parent `index.md`. |
 | **No build step** | Content is plain Markdown. Do not introduce tooling, bundlers, or generators. |
@@ -20,30 +20,32 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 ## Directory Structure Rules
 
 ```
-{module}/
+{subject}/
 ├── index.md
-└── {submodule}/
+├── intro/                         ← subject-level intro (optional)
+└── {module}/
     ├── index.md
-    └── {level}/
+    ├── intro/                     ← module-level intro (required)
+    ├── {short-description}.md     ← content files (flat)
+    └── {submodule}/               ← optional
+        ├── index.md
+        ├── intro/                 ← submodule-level intro (required)
         └── {short-description}.md
 ```
 
 > The more modular your material, the better. Split large topics into smaller, focused files — each covering one coherent concept.
 
-- **Module** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
-- **Submodule** — optional grouping within a module (e.g., `linear-algebra` inside `mathematics`). Omit if the module is flat.
-- **Must be a real branch of knowledge.** Modules and submodules must represent established fields of study or practice (e.g., mathematics, programming, entrepreneurship). Do not create modules or submodules for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
-- **Level** — exactly one of:
-  - `intro` — pure concepts, principles, and philosophy of the field itself. Explains *why* the field exists, its core mindset, and its foundational axioms. **Not** for specific sub-topics (those go to `beginner`).
-  - `beginner` — specific topics within the field, explained from the ground up.
-  - `intermediate` — deeper dives, practical application, common patterns.
-  - `advanced` — specialized, cutting-edge, or research-level content.
-- **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `matrix-operations.md`).
-- Content files **never** sit directly under a module or submodule — they must be inside a level directory.
+- **Subject** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
+- **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`). Every subject must consist of one or more modules.
+- **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
+- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice (e.g., mathematics, linear algebra, vector spaces). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
+- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every module and submodule **must** have an `intro/` directory. `intro/` is also allowed at the subject level.
+- **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
+- Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
 
 ## Roadmaps Directory
 
-The `roadmaps/` directory is a special directory that does **not** follow the module/submodule/level convention. It contains role-based learning paths organized by career level.
+The `roadmaps/` directory is a special directory that does **not** follow the subject/module/submodule convention. It contains role-based learning paths organized by career level.
 
 ### Rules
 
@@ -91,7 +93,7 @@ Markdown-based learning resources for developers.
 - [AI / ML](ai-ml/index.md)
 ```
 
-### Module `/mathematics/index.md`
+### Subject `/mathematics/index.md`
 
 ```markdown
 # Mathematics
@@ -103,24 +105,35 @@ Foundations every developer needs — from set theory to linear algebra.
 - ...
 ```
 
-### Submodule `/mathematics/linear-algebra/index.md`
+### Module `/mathematics/linear-algebra/index.md`
 
 ```markdown
 # Linear Algebra
 
 Vectors, matrices, and their applications in computing.
 
-- [Vectors & Matrices](intro/vectors-and-matrices.md)
-- [Matrix Operations](beginner/matrix-operations.md)
-- [Eigendecomposition](intermediate/eigendecomposition.md)
+- [Vectors & Matrices](vectors-and-matrices/index.md)
+- [Matrix Operations](matrix-operations/index.md)
+- [Eigendecomposition](eigendecomposition/index.md)
+```
+
+### Submodule `/mathematics/linear-algebra/vectors-and-matrices/index.md`
+
+```markdown
+# Vectors & Matrices
+
+Representing data and transformations with arrays of numbers.
+
+- [Introduction to Vectors & Matrices](intro/vectors-and-matrices.md)
+- [Vector Operations](vector-operations.md)
 ```
 
 ### Rules for index files
 
-- **Every level directory must be listed.** If `linear-algebra/intermediate/` exists, `linear-algebra/index.md` must link to a file inside it.
+- **Every directory must be listed.** If `linear-algebra/vectors-and-matrices/` has a file, `vectors-and-matrices/index.md` must link to it.
 - **Do not list directories** — list actual `.md` files.
 - **Use relative paths** only. Never absolute or full URLs for internal links.
-- **Keep the list ordered** by recommended reading order (intro → advanced).
+- **Keep the list ordered** by recommended reading order.
 
 ## Mandatory Document Format
 
@@ -189,7 +202,7 @@ Where to go next. Link to related documents or suggest practice exercises.
 - **Use Mermaid** for diagrams (flowcharts, sequence diagrams, graphs).
 - **Use LaTeX** (`$` inline, `$$` display) for math.
 - **Keep files focused.** A single document should cover one coherent topic. Split if it grows too long.
-- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents (e.g., `advanced/part-2.md` or a related sub-topic) and link them via Next Steps.
+- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps.
 
 ### Don'ts
 
@@ -211,10 +224,10 @@ Read the parent `index.md` and sibling files to understand what already exists. 
 ### 2. Determine placement
 
 ```
-mathematics/           ← module (check README Topics table)
-└── calculus/          ← submodule (create if needed)
-    └── intermediate/  ← level
-        └── integrals.md  ← slug
+mathematics/           ← subject (check README Topics table)
+└── calculus/          ← module (create if needed)
+    └── derivatives/   ← submodule (create if needed) or `intro/`
+        └── chain-rule.md  ← slug
 ```
 
 ### 3. Create directory structure
@@ -229,7 +242,8 @@ Follow the mandatory document format. Write the full `.md` file.
 
 - Create or update the parent submodule `index.md` to include a link to the new file.
 - If the submodule `index.md` did not exist, create it and update the module `index.md` to link to it.
-- If the module `index.md` did not exist, create it and update the root `index.md`.
+- If the module `index.md` did not exist, create it and update the subject `index.md`.
+- If the subject `index.md` did not exist, create it and update the root `index.md`.
 
 ### 6. Verify
 
@@ -241,7 +255,7 @@ Follow the mandatory document format. Write the full `.md` file.
 
 1. Read the file and its parent `index.md`.
 2. Make the minimum change needed.
-3. If the file's slug or level changes, update all links pointing to it (check `grep -r "old-path"`).
+3. If the file's slug or path changes, update all links pointing to it (check `grep -r "old-path"`).
 4. If the file is removed, remove its entry from the parent `index.md`.
 
 ## Quality Checklist
@@ -257,8 +271,8 @@ Before considering a task complete, verify:
 - [ ] **Content** is substantive, practical, and code-rich where applicable.
 - [ ] **Line count 400–800** — every content file meets the minimum and is not too long.
 - [ ] **Glossary** defines every non-trivial term introduced.
-- [ ] **Next Steps** link to existing related documents.
 - [ ] **Quick References** items (if present) are verified — all external links are valid and accessible.
+- [ ] **Next Steps** link to existing related documents.
 - [ ] **index.md** files are updated — every new file is linked from its parent index.
 - [ ] **Directory structure** follows the convention exactly.
 - [ ] **No broken links** — all relative paths resolve.

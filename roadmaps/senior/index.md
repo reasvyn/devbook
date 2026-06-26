@@ -2,8 +2,8 @@
 
 Senior roles for developers with 5+ years of experience. Architecture decisions, system design, mentoring, cross-team influence, and technical leadership.
 
-- [Frontend Developer](frontend.md)
-- [Backend Developer](backend.md)
-- [Full-Stack Developer](full-stack.md)
-- [DevOps Engineer](devops.md)
-- [Data Scientist](data-scientist.md)
+- [Frontend Developer](frontend-developer.md)
+- [Backend Developer](backend-developer.md)
+- [Full-Stack Developer](full-stack-developer.md)
+- [Mobile Developer](mobile-developer.md)
+- [QA Engineer](qa-engineer.md)

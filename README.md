@@ -10,19 +10,22 @@ Whether you're brushing up on fundamentals or diving into a new area, DevBook gi
 
 | Topic | Scope |
 |-------|-------|
-| **Mathematics** | Set theory, logic, linear algebra, calculus, probability & statistics, combinatorics, graph theory |
-| **Physics** | Newtonian mechanics, electromagnetism, waves, thermodynamics — intuition for simulation, rendering, and game dev |
-| **English** | Technical writing, documentation style, grammar for code comments, commit messages, and RFCs |
-| **Computer Science** | Data structures, algorithms, time complexity, OS concepts, compilers, databases, architecture |
-| **Computer Networks** | OSI & TCP/IP models, HTTP/HTTPS, DNS, TLS, routing, load balancing, REST, gRPC, WebSockets |
-| **Programming** | Language paradigms, OOP, FP, design patterns, testing, debugging, profiling, CI/CD, refactoring |
-| **Systems Design** | Scalability, consistency models, caching, CDNs, message queues, microservices, CAP theorem |
-| **Security** | OWASP Top 10, authentication, authorization, encryption, OAuth2, JWT, CSP, SQL injection prevention |
-| **AI / ML** | Neural networks, gradient descent, transformers, NLP, computer vision basics, MLOps fundamentals |
-| **Economics** | Scarcity, opportunity cost, supply & demand, market structures, incentives, game theory |
-| **Financial** | Time value of money, financial statements, valuation, corporate finance, fundraising |
-| **Investment** | Risk & return, portfolio theory, asset classes, diversification, venture capital |
-| **Business** | Business models, pricing, unit economics, competitive strategy, product-market fit |
+| **Computer Science** | Data structures, algorithms, OS concepts, compilers, computation theory |
+| **Programming** | Language paradigms, OOP, FP, design patterns, testing, debugging, CI/CD |
+| **Mathematics** | Linear algebra, calculus, probability & statistics, discrete math, number theory |
+| **Networks** | OSI & TCP/IP, HTTP/HTTPS, DNS, TLS, routing, load balancing, REST, gRPC |
+| **Systems Design** | Scalability, consistency models, caching, CDNs, message queues, microservices |
+| **Security** | OWASP Top 10, authentication, authorization, encryption, OAuth2, JWT, CSP |
+| **Data & Databases** | SQL, NoSQL, data modeling, indexing, storage engines, data pipelines |
+| **AI / ML** | Neural networks, gradient descent, transformers, NLP, computer vision, MLOps |
+| **Cloud & DevOps** | Infrastructure, CI/CD, containerization, orchestration, monitoring |
+| **UI/UX Design** | Interface design, accessibility, interaction patterns, design systems |
+| **Software Engineering** | Methodology, testing, project management, code review, team practices |
+| **Physics** | Newtonian mechanics, electromagnetism — intuition for simulation, rendering, game dev |
+| **Hardware** | Embedded systems, electronics, IoT, firmware, computer architecture |
+| **Governance** | Law, policy, ethics, regulation, compliance for digital tech |
+| **English** | Technical writing, documentation style, grammar, clear communication |
+| **Business** | Entrepreneurship, corporate finance, investment, business models, strategy |
 | **Social** | Psychology, communication, human relations, teamwork, cognitive biases |
 
 ## Quick Start
@@ -40,21 +43,21 @@ No dependencies. No build step. No `npm install`.
 ### Directory Convention
 
 ```
-{module}/
+{subject}/
 ├── index.md
-└── {submodule}/
+├── intro/                         ← subject-level intro (optional)
+└── {module}/
     ├── index.md
-    └── {level:intro|beginner|intermediate|advanced}/
+    ├── intro/                     ← module-level intro (required)
+    └── {submodule}/               ← optional
+        ├── index.md
+        ├── intro/                 ← submodule-level intro (required)
         └── {short-description}.md
 ```
 
-- **`index.md`** — every module and submodule **must** have an `index.md` that lists and links to its children.
-- **Level** — each content file sits in a difficulty level directory:
-  - `intro` — pure concepts, principles, and philosophy of the field itself. Not for specific sub-topics (those go to `beginner`).
-  - `beginner` — specific topics within the field, explained from the ground up.
-  - `intermediate` — deeper dives, practical application, common patterns.
-  - `advanced` — specialized or research-level content.
-- **Short description** — a hyphenated slug describing the topic (e.g., `why-math.md`, `linear-algebra.md`).
+- **`index.md`** — every subject, module, and submodule **must** have an `index.md` that lists and links to its children.
+- **`intro/`** — required for every module and submodule. Contains background, principles, history, and philosophy.
+- Content files sit flat under the module or submodule. `intro/` is the only subdirectory allowed at these levels.
 
 Every document follows a mandatory format:
 

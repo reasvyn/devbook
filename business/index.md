@@ -1,7 +1,7 @@
-# Business
+# Business & Entrepreneurship
 
-How companies create, deliver, and capture value — why developers who understand business build better products, communicate more effectively, and advance faster in their careers.
+Startups, product strategy, corporate finance, investment, and company-building.
 
-- [Why Business?](intro/why-business.md)
-- [Business Models](intro/business-models.md)
-- [Entrepreneurship](entrepreneurship/index.md) — starting, funding, and scaling a software venture
+- [Entrepreneurship](entrepreneurship/index.md)
+- [Financial](financial/index.md)
+- [Investment](investment/index.md)

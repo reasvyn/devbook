@@ -45,7 +45,7 @@ What a software architect should know — organization-wide technical strategy, 
 ### Communication & Influence
 
 - `🔴 CRITICAL` Communicating architecture to non-technical stakeholders
-- `[must-know)]` Facilitating technical disagreements — driving to decisions
+- `🟠 HIGH` Facilitating technical disagreements — driving to decisions
 - `🔴 CRITICAL` Technical writing — RFCs, design docs, white papers
 - `🟠 HIGH` Conference talks and community presence
 - `🟠 HIGH` Board and executive presentations

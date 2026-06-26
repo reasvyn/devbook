@@ -4,5 +4,6 @@ Managerial roles for experienced professionals who lead teams, shape processes, 
 
 - [Engineering Manager](engineering-manager.md)
 - [Product Manager](product-manager.md)
-- [People Ops Manager](people-ops.md)
 - [Technical Project Manager](technical-project-manager.md)
+- [DevOps Manager](devops-manager.md)
+- [QA Manager](qa-manager.md)

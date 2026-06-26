@@ -6,7 +6,7 @@ What a mid-level DevOps engineer should know — containerization, CI/CD pipelin
 
 ## Prerequisites
 
-- [Junior Backend Developer](../junior/backend.md) — scripting and server basics
+- [Junior Backend Developer](../junior/backend-developer.md) — scripting and server basics
 
 ## Learning Path
 

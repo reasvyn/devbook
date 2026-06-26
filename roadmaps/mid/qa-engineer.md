@@ -56,4 +56,4 @@ What a mid-level QA engineer should know — test automation, CI integration, te
 ## Next Steps
 
 - [Engineering Manager](../specialist/engineering-manager.md) — transition to QA leadership
-- [SRE](../specialist/sre.md) — if shifting toward reliability engineering
+- [SRE](../specialist/site-reliability-engineer.md) — if shifting toward reliability engineering

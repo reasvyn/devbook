@@ -59,5 +59,5 @@ What a senior DevOps engineer should know — platform engineering, SRE practice
 
 ## Next Steps
 
-- [SRE](../specialist/sre.md) — focused reliability engineering
+- [SRE](../specialist/site-reliability-engineer.md) — focused reliability engineering
 - [Software Architect](../specialist/software-architect.md) — broader system architecture

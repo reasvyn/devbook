@@ -6,7 +6,7 @@ What a data engineer should know — building and maintaining data pipelines, da
 
 ## Prerequisites
 
-- [Mid Backend Developer](../mid/backend.md) or equivalent — SQL, programming, distributed systems basics
+- [Mid Backend Developer](../mid/backend-developer.md) or equivalent — SQL, programming, distributed systems basics
 
 ## Learning Path
 
@@ -69,4 +69,4 @@ What a data engineer should know — building and maintaining data pipelines, da
 ## Next Steps
 
 - [Senior Data Scientist](../senior/data-scientist.md) — if shifting toward modeling and analysis
-- [SRE](sre.md) — if shifting toward reliability and platform engineering
+- [SRE](site-reliability-engineer.md) — if shifting toward reliability and platform engineering

@@ -63,4 +63,4 @@ What a CTO should know — technical vision and strategy, building and scaling e
 ## Next Steps
 
 - [CEO / Founder](ceo-founder.md) — owning the full company vision
-- [Investor / Board Member](investor-board.md) — shifting to governance and investment
+- [CPO / VP of Product](cpo.md) — deepening the product partnership

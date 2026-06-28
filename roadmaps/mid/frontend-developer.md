@@ -12,6 +12,7 @@ What a mid-level frontend developer should know — independence, deeper framewo
 
 ### HTML & CSS
 
+- `🔴 CRITICAL` [Accessibility — ARIA, focus management, screen readers](../../programming/html/index.md)
 - `🔴 CRITICAL` Accessibility — ARIA labels, keyboard navigation, screen reader testing
 - `🔴 CRITICAL` CSS custom properties, calc(), clamp()
 - `🟠 HIGH` CSS methodologies — BEM, utility-first (Tailwind)

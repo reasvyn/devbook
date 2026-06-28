@@ -12,7 +12,7 @@ What a junior frontend developer should know — the fundamentals that every ent
 
 ### HTML & CSS
 
-- `🔴 CRITICAL` Semantic HTML — elements, document structure, forms
+- `🔴 CRITICAL` [Semantic HTML](../../programming/html/index.md) — elements, document structure, forms
 - `🔴 CRITICAL` CSS selectors, box model, specificity, cascade
 - `🔴 CRITICAL` Flexbox and CSS Grid basics
 - `🔴 CRITICAL` Responsive design — media queries, mobile-first

@@ -13,6 +13,7 @@ What a mid-level full-stack developer should know — owning features end to end
 
 ### Frontend
 
+- `🔴 CRITICAL` [HTML — semantic structure, forms, accessibility](../../programming/html/index.md)
 - `🔴 CRITICAL` Framework (React/Vue/Svelte) — components, state management, routing
 - `🔴 CRITICAL` TypeScript — types, interfaces, generics
 - `🔴 CRITICAL` CSS — responsive design, Flexbox, Grid, Tailwind

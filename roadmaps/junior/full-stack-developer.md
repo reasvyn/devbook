@@ -12,7 +12,7 @@ What a junior full-stack developer should know — frontend and backend fundamen
 
 ### HTML & CSS
 
-- `🔴 CRITICAL` Semantic HTML — elements, document structure, forms
+- `🔴 CRITICAL` [Semantic HTML](../../programming/html/index.md) — elements, document structure, forms
 - `🔴 CRITICAL` CSS selectors, box model, specificity, cascade
 - `🔴 CRITICAL` Flexbox and CSS Grid basics
 - `🔴 CRITICAL` Responsive design — media queries, mobile-first

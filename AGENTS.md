@@ -13,7 +13,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 | **Language** | All content must be written in **English**. |
 | **Format** | Every document must follow the 9-section mandatory format (see below). |
 | **Structure** | `{subject}/{module}/{submodule(optional),intro}/{short-description}.md` |
-| **Indexes** | Every module and submodule must have an `index.md`. The root also has an `index.md`. |
+| **Indexes** | Every module, submodule, and `intro/` must have an `index.md`. The root also has an `index.md`. |
 | **No orphans** | A content file must be referenced by its parent `index.md`. |
 | **No build step** | Content is plain Markdown. Do not introduce tooling, bundlers, or generators. |
 
@@ -23,9 +23,13 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 {subject}/
 ├── index.md
 ├── intro/                         ← subject-level intro (required)
+│   ├── index.md                   ← lists all intro files
+│   └── {short-description}.md
 └── {module}/
     ├── index.md
     ├── intro/                     ← module-level intro (required)
+    │   ├── index.md               ← lists all intro files
+    │   └── {short-description}.md
     ├── {short-description}.md     ← content files (flat)
     └── {submodule}/               ← optional
         ├── index.md
@@ -38,7 +42,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 - **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`). Every subject must consist of one or more modules.
 - **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
 - **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice (e.g., mathematics, linear algebra, vector spaces). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
-- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory.
+- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory. Every `intro/` must have an `index.md` listing its files.
 - **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
 - Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
 
@@ -124,16 +128,56 @@ Vectors, matrices, and their applications in computing.
 
 Representing data and transformations with arrays of numbers.
 
-- [Introduction to Vectors & Matrices](intro/vectors-and-matrices.md)
+- [Introduction to Vectors & Matrices](intro/index.md)
 - [Vector Operations](vector-operations.md)
 ```
+
+### `intro/index.md`
+
+```markdown
+# Vectors & Matrices: Introduction
+
+Background, history, and philosophy of vector spaces.
+
+- [What Are Vectors & Matrices?](vectors-and-matrices.md)
+- [History of Linear Algebra](history-of-linear-algebra.md)
+```
+
+### The 4-Level Index Chain
+
+Every content file must be reachable from the root `index.md` through four levels of navigation:
+
+```
+Level 1  Master (root)     /index.md
+                             └── [Subject](subject/index.md)
+Level 2  Subject           subject/index.md
+                             └── [Module](subject/module/index.md)
+Level 3  Module            subject/module/index.md
+                             ├── [Intro](subject/module/intro/index.md)
+                             └── [Submodule](subject/module/submodule/index.md)  (optional)
+Level 4  Submodule/Intro   subject/module/intro/index.md
+                            subject/module/submodule/index.md
+                             └── {short-description}.md
+```
+
+Each level must link **down** to the next. A content file is only considered published when it appears in all four levels:
+
+| Level | File | Links To |
+|---|---|---|
+| 1 | `/index.md` | `subject/index.md` |
+| 2 | `subject/index.md` | `subject/module/index.md` |
+| 3 | `subject/module/index.md` | `subject/module/intro/index.md` or `subject/module/submodule/index.md` |
+| 4 | `subject/module/intro/index.md` or `subject/module/submodule/index.md` | actual `.md` content files |
+
+A missing link at any level means the content is orphaned. Always verify the full chain when creating or moving files.
 
 ### Rules for index files
 
 - **Every directory must be listed.** If `linear-algebra/vectors-and-matrices/` has a file, `vectors-and-matrices/index.md` must link to it.
+- **Index as planning tool.** An `index.md` may list files that do not yet exist by appending `(planned)` to the link text. This marks the topic as planned but not yet created. Planned entries must **not** have a link (the file does not exist yet). Once the file is written, add the link and remove the `(planned)` label.
 - **Do not list directories** — list actual `.md` files.
 - **Use relative paths** only. Never absolute or full URLs for internal links.
-- **Keep the list ordered** by recommended reading order.
+- **Keep the list ordered** by recommended reading order. Use section headings in the index to group related topics.
 
 ## Mandatory Document Format
 
@@ -246,6 +290,7 @@ Follow the mandatory document format. Write the full `.md` file.
 - If the submodule `index.md` did not exist, create it and update the module `index.md` to link to it.
 - If the module `index.md` did not exist, create it and update the subject `index.md`.
 - If the subject `index.md` did not exist, create it and update the root `index.md`.
+- If the file is in `intro/`, update or create `intro/index.md` to include the new link.
 
 ### 6. Verify
 

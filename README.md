@@ -31,7 +31,7 @@ Whether you're brushing up on fundamentals or diving into a new area, DevBook gi
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-org/devbook.git
+git clone https://github.com/reasvyn/devbook.git
 cd devbook
 # That's it — open any .md file in your editor or browser
 ```
@@ -84,7 +84,7 @@ Every document follows a mandatory format:
 ## How to Use This
 
 - **Browse by topic** — start with any directory that interests you.
-- **Follow a path** — each directory's README suggests a learning order.
+- **Follow a path** — each roadmap suggests a learning order.
 - **Search** — `grep -r "topic" devbook/` to find what you need fast.
 - **Contribute** — found an error? Have a better explanation? Open a PR.
 
@@ -105,4 +105,4 @@ MIT — free to use, share, and adapt.
 
 ---
 
-\* Most of the content in this repository is generated with assistance from AI.\*
+*Most of the content in this repository is generated with assistance from AI.*

@@ -12,6 +12,7 @@ What a senior full-stack developer should know — end-to-end architecture, syst
 
 ### Architecture
 
+- `🔴 CRITICAL` [Full-stack HTML — rendering strategies, performance, accessibility](../../programming/html/index.md)
 - `🔴 CRITICAL` Full-stack architecture patterns — BFF, API gateway, monorepo
 - `🔴 CRITICAL` Deployment architectures — serverless, containers, edge
 - `🔴 CRITICAL` Data flow design — client → API → services → data stores

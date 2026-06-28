@@ -16,7 +16,7 @@ What a senior frontend developer should know — architecture decisions, design 
 - `🔴 CRITICAL` Design systems — component libraries, tokens, Storybook
 - `🔴 CRITICAL` State management architecture — when to use what (context, Redux, query tools)
 - `🔴 CRITICAL` Monorepo strategies — Nx, Turborepo
-- `🟠 HIGH` Web Components and framework-agnostic design
+- `🟠 HIGH` [Web Components, Shadow DOM, Custom Elements](../../programming/html/index.md) and framework-agnostic design
 - `🟠 HIGH` Edge rendering and CDN strategies
 
 ### Performance at Scale
@@ -30,7 +30,7 @@ What a senior frontend developer should know — architecture decisions, design 
 
 ### Accessibility
 
-- `🔴 CRITICAL` WCAG 2.2 compliance — AA, AAA standards
+- `🔴 CRITICAL` [Semantic HTML & ARIA](../../programming/html/index.md) — WCAG 2.2 compliance, AA, AAA standards
 - `🔴 CRITICAL` Screen reader testing — VoiceOver, NVDA, JAWS
 - `🔴 CRITICAL` Keyboard navigation and focus management
 - `🟠 HIGH` Accessibility automation — axe-core, Lighthouse CI

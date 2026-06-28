@@ -2,5 +2,7 @@
 
 Languages, paradigms, frameworks, and software development practices.
 
-- [What Is Programming?](intro/what-is-programming.md)
+- [Programming: Introduction](intro/index.md)
 - [Programming Fundamentals](fundamentals/index.md)
+- [HTML](html/index.md)
+- [CSS](css/index.md)

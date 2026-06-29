@@ -6,7 +6,7 @@ Linear algebra, calculus, probability, discrete math, number theory, logic, and 
 
 - [Mathematics: Introduction](intro/index.md)
 
-## Modules (Planned)
+## Modules
 
 - [Linear Algebra](linear-algebra/index.md) — vectors, matrices, linear transformations, eigenvalues, SVD
 - [Calculus](calculus/index.md) — limits, derivatives, integrals, multivariate calculus, Taylor series, optimization
@@ -16,5 +16,3 @@ Linear algebra, calculus, probability, discrete math, number theory, logic, and 
 - [Logic](logic/index.md) — propositional logic, predicate logic, proof systems, model theory
 - [Information Theory](information-theory/index.md) — entropy, mutual information, channel capacity, compression, coding theory
 - [Geometry & Topology](geometry-and-topology/index.md) — coordinate geometry, transformations, computational geometry, topological data analysis
-
-> The modules above are planned. They will be created as content files following the mandatory document format, with documented prerequisites and cross-linking to computer science, physics, and AI/ML topics.

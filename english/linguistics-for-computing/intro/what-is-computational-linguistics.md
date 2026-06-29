@@ -778,40 +778,23 @@ print(doc._.blob.sentiment_assessments)
 |---|---|
 | Attention | Mechanism allowing a model to focus on relevant parts of the input |
 | BLEU | Metric for machine translation based on n-gram overlap with reference |
-| CFG | Context-Free Grammar — formal grammar where each rule expands a non-terminal |
-| Chomsky hierarchy | Classification of formal grammars by generative power |
-| Conditional Random Field (CRF) | Probabilistic model for structured prediction |
 | Constituency | Phrase structure analysis of sentences |
 | Corpus (pl. corpora) | Large collection of texts for linguistic analysis |
 | Dependency | Grammatical relationship between a head word and its dependents |
-| Distributional semantics | Theory that words with similar contexts have similar meanings |
 | Embedding | Dense vector representation of a word, phrase, or sentence |
-| FSA/FST | Finite State Automaton/Transducer — computational model for regular languages |
-| Language model | Probability distribution over sequences of words |
-| Lemmatization | Reducing a word to its dictionary form |
 | N-gram | Contiguous sequence of n items from a text |
 | NER | Named Entity Recognition — identifying entities (people, places, etc.) |
 | Parse tree | Tree structure representing the grammatical analysis of a sentence |
-| POS tagging | Part-of-speech tagging — labeling words with grammatical categories |
 | ROUGE | Metric for summarization based on n-gram overlap with reference |
-| Sequence-to-sequence | Model architecture for transforming one sequence to another |
-| Stemming | Reducing words to a common base form (often crude) |
 | Transformer | Neural architecture based entirely on attention mechanisms |
-| Word2Vec | Technique for learning word embeddings from large corpora |
 
 ## Quick References
 
 - [Jurafsky & Martin: Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) — comprehensive CL textbook (free online)
 - [NLTK Book](https://www.nltk.org/book/) — practical introduction to CL with Python
-- [The Stanford Encyclopedia of Philosophy: Computational Linguistics](https://plato.stanford.edu/entries/computational-linguistics/) — philosophical foundations
-- [Word2Vec Paper (Mikolov 2013)](https://arxiv.org/abs/1301.3781) — efficient estimation of word representations
-- [BERT Paper (Devlin 2018)](https://arxiv.org/abs/1810.04805) — pre-training of deep bidirectional transformers
-- [Attention Is All You Need (Vaswani 2017)](https://arxiv.org/abs/1706.03762) — the transformer architecture
-- [Natural Language Processing with Transformers](https://transformersbook.com/) — practical guide to modern CL
 - [Hugging Face Course](https://huggingface.co/learn/nlp-course) — practical NLP with transformers
-- [ACM Computing Surveys: 60 Years of CL](https://dl.acm.org/doi/10.1145/3482627) — comprehensive historical survey
 
 ## Next Steps
 
-- [Formal Languages & Grammars](../formal-languages-and-grammars.md) (planned) — the mathematical foundations of language
-- [Parsing: Natural & Programming Languages](../parsing-natural-and-programming.md) (planned) — algorithms for syntactic analysis
+- [Formal Languages & Grammars](../formal-languages.md) — the mathematical foundations of language
+- [Parsing: Natural & Programming Languages](../parsing.md) — algorithms for syntactic analysis

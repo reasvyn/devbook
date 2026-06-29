@@ -6,3 +6,4 @@ Languages, paradigms, frameworks, and software development practices.
 - [Programming Fundamentals](fundamentals/index.md)
 - [HTML](html/index.md)
 - [CSS](css/index.md)
+- [JavaScript & TypeScript](js-ts/index.md)

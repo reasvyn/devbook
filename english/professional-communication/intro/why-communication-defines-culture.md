@@ -625,5 +625,5 @@ Output: Decision document with migration plan
 
 ## Next Steps
 
-- [Writing Effective Code Review Comments](../code-review-comments.md) (planned) — mastering PR communication
-- [Incident Postmortems & Incident Reports](../incident-postmortems.md) (planned) — structured incident writing
+- [Writing Effective Code Review Comments](../code-reviews.md) — mastering PR communication
+- [Incident Postmortems & Incident Reports](../incident-reports.md) — structured incident writing

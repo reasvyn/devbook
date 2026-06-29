@@ -586,5 +586,5 @@ The after version tells the reader what the project does, why they'd use it, and
 
 ## Next Steps
 
-- [API Reference Documentation](../api-reference-documentation.md) (planned) — writing clear, usable API docs
-- [Diataxis Framework in Practice](../diataxis-in-practice.md) (planned) — applying the framework to real projects
+- [API Reference Documentation](../api-docs.md) — writing clear, usable API docs
+- [Diataxis Framework in Practice](../diataxis.md) — applying the framework to real projects

@@ -6,16 +6,13 @@ Probability theory, random variables, statistical inference, and data analysis �
 
 - [Probability & Statistics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## Topics
 
-- [Probability Foundations](probability-foundations.md) — sample spaces, events, axioms, conditional probability, Bayes' theorem (planned)
-- [Random Variables](random-variables.md) — discrete and continuous, PMF, PDF, CDF, expectation, variance (planned)
-- [Probability Distributions](probability-distributions.md) — Bernoulli, binomial, Poisson, normal, exponential, uniform (planned)
-- [Joint & Conditional Distributions](joint-and-conditional.md) — joint PMF/PDF, marginal, conditional, covariance, correlation (planned)
-- [Law of Large Numbers & CLT](lln-and-clt.md) — LLN, Central Limit Theorem, sampling distributions (planned)
-- [Descriptive Statistics](descriptive-statistics.md) — mean, median, mode, variance, quartiles, visualization (planned)
-- [Estimation](estimation.md) — point estimation, MLE, confidence intervals, bias-variance tradeoff (planned)
-- [Hypothesis Testing](hypothesis-testing.md) — null/alternative, p-values, t-tests, chi-square, ANOVA (planned)
-- [Bayesian Statistics](bayesian-statistics.md) — prior, posterior, conjugate priors, MCMC (planned)
-- [Linear Regression](linear-regression.md) — OLS, multiple regression, diagnostics, regularization (planned)
-- [Applications in Computing](probability-applications.md) — A/B testing, anomaly detection, recommendation systems, probabilistic programming (planned)
+- [Probability Foundations](probability-foundations.md) — sample spaces, events, axioms, conditional probability, Bayes theorem
+- [Random Variables](random-variables.md) — discrete and continuous, PMF, PDF, CDF, expectation, variance
+- [Probability Distributions](probability-distributions.md) — Bernoulli, binomial, Poisson, normal, exponential, uniform, beta, t, F, chi-square
+- [Joint & Conditional Distributions](joint-distributions.md) — joint PMF/PDF, marginal, conditional, covariance, correlation
+- [Law of Large Numbers & CLT](limit-theorems.md) — LLN, Central Limit Theorem, sampling distributions
+- [Descriptive Statistics](descriptive-statistics.md) — mean, median, mode, variance, quartiles, visualization, EDA
+- [Estimation & Hypothesis Testing](estimation-and-testing.md) — MLE, confidence intervals, t-tests, chi-square, ANOVA, power analysis
+- [Bayesian Statistics](bayesian-statistics.md) — prior, posterior, conjugate priors, MCMC, Bayesian A/B testing

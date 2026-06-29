@@ -7,3 +7,4 @@ Executive and C-level roles for senior leaders who set technical vision, drive o
 - [VP of Engineering](vp-engineering.md)
 - [CPO / VP of Product](cpo.md)
 - [CFO](cfo.md)
+- [Investor / Board Member](investor-board.md)

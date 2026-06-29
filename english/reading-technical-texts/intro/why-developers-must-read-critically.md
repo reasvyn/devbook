@@ -646,5 +646,5 @@ The spec is a contract, but it may be incomplete. The critical reader identifies
 
 ## Next Steps
 
-- [How to Read a Research Paper](../how-to-read-a-research-paper.md) (planned) — applying the four-pass method to academic papers
-- [Reading RFCs & Internet Standards](../reading-rfcs.md) (planned) — navigating protocol specifications
+- [How to Read a Research Paper](../research-papers.md) — applying the four-pass method to academic papers
+- [Reading RFCs & Internet Standards](../rfcs.md) — navigating protocol specifications

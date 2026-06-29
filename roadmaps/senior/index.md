@@ -7,3 +7,5 @@ Senior roles for developers with 5+ years of experience. Architecture decisions,
 - [Full-Stack Developer](full-stack-developer.md)
 - [Mobile Developer](mobile-developer.md)
 - [QA Engineer](qa-engineer.md)
+- [Data Scientist](data-scientist.md)
+- [DevOps](devops.md)

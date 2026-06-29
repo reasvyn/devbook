@@ -2,7 +2,7 @@
 
 The building blocks that every programmer uses — regardless of language or paradigm. Master these, and you can pick up any language.
 
-- [Programming Fundamentals](intro/programming-fundamentals.md)
+- [Programming Fundamentals](intro/index.md)
 - [Variables](variables.md)
 - [Data Types](data-types.md)
 - [Operators & Expressions](operators-and-expressions.md)

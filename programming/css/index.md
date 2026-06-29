@@ -47,6 +47,7 @@ Styling the web — selectors, layout, responsive design, animations, and modern
 ## Architecture & Organization
 
 - [BEM, Cascade Layers, CSS Modules & Preprocessors](bem-and-architecture.md)
+- [Sass Basics](sass-basics.md) — variables, nesting, mixins, partials
 
 ## Tooling, Performance & Debugging
 

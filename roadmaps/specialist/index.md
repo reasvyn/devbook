@@ -7,3 +7,4 @@ Specialist roles for experienced practitioners who go deep rather than broad —
 - [Security Engineer](security-engineer.md)
 - [Data Engineer](data-engineer.md)
 - [ML Engineer](ml-engineer.md)
+- [Engineering Manager](engineering-manager.md)

@@ -620,5 +620,5 @@ This may fail if your network requires a proxy.
 
 ## Next Steps
 
-- [Sentence Structure for Technical Writing](../sentence-structure.md) (planned) — crafting clear, readable sentences
-- [Punctuation for Clarity](../punctuation-for-clarity.md) (planned) — mastering technical punctuation
+- [Sentence Structure for Technical Writing](../sentence-structure.md) — crafting clear, readable sentences
+- [Punctuation for Clarity](../punctuation.md) — mastering technical punctuation

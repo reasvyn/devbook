@@ -8,10 +8,10 @@ Ray optics, wave optics, reflection, refraction, scattering, and radiometry — 
 
 ## Topics (Planned)
 
-- [Ray Optics](ray-optics.md) — reflection, refraction, Snell's law, lenses, mirrors, ray tracing basics (planned)
-- [Wave Optics](wave-optics.md) — interference, diffraction, polarization, coherence (planned)
-- [Radiometry & Photometry](radiometry.md) — radiance, irradiance, BRDF, luminous flux, color spaces (planned)
-- [Geometric Optics](geometric-optics.md) — paraxial approximation, thin lens equation, aberrations (planned)
-- [Optics in Rendering](optics-in-rendering.md) — ray tracing, path tracing, global illumination, participating media (planned)
-- [Display Technology](display-technology.md) — LCD, OLED, quantum dots, HDR, color calibration (planned)
-- [Camera & Sensor Physics](camera-sensors.md) — aperture, shutter, ISO, sensor noise, dynamic range (planned)
+- Ray Optics — reflection, refraction, Snell's law, lenses, mirrors, ray tracing basics (planned)
+- Wave Optics — interference, diffraction, polarization, coherence (planned)
+- Radiometry & Photometry — radiance, irradiance, BRDF, luminous flux, color spaces (planned)
+- Geometric Optics — paraxial approximation, thin lens equation, aberrations (planned)
+- Optics in Rendering — ray tracing, path tracing, global illumination, participating media (planned)
+- Display Technology — LCD, OLED, quantum dots, HDR, color calibration (planned)
+- Camera & Sensor Physics — aperture, shutter, ISO, sensor noise, dynamic range (planned)

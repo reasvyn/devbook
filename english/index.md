@@ -8,8 +8,8 @@ Technical communication, documentation, grammar, linguistics, and critical readi
 
 ## Modules
 
-- [Technical Writing & Documentation](technical-writing/index.md) — API docs, READMEs, developer guides, documentation systems, style guides
 - [Grammar & Style](grammar-and-style/index.md) — English grammar, punctuation, clarity, conciseness, technical style guides
 - [Professional Communication](professional-communication/index.md) — email, reports, meeting notes, code review comments, incident postmortems
+- [Technical Writing & Documentation](technical-writing/index.md) — API docs, READMEs, developer guides, documentation systems, style guides
 - [Reading Technical Texts](reading-technical-texts/index.md) — reading academic papers, RFCs, specifications, white papers critically
 - [Linguistics for Computing](linguistics-for-computing/index.md) — syntax, semantics, pragmatics, formal languages, NLP foundations

@@ -4,6 +4,7 @@ The formal study of language as it applies to computing — syntax, semantics, p
 
 - [Introduction](intro/index.md)
 - [Formal Languages & Grammars](formal-languages.md)
+- [Levels of Linguistic Analysis: A Roadmap](levels-of-linguistic-analysis-a-roadmap.md)
 - [Morphology & Tokenization](morphology-tokenization.md)
 - [Parsing: Natural & Programming Languages](parsing.md)
 - [Semantics: Meaning in Language & Code](semantics.md)

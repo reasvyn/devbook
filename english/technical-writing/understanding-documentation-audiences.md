@@ -628,65 +628,6 @@ Steps to create documentation personas:
 Gap analysis: Personas with no "Primary" coverage need prioritization.
 ```
 
-## Study Cases
-
-### Case 1: Persona-Driven Rewrite of a CLI Tool's Docs
-
-A CLI tool for database migrations had one alphabetical reference page and no getting-started guide.
-
-```text
-Persona analysis: 60% junior (needed tutorials), 30% mid (how-to),
-10% senior (command reference).
-
-Changes:
-1. Added a getting-started guide for newcomers
-2. Reorganized commands by task, not alphabetically
-3. Added beginner callouts to complex commands
-4. Separate reference section for power users
-
-Results:
-- Support tickets about "how do I do X?" dropped by 65%
-- First-time completion rate improved from 30% to 82%
-```
-
-### Case 2: Analytics Reveal an Underserved Audience
-
-An API platform noticed 40% of search queries were variations of "rate limit". No dedicated page existed.
-
-```text
-Signal: 1,200 searches/month for "rate limit", 70% clicked nothing.
-Rate limit info was buried in the authentication page under "Throttling Policy".
-
-Fix:
-1. Created a dedicated rate-limiting page with limits, handling, best practices
-2. Added "rate limiting" synonym to search configuration
-3. Added link from authentication page to the new page
-
-Results:
-- Rate-limit support tickets: 45/month → 8/month
-- Searchers finding what they need: 30% → 85%
-```
-
-### Case 3: Empathy Gap in Integration Docs
-
-An API integration guide assumed readers knew the request body format, how to handle the response, and how to use the Authorization header.
-
-```text
-Rewrite: Added explicit curl examples with request and response,
-step-by-step authentication flow, and verification points.
-
-Results:
-- Integration success rate: 35% → 92%
-- Average integration time: 4 hours → 45 minutes
-```
-
-## Examples
-
-### Example 1: Progressive Disclosure in a Reference Page
-
-```text
-# API Key Authentication
-
 ## Quick Setup
 Add your API key to the Authorization header:
 ```

@@ -63,15 +63,11 @@ Index files are valid prerequisite targets when the reader must understand the e
 
 ## Content / Material
 
-The core material — explanations, diagrams, code snippets, and everything in between. This is the main body of the document.
+The core material — explanations, diagrams, code snippets, and everything in between. Integrate real-world scenarios, examples, and walkthroughs directly into this section rather than separating them.
 
-## Study Cases (Optional)
+## Learning Tips (Optional)
 
-Real-world scenarios or walkthroughs that apply the concepts covered.
-
-## Examples (Optional)
-
-Additional practical examples beyond what's in the Content section.
+Practical advice for studying and retaining the material. Common pitfalls to avoid, memory aids, practice strategies, or ways to apply the concepts.
 
 ## Glossary
 
@@ -116,20 +112,17 @@ A file can live at any valid combination:
 - **`intro/`** — a special directory for background, philosophy, principles, history, ethics, or official organizations about the field. Every subject and module **must** have an `intro/` directory.
 - **Short description** is a hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
 - Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
-- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice. Do not create entities for job roles, positions, or personas — role-based content belongs in `roadmaps/`.
-- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents.
+- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice. Do not create entities for job roles, positions, or personas — role-based profession explorations belong in `careers/`.
+- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, or diagrams directly in the Content section. If longer than 800 lines, split into multiple focused documents.
 
-### Roadmaps
+### Careers
 
-The `roadmaps/` directory is a special directory that does **not** follow the subject/module/submodule convention. It contains role-based learning paths organized by career level.
+The `careers/` directory follows the same subject/module convention as other top-level directories. Each career is a module that explores a profession in depth — what the role entails, its responsibilities, specializations, career progression, and industry context.
 
-- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `manager`, `specialist`, `executive`.
-- Each level has an `index.md` listing all roles at that level.
-- Each role file is a learning path using priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
-- `roadmaps/index.md` lists all levels (not individual roles).
-- They are guides, not content modules — they reference existing DevBook files where possible.
-- The 9-section mandatory format does **not** apply to roadmap files.
-- **Index references allowed.** Roadmaps may link to `index.md` files (subject, module, or submodule) to imply the reader should cover all content under that index. For example, a backend developer roadmap might list `[Networks](networks/index.md)` as a CRITICAL prerequisite, meaning every document under `networks/` must be mastered.
+- Structure: `{career}/{module}/{short-description}.md`
+- Each career module has an `index.md`, an `intro/` with background content, and content files covering different aspects of the profession.
+- Content files follow the 9-section mandatory format.
+- Career modules are about the *profession itself*, not learning paths for individuals.
 
 ### Index System
 
@@ -153,9 +146,9 @@ The master `index.md` at the repository root references every subject:
 ```markdown
 # DevBook
 
-Markdown-based learning resources for developers. Start with the roadmaps to find your path, then dive into any subject.
+Markdown-based learning resources for developers. Explore careers, then dive into any subject.
 
-- [Roadmaps](roadmaps/index.md)
+- [Careers](careers/index.md)
 - [Computer Science](computer-science/index.md)
 - [Programming](programming/index.md)
 - [Mathematics](mathematics/index.md)

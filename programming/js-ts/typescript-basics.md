@@ -724,33 +724,6 @@ class MyClass { method() {} }
 type Instance = InstanceType<typeof MyClass>;
 ```
 
-## Study Cases
-
-### Case 1: Type-Safe API Client
-
-```typescript
-class TypedApiClient {
-    constructor(private baseURL: string) {}
-
-    private async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-        const response = await fetch(`${this.baseURL}${endpoint}`, {
-            ...options,
-            headers: { "Content-Type": "application/json", ...options.headers as Record<string, string> }
-        });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-    }
-
-    async get<T>(endpoint: string): Promise<T> { return this.request<T>(endpoint); }
-    async post<TBody, TResponse>(endpoint: string, body: TBody): Promise<TResponse> {
-        return this.request<TResponse>(endpoint, { method: "POST", body: JSON.stringify(body) });
-    }
-}
-
-const api = new TypedApiClient("https://api.example.com");
-const users = await api.get<User[]>("/users");
-```
-
 ## Glossary
 
 | Term | Definition |

@@ -1,8 +1,8 @@
 # DevBook
 
-Markdown-based learning resources for developers. Start with the roadmaps to find your path, then dive into any subject.
+Markdown-based learning resources for developers. Explore careers, then dive into any subject.
 
-- [Roadmaps](roadmaps/index.md) — career paths by role and level
+- [Careers](careers/index.md) — in-depth explorations of software professions
 - [Computer Science](computer-science/index.md) — algorithms, data structures, computation theory, operating systems
 - [Programming](programming/index.md) — languages, paradigms, software development practices
 - [Mathematics](mathematics/index.md) — linear algebra, calculus, statistics, discrete math

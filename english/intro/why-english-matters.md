@@ -67,7 +67,6 @@ Avoided: CockroachDB was ruled out due to operational complexity
 for a team of three.
 ```
 
-
 ### The Developer's Communication Stack
 
 Communication in software engineering happens at multiple layers:
@@ -101,7 +100,6 @@ For non-native speakers, investing in English directly translates to access to a
 The dominance of English in technology creates a disparity: native speakers start with an advantage, while non-native speakers must invest extra effort to reach the same level of technical communication. Recognizing this gap is the first step toward closing it.
 
 English is also the language of cutting-edge research. AI/ML papers on arXiv, programming language research at PLDI/OOPSLA, systems research at SOSP/OSDI — all published in English. A developer who reads English research papers has a 6-18 month head start on trends before they reach mainstream tutorials and blog posts.
-
 
 ### Reading: The Input Side
 
@@ -318,158 +316,6 @@ The pattern is clear: communication reach expands with seniority. A principal en
 **"Writing docs is someone else's job."** — In most engineering teams, every engineer owns documentation for the code they write. Dedicated technical writers exist at large companies, but even there, engineers provide the raw material.
 
 **"My code is self-documenting."** — Self-documenting code reduces the need for comments but does not eliminate the need for documentation. The purpose of a module, the reason behind an architecture decision, the tradeoffs of an algorithm — these cannot be expressed in code alone.
-
-## Study Cases
-
-### Case 1: The Ambiguous Spec
-
-A product manager writes: "The user should be able to delete their account." The developer implements soft-delete (sets a flag). The PM meant hard-delete (removes all data). Result: a week of rework and a missed deadline.
-
-Fix: The developer should have written a clarification: "By 'delete,' do you mean soft-delete (mark as inactive, preserve data) or hard-delete (irreversibly remove all records)?" Then document the decision in the ticket.
-
-### Case 2: The Code Review That Went Wrong
-
-Original review comment: "This doesn't look right. Fix it."
-
-Better: "The error handling on line 47 swallows the exception without logging. If this API call fails in production, we will have no trace of it. Consider logging the error with context before re-raising, or use a structured log statement like `logger.error('payment_failed', order_id=order.id)`."
-
-The second version explains the problem, the consequence, and the solution — all in clear English.
-
-### Case 3: The Postmortem
-
-Poor postmortem: "The database went down and users couldn't log in. We restarted it."
-
-Good postmortem: "Root cause: An unpatched memory leak in the connection pooler caused the primary database node to exhaust available memory after 72 hours of uptime, triggering OOM kill by the kernel. Detection: PagerDuty alert fired at 03:14 UTC. Mitigation: Restarted the database service after increasing `max_connections` from 200 to 300 as a temporary measure. Resolution: Deployed a fix that releases idle connections after 30 seconds (PR #4821). Preventative: Added memory usage monitoring to Grafana with a 60% threshold alert."
-
-### Case 4: The RFC That Got Approved
-
-Two engineers write RFCs proposing the same thing: adopting a message queue for async task processing.
-
-**RFC A (vague):**
-```
-We should use RabbitMQ for async tasks. It's reliable and widely used.
-```
-
-**RFC B (detailed):**
-```
-Proposal: Adopt RabbitMQ for asynchronous task processing.
-
-Motivation: Our current in-process task queue blocks the web server
-during long-running operations, causing 5-second+ response times
-under load. We need a message broker that:
-- Decouples task producers from consumers
-- Persists messages to survive process restarts
-- Supports priority queuing for time-sensitive tasks
-- Integrates with our existing stack (Python, Docker, Kubernetes)
-
-Evaluation:
-| Option | Durability | Throughput | Ops Burden | Team Familiarity |
-|--------|-----------|-----------|-----------|-----------------|
-| RabbitMQ | High | 50k/s | Moderate | High (used in data team) |
-| Redis | Low | 100k/s | Low | High |
-| SQS | High | Unlimited | None | Low |
-| Kafka | High | 1M/s | High | Low |
-
-Recommendation: RabbitMQ — balances durability with team familiarity.
-Next: POC to validate throughput meets our 10k tasks/hour peak.
-```
-
-RFC B gets approved in the first review. RFC A requires three rounds of back-and-forth and eventually stalls. The difference is the quality of the written communication.
-
-## Examples
-
-### Example 1: Rewriting a vague error message
-
-```python
-# Before
-raise Exception("Something went wrong")
-
-# After
-class InsufficientFundsError(Exception):
-    """Raised when an account lacks sufficient balance for a transaction."""
-
-raise InsufficientFundsError(
-    f"Account {account_id} has balance ${balance:.2f}, "
-    f"but transaction requires ${amount:.2f}"
-)
-```
-
-### Example 2: Documentation snippet
-
-```
-# Bad:
-To use the API, you need to send a request. It will return data.
-
-# Good:
-GET /api/v2/users/:id
-
-Retrieves a user by their unique identifier.
-
-Parameters:
-  - id (string, required): The 24-character hex user ID.
-
-Response (200):
-  { "id": "...", "name": "...", "email": "..." }
-
-Response (404):
-  { "error": "user_not_found", "message": "No user with the given ID exists." }
-```
-
-### Example 3: Slack message clarity
-
-```text
-Bad:
-"Hey, the build is failing. Can someone look at it?"
-
-Good:
-"@platform-team The CI build for the main branch is failing on
-the 'test-migrations' step (build #1423). The error suggests a
-schema mismatch between the latest migration and the test
-database seed. Logs: https://ci.example.com/builds/1423
-Looking for someone to investigate. I'm happy to help if you
-point me in the right direction."
-```
-
-The good message includes: who (specific team), what (which build, which step), evidence (logs link), and a specific ask.
-
-### Example 4: Architectural decision record
-
-```text
-# ADR-001: Adopt Protocol Buffers for service-to-service communication
-
-Status: Accepted
-Date: 2024-03-15
-
-Context: Our REST API uses JSON for serialization. As we scale to
-50+ microservices, we need a more efficient serialization format
-that supports strong typing and schema evolution.
-
-Decision: Use Protocol Buffers (protobuf) v3 for all internal
-service-to-service RPC calls. External-facing APIs remain REST/JSON.
-
-Consequences:
-- (+) 10x faster serialization vs JSON
-- (+) Strong typing reduces integration bugs
-- (+) Schema evolution via field numbering
-- (-) Requires schema registry
-- (-) Learning curve for the team
-- (-) Debugging requires additional tooling (protoc, grpcurl)
-```
-
-### Example 5: Commit message
-
-```
-fix(auth): validate session cookie before decoding
-
-The login redirect loop occurred because SessionMiddleware.decode()
-was called on an empty cookie value, which raised a ValueError.
-The global exception handler caught this and redirected to /login,
-creating an infinite loop.
-
-Fix: check that the cookie exists and is non-empty before calling
-decode(). If invalid, return a 401 with an explicit error message
-instead of redirecting.
-```
 
 ## Glossary
 

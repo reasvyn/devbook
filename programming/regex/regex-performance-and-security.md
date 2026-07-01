@@ -368,44 +368,6 @@ Add performance tests to your CI pipeline. Run each regex against incrementally 
 
 Integration with CI: add `regexploit --check patterns.txt` and performance regression tests to your pipeline.
 
-## Study Cases
-
-### Case 1: A URL validator that freezes on long input
-
-**Problem:** `([\w-]+\.)+` has nested quantifiers — a `+` around `[\w-]+`. Input "http://" + "a"*100 (no dot) forces the engine to try all partitions of the a's, causing exponential backtracking.
-
-**Solution:** Use possessive `++` to discard backtracking states: `([\w-]+\.)++`. Or switch to RE2 for guaranteed linear time.
-
-### Case 2: Sanitizing user input with a vulnerable regex
-
-**Problem:** `r'<script[^>]*>.*?</script>'` against "<script>" + "a"*50000. The lazy `.*?` expands through all 50000 characters looking for `</script>` that does not exist.
-
-**Solution:** Replace `.*?` with `[^<]*` — it stops at the first `<` with no backtracking. Better yet, use an HTML parser (HTML is not regular).
-
-### Case 3: Adding regex timeout to an API endpoint
-
-**Problem:** User-supplied search patterns against a product database. Malicious patterns freeze the server for minutes.
-
-**Solution:** Limit input length (max 200 chars) and use RE2 for user-supplied patterns — it guarantees linear time regardless of the pattern:
-
-```python
-import re2
-
-@app.route('/search')
-def search():
-    pattern = request.args.get('q', '')
-    if len(pattern) > 200:
-        return jsonify({"error": "Pattern too long"}), 400
-    try:
-        compiled = re2.compile(pattern)
-        results = [p for p in products if compiled.search(p)]
-    except re2.error:
-        return jsonify({"error": "Invalid regex"}), 400
-    return jsonify(results)
-```
-
-RE2 does not support backreferences or lookahead, but most search use cases do not need them.
-
 ## Glossary
 
 | Term | Definition |

@@ -583,15 +583,6 @@ The load balancer should have routed traffic to the backup
 datacenter, but the health check did not fire.
 ```
 
-## Study Cases
-
-### Case 1: Choosing the right tense for an API changelog
-
-A team maintains a public REST API. They need to announce breaking changes for version 4.0. Compare three approaches:
-
-**Approach A — past tense.**
-
-```markdown
 ## v4.0 Breaking Changes
 
 - Removed the `/v1/orders` endpoint.
@@ -686,21 +677,6 @@ Step 3: Start the development server.
 
 Imperative for steps, simple present for explanations. Clean, predictable, easy to follow.
 
-## Examples
-
-**Example 1: Simple present in a configuration reference.**
-
-```text
-# redis.conf
-# port: The port the server listens on. Defaults to 6379.
-# bind: The network interface to bind to. 0.0.0.0 means all.
-# timeout: Seconds before closing an idle connection. 0
-#          disables the timeout.
-```
-
-**Example 2: Simple past in a release retrospective.**
-
-```text
 ## 2.0 Retrospective
 
 We shipped version 2.0 on March 1. The team completed the

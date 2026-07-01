@@ -312,58 +312,6 @@ Some things are better documented in code: tests as specification, type signatur
 
 **Docs-as-code with collaboration.** Documentation treated as code, going through PRs and CI. Highest initial investment but lowest ongoing cost per quality-adjusted page. Best for 20+ developers or customer-facing documentation.
 
-## Study Cases
-
-### Case 1: The Startup That Ignored Documentation
-
-A 30-person startup grew from 5 to 30 engineers with no documentation culture. Costs: senior engineers spent 10–15 hours/week answering questions, onboarding took 3–4 months, and departing engineers took undocumented knowledge. The intervention: hired a technical writer, mandated READMEs, required RFCs. Results: interrupt time dropped to 3–5 hours/week, onboarding fell to 4–6 weeks, and the writer paid for itself within 6 months.
-
-### Case 2: The API with No Documentation
-
-A B2B SaaS company launched an API with zero documentation. Customers had to email support to understand integration.
-
-**Costs:**
-- Support team spent 40% of time answering "how do I use the API" questions
-- Integration took customers 2–4 weeks (competitor APIs with good docs: 2–3 days)
-- Customer churn: 15% of trial users gave up during integration
-- Revenue loss: estimated $500K/year from churn during integration
-
-**The intervention:**
-- Two-week sprint to write API reference docs and a getting-started guide
-- Added code examples in three languages (curl, Python, JavaScript)
-- Published the documentation on a developer portal
-
-**Results:**
-- Support tickets about API usage dropped by 60%
-- Trial-to-paid conversion increased by 25%
-- Customer integration time dropped from 2–4 weeks to 2–5 days
-- The two-week sprint generated estimated $300K/year in recovered revenue
-
-### Case 3: The Documentation Debt Avalanche
-
-A mature product with 10 years of accumulated documentation had:
-- 40% of documentation pages referencing deprecated features
-- 60% with no last-updated date
-- 20% with broken code examples
-- No consistent structure across pages
-
-**Costs:**
-- Developers spent significant time wondering whether documentation was current
-- Support tickets increased as customers found outdated information
-- New hires lost trust in documentation and defaulted to asking colleagues
-- Documentation was described as "a liability, not an asset"
-
-**The recovery:**
-1. Audited all documentation pages (marked as current, needs update, or deprecated)
-2. Deleted or archived 35% of pages (deprecated features, obsolete guides)
-3. Established a documentation freshness policy: any page not updated in 6 months is flagged
-4. Required documentation updates in the same PR as code changes
-
-**Results:**
-- Removed 35% of pages (deleted or archived), immediately improving the remaining content's discoverability
-- Developer trust gradually returned as stale pages were flagged
-- Support tickets about deprecated features dropped
-
 ## Glossary
 
 | Term | Definition |

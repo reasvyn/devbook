@@ -307,42 +307,6 @@ Current best practice in technical style draws from all these traditions:
 
 **The unifying principle:** Documentation is software. It follows the same lifecycle, uses the same tooling, and deserves the same rigor as code. Style is not decoration — it is engineering practice applied to prose.
 
-## Study Cases
-
-### Case 1: The Transition from Paper to HTML
-
-In 1995, a major database vendor shipped a 3000-page printed manual. By 2000, the same documentation was online as HTML pages. The style changed dramatically:
-
-- Passive voice to active voice: "The query is executed by the system" → "The system executes the query."
-- Third person to second person: "The user should ensure" → "Ensure that..."
-- Single document → hundreds of linked pages
-- One-size-fits-all → separated into Getting Started, Reference, and Troubleshooting
-
-The style change was driven by the medium, not by editorial preference. Online readers searched and scanned; they did not read linearly.
-
-### Case 2: Stripe's API Documentation
-
-Stripe's API documentation is widely considered the industry gold standard. Its style reflects the modern synthesis:
-
-- **Right-rail navigation** showing all endpoints (reference pattern)
-- **Automatic code generation** in multiple languages (developer-first)
-- **Interactive "try it" console** (tutorial + how-to combined)
-- **Minimal prose** — code examples communicate more than paragraphs do
-- **Consistent terminology** across all documents
-
-Stripe explicitly follows Diataxis: tutorials for getting started, how-to guides for common tasks, reference for endpoints, and explanation guides for concepts.
-
-### Case 3: Kubernetes Documentation Evolution
-
-Kubernetes documentation evolved from a single README (2014) to one of the most comprehensive documentation systems in open source.
-
-- Early docs: developer-focused, assumes deep container knowledge
-- Growth phase: concept guides and tutorials for operators
-- Mature phase: Diataxis-organized, job-specific tasks, troubleshooting guides
-- Current: role-based documentation (developer, operator, administrator)
-
-Each phase required a different style. The concept guides used explanatory prose. The reference sections used terse, consistent formatting. The task guides used imperative numbered steps.
-
 ## Glossary
 
 | Term | Definition |
@@ -391,25 +355,6 @@ Large language models (LLMs) are the newest force reshaping technical writing co
 **The emerging best practice:**
 
 Use AI for the mechanical work: first drafts, formatting, consistency, translation. Reserve human effort for: audience analysis, structural decisions, verification against code, and tone calibration. Style guides must now address how to review AI-generated content — a skill few writers currently have.
-
-## Study Cases (Continued)
-
-### Case 4: An AI's Attempt at API Documentation
-
-A team asked an LLM to generate documentation for a new REST API. The AI produced complete reference docs in 30 seconds: endpoint descriptions, request/response examples, and error codes.
-
-**Problems discovered during review:**
-
-- Two endpoints were documented with parameters that did not exist in the code
-- Authentication was described as optional when the API required it
-- Rate limits were made up — the AI assumed standard limits that the team had not implemented
-- The tone was promotional ("Our powerful API enables remarkable workflows")
-
-**What the team kept:** The structure, the request/response examples (verified against tests), the error code table (verified against source).
-
-**What the team rewrote:** All parameter descriptions (matched against actual code), the authentication section, rate limit documentation (marked as TBD), and the tone (professional, not promotional).
-
-**Lesson:** AI accelerates documentation production but does not eliminate the need for verification. The best workflow: AI generates, human verifies and refines.
 
 ## Quick References
 

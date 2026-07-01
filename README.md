@@ -64,12 +64,11 @@ Every document follows a mandatory format:
 2. **Description** — brief overview and why it matters
 3. **Prerequisites** — what you should know before reading (index files are valid targets when an entire subject/module/submodule is required)
 4. **Table of Contents** — section navigation
-5. **Content / Material** — the core material
-6. **Study Cases** (Optional) — real-world walkthroughs
-7. **Examples** (Optional) — additional practical examples
-8. **Glossary** — key terms and definitions
-9. **Quick References** (Optional) — verified external links to journals, books, blog posts, websites
-10. **Next Steps** — where to go from here
+5. **Content / Material** — the core material, including real-world scenarios and examples
+6. **Learning Tips** (Optional) — practical advice for studying and retaining the material
+7. **Glossary** — key terms and definitions
+8. **Quick References** (Optional) — verified external links to journals, books, blog posts, websites
+9. **Next Steps** — where to go from here
 
 ## Why Markdown?
 

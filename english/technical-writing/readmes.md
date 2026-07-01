@@ -569,14 +569,6 @@ Use a generator for common patterns (library, CLI, app). Write from scratch
 for projects with unique documentation or marketing needs.
 ```
 
-## Study Cases
-
-### Case 1: README-First Design Catches an API Mistake
-
-A team plans a CSV parsing library. Before writing code, they draft the README with the intended API.
-
-```text
-// First README draft
 ## API
 
 ### parse(data, options)
@@ -650,19 +642,6 @@ After:
 Reduced from 12 badges to 4. Removed badges provided information that
 was either obvious (stars, forks) or better viewed on the GitHub UI (issues).
 ```
-
-## Examples
-
-### Example 1: Minimal CLI README
-
-```markdown
-# csv2json
-
-[![CI](https://img.shields.io/github/actions/workflow/status/user/csv2json/ci.svg)]()
-
-Convert CSV files to JSON with schema validation.
-
-npm install -g csv2json
 
 ## Usage
 

@@ -521,7 +521,6 @@ print(f"Encoded:  {encoded}")
 
 **Viterbi algorithm (maximum likelihood decoding):**
 
-
 The Viterbi algorithm finds the most likely transmitted sequence given the received sequence by dynamic programming on the trellis:
 
 1. For each state at each time step, compute the path metric (cumulative Hamming or Euclidean distance).
@@ -616,120 +615,6 @@ for ber in [1e-6, 1e-5, 1e-4, 1e-3]:
 ```
 
 **Ethernet (10GBASE-T).** Uses LDPC codes with 2048-bit codewords and rate 0.85, operating within 1 dB of Shannon capacity at BER $10^{-12}$.
-
-## Study Cases
-
-### Case 1: Hamming Code Performance on BSC
-
-```python
-def simulate_hamming_bsc(p, trials=10000):
-    hamming = HammingCode(r=3)
-    n = hamming.n
-    errors = 0
-    total_bits = 0
-
-    for _ in range(trials):
-        msg = np.random.randint(0, 2, hamming.k)
-        codeword = hamming.encode(msg)
-        # Channel: BSC(p)
-        noise = np.random.binomial(1, p, n)
-        received = (codeword + noise) % 2
-        decoded, corrected = hamming.decode(received)
-        errors += np.sum(decoded != msg)
-        total_bits += hamming.k
-
-    ber = errors / total_bits
-    theoretical = 1 - (1-p)**n - n * p * (1-p)**(n-1)
-    return ber, theoretical
-
-for p in [0.01, 0.05, 0.1]:
-    sim, theory = simulate_hamming_bsc(p)
-    print(f"BSC(p={p}): simulated BER={sim:.6f}, uncoded={p}")
-```
-
-
-
-## Examples
-
-### Example 1: Hamming Distance and Error Correction
-
-```python
-def error_correction_capability(d_min):
-    detect = d_min - 1
-    correct = (d_min - 1) // 2
-    return detect, correct
-
-codes = {"Repetition (3,1)": 3, "Hamming (7,4)": 3,
-         "Extended Hamming (8,4)": 4, "RS(255,223)": 33}
-for name, dmin in codes.items():
-    detect, correct = error_correction_capability(dmin)
-    print(f"{name} (d_min={dmin}): detect {detect}, correct {correct} errors")
-```
-
-### Example 2: Syndrome Table Lookup Decoding
-
-```python
-def build_syndrome_table(H):
-    n = H.shape[1]
-    table = {}
-    # Syndrome for zero error
-    table[tuple(np.zeros(H.shape[0], dtype=int))] = np.zeros(n, dtype=int)
-    # Single-bit errors
-    for i in range(n):
-        e = np.zeros(n, dtype=int)
-        e[i] = 1
-        s = (H @ e) % 2
-        table[tuple(s)] = e
-    return table
-
-H = np.array([[1,1,1,0,1,0,0],[1,0,1,1,0,1,0],[0,1,1,1,0,0,1]], dtype=int)
-syndrome_table = build_syndrome_table(H)
-print(f"Syndrome table built with {len(syndrome_table)} entries")
-print(f"Syndrome for position 2: {list(syndrome_table.keys())[2]}")
-```
-
-### Example 3: Gilbert-Varshamov Bound
-
-```python
-def gilbert_varshamov_bound(n, k, d):
-    """Check if an (n,k) code with minimum distance d exists (lower bound)."""
-    t = (d - 1) // 2
-    volume = sum([comb(n, i) for i in range(t + 1)])
-    return 2**(n - k) >= volume
-
-def hamming_upper_bound(n, k, d):
-    """Hamming (sphere-packing) upper bound."""
-    t = (d - 1) // 2
-    volume = sum([comb(n, i) for i in range(t + 1)])
-    return 2**(n - k) >= volume
-
-from math import comb
-n, k, d = 7, 4, 3
-gv = gilbert_varshamov_bound(n, k, d)
-hamming = hamming_upper_bound(n, k, d)
-print(f"({n},{k}) d={d}: GV bound says {'exists' if gv else 'may not exist'}")
-print(f"Hamming bound says {'may exist' if hamming else 'impossible'}")
-```
-
-### Example 4: Comparing Uncoded vs. Coded BER
-
-```python
-def uncoded_ber_bsc(p):
-    return p
-
-def hamming_coded_ber_bsc(p):
-    # (7,4) Hamming: approximates BER after decoding
-    # Corrects single-bit errors: P(no error given 0 or 1 errors)
-    p_block_correct = (1-p)**7 + 7 * p * (1-p)**6
-    p_block_error = 1 - p_block_correct
-    # Approximate bit error: probability block has >= 2 errors * 3.5 / 7
-    return p_block_error * 3.5 / 7
-
-for p in [0.01, 0.02, 0.05, 0.1]:
-    uncoded = uncoded_ber_bsc(p)
-    coded = hamming_coded_ber_bsc(p)
-    print(f"BSC(p={p}): uncoded={uncoded:.4f}, Hamming(7,4)={coded:.6f}")
-```
 
 ## Glossary
 

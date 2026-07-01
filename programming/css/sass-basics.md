@@ -628,10 +628,6 @@ $color: #0066cc;
 
 Division is performed with `math.div()` in modern Sass; the `/` operator is deprecated for division.
 
-
-
-
-
 ### Integration with Build Tools
 
 Most modern build tools compile Sass automatically. Vite and Parcel handle `.scss` imports with zero configuration. Webpack requires `sass-loader`. For standalone usage, npm scripts work:
@@ -672,87 +668,6 @@ The `--style compressed` flag produces minified output for production.
 - New greenfield projects — modern CSS covers most needs
 - Projects prioritising runtime flexibility (theming, dark mode)
 - Small projects or prototypes where Sass adds unnecessary complexity
-
-## Study Cases
-
-### Case 1: Responsive Mixin Library
-
-**Scenario:** A team writes the same media query patterns across dozens of components.
-
-**Solution:** Create a `_mixins.scss` file with reusable breakpoint mixins:
-
-```scss
-@mixin bp($size) {
-    @if $size == sm { @media (min-width: 640px) { @content; } }
-    @else if $size == md { @media (min-width: 768px) { @content; } }
-    @else if $size == lg { @media (min-width: 1024px) { @content; } }
-    @else if $size == xl { @media (min-width: 1280px) { @content; } }
-}
-```
-
-**Result:** Consistent breakpoints across the codebase, single source of truth for responsive behaviour.
-
-## Examples
-
-### Example 1: A Themed Button Set
-
-```scss
-// _variables.scss
-$primary: #0066cc;
-$secondary: #6c757d;
-$border-radius: 6px;
-
-// _mixins.scss
-@mixin button-reset {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: $border-radius;
-    font: inherit;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: background 0.15s;
-}
-
-// _buttons.scss
-@use "variables" as *;
-@use "mixins";
-
-.btn {
-    @include mixins.button-reset;
-
-    &--primary {
-        background: $primary;
-        color: white;
-        &:hover { background: color.adjust($primary, $lightness: -10%); }
-    }
-
-    &--secondary {
-        background: $secondary;
-        color: white;
-        &:hover { background: color.adjust($secondary, $lightness: -10%); }
-    }
-}
-```
-
-### Example 2: Typography Scale
-
-```scss
-@use "sass:math";
-
-$base-size: 16px;
-$scale-ratio: 1.25;
-
-@for $i from 1 through 6 {
-    h#{$i} {
-        font-size: $base-size * math.pow($scale-ratio, 6 - $i);
-        line-height: 1.2;
-        margin-bottom: 0.5em;
-    }
-}
-```
 
 ## Glossary
 

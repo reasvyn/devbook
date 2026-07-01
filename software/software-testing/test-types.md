@@ -335,67 +335,6 @@ A well-balanced test suite follows the pyramid and adapts to the project context
 
 **Chasing coverage numbers.** High coverage is a byproduct of good testing, not a goal. Writing a test that asserts nothing but increases coverage is waste.
 
-## Study Cases
-
-**Case 1: A team with no tests inheriting a legacy codebase.**
-
-Start by writing integration tests that document the current behavior — these are characterization tests. Test the outputs you care about. Once you have characterization tests, refactor with confidence that you will catch regressions.
-
-**Case 2: A flaky E2E test that fails randomly.**
-
-Common causes: timing issues (missing `waitFor`), shared state between tests, environment differences. Fix by adding explicit waits, isolating test data per test, and running tests in the same environment as CI.
-
-## Examples
-
-**Example: Unit vs integration for a user registration flow.**
-
-Unit test: test the validation logic (`validateEmail`, `validatePassword`, `isOver13`) in isolation.
-
-Integration test: test the `registerUser` function with a real database to verify the user is stored correctly and a confirmation email is queued.
-
-E2E test: test that a user can fill out the registration form, submit, and see the confirmation page.
-
-## Study Cases
-
-**Case 1: A team inverts the test pyramid.**
-
-A startup ships features rapidly with only manual E2E testing. As the team grows, the manual regression suite takes a full week. Releases are delayed, and bugs still escape to production because the testers are exhausted and rush through the checklist.
-
-The fix: invest in unit tests for the core business logic. Within a month, unit tests cover the critical paths. The manual regression suite is trimmed to only cover scenarios that cannot be automated. Release cycles go from monthly to weekly.
-
-**Case 2: Flaky E2E test blocks every deployment.**
-
-An E2E test that checks the shopping cart randomly fails in CI. Developers start ignoring the failure and deploying anyway. Eventually, a real regression goes unnoticed because no one trusts the test suite.
-
-The fix: quarantine the flaky test immediately. Investigate the root cause (a race condition in the test, not the app). Rewrite the test to wait for the correct element state instead of a fixed timeout. Add a rule: any test that fails more than 5% of the time is quarantined until fixed.
-
-**Case 3: A performance test catches a memory leak.**
-
-Load testing reveals that memory usage grows linearly with each request and never decreases. The team investigates and finds a global cache that is never evicted. The fix is a simple TTL policy. Without the load test, this leak would have caused weekly production outages as the server ran out of memory.
-
-## Examples
-
-**Example: Determining the right test type for a scenario.**
-
-| Scenario | Best test type | Why |
-|----------|---------------|-----|
-| Validate an email address format | Unit test | Pure logic, no dependencies, many edge cases |
-| Verify checkout calculates tax correctly | Integration test | Involves database lookup of tax rates |
-| Complete user purchase flow | E2E test | Multiple systems (web, API, payment gateway, email) |
-| Check page loads in under 2 seconds | Performance test | Requires measuring real response times |
-| Verify password is stored hashed | Security test | Specific security concern |
-| Test a new UI component renders correctly | Visual regression | Subjective visual output |
-| Try to find bugs in a new feature | Exploratory manual | Automated tests only find expected bugs |
-
-**Example: Scaling a test suite as the team grows.**
-
-| Team size | Test approach |
-|-----------|--------------|
-| 1-3 developers | Unit tests for core logic, manual smoke tests for UI |
-| 4-10 developers | Add integration tests for APIs and database, automate CI |
-| 10-50 developers | Add E2E tests for critical flows, performance tests in CI |
-| 50+ developers | Full test pyramid, visual regression, contract testing, chaos engineering |
-
 ## Glossary
 
 | Term | Definition |

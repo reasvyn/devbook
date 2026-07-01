@@ -314,47 +314,6 @@ Practical strategies for finding the right source for your need:
 | Stay current | Conference proceedings (arXiv) → Newsletters → Engineering blogs |
 | Deep understanding | Survey paper → Foundational papers → Textbook → Implementation |
 
-
-## Study Cases
-
-### Case 1: Building a Recommendation System
-
-A developer tasked with building a content recommendation system encounters:
-
-1. **Blog post:** "Building a Movie Recommender with Python" — practical but simplistic, no evaluation methodology
-2. **White paper:** "Netflix Prize and Matrix Factorization" — detailed but promotional
-3. **Academic paper:** "Matrix Factorization Techniques for Recommender Systems" (Koren, Bell, Volinsky, 2009) — peer-reviewed, explains the math and trade-offs
-4. **Book chapter:** From "Programming Collective Intelligence" — clear explanation but outdated (2007)
-5. **Official documentation:** scikit-learn's matrix factorization module — reference implementation
-
-The developer reads the white paper for context, the academic paper for depth, the documentation for implementation, and validates with the blog post for a practical starting point. The blog post alone would have been insufficient (no evaluation). The white paper alone would have been biased. The book alone would have been outdated.
-
-### Case 2: The Microservices Decision
-
-A team evaluating microservices architecture encounters:
-
-1. **Vendor white paper:** "Why Microservices Are the Future" — sponsored by a cloud provider, emphasizes benefits, minimizes costs
-2. **Blog post:** "We Migrated to Microservices and Regretted It" — honest failure story, single data point
-3. **Academic paper:** "An Empirical Study of Microservice Migration" — peer-reviewed, studied 30 companies, found mixed results
-4. **Book:** "Building Microservices" by Sam Newman — comprehensive, balanced, but author's experience is specific
-
-The team reads the book for fundamentals, the academic paper for empirical evidence, the blog post for a cautionary perspective, and critically evaluates the white paper as marketing. The academic paper's empirical findings override the white paper's promotional claims.
-
-### Case 3: The arXiv Overclaim
-
-A developer discovers a paper on arXiv claiming a new algorithm achieves 10x performance improvement over state-of-the-art. Excited, they attempt to implement it.
-
-**Critical analysis:**
-- No peer review (arXiv only)
-- No code published alongside the paper
-- Benchmarks use synthetic data, not real-world datasets
-- The comparison baseline is three years old
-- The paper has been on arXiv for two years with no citations
-
-**Conclusion:** The claim is likely exaggerated or the evaluation is flawed. The developer finds a follow-up paper from a different group that reproduces the result at only 1.5x improvement, uncovering a flaw in the original evaluation methodology.
-
-**Lesson:** Preprints are valuable but provisional. Treat them as interesting claims, not established facts, until verified by the community.
-
 ## Glossary
 
 | Term | Definition |

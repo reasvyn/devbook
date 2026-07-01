@@ -341,29 +341,6 @@ Synchronous communication always feels more urgent because it demands immediate 
 
 Fix: Set SLAs for async response. "Respond within 4 hours during work hours" or "By end of next business day."
 
-## Study Cases
-
-### Case 1: The Meeting-Heavy Startup
-
-A 40-person startup averaged 25 meetings-hours per engineer per week. Diagnosis: every decision required a meeting, no written proposals, no note-takers. The fix: mandated RFCs, required written agendas (shared 24 hours before), async standups, 4-hour async response SLA, 30-minute meeting cap. Results: meeting time dropped to 8 hours/week, decision records eliminated repeated debates, satisfaction improved 30%.
-
-### Case 2: The Remote Team That Could Not Collaborate
-
-A fully distributed team had engineers in 12 timezones. They tried to maintain synchronous communication (everyone overlapping 2 hours per day). The result: resentment from engineers in unfavorable timezones, decisions made without non-overlapping team members, and slow progress.
-
-**The async pivot:**
-1. Eliminated the mandatory overlap period
-2. Every decision documented in an RFC with a minimum 48-hour review period
-3. Recorded all synchronous meetings for later viewing
-4. Used async daily updates instead of standups
-5. Designated decision-making windows (RFCs open for comment Monday-Thursday, decisions announced Friday)
-
-**Results:**
-- Engineers in non-US timezones reported feeling equally included
-- Decision quality improved (more perspectives considered)
-- Time-to-decision was initially slower but became faster as the team learned async patterns
-- Team satisfaction scores improved significantly
-
 ## Glossary
 
 | Term | Definition |

@@ -305,57 +305,6 @@ A testing culture is one where quality is everyone's responsibility. Signs of a 
 
 Building this culture takes time, especially in organizations where testing has historically been undervalued. Start small: enforce tests for new code, fix the flakiest tests first, and make the test suite fast. Success builds on itself.
 
-## Study Cases
-
-**Case 1: A null pointer in production.**
-
-An e-commerce site crashes during checkout when a user applies a discount code. Investigation shows that the discount service returns `null` for expired codes, and the checkout code does not handle `null` — it assumes a discount object is always returned.
-
-Root cause: the developer who wrote the discount service and the developer who wrote the checkout assumed different contracts. No integration test verified the interaction. The fix: add a unit test for the checkout code that passes a null discount, and an integration test that calls the real discount service with an expired code.
-
-Cost: The bug was in production for three days, affecting approximately 500 failed transactions. Estimated revenue loss: $15,000. Cost to fix: 2 hours.
-
-**Case 2: The untested migration.**
-
-A database migration renames a column from `username` to `user_name`. The application code is updated to use the new name, but a background job that runs weekly still references the old column. The job fails silently for two weeks before anyone notices.
-
-Root cause: the background job had zero test coverage, and the migration did not include a data migration to keep the old column working during the transition. The fix: add a test that runs the background job against the migrated database schema, and use a database migration pattern that renames columns in two phases (add new column, write to both, drop old column).
-
-Cost: Two weeks of missed email notifications. Customer trust damage.
-
-**Case 3: Testing saves a refactor.**
-
-A team decides to extract the payment processing logic from the monolithic web application into a standalone microservice. The code is tightly coupled with no tests. The team spends two months writing characterization tests (tests that document current behavior) before touching the code. During this process, they discover seven latent bugs that were in production but undetected.
-
-Without the characterization tests, the refactor would have introduced regressions that would have taken months to find. The testing investment paid for itself before the first line of the new microservice was written.
-
-## Examples
-
-**Example: Testing culture spectrum.**
-
-| Stage | Developer behavior | Testing approach |
-|-------|-------------------|-----------------|
-| Denial | "Testing slows me down" | No tests, manual only |
-| Acceptance | "I should probably test this" | Occasional unit tests for complex code |
-| Practice | "I write tests as I go" | Unit tests for all new code, some integration |
-| Discipline | "Tests are non-negotiable" | TDD, CI gate, coverage tracked |
-| Culture | "How can we test better?" | Test strategy, experimentation, tooling investment |
-| Mastery | "How can we test less but better?" | Risk-based testing, targeted automation |
-
-**Example: What a good test suite looks like.**
-
-| Property | Bad suite | Good suite |
-|----------|-----------|------------|
-| Reliability | Flaky, random failures | Deterministic, every run same result |
-| Speed | 45 minutes | 3 minutes |
-| Isolation | Tests depend on each other | Each test runs independently |
-| Feedback | Fails on CI after push | Fails locally in seconds |
-| Maintenance | Tests break for unrelated changes | Tests only break when behavior changes |
-| Confidence | "Tests passed but I'm still nervous" | "If tests pass, I deploy with confidence" |
-| Readability | `test1()`, `test2()`, deeply nested fixtures | Descriptive names, clear setup and assertions |
-| Coverage | 90% line coverage, 10% branch coverage | Meaningful coverage of critical paths |
-| Debugging | Stack traces unrelated to the failure | Failure message points to root cause |
-
 ## Glossary
 
 | Term | Definition |

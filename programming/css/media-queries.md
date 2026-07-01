@@ -484,124 +484,6 @@ The browser downloads both files regardless but applies only the matching one.
 
 5. **Test at actual breakpoints.** Do not rely on device emulators alone.
 
-## Study Cases
-
-### Responsive Navigation
-
-```css
-/* Base: hamburger menu on mobile */
-.nav-list {
-    display: none;
-}
-
-.nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-toggle:focus-visible {
-    outline: 2px solid #0066cc;
-}
-
-.nav-list.is-open {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* Desktop: horizontal nav */
-@media (min-width: 768px) {
-    .nav-toggle {
-        display: none;
-    }
-
-    .nav-list {
-        display: flex;
-        gap: 1.5rem;
-    }
-}
-```
-
-### Responsive Typography
-
-```css
-body {
-    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
-}
-
-h1 {
-    font-size: clamp(2rem, 1.5rem + 2vw, 3.5rem);
-}
-
-@media (min-width: 768px) {
-    article {
-        max-width: 65ch;
-        margin: 0 auto;
-    }
-}
-```
-
-## Examples
-
-### Example 1: Print stylesheet
-
-```css
-@media print {
-    nav, footer, .sidebar, .ads {
-        display: none !important;
-    }
-
-    body {
-        font-size: 12pt;
-        line-height: 1.5;
-        color: black;
-        background: white;
-    }
-
-    a {
-        color: black;
-        text-decoration: underline;
-    }
-
-    a[href]::after {
-        content: " (" attr(href) ")";
-        font-size: 0.8em;
-    }
-}
-```
-
-### Example 2: Dark mode with media query
-
-```css
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #121212;
-        --surface: #1e1e1e;
-        --text: #e0e0e0;
-        --text-secondary: #a0a0a0;
-        --border: #333;
-    }
-}
-```
-
-### Example 3: Reduced motion
-
-```css
-@media (prefers-reduced-motion: reduce) {
-    .parallax-bg {
-        background-attachment: scroll;   /* Disable parallax */
-    }
-
-    .fade-in {
-        opacity: 1;                      /* Always visible */
-        transform: none;
-    }
-}
-```
-
 ## Glossary
 
 | Term | Definition |
@@ -613,7 +495,6 @@ h1 {
 | prefers-reduced-motion | User preference to minimize animation |
 | Mobile-first | Base styles for mobile, add with min-width |
 | Range syntax | Modern `min-width <= width <= max-width` |
-
 
 ## Quick References
 

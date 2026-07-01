@@ -41,35 +41,22 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 - **Subject** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
 - **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`). Every subject must consist of one or more modules.
 - **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
-- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice (e.g., mathematics, linear algebra, vector spaces). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based content belongs in `roadmaps/`, not in content modules.
+- **Must be a real branch of knowledge.** Subjects, modules, and submodules must represent established fields of study or practice (e.g., mathematics, linear algebra, vector spaces). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based profession explorations belong in `careers/`, not in content modules.
 - **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory. Every `intro/` must have an `index.md` listing its files.
 - **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
 - Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
 
-## Roadmaps Directory
+## Careers Directory
 
-The `roadmaps/` directory is a special directory that does **not** follow the subject/module/submodule convention. It contains role-based learning paths organized by career level.
+The `careers/` directory follows the same subject/module convention as other top-level directories. Each career is a module that explores a profession in depth — what the role entails, its responsibilities, specializations, career progression, and industry context. These documents discuss the *profession itself*, not what someone should learn to enter it.
 
 ### Rules
 
-- Structure: `{level}/{role}.md` where `level` is one of `junior`, `mid`, `senior`, `manager`, `specialist`, `executive`.
-- Each level has an `index.md` listing all roles available at that level.
-- Each role file is a learning path using priority labels: `🔴 CRITICAL`, `🟠 HIGH`, `🟡 MEDIUM`, `🟢 LOW`.
-- `roadmaps/index.md` lists all levels (not individual roles).
-- They are guides, not content modules — they reference existing DevBook files where possible.
-- The 9-section mandatory format does **not** apply to roadmap files.
-- **Index references allowed.** Roadmaps may link to `index.md` files (subject, module, or submodule) to imply the reader should cover all content under that index. For example, a backend developer roadmap might list `[Networks](networks/index.md)` as a CRITICAL prerequisite, meaning every document under `networks/` must be mastered. This avoids listing every file individually when a whole module is required.
-
-### Level reference
-
-| Level | Experience | Focus |
-|-------|-----------|-------|
-| `junior/` | 0–2 years | Fundamentals, tooling basics, completing defined tasks with guidance |
-| `mid/` | 2–5 years | Independence, testing, design patterns, delivering features end-to-end |
-| `senior/` | 5+ years | Architecture, system design, mentoring, cross-team influence |
-| `manager/` | varies | Leading teams, product, and processes — EM, PM, People Ops, TPM |
-| `specialist/` | varies | Deep expertise (architect, SRE, security, data engineer) — requires senior-level experience in a domain |
-| `executive/` | varies | C-level, founders, investors, board members — requires extensive leadership experience |
+- Structure: `{career}/{module}/{short-description}.md`
+- Each career module has an `index.md`, an `intro/` with background content, and content files covering different aspects of the profession.
+- Content files follow the 9-section mandatory format.
+- Career modules are subjects of study about professions, not learning paths for individuals.
+- Unlike the old `roadmaps/` directory, careers are not organized by experience level — they are standalone profession profiles.
 
 ## Index System
 
@@ -204,15 +191,11 @@ Index files are valid prerequisite targets when the reader must understand the e
 
 ## Content / Material
 
-The core material. Use headings, paragraphs, code blocks, diagrams (Mermaid), and math (LaTeX `$$`) as needed. Be concise but complete.
+The core material. Use headings, paragraphs, code blocks, diagrams (Mermaid), and math (LaTeX `$$`) as needed. Be concise but complete. Integrate real-world scenarios, examples, and walkthroughs directly into this section rather than separating them.
 
-## Study Cases (Optional)
+## Learning Tips (Optional)
 
-Real-world scenarios that apply the concepts. Walk through a problem and its solution.
-
-## Examples (Optional)
-
-Additional examples beyond the content section. Useful for edge cases or variations.
+Practical advice for studying and retaining the material. Common pitfalls to avoid, memory aids, practice strategies, or ways to apply the concepts.
 
 ## Glossary
 
@@ -248,7 +231,7 @@ Where to go next. Link to related documents or suggest practice exercises.
 - **Use Mermaid** for diagrams (flowcharts, sequence diagrams, graphs).
 - **Use LaTeX** (`$` inline, `$$` display) for math.
 - **Keep files focused.** A single document should cover one coherent topic. Split if it grows too long.
-- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, study cases, or diagrams. If longer than 800 lines, split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps.
+- **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, or diagrams directly in the Content section. If longer than 800 lines, split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps.
 
 ### Don'ts
 

@@ -8,6 +8,7 @@ Prime numbers, modular arithmetic, GCD, cryptographic foundations, and the theor
 
 ## Topics
 
+- [Number Systems](number-systems/index.md) — natural numbers, integers, rationals, reals, complex numbers, floating-point
 - [Divisibility & Primes](divisibility-and-primes.md) — division algorithm, prime numbers, fundamental theorem of arithmetic, GCD, Euclidean algorithm, Bezout identity
 - [Modular Arithmetic](modular-arithmetic.md) — congruence, modular operations, residue systems, inverses, fast exponentiation
 - [Chinese Remainder Theorem](chinese-remainder-theorem.md) — CRT statement, proof, Garner algorithm, residue number systems

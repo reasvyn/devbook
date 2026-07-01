@@ -560,69 +560,6 @@ fetch("https://example.com").then(response => {
 });
 ```
 
-## Study Cases
-
-### Case 1: Tracing an HTTP Request from Browser to Server and Back
-
-A user opens `https://shop.example.com/products?category=books&page=1` in their browser.
-
-**URL parsing:** scheme=`https`, host=`shop.example.com`, path=`/products`, query=`category=books&page=1`.
-
-**DNS resolution:** The browser queries DNS and receives `198.51.100.23` for `shop.example.com`.
-
-**TCP handshake:** Three-way handshake to `198.51.100.23:443`: SYN, SYN-ACK, ACK.
-
-**TLS handshake:** ClientHello, ServerHello with certificate (valid for `*.example.com`, issued by Let's Encrypt), key exchange, Finished.
-
-**HTTP request (HTTP/2):**
-```
-:method: GET
-:path: /products?category=books&page=1
-:authority: shop.example.com
-:scheme: https
-cookie: session_id=xyz789
-```
-
-**Server processing:** Nginx receives the request and forwards it to a backend application, which queries a database and renders an HTML response.
-
-**HTTP response:** status 200, compressed HTML body, cookies for session tracking.
-
-**Browser rendering:** The browser decompresses the HTML, discovers CSS and image resources, and fetches them over additional HTTP/2 streams on the same connection.
-
-**Total time:** ~200-500ms depending on network conditions.
-
-### Case 2: Why HTTP/2 Multiplexing Improves Page Load Time
-
-A page needs `document.html` (50 KB), `styles.css` (20 KB), `app.js` (100 KB), `logo.png` (30 KB), and `hero.jpg` (200 KB).
-
-**Under HTTP/1.1:** Requests are queued per connection. If `styles.css` is slow, `app.js` is blocked behind it (HOL blocking). Browsers open 6-8 parallel connections, but each has its own queue.
-
-```
-HTTP/1.1:  [REQ doc] -> [RES doc] -> [REQ css] -> [RES css] -> [REQ js] -> ...
-```
-
-**Under HTTP/2:** All 5 requests send simultaneously on one connection. The server responds in any order. The large `hero.jpg` does not block the small `styles.css`.
-
-```
-HTTP/2:  Stream 1: [REQ doc]  -> ... -> [RES doc]
-         Stream 3: [REQ css]  -> ... -> [RES css]
-         Stream 5: [REQ js]   -> ... -> [RES js]
-```
-
-**Result:** HTTP/1.1 total time = serialized sum of all responses. HTTP/2 total time = time of the slowest resource. This translates to 30-60% faster page loads on real-world sites, especially over high-latency connections.
-
-### Case 3: What Happens When an HTTPS Certificate is Invalid
-
-An invalid certificate triggers errors during the TLS handshake, and the client refuses to establish a secure connection.
-
-**Expired certificate:** The server presents a certificate whose validity period has passed. The browser shows a full-page warning (e.g., `NET::ERR_CERT_DATE_INVALID` in Chrome). curl returns `SSL certificate problem: certificate has expired`. Python requests raises `requests.exceptions.SSLError`.
-
-**Self-signed certificate:** The certificate is not signed by a trusted CA. The client rejects it with `CERTIFICATE_VERIFY_FAILED`. Bypassing with `verify=False` (Python) or `-k` (curl) is possible but dangerous and should only be used for local development.
-
-**Hostname mismatch:** The certificate is issued for `other-site.com` but the URL points to `shop.example.com`. Error: `SSL: no alternative certificate subject name matches target host name`.
-
-**Why this matters:** Without certificate validation, a man-in-the-middle (MITM) attack is trivial. An attacker on the same Wi-Fi network can intercept the connection, present their own certificate, and decrypt all traffic. Validation ensures you are talking to the real server, not an impostor.
-
 ## Glossary
 
 | Term | Definition |

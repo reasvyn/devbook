@@ -707,66 +707,6 @@ function dangerous() {
 }
 ```
 
-## Study Cases
-
-### Case 1: Loading Dashboard with Loading States
-
-```javascript
-class DashboardLoader {
-    constructor() {
-        this.state = { loading: false, error: null, data: null };
-    }
-
-    async load(userId) {
-        this.state.loading = true;
-        this.state.error = null;
-        this.render();
-
-        try {
-            const [user, posts, notifications] = await Promise.all([
-                this.fetchUser(userId),
-                this.fetchPosts(userId),
-                this.fetchNotifications(userId)
-            ]);
-
-            this.state.data = { user, posts, notifications };
-        } catch (error) {
-            this.state.error = error.message;
-        } finally {
-            this.state.loading = false;
-            this.render();
-        }
-    }
-
-    async fetchUser(id) {
-        const res = await fetch(`/api/users/${id}`);
-        if (!res.ok) throw new Error("Failed to load user");
-        return res.json();
-    }
-
-    async fetchPosts(userId) {
-        const res = await fetch(`/api/users/${userId}/posts`);
-        return res.json();
-    }
-
-    async fetchNotifications(userId) {
-        const res = await fetch(`/api/users/${userId}/notifications`);
-        return res.json();
-    }
-
-    render() {
-        const container = document.querySelector("#dashboard");
-        if (this.state.loading) {
-            container.innerHTML = "<div>Loading...</div>";
-        } else if (this.state.error) {
-            container.innerHTML = `<div class="error">${this.state.error}</div>`;
-        } else if (this.state.data) {
-            container.innerHTML = this.renderData(this.state.data);
-        }
-    }
-}
-```
-
 ## Glossary
 
 | Term | Definition |

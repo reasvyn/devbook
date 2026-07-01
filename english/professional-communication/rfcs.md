@@ -469,41 +469,6 @@ An RFC process is only effective if the team actually uses it. Building the cult
 
 **Retire old RFCs.** When an RFC is superseded, mark it clearly. Link to the new RFC from the old one.
 
-## Study Cases
-
-### Case 1: A Lightweight RFC That Prevented an Architectural Mistake
-
-A team proposed migrating their monolith to microservices. The RFC was initially a 50-slide presentation. The author converted it to a two-page RFC following the lightweight template.
-
-The review revealed that the team had not considered data consistency requirements. The ordering service needed transactions across services, which microservices handle poorly. The RFC was updated to propose a strangler fig pattern that extracted only the read-only services first.
-
-The lightweight process caught the issue before the team committed months of effort to the wrong architecture.
-
-### Case 2: A Heavyweight RFC for a Cross-Team Database Migration
-
-A central infrastructure team proposed migrating all PostgreSQL databases from version 12 to version 16. The RFC covered:
-
-- Motivation: version 12 reaches end-of-life in six months
-- Design: blue-green migration with read replicas
-- Impact on each team's services
-- Rollback plan if migration fails
-- Timeline with explicit milestones per team
-
-Each team had one week to review and raise concerns. The RFC was accepted with conditions: two teams needed additional testing time. The decision log noted the conditions, and the migration proceeded on a per-team schedule.
-
-### Case 3: An RFC That Was Rejected and Why That Was a Good Outcome
-
-An engineer proposed replacing the team's message queue with a different technology. The RFC was well-written and the author had done thorough benchmarking. However, during review, the team's SRE representative pointed out that the proposed queue had no operational experience on the team and would require new monitoring, runbooks, and incident response procedures.
-
-The RFC was rejected, but the decision log clearly documented the reasoning. Six months later, when the team hired an engineer with experience in the proposed queue, they revisited the RFC and accepted it with updated risk analysis.
-
-The author did not feel rejected personally because the decision was about operational readiness, not about the quality of the proposal.
-
-## Examples
-
-### Example 1: RFC Motivation Section
-
-```markdown
 ## Motivation
 
 Our CI pipeline runs 45 minutes on average for a full test suite. Developers

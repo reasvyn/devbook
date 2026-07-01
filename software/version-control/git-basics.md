@@ -432,36 +432,6 @@ git push
 - **Review your changes before committing** — use `git diff` to make sure you are only committing what you intend.
 - **Never force push shared branches** — `git push --force` rewrites history and breaks other developers' clones. Use `--force-with-lease` if absolutely necessary.
 
-## Study Cases
-
-**Case 1: Recovering a deleted file.**
-
-You accidentally delete a file and realize it before committing:
-
-```bash
-rm important.py
-git restore important.py     # file is back
-```
-
-If the deletion was already committed, use:
-
-```bash
-git revert HEAD
-```
-
-**Case 2: You committed on main instead of a branch.**
-
-```bash
-# Create the branch that should have existed
-git branch feature-x
-
-# Move main back one commit
-git reset --hard HEAD~1
-
-# Switch to the feature branch
-git checkout feature-x
-```
-
 ## Glossary
 
 | Term | Definition |

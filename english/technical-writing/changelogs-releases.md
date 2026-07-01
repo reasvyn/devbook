@@ -533,19 +533,6 @@ Link each version to its diff:
 [1.1.0]: https://github.com/org/repo/compare/v1.0.0...v1.1.0
 ```
 
-## Study Cases
-
-### Case 1: From No Changelog to Keep a Changelog
-
-A project had no changelog. New users had no way to evaluate the release history.
-
-```text
-Before:
-(no changelog)
-
-After:
-# Changelog
-
 ## [1.0.0] - 2026-06-29
 
 ### Added
@@ -641,11 +628,6 @@ Upgrading is automatic — all users will be on v3.0 by July 1.
 ...
 ```
 
-## Examples
-
-### Example 1: Standard Changelog Structure
-
-```markdown
 ## [1.3.0] - 2026-06-29
 
 ### Added

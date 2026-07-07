@@ -323,6 +323,68 @@ func drawLine(x1 int, x2 int, y1 int, y2 int)  # Swapped x/y pairing
 
 **POLA checklist:** Does naming match behavior? Are parameters in natural order? Is return type predictable? Are side effects absent?
 
+### Pragmatics in Error Messages
+
+Error messages are a high-leverage application of pragmatics. A well-designed error message communicates what went wrong, why it happened, and how to fix it:
+
+```python
+# Poor — violates all maxims
+# Quantity: too little info
+# Manner: obscure code
+# Quality: misleading
+# Relation: irrelevant
+Error 0x7F: Access denied.
+
+# Good — respects all maxims
+# Quantity: enough to diagnose and fix
+# Quality: accurate description
+# Relation: directly addresses the issue
+# Manner: clear language
+Permission denied: User 'alice' does not have 'write' access
+to bucket 'my-bucket'. To fix, contact your administrator
+or use a different access key.
+```
+
+**Error message conversational structure:**
+
+| Component | Purpose | Example |
+|-----------|---------|---------|
+| What happened | State the error factually | "Connection timed out" |
+| Why it happened | Explain the cause | "The server at 192.168.1.1:8080 did not respond within 5 seconds" |
+| How to fix it | Suggest next steps | "Check that the server is running and reachable, or increase the timeout value" |
+| Where to get help | Provide escalation path | "See https://docs.example.com/troubleshooting for more details" |
+
+**The politeness dimension in errors:**
+
+```python
+# Impolite — blame-shifting
+YOU ENTERED AN INVALID DATE. (Shouts, blames user)
+
+# Polite — user-centered
+The date "04-13-2026" is not valid. Expected format: YYYY-MM-DD.
+Please correct and try again. (Explains, guides)
+```
+
+### Pragmatics in Code Review
+
+Code review is a pragmatic act — it involves the reviewer communicating judgments about another developer's work. Effective code review communication balances honesty with face-saving:
+
+**Politeness strategies in code review comments:**
+
+| Strategy | Threat level | Example |
+|----------|-------------|---------|
+| Bald on record | High | "This is wrong. Use a hash map instead." |
+| Positive politeness | Medium | "Good start! One improvement: a hash map would make this O(1) instead of O(n)." |
+| Negative politeness | Lower | "Have you considered using a hash map here? It might improve the complexity." |
+| Off-record (hint) | Lowest | "This reminds me of the difference between O(n) and O(1) lookups..." |
+
+**Grice's maxims applied to code review:**
+
+- **Quantity:** Be informative but not overwhelming. "This function is getting long" is less helpful than "Extracting the validation logic into a separate function would improve readability."
+- **Quality:** Be accurate. Do not say "this never happens" when it happens in edge cases.
+- **Relation:** Stay on topic. Do not bring up unrelated style preferences in a review about correctness.
+- **Manner:** Be clear. Use code examples alongside prose explanations.
+
 ### Presupposition and Definiteness
 
 **Presuppositions:** Background assumptions for an utterance to make sense.

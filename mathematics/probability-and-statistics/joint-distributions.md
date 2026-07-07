@@ -331,6 +331,122 @@ y = stats.t.ppf(u[:, 1], df)
 print(f"Correlation: {np.corrcoef(x, y)[0, 1]:.4f}")
 ```
 
+### Copula Families and Their Properties
+
+Different copula families capture different dependence structures:
+
+**Gaussian copula:** Derived from the multivariate normal distribution. It captures linear correlation but has no tail dependence — extreme events in one variable do not increase the probability of extreme events in the other.
+
+$$
+C_{\rho}(u, v) = \Phi_{\rho}(\Phi^{-1}(u), \Phi^{-1}(v))
+$$
+
+**Clayton copula:** Exhibits strong lower tail dependence — variables tend to be correlated during extreme negative events. Used in finance for modeling asset returns during market crashes.
+
+**Frank copula:** Has no tail dependence and allows both positive and negative dependence over its full range. Suitable for data with weak symmetric dependence.
+
+**Gumbel copula:** Exhibits upper tail dependence — variables are correlated during extreme positive events. Used in hydrology for modeling flood peaks and in insurance for extreme claims.
+
+```python
+import numpy as np
+from scipy import stats
+
+def clayton_copula_samples(theta, n=1000):
+    """Generate samples from a Clayton copula."""
+    v = np.random.exponential(1, n)
+    u1 = np.random.uniform(0, 1, n)
+    u2 = (1 + v**(-1/theta) * (u1**(-theta) - 1))**(-1/theta)
+    return u1, u2
+
+theta = 2.0  # Controls dependence strength
+u1, u2 = clayton_copula_samples(theta, 5000)
+kendall_tau = stats.kendalltau(u1, u2)[0]
+print(f"Clayton(theta={theta}): Kendall's tau = {kendall_tau:.4f}")
+```
+
+### Transformations of Random Vectors
+
+When transforming a random vector $\mathbf{X}$ to $\mathbf{Y} = g(\mathbf{X})$, the joint distribution changes according to the **change of variables** formula.
+
+For a bijective, differentiable transformation $\mathbf{Y} = g(\mathbf{X})$:
+
+$$
+f_{\mathbf{Y}}(\mathbf{y}) = f_{\mathbf{X}}(g^{-1}(\mathbf{y})) \cdot |\det J_{g^{-1}}(\mathbf{y})|
+$$
+
+where $J_{g^{-1}}$ is the Jacobian matrix of the inverse transformation.
+
+**Linear transformations:** If $\mathbf{Y} = A\mathbf{X} + \mathbf{b}$ where $A$ is invertible:
+
+$$
+f_{\mathbf{Y}}(\mathbf{y}) = \frac{1}{|\det A|} f_{\mathbf{X}}(A^{-1}(\mathbf{y} - \mathbf{b}))
+$$
+
+**Sum of random variables:** For $Z = X + Y$:
+
+$$
+f_Z(z) = \int_{-\infty}^{\infty} f_{X,Y}(x, z - x) \, dx
+$$
+
+If $X$ and $Y$ are independent, this becomes the convolution:
+
+$$
+f_Z(z) = \int_{-\infty}^{\infty} f_X(x) f_Y(z - x) \, dx
+$$
+
+**Applications:**
+- **Portfolio theory.** The return of a portfolio is a linear combination of asset returns. The distribution of portfolio returns determines value-at-risk and expected shortfall.
+- **Image processing.** Color space transformations (RGB to HSV) are bijective transformations of random vectors. Understanding how noise propagates through these transformations guides filter design.
+- **Kalman filters.** The prediction step applies a linear transformation to the state estimate. The covariance update uses the Jacobian to transform uncertainty.
+
+### Order Statistics
+
+Order statistics are the sorted values of a random sample: $X_{(1)} \leq X_{(2)} \leq \dots \leq X_{(n)}$.
+
+**Distribution of the $k$th order statistic:**
+
+$$
+f_{X_{(k)}}(x) = \frac{n!}{(k-1)!(n-k)!} F_X(x)^{k-1} (1 - F_X(x))^{n-k} f_X(x)
+$$
+
+**Joint distribution of minimum and maximum:**
+
+$$
+f_{X_{(1)}, X_{(n)}}(x, y) = n(n-1) (F_X(y) - F_X(x))^{n-2} f_X(x) f_X(y), \quad x < y
+$$
+
+**Applications:**
+- **Outlier detection.** The distribution of the maximum provides a threshold for identifying extreme values under the null hypothesis.
+- **Extreme value theory.** The Fisher-Tippett-Gnedenko theorem states that the distribution of the normalized maximum converges to one of three extreme value distributions (Gumbel, Frechet, Weibull), regardless of the original distribution.
+- **Rank-based statistics.** The Wilcoxon rank-sum test and the Mann-Whitney U test are based on order statistics. They provide non-parametric alternatives to the $t$-test that do not assume normality.
+
+```python
+import numpy as np
+from scipy import stats
+
+# Distribution of the maximum of n exponential(1) variables
+n = 10
+samples = np.random.exponential(1, (50000, n))
+maxima = np.max(samples, axis=1)
+# Theoretical: P(max <= x) = (1 - exp(-x))^n
+x = np.linspace(0, 8, 100)
+empirical_cdf = np.mean(maxima[:, None] <= x, axis=0)
+theoretical_cdf = (1 - np.exp(-x))**n
+print(f"Max deviation: {np.max(np.abs(empirical_cdf - theoretical_cdf)):.4f}")
+```
+
+### Applications in Machine Learning
+
+Joint distributions appear throughout ML:
+
+**Linear discriminant analysis (LDA):** Models each class as a multivariate normal distribution with a shared covariance matrix. The decision boundary between classes is linear in feature space.
+
+**Gaussian processes:** Define a joint distribution over function values. Any finite set of points has a multivariate normal distribution specified by a mean function and covariance kernel. Predictions condition on observed data using the conditional normal formula.
+
+**Variational autoencoders:** Model the joint distribution $p(x, z)$ where $x$ is the data and $z$ is a latent representation. The encoder approximates $p(z|x)$ and the decoder approximates $p(x|z)$. Training maximizes the evidence lower bound (ELBO).
+
+**Generative adversarial networks (GANs):** Learn the joint distribution of data and noise implicitly through adversarial training. The generator learns $p(x|z)$ while the discriminator learns to distinguish real from generated samples.
+
 ## Glossary
 
 | Term | Definition |
@@ -352,6 +468,11 @@ print(f"Correlation: {np.corrcoef(x, y)[0, 1]:.4f}")
 | Regression function | $E[Y \mid X]$ as a function of $X$ |
 | Gaussian mixture model | Weighted sum of multivariate normal distributions |
 | Bayesian network | Graphical model encoding conditional independence |
+| Order statistics | Sorted values of a random sample |
+| Change of variables | Formula for distribution of transformed random vectors |
+| Extreme value distribution | Limiting distribution of sample maxima |
+| Gaussian process | Distribution over functions with multivariate normal finite marginals |
+| LDA | Linear discriminant analysis — classification via class-conditional MVN |
 
 ## Quick References
 

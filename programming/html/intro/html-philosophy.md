@@ -82,6 +82,14 @@ The lenient parser is a double-edged sword:
 
 The key insight: HTML's error recovery exists because the web serves a diverse, global audience with varying skill levels and tools. A strict parser would exclude people who cannot or do not write perfect markup. The web trades purity for accessibility.
 
+**How the parser works in practice.** The HTML parser algorithm, detailed in section 12.2 of the HTML Living Standard, spans over 100 pages of specification text. It is divided into two phases:
+
+**Tokenization.** The parser reads the input character by character and produces a stream of tokens: DOCTYPE tokens, start tags, end tags, comments, character tokens, and end-of-file tokens. The tokenizer has over 80 distinct states, each handling a specific character sequence — `<!` triggers a comment or doctype attempt, `</` signals an end tag, `<?` is a parse error (treated as a comment in some contexts). When the tokenizer encounters an unexpected character, it switches to a recovery state and consumes input until it can resume normal processing.
+
+**Tree construction.** The token stream feeds into the tree construction algorithm, which builds the DOM node by node. Tree construction maintains several data structures: a stack of open elements (tracking currently open tags), a list of active formatting elements (for managing `<b>`, `<i>`, and similar overlapping tags), and an insertion mode pointer that changes as the parser encounters certain elements like `<select>`, `<table>`, or `<template>`. When a misnested tag like `<b><i>text</b></i>` is encountered, the algorithm automatically closes the inner `<i>` before closing the `<b>`, producing a well-formed DOM tree.
+
+This specification-by-algorithm approach was revolutionary. Previous HTML standards described what valid documents looked like — a grammar. The HTML5 specification described what the parser should do — a program. This shift from descriptive to procedural specification made browser behavior deterministic across all implementations for the first time.
+
 ### Principle 3: Separation of Concerns
 
 HTML is responsible for structure and meaning. CSS handles presentation. JavaScript manages behavior. This separation is a foundational principle of web development.
@@ -278,6 +286,16 @@ This distinction explains several characteristics of HTML:
 
 The platform approach has a cost: HTML evolves slowly. Adding a new element requires consensus among browser vendors, specification editors, and the developer community. A framework can add a feature in a single release. This tradeoff is intentional — stability and universality matter more than speed.
 
+The platform-vs-framework distinction has concrete consequences for how HTML features are designed:
+
+**Features must be composable.** A platform provides primitives that can be combined in unpredictable ways. HTML elements compose freely: an `<a>` element can contain an `<img>`, which can be wrapped in a `<figure>`, inside an `<article>`, inside a `<section>`. There are no restrictions on most nesting combinations beyond a few semantic rules — for example, an `<a>` cannot contain another interactive `<a>`, and a `<p>` cannot contain block-level elements. Frameworks, by contrast, often impose structural constraints and component hierarchies that dictate application architecture.
+
+**Features must be independently useful.** Every HTML element should work on its own, without requiring companion elements or libraries. A `<button>` functions without CSS or JavaScript. A `<form>` submits data over HTTP without AJAX libraries. A `<details>` element opens and closes natively. A `<video>` element renders controls and plays media without a JavaScript player library. This independence ensures that the platform serves as a reliable baseline — content is always functional, even when layers above it fail.
+
+**Features must degrade gracefully.** New HTML elements should provide value in modern browsers while falling back to something functional in older ones. The `<dialog>` element, for example, is natively modal in supporting browsers, managing focus trapping and overlay stacking automatically. In older browsers, it appears as a positioned `<div>` — visually less sophisticated but still readable and interactive. The `loading="lazy"` attribute on images is ignored by older browsers, which simply load the image eagerly — a slower experience but not a broken one.
+
+**The neutrality contract.** By refusing to prescribe application architecture, HTML maintains neutrality across frameworks and methodologies. React, Vue, Angular, Svelte, and vanilla JavaScript all produce the same target: HTML elements in a DOM tree. This neutrality is why the web platform can evolve independently from the JavaScript framework ecosystem — a new HTML element benefits all frameworks equally the moment browsers ship it.
+
 ### Principle 9: The Priority of Constituencies
 
 The WHATWG specification defines a hierarchy of constituencies that should be prioritized when making design decisions:
@@ -322,6 +340,102 @@ The principles do not always agree. Real HTML design involves tradeoffs:
 **Platform stability vs innovation.** HTML evolves slowly by design. But slow evolution frustrates developers who want new capabilities today. The tension is managed by the layer model: CSS and JavaScript evolve faster than HTML, providing new capabilities without requiring changes to the markup language itself.
 
 **Universality vs specialization.** Designing for everyone means no one gets a perfect experience. A feature that works well on desktop might be awkward on mobile. A feature that is intuitive for experts might confuse beginners. The web platform aims for the broadest possible middle ground.
+
+### Study Cases
+
+**Case 1: `<div>`-Spam and the Rise of Semantic Elements**
+
+In the early 2000s, virtually every website used `<div>` elements with class names for all structural components: `<div class="header">`, `<div class="nav">`, `<div class="content">`, `<div class="footer">`. This pattern worked visually — CSS could style any `<div>` — but it was meaningless to machines. A screen reader could not distinguish a navigation `<div>` from a content `<div>`, because both were identical `<div>` elements differentiated only by class names that human authors chose arbitrarily. HTML5 addressed this by introducing dedicated semantic elements: `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, and `<footer>`. These elements express meaning in the tag name itself, making the document structure discoverable by any tool that parses HTML — search engines, screen readers, browser extensions, and AI agents. This case study illustrates how the platform recognizes widespread usage patterns and elevates them to first-class syntax, improving accessibility and machine readability without requiring authors to change their underlying mental model.
+
+**Case 2: The jQuery Era — When Libraries Fill Platform Gaps**
+
+From 2006 to 2015, jQuery was the most widely used JavaScript library on the web, present on over 70% of all websites. jQuery succeeded because the platform had significant gaps: browsers implemented inconsistent DOM APIs, there was no standardized way to select elements by CSS selector (`document.querySelectorAll()` did not exist), the `classList` API was not yet available, and AJAX required verbose `XMLHttpRequest` code. jQuery provided a unified, cross-browser API that "just worked." Over time, HTML5 and its companion specifications filled these gaps natively — `querySelector`, `classList`, `fetch`, and the `dataset` API for custom data attributes — reducing the need for jQuery to the point where modern projects rarely include it. This case demonstrates the dynamic between platform and libraries: libraries flourish where the platform is weak and recede as the platform improves, validating the platform approach of providing stable primitives that others build upon.
+
+**Case 3: Polyfills — Community-Driven Platform Extension**
+
+Polyfills exemplify progressive enhancement at the specification level. When HTML5 introduced `<canvas>`, `<video>`, and semantic elements, developers could not wait years for all browsers to implement them natively. Polyfills — JavaScript libraries that emulate missing browser features — bridged this gap. The `html5shiv` polyfill made HTML5 semantic elements work in Internet Explorer 6-8 by using `document.createElement()` to register unknown elements so they could be styled with CSS. Google's `html5shiv` was included in the HTML5 Boilerplate project and became standard practice for years. This case study shows how the web community self-organizes around platform gaps, enabling adoption years before native implementation reaches all users. Polyfills also create pressure on browser vendors: when a polyfill proves widely used and performant, it signals real developer demand for native implementation.
+
+**Case 4: Mobile Viewports — Proprietary Innovation Becomes Standard**
+
+When the iPhone launched in 2007, most websites were designed for desktop monitors and rendered as tiny, unreadable shrunken pages on the 320px-wide screen. Apple introduced the viewport meta tag as a proprietary extension to iOS Safari:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+This tag instructed the browser to render at the device's actual pixel width rather than scaling down a desktop layout. It was a vendor-specific solution to a universal problem. Other mobile browsers adopted the same meta tag, and it eventually became standardized in the CSS Device Adaptation specification. Today it is considered mandatory for any responsive website. This case illustrates how the platform absorbs successful innovations from any source — a feature does not need to originate from a standards body to become part of the platform. What matters is adoption and interoperability.
+
+### Examples
+
+**Progressive Enhancement — A Form for All Conditions**
+
+This form demonstrates progressive enhancement: baseline HTML guarantees submission, while JavaScript enhances the experience:
+
+```html
+<form action="/subscribe" method="POST" id="subscribe-form">
+    <label for="email">Email address</label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Subscribe</button>
+</form>
+<script>
+    document.getElementById('subscribe-form')
+        .addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(e.target);
+            await fetch('/api/subscribe', {
+                method: 'POST', body: data
+            });
+        });
+</script>
+```
+
+With JavaScript enabled, the form submits via AJAX without a page reload. Without JavaScript, it performs a standard HTTP POST to `/subscribe`. Both paths reach the server. The HTML layer guarantees core functionality; JavaScript enhances the user experience by eliminating the full-page refresh.
+
+**Semantic vs Non-Semantic Navigation**
+
+Two approaches to building a breadcrumb trail, with markedly different machine readability:
+
+```html
+<!-- Non-semantic: meaning must be inferred from class names -->
+<div class="breadcrumbs">
+    <span class="crumb"><a href="/">Home</a></span>
+    <span class="separator">&gt;</span>
+    <span class="crumb"><a href="/products">Products</a></span>
+    <span class="separator">&gt;</span>
+    <span class="crumb current">Widgets</span>
+</div>
+
+<!-- Semantic: meaning is expressed in element and attribute names -->
+<nav aria-label="Breadcrumb">
+    <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li aria-current="page">Widgets</li>
+    </ol>
+</nav>
+```
+
+The semantic version uses `<nav>` for navigation context, `<ol>` for ordered hierarchy (breadcrumbs are inherently ordered), `aria-label` for screen reader identification, and `aria-current="page"` to mark the current position in the navigation. The non-semantic version requires humans and automated tools to infer meaning from arbitrary class names and presentation characters (`&gt;`), which is fragile and inaccessible.
+
+**Accessibility-First Interactive Element**
+
+The difference between a native button and a `<div>` pretending to be a button illustrates why platform primitives matter:
+
+```html
+<!-- Accessible by default: native button provides semantics, keyboard
+     interaction, focus management, and form participation for free -->
+<button type="button" onclick="handleClick()">Submit</button>
+
+<!-- Must manually reimplement every browser feature:
+     role, tabindex, keyboard handler, ARIA states -->
+<div role="button" tabindex="0" onclick="handleClick()"
+     onkeydown="if(event.key==='Enter'||event.key===' ')
+         handleClick()">
+    Submit
+</div>
+```
+
+The native `<button>` announces itself to screen readers, participates in Tab key navigation, responds to Enter and Space keys, and integrates with form submission — all without any additional code. The `<div>` requires manual implementation of each of these features, and in practice, at least one is usually missed.
 
 ## Glossary
 

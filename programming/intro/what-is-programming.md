@@ -17,9 +17,8 @@ An introduction to the discipline of programming — what it means to write inst
 - [The Programming Process](#the-programming-process)
 - [Paradigms Overview](#paradigms-overview)
 - [Programming in the Real World](#programming-in-the-real-world)
+- [How to Choose a Language](#how-to-choose-a-language)
 - [Common Misconceptions](#common-misconceptions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)
@@ -39,6 +38,8 @@ Input → [Program] → Output
 ```
 
 The program defines the transformation. Without a program, the computer does nothing.
+
+Every program, regardless of language, follows the same fundamental structure: it reads data from somewhere (input), manipulates that data according to a set of rules (processing), and sends the result somewhere (output). The input could be a keyboard press, a network request, a sensor reading, or a file on disk. The output could be pixels on a screen, a network response, or a file written to storage.
 
 ### How Computers Execute Programs
 
@@ -64,6 +65,8 @@ When you run a program, the operating system loads it from storage into memory, 
 ```
 
 The speed of this cycle determines how fast a program runs. Modern CPUs use pipelining (executing multiple instructions at different stages simultaneously), caching (keeping frequently used data close to the CPU), and multiple cores (executing several instruction streams in parallel) to go faster.
+
+A CPU pipeline works like an assembly line. While one instruction is being executed, the next is being decoded, and the one after that is being fetched. In a perfect 5-stage pipeline, instructions complete every cycle instead of every 5 cycles. Branch prediction tries to guess which way a conditional jump will go so the pipeline stays full — a misprediction causes a costly pipeline flush.
 
 ### Programming Languages
 
@@ -92,6 +95,62 @@ High-level languages provide:
 
 The tradeoff is performance. Well-written assembly or machine code can be faster than equivalent high-level code, but the difference shrinks as compilers improve.
 
+The same program in different languages illustrates the abstraction levels:
+
+```asm
+; x86-64 assembly — add two numbers
+section .text
+    global _start
+_start:
+    mov eax, 5
+    mov ebx, 3
+    add eax, ebx
+    ; eax = 8
+```
+
+```c
+// C — compiled, explicit types, manual memory
+#include <stdio.h>
+int main() {
+    int a = 5, b = 3;
+    printf("%d\n", a + b);
+    return 0;
+}
+```
+
+```go
+// Go — compiled with garbage collection
+package main
+import "fmt"
+func main() {
+    a, b := 5, 3
+    fmt.Println(a + b)
+}
+```
+
+```rust
+// Rust — systems language with ownership
+fn main() {
+    let a: i32 = 5;
+    let b: i32 = 3;
+    println!("{}", a + b);
+}
+```
+
+```python
+# Python — interpreted, dynamic, high-level
+a, b = 5, 3
+print(a + b)
+```
+
+```javascript
+// JavaScript — dynamic, JIT-compiled
+let a = 5, b = 3;
+console.log(a + b);
+```
+
+Each language makes different tradeoffs. C gives you full control over memory but requires manual management. Rust enforces memory safety at compile time with ownership rules. Python maximizes developer speed at the cost of runtime performance. JavaScript runs in every browser, making it the universal language of the web.
+
 ### Compilation vs Interpretation
 
 High-level languages must be translated into machine code before the computer can execute them. There are two main approaches:
@@ -107,6 +166,28 @@ Source code → [Compiler] → Executable → [CPU] → Output
 _Advantages:_ Fast execution, no runtime dependency needed, full optimization.
 
 _Disadvantages:_ Slower development cycle (compile before every test), platform-specific executables.
+
+The compilation pipeline itself has multiple stages:
+
+```
+Source code
+    ↓
+[Preprocessor] — handles #include, #define, macros
+    ↓
+[Parser] — builds an Abstract Syntax Tree (AST)
+    ↓
+[Semantic Analyzer] — type checking, scope resolution
+    ↓
+[Intermediate Representation (IR) Generator]
+    ↓
+[Optimizer] — inlining, constant folding, loop unrolling
+    ↓
+[Code Generator] — emits assembly or machine code
+    ↓
+[Linker] — resolves external symbols, produces executable
+```
+
+Each stage transforms the program from human-readable text toward machine-executable binary. The optimizer is particularly important — a good compiler can make code run 2-10x faster through transformations that no human would write by hand.
 
 **Interpreted languages** (Python, JavaScript, Ruby):
 
@@ -181,13 +262,20 @@ numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x * x, numbers))
 ```
 
+Python supports functional style, but languages like Haskell enforce functional purity:
+
+```haskell
+-- Haskell — functional, no side effects by default
+squares = map (^2) [1..5]
+```
+
 **Object-oriented programming** — organizes code around objects that contain data (fields) and behavior (methods). Objects encapsulate state and communicate through method calls.
 
 ```python
 class Dog:
     def __init__(self, name):
         self.name = name
-    
+
     def bark(self):
         return f"{self.name} says woof!"
 
@@ -195,7 +283,23 @@ rex = Dog("Rex")
 print(rex.bark())
 ```
 
-Most modern languages support multiple paradigms. Python, JavaScript, Kotlin, and Scala let you mix imperative, functional, and OOP styles. The best paradigm depends on the problem and the team.
+**Procedural programming** — an imperative style that organizes code into procedures or functions. Before OOP, procedural programming was the dominant organization strategy.
+
+```c
+// C — procedural programming
+#include <stdio.h>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    printf("%d\n", add(5, 3));
+    return 0;
+}
+```
+
+Most modern languages support multiple paradigms. Python, JavaScript, Kotlin, and Scala let you mix imperative, functional, and OOP styles. The best paradigm depends on the problem and the team. A web application might use OOP for the domain model, functional style for data transformations, and imperative code for performance-critical loops.
 
 ### Programming in the Real World
 
@@ -241,15 +345,19 @@ Python and JavaScript satisfy all four criteria, which is why they are the most 
 
 **"Programming is about memorizing syntax."** Syntax is the easiest part. You look it up when you need it. The hard parts are problem decomposition, algorithm design, and debugging.
 
-**"You need to be good at math."** Basic arithmetic and logical reasoning are enough for most programming. Advanced math is only needed for specialized fields like graphics, machine learning, or cryptography.
+**"You need to be good at math."** Basic arithmetic and logical reasoning are enough for most programming. Advanced math is only needed for specialized fields like graphics, machine learning, or cryptography. A web developer uses more logic and pattern recognition than calculus.
 
-**"Programming is solitary."** Professional programming is highly collaborative. You spend more time reading code, reviewing code, and communicating than writing code.
+**"Programming is solitary."** Professional programming is highly collaborative. You spend more time reading code, reviewing code, and communicating than writing code. Studies suggest developers spend 60-70% of their time reading code, not writing it.
 
-**"More code is better."** Every line of code is a liability. It must be tested, maintained, and understood. The best code is the code you do not write.
+**"More code is better."** Every line of code is a liability. It must be tested, maintained, and understood. The best code is the code you do not write. Experienced developers write less code, not more — they use libraries, frameworks, and patterns that achieve more with fewer lines.
 
 **"Programming is easy once you learn a language."** Learning a language is the first step. The real skill is knowing what to build, how to structure it, and how to adapt as requirements change. These skills take years to develop.
 
-**"You can learn programming in a month."** You can learn the basics of a language in a month. Becoming a proficient programmer who can build reliable, maintainable software takes years of deliberate practice.
+**"You can learn programming in a month."** You can learn the basics of a language in a month. Becoming a proficient programmer who can build reliable, maintainable software takes years of deliberate practice. The first year is typically spent learning syntax and basic patterns. The next few years develop architectural thinking, testing discipline, and debugging instincts.
+
+**"Computers do exactly what you tell them."** This is both true and misleading. Computers execute your instructions literally, but what you intend and what you write are often different. A bug is not the computer doing something wrong — it is you telling the computer to do the wrong thing. The computer is always right, which is both humbling and empowering.
+
+**"Real programmers use [language X]."** There is no one "real" programming language. Every language exists because it solves a particular set of problems well. A systems programmer who dismisses Python ignores its utility for automation and data analysis. A web developer who dismisses Rust ignores its safety guarantees for performance-critical components. The best programmers are polyglots who choose the right tool for the job.
 
 ## Glossary
 
@@ -284,6 +392,16 @@ Python and JavaScript satisfy all four criteria, which is why they are the most 
 | Statement | An instruction that performs an action |
 | Boolean | A data type with two values: true and false |
 | String | A sequence of characters representing text |
+| Branch prediction | A CPU technique that guesses the outcome of conditional jumps to keep the pipeline full |
+| AST | Abstract Syntax Tree — the tree representation of source code structure used by compilers |
+| Linker | A tool that resolves external symbol references and produces a final executable |
+| Optimizer | A compiler stage that transforms code to improve performance without changing behavior |
+| CI/CD | Continuous Integration and Continuous Deployment — automated build, test, and release pipelines |
+| Postmortem | A written analysis of an incident to understand root causes and prevent recurrence |
+| Polyglot | A programmer who is proficient in multiple programming languages |
+| Deterministic | Always producing the same output from the same input with no randomness |
+| Volatile memory | Memory that loses its contents when power is removed (e.g., RAM) |
+| Persistent storage | Storage that retains data when power is removed (e.g., SSD, HDD) |
 
 ## Quick References
 
@@ -292,6 +410,10 @@ Python and JavaScript satisfy all four criteria, which is why they are the most 
 - [Code: The Hidden Language of Computer Hardware and Software](https://www.charlespetzold.com/code/) — how computers work from the ground up
 - [Learn to Program](https://pragprog.com/titles/ahlearnt2/) — beginner-friendly introduction
 - [Programming Paradigms for Beginners](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/) — overview of different programming styles
+- [Compiler Explorer (Godbolt)](https://godbolt.org/) — see how high-level code maps to assembly in real time
+- [CPU Instruction Pipeline Animations](https://www.youtube.com/watch?v=3cTt5sG4U-I) — visual explanation of pipeline architecture
+- [Teach Yourself Programming in Ten Years](https://norvig.com/21-days.html) — Peter Norvig on what it really takes to learn programming
+- [The Absolute Minimum Every Software Developer Must Know About Unicode](https://www.joelonsoftware.com/articles/Unicode.html) — character encoding fundamentals
 
 ## Next Steps
 

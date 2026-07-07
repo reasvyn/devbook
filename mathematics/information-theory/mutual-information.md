@@ -346,6 +346,96 @@ This is the central quantity in Shannon's noisy channel coding theorem.
 
 **Granger causality.** In time series analysis, conditional mutual information $I(X_t; Y_{<t} | X_{<t})$ measures whether $Y$ Granger-causes $X$ by quantifying the additional information past $Y$ provides about current $X$ beyond past $X$.
 
+### Interaction Information and Higher-Order Dependencies
+
+Interaction information extends mutual information to three or more variables:
+
+$$
+I(X; Y; Z) = I(X; Y) - I(X; Y | Z) = I(X; Z) - I(X; Z | Y) = I(Y; Z) - I(Y; Z | X)
+$$
+
+**Interpretation:**
+- $I(X; Y; Z) > 0$ indicates **redundancy** — the information that $X$ and $Y$ share about $Z$ is partially overlapping. Knowing $Z$ reduces the mutual information between $X$ and $Y$.
+- $I(X; Y; Z) < 0$ indicates **synergy** — $X$ and $Y$ together provide more information about $Z$ than either alone. The mutual information between $X$ and $Y$ increases when conditioning on $Z$.
+
+**Example — XOR gate:** For binary variables $X, Y, Z$ where $Z = X \oplus Y$ (XOR), each pair is independent but the triple is dependent. Here $I(X; Y) = 0$ (independence), but $I(X; Y | Z) = 1$ (knowing $Z$ makes $X$ and $Y$ dependent). This gives $I(X; Y; Z) = -1$, indicating pure synergy.
+
+**Partial information decomposition (PID):** PID decomposes the information that two source variables $X_1, X_2$ provide about a target $Y$ into four components:
+
+1. **Unique information** from $X_1$ — information only $X_1$ provides about $Y$
+2. **Unique information** from $X_2$ — information only $X_2$ provides about $Y$
+3. **Redundant information** — information both $X_1$ and $X_2$ provide about $Y$
+4. **Synergistic information** — information that emerges from the combination of $X_1$ and $X_2$
+
+PID has applications in neuroscience (analyzing how different brain regions encode information), feature selection (detecting redundant vs. synergistic feature interactions), and ensemble learning (understanding how different models complement each other).
+
+### Practical Estimation of Mutual Information
+
+Estimating mutual information from finite samples requires careful consideration of bias and variance:
+
+**k-Nearest Neighbors (KSG) estimator:** The Kraskov-Stogbauer-Grassberger estimator adapts the neighborhood size based on local density, reducing bias compared to fixed-bin methods:
+
+```python
+import numpy as np
+from sklearn.neighbors import NearestNeighbors
+
+def kraskov_mi(x, y, k=5):
+    """KSG mutual information estimator."""
+    n = len(x)
+    points = np.column_stack([x, y])
+
+    # Joint space distances
+    nn_joint = NearestNeighbors(n_neighbors=k+1).fit(points)
+    d, _ = nn_joint.kneighbors(points)
+    eps = d[:, k]
+
+    # Count neighbors in marginal spaces
+    mi = 0
+    for i in range(n):
+        nx = np.sum(np.abs(x - x[i]) < eps[i]) - 1
+        ny = np.sum(np.abs(y - y[i]) < eps[i]) - 1
+        mi += np.digamma(k) + np.digamma(n) - np.digamma(nx + 1) - np.digamma(ny + 1)
+    return mi / n
+
+np.random.seed(42)
+x = np.random.randn(1000)
+y = x + 0.3 * np.random.randn(1000)
+print(f"KSG MI (k=5): {kraskov_mi(x, y):.4f} nats")
+```
+
+**Bias correction:** The KSG estimator has negative bias for small samples ($n < 100$). Shuffle the data to estimate and subtract the baseline:
+
+```python
+def bias_corrected_mi(x, y, k=5, n_shuffles=50):
+    """Bias-corrected MI using shuffled baselines."""
+    mi_observed = kraskov_mi(x, y, k)
+    mi_shuffled = np.array([
+        kraskov_mi(x, np.random.permutation(y), k)
+        for _ in range(n_shuffles)
+    ])
+    return mi_observed - np.mean(mi_shuffled)
+
+mi_corrected = bias_corrected_mi(x, y)
+print(f"Bias-corrected MI: {mi_corrected:.4f} nats")
+```
+
+**Gaussian approximation:** For approximately Gaussian data, the closed-form formula provides a fast estimate:
+
+```python
+def gaussian_mi(x, y):
+    """MI for approximately Gaussian data using correlation."""
+    r = np.corrcoef(x, y)[0, 1]
+    return -0.5 * np.log2(1 - r**2)
+
+print(f"Gaussian approximation: {gaussian_mi(x, y):.4f} bits")
+```
+
+**Choosing the right estimator:**
+- **Discrete data** with small alphabets: direct plug-in estimator with bias correction (Miller-Madow)
+- **Continuous data** with simple dependencies: Gaussian approximation
+- **Continuous data** with complex dependencies: KSG estimator ($k = 3$ to $k = 10$)
+- **High-dimensional data:** Neural estimation (MINE — Mutual Information Neural Estimation)
+
 ## Glossary
 
 | Term | Definition |

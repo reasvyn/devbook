@@ -317,6 +317,60 @@ The pattern is clear: communication reach expands with seniority. A principal en
 
 **"My code is self-documenting."** — Self-documenting code reduces the need for comments but does not eliminate the need for documentation. The purpose of a module, the reason behind an architecture decision, the tradeoffs of an algorithm — these cannot be expressed in code alone.
 
+### Cross-Cultural Communication in Engineering
+
+Engineering teams are increasingly global, making cross-cultural communication a critical skill:
+
+**High-context vs. low-context cultures (Hall, 1976):**
+
+| Dimension | Low-context (US, Germany, Scandinavia) | High-context (Japan, China, Arab countries) |
+|-----------|--------------------------------------|------------------------------------------|
+| Communication | Explicit, direct, words carry meaning | Implicit, indirect, context carries meaning |
+| Feedback | Direct criticism is constructive | Indirect feedback preserves harmony |
+| Agreement | "Yes" means agreement | "Yes" means "I hear you," not necessarily agreement |
+| Documentation | Detailed, exhaustive | High-level, assumes background knowledge |
+
+**Practical implications for developers:**
+- In code reviews, a direct "This is wrong" may be appropriate for a low-context colleague but cause loss of face for someone from a high-context culture. "Have you considered an alternative approach here?" achieves the same goal with different framing.
+- In async communication, low-context writers should add context for high-context readers. "We decided to use PostgreSQL" becomes "Given our team's experience with PostgreSQL and its JSON support for flexible schemas, we decided to use it as our primary database."
+- Meeting culture varies. Some cultures expect the most senior person to speak first; others expect open discussion. Being aware of these differences prevents misinterpretation.
+
+**English as a second language considerations:**
+- Avoid idioms and cultural references: "ballpark figure," "hit the ground running," "move the goalposts"
+- Use simple sentence structures: subject-verb-object, avoid nested clauses
+- Define acronyms on first use: "API (Application Programming Interface)"
+- Use consistent terminology — do not switch between synonyms for the same concept
+- Be explicit about expectations: "I need this by Friday EOD" instead of "ASAP"
+
+### Developing a Personal Communication Practice
+
+Improving English communication is an ongoing process:
+
+**Daily habits:**
+- Read one technical document or RFC critically, noting vocabulary and sentence structures
+- Write one paragraph of technical documentation or a code comment with attention to clarity
+- Review a PR focusing on the communication quality of comments and commit messages
+- Participate in a written technical discussion (Slack, forum, GitHub issue)
+
+**Weekly habits:**
+- Write or update a small piece of documentation (README section, API doc)
+- Read an engineering blog post and summarize it in your own words
+- Give a short written status update to your team
+- Review your own writing from the previous week for patterns to improve
+
+**Monthly habits:**
+- Write or contribute to an RFC or design document
+- Read a technical book chapter and take structured notes
+- Record yourself explaining a technical concept and review the recording
+- Ask a colleague for feedback on a piece of writing
+
+**Resources for continued improvement:**
+- [Write the Docs](https://www.writethedocs.org/) — community for documentation practitioners
+- [Technical Writing Courses (Google)](https://developers.google.com/tech-writing) — free courses on technical writing
+- [Plain English Campaign](https://www.plainenglish.co.uk/) — guides for clear communication
+- [Hemingway Editor](https://hemingwayapp.com/) — tool for improving readability
+- [Grammarly](https://www.grammarly.com/) — AI writing assistant for grammar and clarity
+
 ## Glossary
 
 | Term | Definition |

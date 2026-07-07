@@ -330,6 +330,83 @@ The `@scope` rule (2024+) limits rules to a subtree:
 
 Scope helps with component isolation without Shadow DOM.
 
+### Interaction with Container Queries
+
+Container queries (`@container`) add a new dimension to the cascade. They allow styles to respond to the size of a parent container rather than the viewport:
+
+```css
+/* Define a container */
+.card-container {
+    container-type: inline-size;
+    container-name: card;
+}
+
+/* Query the container's size */
+@container card (min-width: 400px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Narrower container — stack vertically */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+```
+
+Container queries interact with the cascade like media queries — they do not change specificity or origin. A container query style has the same specificity as its selector, but only applies when the container condition is met. This allows fine-grained responsive design without increasing specificity battles.
+
+### The :has() Selector and Cascade Impact
+
+The `:has()` relational pseudo-class (2023+) selects elements based on their descendants:
+
+```css
+/* Select cards that contain an image */
+.card:has(img) {
+    grid-template-rows: auto 1fr;
+}
+
+/* Style a form differently when it has errors */
+form:has(.error) {
+    border-color: red;
+}
+
+/* Select a parent based on child state — previously impossible */
+li:has(> input:checked) {
+    background: #e8f5e9;
+}
+```
+
+`:has()` does not increase specificity beyond the sum of its parts. A selector like `.card:has(img)` has specificity `(0, 1, 1)` — one class plus one pseudo-class. This is higher than `.card` alone but lower than `#card`. Understanding this helps avoid cascade conflicts when using `:has()`.
+
+### Nesting and the Cascade
+
+CSS nesting (2023+) provides syntactic sugar for grouping related rules but does not affect the cascade:
+
+```css
+/* Nested syntax — purely syntactic, same cascade behavior */
+.card {
+    background: white;
+
+    & .title {
+        font-size: 1.25rem;    /* Same as .card .title */
+    }
+
+    & .body {
+        color: #666;            /* Same as .card .body */
+    }
+}
+
+/* Equivalent without nesting — identical specificity and cascade */
+.card { background: white; }
+.card .title { font-size: 1.25rem; }
+.card .body { color: #666; }
+```
+
+The nesting selector `&` does not add specificity. Nested rules have the same specificity as the equivalent un-nested selectors. The cascade treats them identically — only the source order differs.
+
 ### Source Order Strategies
 
 Practical strategies for managing cascade order:

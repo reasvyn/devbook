@@ -54,6 +54,18 @@ In 1987, Apple released **HyperCard** — a hypertext system for the Macintosh t
 
 Meanwhile, the publishing industry had developed **SGML** (Standard Generalized Markup Language, ISO 8879:1986) — a metalanguage for defining markup languages. SGML was powerful but complex. The full specification was over 500 pages. Tim Berners-Lee would later borrow SGML's syntax (angle-bracketed tags) for HTML, while dramatically simplifying it.
 
+Other hypertext systems of the 1980s also contributed ideas that shaped HTML's design:
+
+**Intermedia (1985).** Developed at Brown University's Institute for Research in Information and Scholarship, Intermedia was a hypertext system for education that ran on Unix workstations. It introduced bidirectional links — each link stored both its source and destination, allowing users to see all documents that referenced the current one. This concept of transclusion — showing content from one document embedded in another — later influenced the `<iframe>` element and modern content syndication patterns like RSS and embed APIs.
+
+**NoteCards (1985).** Developed by Frank Halasz at Xerox PARC, NoteCards organized information into semantic units called "cards" connected by typed links. Each link could describe its relationship to the target (e.g., "supports", "contradicts", "example-of"). This typed-link model influenced the semantic web movement and the development of microformats, RDFa, and JSON-LD — standards that add machine-readable meaning to HTML documents.
+
+**Guide (1986).** Created at the University of Kent, Guide was one of the first commercial hypertext systems for personal computers. It introduced "replacement links" — clicking a link would expand the linked content inline rather than navigating away from the current document. This interaction pattern reappeared in HTML5 with the `<details>` and `<summary>` elements, which provide native disclosure widgets without JavaScript.
+
+**HyperTIES (1987).** Developed at the University of Maryland, HyperTIES pioneered "embedded menus" — clickable links placed directly within running text rather than in separate navigation panels. This design directly influenced HTML's anchor element: in HTML, a link is an inline element that can appear within a paragraph, not a separate navigation structure. Every `<a>` tag embedded in prose today traces its lineage to HyperTIES.
+
+**The Common Ground.** What united these systems — and what HTML would inherit — was the principle that hypertext should be authorable, not just readable. HyperCard succeeded partly because non-programmers could create stacks with its scripting language, HyperTalk. Guide succeeded because writers could author documents without learning complex syntax. HTML's simplicity — a plain text file with angle brackets — made it the first hypertext system that anyone could use, on any computer, without purchasing specialized software.
+
 ### 1990–1991: Birth at CERN
 
 In 1989, Tim Berners-Lee was working as a software engineer at CERN, the European Organization for Nuclear Research in Geneva, Switzerland. CERN had thousands of scientists from hundreds of institutions worldwide, all sharing data through incompatible systems. Berners-Lee saw the problem clearly: researchers could not easily share information across different computers, operating systems, and networks.
@@ -71,6 +83,12 @@ By the end of 1990, Berners-Lee had built all the components necessary for a wor
 The first web page was published on August 6, 1991. It described what the World Wide Web was and how to set up a web server. Berners-Lee also posted a summary of the project to the alt.hypertext Usenet newsgroup, marking the first public announcement of the web.
 
 The original HTML had a tiny vocabulary: headings (`<h1>` through `<h6>`), paragraphs (`<p>`), lists (`<ul>`, `<ol>`, `<li>`), links (`<a>`), and emphasis (`<em>`, `<strong>`). There were no images, no tables, no forms, no stylesheets. The web was purely about hypertext documents.
+
+Berners-Lee and his colleague Robert Cailliau spent 1991 and 1992 evangelizing the web at conferences across Europe and the United States, demonstrating how hypertext could connect research documents across the internet. They carried a NeXTcube to conferences, connected it to the CERN server via telephone lines, and showed live hypertext navigation. The reception was enthusiastic but adoption was slow — the web was still a niche tool for high-energy physicists.
+
+Most internet users at the time relied on other protocols: **Gopher** for hierarchical document browsing, **FTP** for file transfer, **Usenet** for threaded discussions, and **email** for direct communication. Gopher, developed at the University of Minnesota, was particularly popular because it presented a clean, menu-driven interface to distributed documents. The web's advantage — hypertext links embedded in documents rather than nested menu hierarchies — was not immediately obvious to users who had never experienced non-linear navigation.
+
+The first web page at CERN also served as a directory of other web servers. Berners-Lee maintained this list by hand as new servers appeared. By the end of 1992, the list contained only about 50 entries — all at universities and research laboratories. The breakthrough that would bring the web to millions of users came the following year, when a graphical browser made hypertext intuitive and visually appealing.
 
 ### 1993–1995: The First Browsers and HTML 2.0
 
@@ -322,6 +340,101 @@ The living standard model means HTML is never "done." It evolves to meet the nee
 **Community matters more than formal standards bodies.** The WHATWG, formed by frustrated browser vendors, produced the most significant HTML revision in decades. The W3C's more formal process produced XHTML 2.0, which was irrelevant. The lesson: the people who implement browsers should define the standard.
 
 **The web is resilient.** HTML has survived terrible code, malicious input, fragmented browsers, and well-intentioned redesigns. The lenient parsing model — the thing that makes HTML "messy" — is also what makes it unbreakable.
+
+### Study Cases
+
+**Case 1: The `<blink>` Element — When a Joke Ships to Production**
+
+In 1995, Netscape engineer Lou Montulli implemented the `<blink>` element in a single evening as a joke after colleagues joked that the Netscape logo should blink. It was never intended as a serious feature — it was a prank that escaped into production and was copied by other browsers to maintain compatibility. The `<blink>` tag became universally despised by designers and users for causing nausea and readability problems, yet browsers continue to support it decades later. This case illustrates the "once shipped, never removed" reality of the web platform: even a joke feature becomes permanent if it gains adoption.
+
+**Case 2: The `<img>` Tag — User Demand Overrides Specifier Vision**
+
+When Marc Andreessen added the `<img>` tag to Mosaic in 1993, it violated the vision of HTML as a pure hypertext medium. The W3C had not approved it, and purists argued that images should be linked (click to view) rather than embedded (displayed inline). But users overwhelmingly preferred inline images — they made pages visually engaging and eliminated an extra click to see every picture. Andreessen made the pragmatic choice to ship what users wanted. The `<img>` tag won through user demand, not standards-body approval, and it became one of the most important elements in HTML history.
+
+**Case 3: The Browser Lock-In Strategy of 1997**
+
+By 1997, Netscape Navigator held over 80% market share, but Netscape charged $49 per copy while Microsoft bundled Internet Explorer for free with Windows. Microsoft's strategy was not technical superiority — IE 3.0 was roughly comparable to Netscape 3.0 — but distribution leverage. Pre-installation meant that most new computer users never needed to seek out an alternative browser. By 2000, IE had over 90% market share, and Netscape had been acquired by AOL and effectively abandoned. This case demonstrates how browser market dynamics, not technical merit, determined the outcome of the first browser war, and why the web platform must remain neutral and multi-vendor.
+
+**Case 4: XHTML — Why Purity Lost to Pragmatism**
+
+XHTML 1.0 was technically superior to HTML 4.01 in several dimensions: it was well-formed, extensible via XML namespaces, and compatible with off-the-shelf XML parsers and tooling. Yet it failed because strictness punished authors for mistakes that had no practical consequence in browsers. The real web — pages generated by content management systems, template engines, e-commerce platforms, and human hands — is not well-formed. An unescaped ampersand in a URL would crash an entire XHTML page served with the correct content type. XHTML's failure teaches that a specification must match how people actually work, not how specification authors believe they should work.
+
+### Examples
+
+**The First Web Page (August 1991)**
+
+Tim Berners-Lee's original index page demonstrated the core HTML elements in their earliest form:
+
+```html
+<head><title>The World Wide Web project</title></head>
+<body>
+<h1>World Wide Web</h1>
+The WorldWideWeb (W3) is a wide-area
+<a href="WhatIs.html">hypermedia</a> information retrieval
+initiative aiming to give universal access to a large universe
+of documents.<p>
+Everything there is online about W3 is linked directly or
+indirectly to this document, including the
+<a href="Summary.html">executive summary</a> of the project.
+</body>
+```
+
+Notice the absence of a doctype, the use of bare text outside any paragraph element, and the inconsistent tag casing — `<head>` but `</HEAD>` in the original. The parser algorithm did not exist yet, so behavior varied between browsers.
+
+**HTML 4.01 Transitional (Late 1990s)**
+
+A typical late-1990s page combined semantic structure with presentational markup:
+
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type"
+    content="text/html; charset=iso-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+<font face="Arial" size="4" color="#333">Welcome</font><br><br>
+<table width="100%" cellpadding="10">
+<tr><td bgcolor="#eee">Navigation</td>
+<td>Content area</td></tr>
+</table>
+</body>
+</html>
+```
+
+The transitional doctype allowed deprecated presentational elements like `<font>` and `<center>`, while the table-based layout was borrowed from its original purpose (tabular data) and repurposed for page structure — a pattern that would not be fully replaced by CSS until the 2010s.
+
+**HTML5 Modern (Current Era)**
+
+A contemporary page is cleaner, semantic, and separates concerns:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+<main>
+    <h1>Welcome</h1>
+    <p>Content goes here.</p>
+</main>
+</body>
+</html>
+```
+
+The evolution from the first example to the last shows HTML's trajectory: from loose, presentation-focused, browser-dependent markup to structured, semantic, accessible, and interoperable code — without ever breaking backward compatibility with the first page published in 1991.
 
 ## Glossary
 

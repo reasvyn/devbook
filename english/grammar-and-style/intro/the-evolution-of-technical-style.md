@@ -307,6 +307,67 @@ Current best practice in technical style draws from all these traditions:
 
 **The unifying principle:** Documentation is software. It follows the same lifecycle, uses the same tooling, and deserves the same rigor as code. Style is not decoration — it is engineering practice applied to prose.
 
+### Documentation Tooling and Automation
+
+Modern technical writing relies on an ecosystem of tools that automate style enforcement, structural checks, and quality gates:
+
+**Prose linters** catch style violations automatically in CI:
+
+```yaml
+# .github/workflows/lint-docs.yml
+name: Lint Documentation
+on: [pull_request]
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@v2
+        with:
+          files: docs/
+```
+
+**Popular prose linters and their capabilities:**
+
+| Tool | Language | What it checks |
+|------|----------|----------------|
+| Vale | All | Style, tone, consistency, custom rules |
+| write-good | JavaScript | Weasel words, passive voice, cliches |
+| Alex | JavaScript | Insensitive, inconsiderate language |
+| proselint | Python | Terminology, redundancy, readability |
+| markdownlint | JavaScript | Markdown syntax, structure, formatting |
+
+**Automated link checking:** Tools like lychee and muffet check all external and internal links in documentation on every commit. A broken link in documentation is treated like a compilation error — it blocks the build.
+
+**Documentation testing:** Executable documentation ensures code examples stay correct:
+
+```python
+# docs/examples/user_management.py
+# This file is tested by pytest as part of CI
+from myapp import create_user
+
+def test_docs_create_user():
+    user = create_user("alice@example.com", role="admin")
+    assert user.email == "alice@example.com"
+    assert user.role == "admin"
+```
+
+Tools like doctest (Python), Doxygen (C++), and Swift-DocC (Swift) extract code examples from documentation and run them as tests.
+
+### The Future of Technical Style
+
+Several trends are shaping the next generation of technical writing:
+
+**AI-assisted authoring.** Large language models generate first drafts, suggest improvements, and translate between languages. The writer's role shifts from author to editor — verifying accuracy, calibrating tone, and making structural decisions.
+
+**Personalized documentation.** Documentation that adapts to the reader's experience level, role, or context. A junior developer sees more explanation; a senior developer sees the same content in condensed form. Dynamic documentation systems use reader profiles and interaction history to tailor content.
+
+**Video and interactive content.** While this document focuses on written style, modern technical communication increasingly includes video tutorials, interactive code playgrounds, and immersive documentation experiences. The challenge is maintaining the same quality standards across formats.
+
+**Community contribution at scale.** Large projects receive hundreds of documentation contributions. Maintaining style consistency across contributions requires automated enforcement, clear contribution guidelines, and a sustainable review process.
+
+**Accessibility-first documentation.** Style guides increasingly address accessibility: alt text for all images, semantic HTML structure, keyboard-navigable examples, screen-reader-compatible formatting, and color-contrast compliance. These are not optional — they are baseline requirements for professional documentation.
+
 ## Glossary
 
 | Term | Definition |

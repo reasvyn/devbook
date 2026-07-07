@@ -307,6 +307,118 @@ def kl_divergence(mu, logvar):
     return -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
 ```
 
+### Differential (Continuous) Entropy
+
+For continuous random variables, Shannon entropy generalizes to **differential entropy**:
+
+$$
+h(X) = -\int_{-\infty}^{\infty} f(x) \log_2 f(x) \, dx
+$$
+
+Differential entropy differs from discrete entropy in important ways:
+
+- It can be **negative**. A uniform distribution over $[0, 0.5]$ has $h(X) = -\log_2 2 = -1$ bit.
+- It is not invariant under scaling. If $Y = aX$, then $h(Y) = h(X) + \log_2 |a|$.
+- It does not have the same operational meaning — it is not a lower bound on average code length.
+
+**Maximum entropy distributions:** Given constraints, the distribution maximizing differential entropy is:
+
+| Constraint | Maximum entropy distribution |
+|---|---|
+| Bounded support $[a, b]$ | Uniform |
+| Fixed mean $\mu$, support $[0, \infty)$ | Exponential |
+| Fixed mean $\mu$ and variance $\sigma^2$ | Gaussian |
+
+The Gaussian has maximum entropy among all distributions with a given mean and variance. This is why the normal distribution appears so often — it is the least informative distribution consistent with observed first and second moments.
+
+**Mutual information for continuous variables:**
+
+$$
+I(X; Y) = \iint f(x, y) \log_2 \frac{f(x, y)}{f(x) f(y)} \, dx \, dy = h(X) + h(Y) - h(X, Y)
+$$
+
+This inherits the same properties as discrete mutual information: non-negativity, symmetry, and invariance under invertible transformations.
+
+### Maximum Entropy Principle
+
+The **maximum entropy principle** (Jaynes, 1957) states that the best probability distribution given partial information is the one with maximum entropy subject to the known constraints. This is the least biased distribution — it does not assume anything beyond what is known.
+
+**Example: Constrained by mean only.** Suppose we know $E[X] = 5$ and $X \geq 0$. The maximum entropy distribution is Exponential($\lambda = 1/5$):
+
+$$
+f(x) = \frac{1}{5} e^{-x/5}, \quad x \geq 0
+$$
+
+**Example: Constrained by mean and variance.** Suppose $E[X] = 0$ and $E[X^2] = 1$. The maximum entropy distribution is the standard normal:
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}
+$$
+
+**Applications:**
+- **Spectral entropy in signal processing.** The entropy of a signal's power spectrum measures its complexity. White noise has high spectral entropy; a pure tone has low spectral entropy.
+- **Entropy regularization in reinforcement learning.** Policy gradient methods add an entropy bonus to encourage exploration. Higher entropy policies try more diverse actions, preventing premature convergence to suboptimal policies.
+- **Feature engineering.** Entropy-based discretization (Fayyad & Irani, 1993) finds optimal cut points for continuous features by minimizing the weighted entropy of the resulting intervals.
+
+### Entropy in Practice: Code Examples
+
+**Computing entropy from empirical data:**
+
+```python
+import numpy as np
+from collections import Counter
+
+def empirical_entropy(data, base=2):
+    """Compute Shannon entropy of empirical distribution."""
+    counts = Counter(data)
+    total = len(data)
+    probs = np.array([c / total for c in counts.values()])
+    return -np.sum(probs * np.log(probs) / np.log(base))
+
+text = "hello world"
+print(f"Character entropy of '{text}': {empirical_entropy(text):.4f} bits")
+
+random_bytes = np.random.randint(0, 256, 1000)
+print(f"Entropy of random bytes: {empirical_entropy(random_bytes):.4f} bits")
+```
+
+**Entropy-based feature selection in text classification (pointwise mutual information):**
+
+```python
+def pointwise_mutual_information(word, category, docs, categories):
+    """PMI between a word and a category."""
+    n = len(docs)
+    p_word = sum(1 for d in docs if word in d) / n
+    p_cat = sum(1 for c in categories if c == category) / n
+    p_word_cat = sum(1 for d, c in zip(docs, categories) 
+                     if word in d and c == category) / n
+    if p_word_cat == 0 or p_word == 0:
+        return 0
+    return np.log2(p_word_cat / (p_word * p_cat))
+```
+
+**Entropy of a password as a security measure:**
+
+```python
+import math
+import string
+
+def password_entropy(password):
+    """Estimate password entropy based on character set size."""
+    charset = 0
+    if any(c.islower() for c in password): charset += 26
+    if any(c.isupper() for c in password): charset += 26
+    if any(c.isdigit() for c in password): charset += 10
+    if any(c in string.punctuation for c in password): charset += 32
+    if charset == 0: return 0
+    return len(password) * math.log2(charset)
+
+for pw in ["password", "Tr0ub4dor&3", "correct-horse-battery-staple"]:
+    print(f"'{pw}': {password_entropy(pw):.1f} bits")
+```
+
+This calculation assumes each character is chosen uniformly from the character set, which overestimates entropy for human-chosen passwords but is a useful baseline.
+
 ## Glossary
 
 | Term | Definition |

@@ -17,9 +17,16 @@ A practical breakdown of the major test types — unit, integration, E2E, manual
 - [Manual Testing](#manual-testing)
 - [Performance Tests](#performance-tests)
 - [Security Tests](#security-tests)
+- [Non-Functional Testing](#non-functional-testing)
+- [Test Selection Strategies](#test-selection-strategies)
+- [Risk-Based Testing](#risk-based-testing)
 - [Other Test Types](#other-test-types)
 - [Balancing the Test Suite](#balancing-the-test-suite)
 - [Common Pitfalls](#common-pitfalls)
+- [Learning Tips](#learning-tips)
+- [Glossary](#glossary)
+- [Quick References](#quick-references)
+- [Next Steps](#next-steps)
 
 ## Content
 
@@ -45,6 +52,10 @@ The test pyramid is a visual model for thinking about test distribution. It has 
 The pyramid guides your investment: put most of your effort into fast, reliable unit tests, fewer into integration tests, and only a handful into E2E tests.
 
 Many teams invert this pyramid — they rely heavily on manual E2E testing and have few unit tests. This is a recipe for slow, brittle, unpredictable releases.
+
+**Variants of the pyramid:**
+
+The testing trophy (Kent C. Dodds) shifts the emphasis toward integration tests, arguing that integration tests provide the best confidence-to-effort ratio. The honeycomb model (Google) suggests roughly equal investment in unit and integration tests with fewer E2E tests. The shape of your pyramid should reflect your application's architecture and risk profile.
 
 ### Unit Tests
 
@@ -290,6 +301,127 @@ Performance testing should be part of the CI pipeline for critical paths, with b
 - Set security headers (CSP, HSTS, X-Frame-Options).
 - Scan dependencies for known vulnerabilities.
 
+### Non-Functional Testing
+
+Non-functional testing verifies how the system behaves under various conditions, beyond what functional correctness covers.
+
+**Usability testing** — evaluating how intuitive the interface is for real users. This includes task completion time, error rate, and user satisfaction scores. Tools: UserTesting, Maze, Hotjar.
+
+**Accessibility testing** — verifying the application is usable by people with disabilities. Tests cover screen reader compatibility, keyboard navigation, color contrast, and focus management.
+
+```javascript
+// Automated accessibility check with axe-core
+import { injectAxe, checkA11y } from 'axe-playwright';
+
+test('page has no accessibility violations', async ({ page }) => {
+  await page.goto('/dashboard');
+  await injectAxe(page);
+  await checkA11y(page);
+});
+```
+
+**Reliability testing** — measuring system uptime, fault tolerance, and recovery capabilities. Chaos engineering (Netflix's Chaos Monkey) intentionally introduces failures to verify the system handles them gracefully.
+
+**Scalability testing** — verifying the system can handle increased load by adding resources (horizontal or vertical scaling). This answers the question: "if we double the traffic, can we double the servers and maintain response times?"
+
+**Compatibility testing** — verifying the application works across different browsers, operating systems, device sizes, and network conditions.
+
+**Compliance testing** — verifying the system meets regulatory requirements (GDPR, HIPAA, PCI-DSS). This often overlaps with security testing but also includes data handling, audit logging, and consent management.
+
+**Recovery testing** — simulating failures (server crash, network partition, database corruption) and verifying the system recovers within acceptable timeframes.
+
+### Test Selection Strategies
+
+Not all tests are equally valuable at all times. Test selection strategies help you run the right tests at the right time.
+
+**Regression test selection (RTS):**
+
+RTS analyzes code changes and runs only the tests affected by those changes. This reduces feedback time from hours to minutes.
+
+```bash
+# Example: running only affected tests
+# Tool: Jest with --onlyChanged, Bazel test selection
+jest --onlyChanged              # Run tests for changed files
+bazel test //...                # Bazel infers affected tests from dependency graph
+```
+
+**Techniques for RTS:**
+
+| Technique | Description | Accuracy |
+|-----------|-------------|----------|
+| File-level | Run tests in files that import changed modules | Coarse |
+| Function-level | Trace function call graphs to find affected tests | Medium |
+| Dependency graph | Use build system dependency graph for precise selection | High |
+
+**Prioritization:**
+
+When you cannot run all tests, run the most valuable tests first:
+
+- Tests covering critical business paths (login, payment)
+- Tests for recently changed code
+- Tests that historically caught bugs
+- Fast tests before slow tests
+
+**Test suite layering:**
+
+```
+Layer 1: Commit hook — unit tests for changed files (< 1 min)
+Layer 2: CI push — full unit suite + integration tests (< 10 min)
+Layer 3: PR merge — full suite + E2E tests (< 30 min)
+Layer 4: Nightly — full suite + performance + security (< 2 hours)
+```
+
+Each layer catches different categories of bugs and runs at a different cadence. The goal is to catch the most common and expensive bugs as early as possible.
+
+### Risk-Based Testing
+
+Risk-based testing (RBT) prioritizes test effort based on the likelihood and impact of failure. It answers the question: "where should we invest our limited testing budget?"
+
+**Risk assessment matrix:**
+
+```
+Impact
+  High  | Critical paths (auth, payment) | Regulatory compliance
+        |       Test thoroughly           |   Must test
+  Low   | Cosmetic issues, rarely used    | Internal tools, admin UI
+        |       Minimal testing           |   Smoke test only
+        +----------------------------------+
+                    Low         High
+                         Likelihood
+```
+
+**Assigning risk levels:**
+
+| Factor | High risk | Low risk |
+|--------|-----------|----------|
+| User impact | Affects all users | Affects few users |
+| Financial cost | Revenue loss, fines | Negligible |
+| Frequency of use | Used daily | Used monthly |
+| Complexity | Many dependencies, stateful | Simple, stateless |
+| Change frequency | Modified every sprint | Stable for months |
+| Known defects | History of bugs | No known issues |
+
+**Applying RBT in practice:**
+
+1. List all features or user stories.
+2. Assign a risk score (likelihood × impact) to each.
+3. Allocate test effort proportionally to risk score.
+4. Define the test approach per level:
+
+| Risk level | Testing approach |
+|------------|-----------------|
+| Critical (9-10) | E2E + integration + unit + security + performance |
+| High (6-8) | Integration + unit + security scan |
+| Medium (3-5) | Unit tests, smoke integration |
+| Low (1-2) | Smoke test, manual check |
+
+**When RBT works best:**
+
+- Tight release schedules where not everything can be tested
+- Legacy systems with no existing test coverage
+- Projects with clear business impact analysis
+- Maintenance releases with limited scope changes
+
 ### Other Test Types
 
 **Smoke tests** — quick checks that the most critical functionality works. Run after every deployment to confirm the application started correctly.
@@ -303,6 +435,20 @@ Performance testing should be part of the CI pipeline for critical paths, with b
 **Snapshot tests** — capture the output of a component (UI or data structure) and compare it to a stored reference. Useful for detecting unexpected changes in UI rendering.
 
 **Visual regression tests** — take screenshots of UI pages and compare them pixel by pixel to baseline images. Tools: Percy, Chromatic.
+
+**Mutation testing** — introduces small changes (mutations) to the source code and checks whether tests detect them. This measures test quality, not just coverage.
+
+```bash
+# Stryker mutation testing for JavaScript
+npx stryker run
+# Output: "62% mutation score — 38% of mutants survived"
+```
+
+A high mutation score means tests are effective at catching real bugs. A low score despite high line coverage suggests the tests assert too little.
+
+**Contract testing** — verifies that two services (consumer and provider) agree on the API contract. Tools: Pact, Spring Cloud Contract. Contract testing is faster than full integration testing and catches breaking changes in microservice architectures before deployment.
+
+**Fuzz testing** — feeds random, unexpected, or malformed data to the application to find crashes, memory leaks, and security vulnerabilities. Tools: AFL, libFuzzer, OSS-Fuzz.
 
 ### Balancing the Test Suite
 
@@ -335,22 +481,47 @@ A well-balanced test suite follows the pyramid and adapts to the project context
 
 **Chasing coverage numbers.** High coverage is a byproduct of good testing, not a goal. Writing a test that asserts nothing but increases coverage is waste.
 
+## Learning Tips
+
+- **Start with the critical path.** Identify the 20% of features that generate 80% of business value. Write E2E tests for those first, then layer integration and unit tests underneath. This gives the highest confidence per test written.
+- **Write tests before code (TDD) for complex logic.** Test-driven development shines for algorithms, validation rules, and business logic. For CRUD APIs and UI work, TDD is less beneficial — write tests after the implementation stabilizes.
+- **Measure test effectiveness, not just count.** Track bug-finding rate per test type. If unit tests catch fewer bugs per hour spent writing them than integration tests, shift your investment. Metrics like mutation score and defect detection rate are more useful than line coverage.
+- **Quarantine flaky tests immediately.** A single flaky test reduces trust in the entire suite. When you find one, move it to a separate CI job that does not block deployments. Fix or delete it within the same sprint.
+- **Use test doubles sparingly.** Every mock makes tests more brittle. Prefer real objects, in-memory databases, and lightweight test containers over mocked interfaces. Reserve mocks for side-effect-heavy dependencies like email sending and payment gateways.
+- **Treat test code as production code.** Apply the same standards: code review, naming conventions, linting, and refactoring. Tests that are hard to read or modify get skipped when deadlines loom.
+- **Organize tests by behavior, not by structure.** Group tests by what they verify (e.g., "authentication," "payment processing") rather than by the class or module they test. This makes the test suite navigable for new team members.
+- **Automate environment setup.** Tests that require manual environment configuration rarely run. Use Docker Compose, test containers, or infrastructure-as-code to create disposable test environments that spin up and tear down with a single command.
+
 ## Glossary
 
 | Term | Definition |
 |------|------------|
-| Unit test | Tests a single unit of code in isolation |
-| Integration test | Tests how multiple components work together |
-| End-to-end test | Tests a complete user flow through the entire system |
-| Mock | A test double that simulates a real dependency |
-| Stub | A test double that returns predefined values |
-| Fixture | A fixed set of data used as a baseline for tests |
-| Coverage | The percentage of code executed by tests |
-| Flaky test | A test that passes and fails without code changes |
-| Regression | A bug introduced by a change in otherwise working code |
-| Smoke test | A quick check that basic functionality works |
-| SAST | Static application security testing |
-| DAST | Dynamic application security testing |
+| Unit test | Tests a single unit of code in isolation from dependencies |
+| Integration test | Tests how multiple components work together with real or realistic dependencies |
+| End-to-end test | Tests a complete user flow through the entire system from UI to database |
+| Mock | A test double that simulates a real dependency with pre-programmed behavior |
+| Stub | A test double that returns predefined values without logic |
+| Fixture | A fixed set of data or objects used as a baseline for tests |
+| Coverage | The percentage of code executed by tests (line, branch, function) |
+| Flaky test | A test that passes and fails intermittently without code changes |
+| Regression | A bug introduced by a change in previously working functionality |
+| Smoke test | A quick check that the most critical functionality works |
+| SAST | Static Application Security Testing — analyzes source code without execution |
+| DAST | Dynamic Application Security Testing — probes a running application |
+| Mutation testing | Introducing small code changes to measure test effectiveness |
+| Contract testing | Verifying API agreement between consumer and provider services |
+| Fuzz testing | Feeding random malformed input to find crashes and vulnerabilities |
+| Load testing | Simulating expected traffic to verify performance requirements |
+| Stress testing | Pushing beyond expected limits to find the breaking point |
+| Test double | Generic term for any object used in place of a real dependency |
+| Test pyramid | Model showing ideal test distribution: many unit, some integration, few E2E |
+| Risk-based testing | Prioritizing test effort based on likelihood and impact of failure |
+| Regression test selection | Running only tests affected by code changes |
+| Usability testing | Evaluating how intuitive the interface is for real users |
+| Accessibility testing | Verifying the application is usable by people with disabilities |
+| Chaos engineering | Intentionally introducing failures to test system resilience |
+| Mutation score | Percentage of code mutations detected by the test suite |
+| Visual regression | Pixel-by-pixel comparison of UI screenshots against baselines |
 
 ## Quick References
 
@@ -358,6 +529,14 @@ A well-balanced test suite follows the pyramid and adapts to the project context
 - [k6 Documentation](https://k6.io/docs/) — load testing tool
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/) — comprehensive web application security testing
 - [Playwright Documentation](https://playwright.dev/docs/writing-tests) — E2E testing framework
+- [Stryker Mutation Testing](https://stryker-mutator.io/) — mutation testing framework
+- [Pact Contract Testing](https://docs.pact.io/) — consumer-driven contract testing
+- [TestContainers](https://testcontainers.com/) — Docker-based integration testing
+- [OWASP ZAP](https://www.zaproxy.org/) — DAST security scanner
+- [axe-core Accessibility](https://www.deque.com/axe/) — accessibility testing engine
+- [Google Testing Blog — Risk Based Testing](https://testing.googleblog.com/) — risk-based testing strategies
+- [Chaos Engineering (Principles of Chaos)](https://principlesofchaos.org/) — introduction to chaos engineering
+- [Bazel Test Selection](https://bazel.build/reference/test-encyclopedia) — build system with built-in RTS
 
 ## Next Steps
 

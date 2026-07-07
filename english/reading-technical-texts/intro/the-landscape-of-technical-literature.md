@@ -363,6 +363,70 @@ Staying current with technical literature is challenging given the volume of new
 | Google Scholar Alerts | Automated alerts | Tracking specific authors or topics |
 | Newsletter (The Morning Paper, TL;DR) | Curated summaries | High-signal weekly reading |
 
+### Keeping Up Without Burning Out (expanded)
+
+Staying current with technical literature is challenging given the volume of new publications:
+
+| Strategy | Time investment | Coverage |
+|---|---|---|
+| Daily | 15 minutes scanning arXiv and newsletters | Broad, shallow awareness |
+| Weekly | 1 hour reading one paper or long-form post | Deep, narrow understanding |
+| Monthly | 4 hours reading one book chapter or major article | Systematic learning |
+| Quarterly | 1 day reading a full book or survey paper | Comprehensive grasp of a domain |
+
+**The Pareto principle in technical reading:** 20% of the literature provides 80% of the useful knowledge. Focus on survey papers, well-cited foundational work, and documentation of widely-used systems. Ignore the long tail of incremental blog posts and minor conference papers unless they directly relate to your work.
+
+**Curated discovery channels:**
+
+| Channel | Type | Best for |
+|---|---|---|
+| Hacker News | Community-curated links | Emerging tools, engineering culture |
+| Lobste.rs | Community-curated links | More focused technical discussion |
+| r/MachineLearning | Reddit community | AI/ML research discussion |
+| CSrankings | Quality-ranked venues | Identifying top conferences |
+| Google Scholar Alerts | Automated alerts | Tracking specific authors or topics |
+| Newsletter (The Morning Paper, TL;DR) | Curated summaries | High-signal weekly reading |
+
+**Building a personal reading system:**
+
+A sustainable approach to staying current involves three tiers:
+
+**Tier 1 — Daily scanning (15 min):** Skim one or two curated sources. The Morning Paper for CS research, Hacker News for engineering trends, or a specific arXiv category. The goal is awareness, not comprehension. Bookmark anything that seems relevant for Tier 2.
+
+**Tier 2 — Weekly deep read (1 hour):** Pick one paper or long-form article from your Tier 1 bookmarks. Read it thoroughly. Take notes. Write a one-paragraph summary in your own words. This builds understanding and retention.
+
+**Tier 3 — Monthly study (4 hours):** Commit to a book chapter or survey paper on a topic you want to master. Take structured notes (Cornell method or outline). Implement key ideas in code if applicable.
+
+**Signaling vs. signal:** Much of what gets published is incremental or derivative. Senior researchers and engineers learn to recognize signal: papers that introduce new ideas, not just new results. A paper that proposes a new architecture is more valuable than a paper that applies an existing architecture to a slightly different problem.
+
+**The role of peer review in quality filtering:** While peer review is imperfect, it is the best quality filter available for academic papers. The acceptance rate at top venues (CS conferences average 15-25% acceptance) indicates some level of quality screening. For non-academic sources, use author reputation, publication history, and independent verification as quality signals.
+
+### Practical Reading Workflows
+
+Different reading goals require different approaches:
+
+**Exploratory reading (learning a new area):**
+1. Find a recent survey paper on the topic. Surveys map the landscape, identify key papers, and summarize results.
+2. Read the survey's introduction and conclusion. If still interested, read the sections most relevant to your goal.
+3. Follow citations to foundational papers. Read their abstracts and conclusions.
+4. Search for recent papers that cite the foundational work (Google Scholar "cited by" feature).
+5. Skim blog posts and tutorials for practical implementation details.
+
+**Targeted reading (solving a specific problem):**
+1. Search for "problem + solution" on Google Scholar, Semantic Scholar, or Papers With Code.
+2. Filter by citation count (highly cited papers are more likely to be impactful).
+3. Read the abstract. If relevant, read the method and results sections.
+4. Look for code implementations on GitHub (Papers With Code links when available).
+5. Validate the approach on your own data or problem.
+
+**Critical reading (evaluating a paper's claims):**
+1. Read the abstract and introduction for the claim.
+2. Read the method section for the approach.
+3. Read the results section for the evidence.
+4. Check the experimental setup: what datasets, baselines, and metrics were used?
+5. Look for limitations: what did the authors not test? What assumptions did they make?
+6. Check for reproducibility: is the code available? Are the hyperparameters specified?
+
 ## Quick References
 
 - [arXiv](https://arxiv.org/) — open-access preprint repository

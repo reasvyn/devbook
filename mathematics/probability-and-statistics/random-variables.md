@@ -15,13 +15,14 @@ A random variable is a numerical summary of a random experiment. Random variable
 - [Probability Density Function (PDF)](#probability-density-function-pdf)
 - [Cumulative Distribution Function (CDF)](#cumulative-distribution-function-cdf)
 - [Expectation](#expectation)
+- [The Law of the Unconscious Statistician](#the-law-of-the-unconscious-statistician)
+- [Properties of Expectation](#properties-of-expectation)
 - [Variance and Standard Deviation](#variance-and-standard-deviation)
 - [Moments and Moment Generating Functions](#moments-and-moment-generating-functions)
 - [Transformations of Random Variables](#transformations-of-random-variables)
 - [Inequalities](#inequalities)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
+- [Learning Tips](#learning-tips)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)
@@ -154,6 +155,111 @@ $$E[X] = 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + \cdots + 6 \cdot \frac{1}{6
 
 **Expected value of a function:** $E[g(X)] = \sum_x g(x) p(x)$ for discrete, $\int g(x) f(x) dx$ for continuous.
 
+### The Law of the Unconscious Statistician
+
+The **Law of the Unconscious Statistician** (LOTUS) states that to compute $E[g(X)]$, you do not need to derive the distribution of $g(X)$ first. You can compute it directly using the distribution of $X$:
+
+**Discrete:** $\displaystyle E[g(X)] = \sum_{x \in \mathcal{X}} g(x) \cdot p(x)$
+
+**Continuous:** $\displaystyle E[g(X)] = \int_{-\infty}^{\infty} g(x) \cdot f(x) \, dx$
+
+The name comes from the fact that it is easy to use this formula "unconsciously" without realizing you are computing an expectation of a transformed variable. LOTUS works because the expectation operator integrates over the probability space, and transforming the values is equivalent to integrating the transformed function against the original measure.
+
+**Example — LOTUS for $X^2$ with a fair die:**
+
+$$E[X^2] = \sum_{x=1}^{6} x^2 \cdot \frac{1}{6} = \frac{1 + 4 + 9 + 16 + 25 + 36}{6} = \frac{91}{6} \approx 15.167.$$
+
+This is much simpler than deriving the PMF of $Y = X^2$ (which would require mapping $Y=4$ back to both $X=2$ and $X=-2$, not applicable here since the die only takes positive values).
+
+**Example — LOTUS with a continuous distribution:**
+
+For $X \sim \text{Uniform}(0, 1)$, find $E[X^2]$:
+
+$$E[X^2] = \int_{0}^{1} x^2 \cdot 1 \, dx = \left[\frac{x^3}{3}\right]_{0}^{1} = \frac{1}{3}.$$
+
+**Python verification:**
+
+```python
+import numpy as np
+np.random.seed(42)
+X = np.random.uniform(0, 1, 100000)
+E_X2 = np.mean(X**2)
+print(f"E[X^2] ≈ {E_X2:.4f} (theoretical: {1/3:.4f})")
+# Output: E[X^2] ≈ 0.3337 (theoretical: 0.3333)
+```
+
+### Properties of Expectation
+
+Beyond linearity, expectation satisfies several important properties useful in both theory and practice.
+
+**Law of Total Expectation (Tower Property):**
+
+$$E[X] = E[E[X | Y]].$$
+
+This says the expectation of $X$ can be computed by first conditioning on another variable $Y$, computing the conditional expectation, and then averaging over $Y$. This is useful when direct computation of $E[X]$ is difficult but conditioning simplifies the problem.
+
+**Example — Expected number of coin flips until heads:**
+
+Let $X$ be the number of coin flips needed to get the first head, with $P(H) = p$. Condition on the first flip:
+
+$$E[X] = E[X | \text{first is H}] \cdot p + E[X | \text{first is T}] \cdot (1-p)$$
+$$E[X] = 1 \cdot p + (1 + E[X]) \cdot (1-p)$$
+
+Solving: $E[X] = p + (1-p) + (1-p)E[X] = 1 + (1-p)E[X]$, so $E[X] = 1/p$.
+
+For a fair coin ($p = 0.5$), the expected number of flips is 2.
+
+**Jensen's Inequality:**
+
+For a convex function $\varphi$:
+
+$$\varphi(E[X]) \le E[\varphi(X)].$$
+
+For a concave function $\varphi$:
+
+$$\varphi(E[X]) \ge E[\varphi(X)].$$
+
+This is fundamental in finance (risk-aversion), information theory ($-\log$ is convex, so $H(X) \le \log|\mathcal{X}|$), and machine learning (the EM algorithm uses Jensen to construct lower bounds).
+
+**Example — Jensen's inequality in action:**
+
+For $\varphi(x) = x^2$ (convex): $(E[X])^2 \le E[X^2]$. This means variance is always non-negative, since $\text{Var}(X) = E[X^2] - (E[X])^2 \ge 0$.
+
+```python
+import numpy as np
+
+# Verify Jensen for a skewed distribution
+np.random.seed(42)
+X = np.random.exponential(scale=1.0, size=100000)
+E_X = np.mean(X)
+E_X2 = np.mean(X**2)
+print(f"(E[X])^2 = {E_X**2:.4f}")
+print(f"E[X^2]   = {E_X2:.4f}")
+print(f"Jensen holds: {(E_X**2 <= E_X2)}")
+```
+
+**Cauchy-Schwarz Inequality:**
+
+$$(E[XY])^2 \le E[X^2] E[Y^2].$$
+
+This implies $|\text{Cov}(X, Y)| \le \sqrt{\text{Var}(X) \text{Var}(Y)}$, which bounds correlation between $-1$ and $1$.
+
+**Expectation of indicator variables:**
+
+If $I_A$ is the indicator of event $A$ ($I_A = 1$ if $A$ occurs, $0$ otherwise):
+
+$$E[I_A] = P(A).$$
+
+This connection between expectation and probability is surprisingly useful. Many probability problems can be solved by computing expectations of indicator variables.
+
+**Example — Expected number of fixed points in a random permutation:**
+
+Let $X$ be the number of positions $i$ such that $\pi(i) = i$ in a random permutation of $n$ elements. Define $I_i = 1$ if $\pi(i) = i$. Then $X = \sum I_i$, and by linearity:
+
+$$E[X] = \sum_{i=1}^n E[I_i] = \sum_{i=1}^n P(\pi(i) = i) = \sum_{i=1}^n \frac{1}{n} = 1.$$
+
+The expected number of fixed points is 1, regardless of $n$. This holds without computing the distribution of $X$ at all.
+
 ### Variance and Standard Deviation
 
 The **variance** measures the spread of a distribution around its mean:
@@ -173,6 +279,18 @@ $$\text{Var}(X) = 15.167 - 3.5^2 = 15.167 - 12.25 = 2.917.$$
 $$\text{SD}(X) = \sqrt{2.917} \approx 1.708.$$
 
 **Coefficient of variation:** $\text{CV}(X) = \text{SD}(X) / E[X]$. Unitless measure of relative dispersion, useful for comparing variability across different scales.
+
+```python
+import numpy as np
+
+# Simulate die rolls
+np.random.seed(42)
+rolls = np.random.randint(1, 7, size=100000)
+empirical_var = np.var(rolls, ddof=0)  # population variance
+empirical_std = np.std(rolls, ddof=0)
+print(f"Empirical Var = {empirical_var:.3f} (theoretical: 2.917)")
+print(f"Empirical SD  = {empirical_std:.3f} (theoretical: 1.708)")
+```
 
 ### Moments and Moment Generating Functions
 
@@ -275,6 +393,22 @@ P(|X - mu| < 3*sigma) = 0.9541 (Chebyshev says >= 0.8889)
 
 **Online learning:** Algorithms like Thompson sampling treat unknown parameters as random variables with posterior distributions that update as data arrives.
 
+**A/B testing:** The difference in conversion rates between two groups is a random variable. Understanding its distribution (via the central limit theorem) allows significance testing.
+
+### Learning Tips
+
+**Simulate everything:** Use Python or R to simulate random variables and verify theoretical expectations, variances, and inequalities. Seeing the empirical results converge to theory builds intuition.
+
+**Practice with indicator variables:** Many expectation problems become trivial when decomposed into indicator variables. Practice rewriting events as sums of indicators.
+
+**Memorize the big three properties:** Linearity of expectation, law of total expectation, and LOTUS handle 80% of expectation calculations. Know when to apply each one.
+
+**Draw the CDF:** For any distribution, sketching the CDF helps understand quantiles, median, and probability intervals. Compare CDFs of different distributions on the same axes.
+
+**Compute both $E[X]$ and $E[X^2]$:** Many problems require variance, which needs both. Computing $E[X^2]$ via LOTUS is often easier than deriving the full distribution of $X^2$.
+
+**Watch for infinite expectation:** Some distributions (Cauchy, Pareto with low alpha) have undefined expectation. Always check that $E[|X|] < \infty$ before applying expectation properties.
+
 ## Glossary
 
 | Term | Definition |
@@ -285,19 +419,28 @@ P(|X - mu| < 3*sigma) = 0.9541 (Chebyshev says >= 0.8889)
 | Probability mass function (PMF) | Gives $P(X = x)$ for discrete $X$ |
 | Probability density function (PDF) | Density whose integral gives probabilities for continuous $X$ |
 | Cumulative distribution function (CDF) | $F(x) = P(X \le x)$, defined for all random variables |
-| Expected value | Probability-weighted average of a random variable |
+| Expected value | Probability-weighted average of a random variable, also called mean |
 | Variance | Expected squared deviation from the mean |
 | Standard deviation | Square root of variance, in the same units as $X$ |
 | Moment | $E[X^k]$ (raw) or $E[(X - \mu)^k]$ (central) |
 | Moment generating function | $E[e^{tX}]$, uniquely determines the distribution |
+| Law of Total Expectation | $E[X] = E[E[X \mid Y]]$ — conditioning simplifies expectation |
+| Law of the Unconscious Statistician (LOTUS) | $E[g(X)]$ computed using $X$'s distribution directly |
+| Jensen's inequality | $\varphi(E[X]) \le E[\varphi(X)]$ for convex $\varphi$ |
 | Markov's inequality | $P(X \ge a) \le E[X]/a$ for non-negative $X$ |
 | Chebyshev's inequality | $P(|X - \mu| \ge k\sigma) \le 1/k^2$ |
 | Chernoff bound | Exponential bound for sums of independent variables |
 | Coefficient of variation | $\text{SD}(X) / E[X]$, unitless measure of dispersion |
-| Quantile function | Inverse of the CDF |
+| Quantile function | Inverse of the CDF, $F^{-1}(p)$ |
 | Support | The set of values a random variable can take |
 | Linearity of expectation | $E[X + Y] = E[X] + E[Y]$, no independence required |
 | Inverse transform sampling | Generating $X$ by $F^{-1}(U)$ where $U \sim \text{Uniform}(0,1)$ |
+| Indicator variable | $I_A = 1$ if event $A$ occurs, $0$ otherwise; $E[I_A] = P(A)$ |
+| Skewness | $\mu_3 / \sigma^3$, measures asymmetry of a distribution |
+| Kurtosis | $\mu_4 / \sigma^4$, measures tail heaviness |
+| Cauchy-Schwarz inequality | $(E[XY])^2 \le E[X^2] E[Y^2]$ |
+| Covariance | $\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])]$, measures linear dependence |
+| Central limit theorem | Sum of i.i.d. random variables approaches normal as $n \to \infty$ |
 
 ## Quick References
 
@@ -305,6 +448,11 @@ P(|X - mu| < 3*sigma) = 0.9541 (Chebyshev says >= 0.8889)
 - [Random Variables (Wikipedia)](https://en.wikipedia.org/wiki/Random_variable) — comprehensive reference
 - [Seeing Theory: Random Variables](https://seeing-theory.brown.edu/random-variables/index.html) — interactive visualizations
 - [Inverse Transform Sampling](https://en.wikipedia.org/wiki/Inverse_transform_sampling) — generating random samples from CDFs
+- [LOTUS (Wikipedia)](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician) — formal statement and proof of LOTUS
+- [Jensen's Inequality Explained](https://brilliant.org/wiki/jensens-inequality/) — intuitive explanation with diagrams
+- [Linearity of Expectation — MIT OCW](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-19-linearity-of-expectation/) — video and notes
+- [Probability Cheatsheet (Stanford)](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability) — quick reference for distributions and properties
+- [Monte Carlo Methods — Stanford Encyclopedia](https://plato.stanford.edu/entries/monte-carlo/) — foundations of simulation
 
 ## Next Steps
 

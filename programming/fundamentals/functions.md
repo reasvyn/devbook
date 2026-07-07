@@ -16,6 +16,10 @@ Functions are the primary mechanism for organising, reusing, and abstracting beh
 - [Return Values](#return-values)
 - [Scope Rules](#scope-rules)
 - [Pure Functions vs Impure Functions](#pure-functions-vs-impure-functions)
+- [First-Class and Higher-Order Functions](#first-class-and-higher-order-functions)
+- [Closures](#closures)
+- [Recursion](#recursion)
+- [Learning Tips](#learning-tips)
 
 ## Content / Material
 
@@ -289,6 +293,218 @@ const applyDiscount = (prices) => { prices.forEach((_, i) => prices[i] *= 0.9); 
 ```
 
 Pure functions are easy to test, cache (memoisation), and parallelise. Isolate impurity at boundaries.
+
+### First-Class and Higher-Order Functions
+
+In languages where functions are first-class citizens, they can be assigned to variables, passed as arguments, and returned from other functions.
+
+```python
+def apply_twice(f, x):
+    return f(f(x))
+
+result = apply_twice(lambda x: x * 2, 3)
+print(result)  # 12
+
+def make_multiplier(n):
+    def multiplier(x):
+        return x * n
+    return multiplier
+
+double = make_multiplier(2)
+print(double(5))  # 10
+```
+
+```javascript
+function applyTwice(f, x) {
+    return f(f(x));
+}
+const result = applyTwice(x => x * 2, 3);
+console.log(result); // 12
+
+const makeMultiplier = (n) => (x) => x * n;
+const double = makeMultiplier(2);
+console.log(double(5)); // 10
+```
+
+First-class functions enable callback patterns, event handling, asynchronous programming, and functional composition.
+
+**Higher-order functions** like `map`, `filter`, and `reduce` operate on collections:
+
+```python
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x ** 2, numbers))  # [1, 4, 9, 16, 25]
+evens = list(filter(lambda x: x % 2 == 0, numbers))  # [2, 4]
+from functools import reduce
+total = reduce(lambda acc, x: acc + x, numbers, 0)  # 15
+```
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const squares = numbers.map(x => x ** 2);  // [1, 4, 9, 16, 25]
+const evens = numbers.filter(x => x % 2 === 0);  // [2, 4]
+const total = numbers.reduce((acc, x) => acc + x, 0);  // 15
+```
+
+**Function composition** chains multiple functions:
+
+```python
+def compose(*funcs):
+    def composed(x):
+        for f in reversed(funcs):
+            x = f(x)
+        return x
+    return composed
+
+trim_and_capitalize = compose(str.strip, str.capitalize)
+print(trim_and_capitalize("  hello  "))  # "Hello"
+```
+
+```javascript
+const compose = (...funcs) => (x) => funcs.reduceRight((acc, f) => f(acc), x);
+const trimAndCapitalize = compose(
+    s => s.trim(),
+    s => s.charAt(0).toUpperCase() + s.slice(1)
+);
+console.log(trimAndCapitalize("  hello  ")); // "Hello"
+```
+
+### Closures
+
+A closure is a function that retains access to its lexical scope even when executed outside that scope.
+
+```python
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count
+        count += 1
+        return count
+    return counter
+
+c = make_counter()
+print(c())  # 1
+print(c())  # 2
+print(c())  # 3
+```
+
+```javascript
+function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+const c = makeCounter();
+console.log(c());  // 1
+console.log(c());  // 2
+console.log(c());  // 3
+```
+
+**Closures in loops (classic JavaScript pitfall):**
+
+```javascript
+for (var i = 0; i < 3; i++) {
+    setTimeout(() => console.log(i), 100);  // 3, 3, 3
+}
+
+for (let i = 0; i < 3; i++) {
+    setTimeout(() => console.log(i), 100);  // 0, 1, 2
+}
+```
+
+**Module pattern using closure:**
+
+```javascript
+const counter = (function() {
+    let count = 0;
+    return {
+        increment: () => ++count,
+        decrement: () => --count,
+        get: () => count
+    };
+})();
+console.log(counter.increment());  // 1
+console.log(counter.increment());  // 2
+console.log(counter.get());        // 2
+```
+
+Closures enable data encapsulation, partial application, callback-based programming, and the module pattern.
+
+### Recursion
+
+Recursion occurs when a function calls itself. Every recursive function must have a **base case** and a **recursive case**.
+
+```python
+def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # 120
+```
+
+```javascript
+const factorial = (n) => n <= 1 ? 1 : n * factorial(n - 1);
+console.log(factorial(5));  // 120
+```
+
+**Tree traversal with recursion:**
+
+```python
+class TreeNode:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+def inorder(node):
+    if node is None:
+        return
+    inorder(node.left)
+    print(node.value)
+    inorder(node.right)
+
+tree = TreeNode(2, TreeNode(1), TreeNode(3))
+inorder(tree)  # 1, 2, 3
+```
+
+**Fibonacci with memoisation:**
+
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+print(fib(100))  # 354224848179261915075
+```
+
+Without memoisation, `fib(50)` would take years of computation. With memoisation, it completes in microseconds.
+
+**Tail recursion:** The recursive call is the last operation in the function. Scheme and Haskell optimise tail calls to reuse the stack frame:
+
+```scheme
+(define (factorial n acc)
+  (if (= n 0) acc
+      (factorial (- n 1) (* n acc))))
+```
+
+Python and JavaScript do not optimise tail calls. Deep recursion risks stack overflow. Use iteration or trampolining for unbounded depth.
+
+## Learning Tips
+
+- **Trace recursion on paper.** Draw the call stack for `factorial(4)` to understand how recursive calls unwind and values propagate back.
+- **Practice converting loops to recursion.** Start with simple iterations and express them recursively — trains base-case thinking and reduces bugs.
+- **Use `@lru_cache`** for expensive recursive functions. Memoisation reduces exponential time to linear in many cases.
+- **Build `make_counter` in a debugger.** Step through to see how the inner function captures and persists the outer variable.
+- **Prefer pure functions** for core logic. Isolate side effects (I/O, state mutation) at system boundaries for testability.
+- **Learn `map`/`filter`/`reduce`.** They replace many imperative loops and make data pipelines explicit and composable.
+- **Watch for mutable default arguments.** Python evaluates defaults once at definition. Use `None` as a sentinel instead of `[]` or `{}`.
+- **Understand the closure-loop pitfall** in JavaScript. The `var` vs `let` difference in loops is a common interview question and a real source of bugs.
 
 ## Glossary
 

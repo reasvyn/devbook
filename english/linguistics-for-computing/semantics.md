@@ -298,6 +298,85 @@ Production              Semantic rule
 expr -> expr1 + expr2   expr.type = int if both operands are int else error
 ```
 
+### Distributional Semantics and Word Embeddings
+
+Distributional semantics is based on the distributional hypothesis: words that appear in similar contexts have similar meanings. This is operationalized through vector representations.
+
+**Count-based methods:** Build a co-occurrence matrix where rows are words, columns are contexts, and cells count how often a word appears in a context. Dimensionality reduction (SVD, PCA) produces dense word vectors:
+
+```python
+import numpy as np
+from sklearn.decomposition import TruncatedSVD
+
+cooccurrence = np.array([
+    [0, 5, 2, 0, 0],  # dog
+    [5, 0, 1, 0, 0],  # cat
+    [2, 1, 0, 3, 2],  # car
+    [0, 0, 3, 0, 4],  # drive
+])
+svd = TruncatedSVD(n_components=2)
+embeddings = svd.fit_transform(cooccurrence)
+print("Word embeddings (2D):\n", embeddings)
+```
+
+**Prediction-based methods (Word2Vec):** Neural networks predict context from word (skip-gram) or word from context (CBOW). The hidden layer weights become the embedding vectors. These embeddings capture semantic relationships as vector arithmetic:
+
+$$
+\text{vec}(\text{king}) - \text{vec}(\text{man}) + \text{vec}(\text{woman}) \approx \text{vec}(\text{queen})
+$$
+
+**Contextual embeddings (BERT, ELMo):** Unlike static embeddings, contextual models assign different vectors to the same word in different contexts. "Bank" in "river bank" vs. "savings bank" gets different representations. This resolves polysemy that static embeddings cannot handle.
+
+### Word Sense Disambiguation
+
+Determining which sense of a polysemous word is intended requires semantic context:
+
+**Lesk algorithm:** Compare the dictionary definitions of each sense with the surrounding context words. The sense with the most overlapping words wins.
+
+```python
+def lesk_similarity(sense_def, context_words):
+    """Score how well a sense definition matches context."""
+    def_words = set(sense_def.lower().split())
+    context_set = set(w.lower() for w in context_words)
+    return len(def_words & context_set)
+
+senses = {
+    "bank_1": "financial institution where deposits are held",
+    "bank_2": "sloping land beside a river or lake",
+}
+context = ["I", "need", "to", "deposit", "a", "check"]
+best_sense = max(senses, key=lambda s: lesk_similarity(senses[s], context))
+print(f"Best sense: {best_sense} -> {senses[best_sense]}")
+```
+
+**Supervised WSD:** Train classifiers on sense-annotated corpora like SemCor. Features include surrounding words, part-of-speech tags, and syntactic relations. Modern approaches use contextual embeddings fine-tuned on WSD datasets, achieving over 80% accuracy on standard benchmarks.
+
+### Semantic Parsing
+
+Semantic parsing maps natural language to executable meaning representations:
+
+**SQL generation:** "Show all employees hired after 2020" becomes:
+
+```sql
+SELECT * FROM employees WHERE hire_date > '2020-01-01'
+```
+
+**Code generation:** "Sort the list of users by name" becomes:
+
+```python
+sorted(users, key=lambda u: u.name)
+```
+
+Semantic parsing combines syntactic analysis (parsing the sentence structure) with semantic composition (building the meaning representation compositionally). Modern approaches use sequence-to-sequence models with attention and structured decoders that enforce target language syntax.
+
+### Pragmatic Inference in Communication
+
+The distinction between semantics (literal meaning) and pragmatics (intended meaning) is crucial for understanding how humans communicate and how AI systems should interpret instructions:
+
+**Implicature in requirements:** When a stakeholder says "The system should handle large files," semantics gives us the literal meaning. Pragmatics tells us we need to define "large" (100MB? 1GB?), decide what "handle" means (upload? process? store?), and understand that this is a request for clarification, not a specification.
+
+**Presupposition in API names:** The function `delete_user(id)` semantically means "remove the user with this ID from the system." It pragmatically presupposes that a user with this ID exists, that deletion is the right operation (not deactivation), and that the caller has permission. Documenting these presuppositions is the job of API documentation, adding a pragmatic layer to the semantic specification.
+
 ## Glossary
 
 | Term | Definition |

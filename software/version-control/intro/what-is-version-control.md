@@ -17,7 +17,13 @@ What version control is, why it is essential for every software project, how dif
 - [How Git Stores Data](#how-git-stores-data)
 - [Common Operations](#common-operations)
 - [Choosing a System](#choosing-a-system)
+- [Branching Strategies](#branching-strategies)
+- [Practical Tips](#practical-tips)
 - [Version Control in the Development Workflow](#version-control-in-the-development-workflow)
+- [Learning Tips](#learning-tips)
+- [Glossary](#glossary)
+- [Quick References](#quick-references)
+- [Next Steps](#next-steps)
 
 ## Content
 
@@ -166,17 +172,35 @@ Because content is addressed by its hash, Git automatically detects duplicate co
 
 Regardless of the system, most developers use the same workflow day to day:
 
-1. **Pull** the latest changes from the shared repository to stay up to date.
-2. **Create a branch** for the feature or fix being worked on.
+1. **Pull** the latest changes from the shared repository to stay up to date. Prefer `git pull --rebase` to avoid unnecessary merge commits.
+2. **Create a branch** for the feature or fix being worked on. Name it descriptively: `feature/add-login`, `fix/null-pointer-crash`.
 3. **Make changes** to files in the working tree — add, modify, delete.
-4. **Stage** the changes that should be part of the next commit. This lets you choose which changes belong together.
-5. **Commit** the staged changes with a descriptive message explaining what and why.
-6. **Push** the branch to the shared repository so others can see it.
+4. **Stage** the changes that should be part of the next commit. Use `git add <file>` for specific files or `git add -p` for interactive staging of individual hunks.
+5. **Commit** the staged changes with a descriptive message. Use the imperative mood: "Add login form validation" not "Added login form validation".
+6. **Push** the branch to the shared repository so others can see it. Use `git push -u origin branch-name` on the first push to set the upstream tracking.
 7. **Open a pull request** (or merge request) to propose merging the changes into the main branch.
-8. **Review** and address feedback from teammates.
-9. **Merge** once the changes are approved.
+8. **Review** and address feedback from teammates. Make additional commits and push them to update the PR.
+9. **Merge** once the changes are approved. Options include creating a merge commit, squashing commits, or rebasing before merging.
 
 Steps 1-6 happen on the command line. Steps 7-9 happen on a platform like GitHub, GitLab, or Bitbucket.
+
+**Stashing:** When you need to switch context without committing unfinished work, use `git stash` to temporarily save changes:
+
+```bash
+git stash push -m "WIP: login form validation"
+git stash list
+git stash pop   # restore and remove from stash
+git stash drop  # remove without restoring
+git stash apply # restore but keep in stash
+```
+
+**Interactive rebase:** Clean up commit history before merging with `git rebase -i`. This lets you squash, reorder, rename, and drop commits:
+
+```bash
+git rebase -i HEAD~5
+```
+
+This opens an editor where you can change `pick` to `squash`, `reword`, `edit`, `drop`, or `fixup` for each commit. This is invaluable for polishing history before sharing.
 
 ### Choosing a System
 
@@ -194,6 +218,136 @@ The main contenders today:
 
 Subversion still exists in some legacy enterprise environments, and Mercurial is used by a few large projects, but these are exceptions. Learning Git is the single highest-leverage investment a developer can make in their tooling.
 
+### Branching Strategies
+
+How you use branches determines your team's collaboration model. Three strategies dominate modern development.
+
+**Git Flow** uses two permanent branches (`main` and `develop`) plus supporting branches for features, releases, and hotfixes. Features branch off `develop`, releases are prepared on a `release` branch, and hotfixes branch directly from `main`.
+
+```
+main ────●──────────●──────────●
+          \        / \        /
+develop ──●──●──●──●──●──●──●──●
+              |     |        |
+          feature  release  hotfix
+```
+
+Git Flow works well for projects with scheduled releases and maintenance branches. It is overkill for continuous delivery — the overhead of managing multiple branch types slows teams that deploy daily.
+
+**GitHub Flow** is simpler: everything branches from `main`, and every change is proposed via a pull request. There are no `develop` or `release` branches. Once a PR is reviewed and passes CI, it merges directly to `main` and is deployed.
+
+```
+main ──●──●──●──●──●──●──●──●──●
+        |     |        |
+      feature fix    feature
+```
+
+GitHub Flow suits continuous deployment where `main` is always deployable. It minimizes bureaucracy but requires disciplined CI/CD and short-lived branches.
+
+**Trunk-Based Development** takes simplicity further. Developers work on short-lived branches (hours, not days) and merge directly to `main` multiple times per day. Feature flags gate incomplete functionality. There are no long-running feature branches.
+
+```
+main ──●──●──●──●──●──●──●──●──●
+        |  |  |  |  |  |  |  |  |
+      (tiny branches, merged within hours)
+```
+
+Trunk-based development reduces merge conflicts, accelerates feedback, and enables continuous deployment. It requires strong automated testing and feature flag infrastructure.
+
+**GitLab Flow** adds environment branches (`staging`, `production`) between feature branches and deployment. Changes flow through environments in a controlled pipeline.
+
+Choose the strategy that matches your release cadence:
+- **Scheduled releases:** Git Flow
+- **Continuous deployment:** GitHub Flow
+- **High-velocity CI/CD:** Trunk-Based Development
+- **Multi-environment pipelines:** GitLab Flow
+
+### Practical Tips
+
+**Write good commit messages.** Follow the conventional format: a short subject line (50 chars or less), a blank line, then a body explaining what and why. The subject line should complete the sentence "This commit will...":
+
+```
+feat(auth): add OAuth2 login provider
+
+Implement Google and GitHub OAuth2 authentication.
+The existing session-based auth remains unchanged.
+
+Closes #142
+```
+
+**Use .gitignore from the start.** Ignore build artifacts (`node_modules/`, `dist/`, `build/`), dependency directories, environment files (`.env`, `*.local`), and OS metadata (`.DS_Store`, `Thumbs.db`). Use gitignore.io or GitHub's template repository to generate a comprehensive file.
+
+**Rebase before merging public branches.** Keep the commit history linear by rebasing feature branches onto the latest `main` before merging. Avoid merge commits in feature branches:
+
+```bash
+git checkout feature-branch
+git rebase main
+```
+
+**Prefer merge commits for integrating features.** When merging a feature branch with multiple commits into `main`, use `--no-ff` to force a merge commit that preserves the branch context:
+
+```bash
+git checkout main
+git merge --no-ff feature-branch
+```
+
+**Commit early, commit often.** Small, focused commits are easier to review, revert, and bisect. A commit should represent one logical change. Avoid mixing formatting changes with logic changes in the same commit.
+
+**Use `git bisect` to find bugs.** When a regression appears, bisect automates searching through history to find the exact commit that introduced the bug:
+
+```bash
+git bisect start
+git bisect bad HEAD
+git bisect good v1.0.0
+# Git checks out the midpoint. Test it, then mark good or bad.
+git bisect good   # or: git bisect bad
+# Repeat until the first bad commit is found.
+git bisect reset
+```
+
+Combine `git bisect run` with a script for fully automated bisecting:
+
+```bash
+git bisect start HEAD v1.0.0
+git bisect run npm test
+```
+
+**Protect sensitive data.** Never commit API keys, passwords, or certificates. Add sensitive files to `.gitignore` before the first commit. If you commit secrets accidentally, rotate them immediately — removing them from the file does not remove them from history. Use tools like `git-secrets` or `talisman` to prevent leaks.
+
+**Set up Git hooks.** Automate quality checks with client-side hooks. Run linters, formatters, and type checkers before allowing a commit:
+
+```bash
+# .git/hooks/pre-commit
+npm run lint && npm run typecheck
+```
+
+Use `husky` for Node.js projects to manage hooks via `package.json`:
+
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
+```
+
+**Use `git worktree` for parallel work.** When you need to work on two branches simultaneously without stashing, create a linked working tree:
+
+```bash
+git worktree add ../project-hotfix hotfix
+```
+
+**Master the reflog.** Git's reflog records every movement of HEAD. If you lose a commit after a destructive rebase or reset, the reflog is your safety net:
+
+```bash
+git reflog
+git reset --hard HEAD@{2}
+```
+
+**Leverage `git blame` with care.** `git blame` shows who last modified each line. Use it to understand why a change was made, not to assign blame.
+
 ### Version Control in the Development Workflow
 
 Version control is not an afterthought — it is central to how modern software is built. It connects to every part of the development lifecycle:
@@ -209,6 +363,22 @@ Version control is not an afterthought — it is central to how modern software 
 **Experimentation** — branches let teams try radical ideas without risk. If an experiment works, it is merged. If not, the branch is deleted and nobody remembers the failed attempt.
 
 **Documentation** — the commit log is the most accurate documentation of why the code evolved the way it did. A well-maintained log answers questions that no other documentation covers.
+
+## Learning Tips
+
+**Visualize your history.** Run `git log --graph --oneline --all` to see the branch structure. This mental model of commits as a directed acyclic graph is essential for understanding rebase, merge, and cherry-pick.
+
+**Practice recovery in a throwaway repo.** Create a test repository and practice undoing commits with `git reset --soft`, `git reset --mixed`, and `git reset --hard`. Recover lost commits with `git reflog`. Resolve merge conflicts intentionally to build confidence.
+
+**Pair bisect with automated tests.** The real power of `git bisect` is `bisect run`. Write a script that exits 0 for good and non-0 for bad, then let Git automate the search across hundreds of commits.
+
+**Use a GUI alongside the CLI.** Tools like GitKraken, SourceTree, or GitLens in VS Code provide visual diffs and history exploration. Use them to build intuition, then transition to CLI for speed.
+
+**Read the Pro Git book.** The official Pro Git book is comprehensive, free, and well-written. Read chapters 1-3 for fundamentals, then chapters on branching and rebasing.
+
+**Practice daily.** Use version control for every project, even personal ones. The habit of committing, branching, and reviewing your own history builds fluency faster than any tutorial.
+
+**Learn one command per day.** Git has over 150 subcommands. Focus on the 20 that matter most: `init`, `clone`, `add`, `commit`, `push`, `pull`, `fetch`, `branch`, `checkout`, `merge`, `rebase`, `log`, `diff`, `status`, `stash`, `reset`, `revert`, `bisect`, `reflog`, `cherry-pick`.
 
 ## Glossary
 
@@ -233,13 +403,33 @@ Version control is not an afterthought — it is central to how modern software 
 | Cherry-pick | Applying a single commit from one branch to another |
 | Bisect | A tool that binary searches history to find when a bug was introduced |
 | Reflog | A log of all HEAD movements, useful for recovery |
+| Detached HEAD | A state where HEAD points directly to a commit instead of a branch |
+| Fast-forward merge | A merge where the target branch has not diverged, simply moving the pointer forward |
+| Squash merge | Combining all commits from a branch into a single commit on the target |
+| Fork | A server-side copy of a repository, typically used in open-source contributions |
+| Upstream | The remote repository that a fork or local repo was originally cloned from |
+| Submodule | A reference to another Git repository embedded within a repository |
+| Worktree | A linked working directory for simultaneous work on multiple branches |
+| Stash | Temporary storage for uncommitted changes |
+| Hook | A script that runs automatically on Git events (pre-commit, post-commit) |
+| Object database | The internal storage (.git/objects) containing blobs, trees, commits, and tags |
+| Dangling commit | A commit not reachable from any branch or tag, subject to garbage collection |
+| Diff | A representation of changes between two versions of files |
+| Tracked file | A file that Git is already monitoring for changes |
+| Untracked file | A file in the working tree that Git has not been told about |
+| Ignored file | A file matched by `.gitignore` patterns that Git will not track |
 
 ## Quick References
 
 - [Pro Git Book](https://git-scm.com/book) — the official and comprehensive Git reference, available free online
 - [Git SCM Documentation](https://git-scm.com/docs) — command reference for every Git subcommand
-- [GitHub Git Tutorials](https://github.com/git-guides) — beginner-friendly guides from GitHub
+- [GitHub Git Guides](https://github.com/git-guides) — beginner-friendly guides from GitHub
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) — visual guides covering Git concepts and workflows
+- [Learn Git Branching](https://learngitbranching.js.org/) — interactive visual tutorial for branching and merging
+- [Conventional Commits](https://www.conventionalcommits.org/) — specification for structured commit messages
+- [gitignore.io](https://www.toptal.com/developers/gitignore) — generate .gitignore files for projects and IDEs
+- [Oh Shit, Git!?!](https://ohshitgit.com/) — practical recovery recipes for common Git mistakes
+- [Flight Rules for Git](https://github.com/k88hudson/git-flight-rules) — guide for what to do when things go wrong
 
 ## Next Steps
 

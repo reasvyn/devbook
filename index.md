@@ -2,6 +2,9 @@
 
 Markdown-based learning resources for developers. Explore careers, then dive into any subject.
 
+- [Level Up](level-up/index.md) — existential recovery, resilience, habits, meaning, and purpose
+- [Philosophy](philosophy/index.md) — existentialism, stoicism, ethics, meaning, and the good life
+- [Psychology](psychology/index.md) — positive psychology, behavioral psychology, cognitive psychology
 - [Careers](careers/index.md) — in-depth explorations of software professions
 - [Computer Science](computer-science/index.md) — algorithms, data structures, computation theory, operating systems
 - [Programming](programming/index.md) — languages, paradigms, software development practices
@@ -19,4 +22,4 @@ Markdown-based learning resources for developers. Explore careers, then dive int
 - [Governance](governance/index.md) — law, policy, ethics, regulation, compliance
 - [English](english/index.md) — technical writing, documentation, clear communication
 - [Business & Entrepreneurship](business/index.md) — startups, product, finance, investment
-- [Social & Psychology](social/index.md) — teamwork, communication, leadership, cognitive science
+- [Social](social/index.md) — teamwork, communication, leadership, human relations

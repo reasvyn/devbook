@@ -376,6 +376,94 @@ Common mobile-first breakpoints (content-driven):
 @media (min-width: 1280px) { } /* xl — wide desktop */
 ```
 
+### Container Queries for Mobile-First Components
+
+Container queries (`@container`) complement media queries by allowing components to respond to their parent container's size rather than the viewport:
+
+```css
+/* Define a containment context */
+.card-grid {
+    container-type: inline-size;
+    container-name: cards;
+}
+
+/* Mobile-first card: stacked by default */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* When container is wide enough, switch to row layout */
+@container cards (min-width: 400px) {
+    .card {
+        flex-direction: row;
+    }
+    .card img {
+        width: 200px;
+        flex-shrink: 0;
+    }
+}
+
+/* Even wider: add metadata sidebar */
+@container cards (min-width: 700px) {
+    .card {
+        display: grid;
+        grid-template-columns: auto 1fr 200px;
+    }
+}
+```
+
+Container queries are especially valuable for mobile-first design because they make components truly reusable. A card component can be used in a narrow sidebar, a medium-width content area, or a wide hero section — it adapts to each context independently. This eliminates the need for fragile width-based media queries tied to specific viewport sizes.
+
+### Conditional CSS with prefers-* Media Features
+
+Mobile-first design must respect user preferences and device capabilities:
+
+```css
+/* Base: works everywhere */
+.button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Reduce motion for vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .button {
+        border: 2px solid currentColor;
+        background: transparent;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .button {
+        background: #3399ff;
+        color: #000;
+    }
+}
+
+/* Reduced data — serve smaller assets */
+@media (prefers-reduced-data: reduce) {
+    .hero {
+        background-image: none;
+    }
+    .hero img {
+        display: none;
+    }
+}
+```
+
+These conditional styles ensure that the mobile-first baseline works for everyone, while enhancements tailor the experience to individual needs. Mobile-first is not just about screen size — it is about designing for a diverse range of users and contexts.
+
 ## Glossary
 
 | Term | Definition |

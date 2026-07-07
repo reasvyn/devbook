@@ -19,8 +19,9 @@ First-order logic (FOL) extends propositional logic with predicates, quantifiers
 - [Lowenheim-Skolem Theorem](#lowenheim-skolem-theorem)
 - [Limitations of First-Order Logic](#limitations-of-first-order-logic)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
+- [FOL in Programming: SQL, Prolog, and Type Systems](#fol-in-programming-sql-prolog-and-type-systems)
+- [Common Pitfalls in FOL](#common-pitfalls-in-fol)
+- [Learning Tips](#learning-tips)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)
@@ -295,6 +296,169 @@ WHERE NOT EXISTS (
 
 Although model checking of finite-state systems typically uses temporal logics, the underlying state exploration can be expressed in FOL with a fixed-point operator (FO + LFP, which expresses the modal mu-calculus).
 
+### FOL in Programming: SQL, Prolog, and Type Systems
+
+#### SQL and Relational Calculus
+
+SQL queries are syntactic sugar for domain relational calculus, a restricted fragment of FOL. Every SQL query corresponds to a FOL formula with:
+
+- `SELECT columns` → free variables being projected
+- `FROM tables` → domain of quantification
+- `WHERE conditions` → quantifier-free formula (for simple predicates)
+- `NOT EXISTS` → universal quantification or negated existential
+
+```sql
+-- Find employees who manage all projects in department CS
+-- FOL: {e.name | Employee(e) ∧ ∀p (Project(p) ∧ Dept(p, 'CS') → Manages(e, p))}
+SELECT e.name
+FROM Employee e
+WHERE NOT EXISTS (
+    SELECT 1 FROM Project p
+    WHERE p.dept = 'CS'
+    AND p.manager_id != e.id
+)
+```
+
+SQL's limited quantification (only `EXISTS` and `NOT EXISTS` correspond to $\exists$ and $\neg \exists$) means some FOL queries cannot be expressed directly. Recursive CTEs (Common Table Expressions) extend SQL beyond FOL into fixed-point logic.
+
+#### Prolog and Horn Clauses
+
+Prolog is a logic programming language based on a subset of FOL called Horn clauses. A Horn clause has at most one positive literal:
+
+```
+% FOL: ∀x (Parent(x, y) ∧ Male(x) → Father(x, y))
+% Prolog: father(X, Y) :- parent(X, Y), male(X).
+
+% FOL: ∀x (∃y Parent(y, x) → Child(x))
+% Prolog: child(X) :- parent(_, X).
+
+% Facts
+parent(john, mary).
+parent(mary, alice).
+male(john).
+
+% Queries
+?- father(john, mary).   % true
+?- child(alice).          % true
+?- parent(X, Y).          % enumerates all parent relationships
+```
+
+Prolog uses resolution with SLDNF (Selective Linear Definite clause with Negation as Failure) to answer queries. The absence of a proof is interpreted as falsity (closed-world assumption), which differs from standard FOL semantics (open-world assumption).
+
+#### Type Systems and Curry-Howard Correspondence
+
+The Curry-Howard correspondence maps logical systems to type systems:
+
+| Logic | Programming |
+|-------|-------------|
+| Proposition | Type |
+| Implication ($\to$) | Function type ($\to$) |
+| Conjunction ($\land$) | Product type (pair, tuple) |
+| Disjunction ($\lor$) | Sum type (Either, tagged union) |
+| Universal quantifier ($\forall$) | Polymorphic type (generics) |
+| Existential quantifier ($\exists$) | Abstract data type (existential) |
+| Proof | Program (term) |
+| Proof normalization | Program evaluation |
+
+First-order logic corresponds to a type system with dependent types (like Idris, Agda, Coq). The `forall` quantifier in Haskell (`forall a. a -> a`) is second-order, not first-order — it quantifies over types, which are like predicates in logic.
+
+```haskell
+-- Universal quantification in Haskell (second-order)
+id :: forall a. a -> a
+id x = x
+
+-- This corresponds to: ∀a (a → a) in second-order logic
+```
+
+**Dependent types (FOL in types):**
+
+```idris
+-- Idris: FOL-style quantification over values
+append : (n : Nat) -> (m : Nat) -> Vect n a -> Vect m a -> Vect (n + m) a
+
+-- The type says: for all n, m, and any vector of length n and m,
+-- append produces a vector of length n + m
+-- This is: ∀n∀m∀a (Vect(n, a) → Vect(m, a) → Vect(n+m, a))
+```
+
+### Common Pitfalls in FOL
+
+**Pitfall 1: Confusing free and bound variables.**
+
+```text
+// Wrong: P(x) → ∀x Q(x)  — x is both free and bound
+// Right: P(x) → ∀y Q(y)  — renamed to avoid confusion
+```
+
+Always rename bound variables before substituting to avoid capture.
+
+**Pitfall 2: Reordering quantifiers incorrectly.**
+
+$$\forall x \exists y \text{Loves}(x, y) \quad \text{(everyone loves someone)}$$
+$$\exists y \forall x \text{Loves}(x, y) \quad \text{(someone is loved by everyone)}$$
+
+These are not equivalent. Swapping $\forall$ and $\exists$ changes the meaning. The first says each person loves at least one person (possibly different people). The second says there is a universal beloved.
+
+**Pitfall 3: Using $\to$ when $\land$ is needed with $\exists$.**
+
+Translating "Some cats are black":
+
+```text
+// Wrong: ∃x (Cat(x) → Black(x))
+// This is true in any domain where at least one thing is not a cat!
+// Right: ∃x (Cat(x) ∧ Black(x))
+```
+
+The implication $\to$ is true whenever the antecedent is false, so $\exists x (Cat(x) \to Black(x))$ is satisfied by any non-cat element.
+
+**Pitfall 4: Using $\land$ when $\to$ is needed with $\forall$.**
+
+Translating "All cats are black":
+
+```text
+// Wrong: ∀x (Cat(x) ∧ Black(x))
+// This says everything is a black cat — far too strong.
+// Right: ∀x (Cat(x) → Black(x))
+```
+
+**Pitfall 5: Negating quantifiers incorrectly.**
+
+$$\neg \forall x P(x) \quad \text{is equivalent to} \quad \exists x \neg P(x)$$
+$$\neg \exists x P(x) \quad \text{is equivalent to} \quad \forall x \neg P(x)$$
+
+This is the **duality of quantifiers**. Push negations inward over quantifiers by flipping $\forall \leftrightarrow \exists$.
+
+**Pitfall 6: Assuming the domain is non-empty.**
+
+FOL structures must have a non-empty domain. But in reasoning about software, you may need to express properties about empty collections. Be careful translating from programming to logic — an empty list in code does not correspond to an empty domain.
+
+**Pitfall 7: Equality vs. equivalence.**
+
+The equality symbol $=$ in FOL refers to identity — two terms refer to the same object. This is different from logical equivalence ($\leftrightarrow$), bi-implication, or observational equivalence in programming. In databases, $=$ for `NULL` values behaves differently from FOL equality.
+
+### Learning Tips
+
+**Translate natural language to FOL and back:** Take English sentences, translate them to FOL, and then translate the FOL back to English to verify the meaning is preserved. This builds the muscle memory for quantifier placement.
+
+**Practice with finite models:** When checking validity or satisfiability, start with small finite domains (1, 2, 3 elements). Enumerate the possibilities to build intuition before reasoning about infinite domains.
+
+**Remember the duality laws:** $\neg \forall x \phi \iff \exists x \neg \phi$ and $\neg \exists x \phi \iff \forall x \neg \phi$. These are essential for negation and contrapositive reasoning.
+
+**Draw Venn-style diagrams for quantifiers:** Visualize $\forall x (P(x) \to Q(x))$ as "the P circle is inside the Q circle" and $\exists x (P(x) \land Q(x))$ as "the circles overlap".
+
+**Use SMT solvers for verification:** The Z3 solver (by Microsoft) can check satisfiability of FOL formulas in decidable fragments. Experimenting with Z3 gives immediate feedback on your understanding.
+
+```python
+from z3 import *
+
+x, y = Ints('x y')
+s = Solver()
+s.add(ForAll([x, y], x + y == y + x))  # commutativity
+print(s.check())  # sat — addition is commutative
+```
+
+**Separate syntax from semantics:** Confusing the two is the most common conceptual error. Syntax is about symbols and rules for forming formulas. Semantics is about meaning in structures. The same formula can be true in one structure and false in another.
+
 ## Glossary
 
 | Term | Definition |
@@ -310,6 +474,7 @@ Although model checking of finite-state systems typically uses temporal logics, 
 | Satisfiability | A formula that holds in some structure |
 | Entailment | $\Gamma \models \phi$: every model of $\Gamma$ is also a model of $\phi$ |
 | Completeness | Every valid formula is provable (Godel, 1929) |
+| Soundness | Every provable formula is valid (truth-preserving rules) |
 | Compactness | A set of formulas has a model iff every finite subset has a model |
 | Lowenheim-Skolem | A theory with an infinite model has models of every infinite size |
 | Non-standard model | A model not isomorphic to the intended structure |
@@ -317,6 +482,18 @@ Although model checking of finite-state systems typically uses temporal logics, 
 | Conservative extension | Adding definitions to a theory without changing its theorems |
 | Presburger arithmetic | Decidable FOL fragment with $+$ but no $\times$ on $\mathbb{N}$ |
 | Monadic FOL | FOL with only unary predicates (no $n$-ary relations for $n > 1$) |
+| Horn clause | A clause with at most one positive literal, used in Prolog |
+| Closed-world assumption | Everything not provably true is false (Prolog semantics) |
+| Open-world assumption | Truth is independent of provability (standard FOL semantics) |
+| Curry-Howard correspondence | The isomorphism between proofs and programs |
+| Dependent type | A type that depends on a value, analogous to FOL quantification |
+| Quantifier duality | $\neg \forall x \phi \iff \exists x \neg \phi$ and vice versa |
+| Capture-avoiding substitution | Renaming bound variables to prevent accidental capture during substitution |
+| Henkin construction | Building a model from syntactic elements by extending to a maximally consistent set |
+| SMT solver | Satisfiability Modulo Theories — automated solver for quantifier-free FOL with theories |
+| Resolution | A proof system for FOL based on refutation and unification |
+| Skolemization | Replacing existential quantifiers with fresh function symbols |
+| Herbrand model | A model where the domain is the set of ground terms |
 
 ## Quick References
 
@@ -325,6 +502,12 @@ Although model checking of finite-state systems typically uses temporal logics, 
 - [Stanford Encyclopedia: First-Order Logic](https://plato.stanford.edu/entries/logic-firstorder/) — comprehensive philosophical and mathematical reference
 - [Model Theory, Hodges](https://www.cambridge.org/core/books/model-theory/93FD6B5B5EF7A0C1A6E0B8E3F4A0C3E1) — the standard reference for model theory
 - [Z3 SMT Solver](https://github.com/Z3Prover/z3) — supports quantifier reasoning in FOL
+- [Learn Prolog Now!](https://www.learnprolognow.org/) — free online Prolog course
+- [Curry-Howard Correspondence (Wikipedia)](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence) — detailed explanation of proofs-as-programs
+- [SQL and Relational Calculus](https://en.wikipedia.org/wiki/Relational_calculus) — connection between SQL and FOL
+- [The Art of Prolog, Sterling & Shapiro](https://mitpress.mit.edu/9780262691635/the-art-of-prolog/) — advanced Prolog programming techniques
+- [Types and Programming Languages, Pierce](https://www.cis.upenn.edu/~bcpierce/tapl/) — type systems and their logical foundations
+- [First-Order Logic in SMT (Z3 Tutorial)](https://microsoft.github.io/z3guide/docs/logic/Quantifiers/) — using Z3 for quantifier reasoning
 
 ## Next Steps
 

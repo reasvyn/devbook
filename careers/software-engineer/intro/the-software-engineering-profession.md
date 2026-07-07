@@ -434,6 +434,7 @@ The milestones also reveal the accelerating pace of change. The gap between Fort
 
 ## Next Steps
 
+- [The Software Crisis](the-software-crisis.md) — the founding problem that defined the profession
 - [What Is a Software Engineer?](../what-is-a-software-engineer.md)
 - [Responsibilities & Daily Work](../responsibilities-and-daily-work.md)
 - [Types & Specializations](../types-and-specializations.md)

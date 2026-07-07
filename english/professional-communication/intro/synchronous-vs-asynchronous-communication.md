@@ -303,6 +303,65 @@ Incidents start synchronous (bridge call, war room). Write updates in a shared c
 
 Share an async agenda document before the meeting. Both participants add items. Use the sync time for discussion, not status reporting.
 
+### Documentation-First Communication
+
+A documentation-first approach extends async-first principles to organizational knowledge:
+
+**Every decision has a document.** Before a decision is made, someone writes a proposal. After the decision, the document captures the rationale. This creates an audit trail and prevents "we decided this in a meeting and nobody remembers why."
+
+**Templates reduce friction.** Providing templates for RFCs, decision records, and meeting notes lowers the barrier to writing. A template prompts for the essential information and ensures consistency across documents.
+
+```markdown
+# Decision Record: {title}
+
+## Status
+Proposed | Accepted | Deprecated | Superseded
+
+## Context
+What is the problem we are solving? What factors constrain the decision?
+
+## Options Considered
+Option A: {description}
+- Pros: {list}
+- Cons: {list}
+
+Option B: {description}
+- Pros: {list}
+- Cons: {list}
+
+## Decision
+We chose Option A because {rationale}.
+
+## Consequences
+What becomes easier? What becomes harder?
+```
+
+**The documentation-first workflow:**
+
+1. Identify a decision that needs to be made
+2. Write a one-page proposal (template helps)
+3. Share async for review (24-48 hour review period)
+4. Schedule sync only if consensus is not reached async
+5. Finalize the document and archive in a searchable location
+
+This workflow scales from small teams (documentation is lightweight) to large organizations (documentation provides coordination without meetings).
+
+### The Async-First Tooling Stack
+
+Engineering teams should select tools that support async-first communication:
+
+| Category | Async-friendly tools | Anti-patterns |
+|----------|---------------------|---------------|
+| Chat | Slack/Discord with notification batching | Always-on notifications, real-time expectations |
+| Documents | Notion, Google Docs, Markdown in Git | Only PPT/verbal presentations |
+| Proposals | RFCs, ADRs in version control | Only verbal discussion in meetings |
+| Code reviews | GitHub/GitLab PRs | In-person walkthroughs |
+| Knowledge base | Wiki, docs site, GitHub Pages | Only chat history |
+| Meetings | Recorded, with agenda and notes | Unrecorded, undocumented |
+| Status | Async standup tools (Geekbot, Statuspage) | Required daily sync standups |
+
+**Key principle:** Every tool should produce a durable, searchable artifact. If the conversation happens in a tool that does not persist (unrecorded video call, ephemeral chat), the knowledge is lost.
+
 ### Organizational Anti-Patterns
 
 **1. Sync-by-default culture.**

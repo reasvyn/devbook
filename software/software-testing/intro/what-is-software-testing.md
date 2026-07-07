@@ -305,6 +305,167 @@ A testing culture is one where quality is everyone's responsibility. Signs of a 
 
 Building this culture takes time, especially in organizations where testing has historically been undervalued. Start small: enforce tests for new code, fix the flakiest tests first, and make the test suite fast. Success builds on itself.
 
+### Risk-Based Testing
+
+Not all tests are equally important. Risk-based testing prioritizes testing effort based on the likelihood and impact of failure:
+
+**Risk assessment matrix:**
+
+| Impact | High probability | Medium probability | Low probability |
+|--------|-----------------|-------------------|-----------------|
+| Critical | Extensive testing | Thorough testing | Standard testing |
+| Moderate | Thorough testing | Standard testing | Light testing |
+| Low | Standard testing | Light testing | Minimal testing |
+
+**Factors that increase risk:**
+- Code churn — frequently changed modules are more likely to have bugs
+- Complexity — high cyclomatic complexity correlates with defect density
+- Dependencies — modules with many dependencies are more likely to fail
+- Criticality — payment processing, auth, data integrity failures have high impact
+- History — modules with past defects are likely to have future defects
+
+**Practical approach:** Identify the 20% of features that handle 80% of business value and focus testing effort there. Amazon's "flywheel" features, Stripe's payment processing, and Google's search ranking all receive disproportionate testing investment.
+
+### Test Automation Strategy
+
+Building an effective test automation strategy requires planning:
+
+**The test automation pyramid (Cohn, 2009):**
+
+```
+        /\
+       /E2E\
+      /------\
+     /Integration\
+    /--------------\
+   /   Unit Tests   \
+  /------------------\
+```
+
+- **Base (Unit):** Fast, reliable, targeted. Thousands of tests, milliseconds each.
+- **Middle (Integration):** Verify component interactions. Hundreds of tests, seconds each.
+- **Top (E2E):** Simulate user workflows. Dozens of tests, minutes each.
+
+**Modern revision — the testing trophy (Guillermo Rauch):**
+
+```
+         /\
+        /Static\
+       /Analysis\
+      /----------\
+     /   Unit     \
+    /--------------\
+   /  Integration   \
+  /------------------\
+ /      E2E          \
+/----------------------\
+```
+
+Static analysis (type checking, linting) catches entire classes of bugs before any test runs. Integration tests verify that components work together. E2E tests cover critical user journeys.
+
+**Where to invest:**
+- Static analysis — low effort, high payoff. Add TypeScript, mypy, ESLint first.
+- Unit tests — medium effort, high coverage. Test business logic thoroughly.
+- Integration tests — higher effort, catch real bugs. Test database, API, and service interactions.
+- E2E tests — highest effort, slowest. Reserve for critical paths: login, purchase, data export.
+
+**The inverted pyramid anti-pattern:** Most teams start with too many E2E tests because they seem to test "real" scenarios. But E2E tests are slow, flaky, and hard to debug. The result is an unreliable test suite that nobody trusts. Fix: push tests down the pyramid. If you have 100 E2E tests, move 80 of them to integration and unit tests.
+
+### Testing in Different Domains
+
+Testing practices vary significantly by domain:
+
+**Web applications:**
+- Cross-browser testing — verify behavior in Chrome, Firefox, Safari, Edge
+- Responsive design testing — verify layouts at various viewport sizes
+- Accessibility testing — screen readers, keyboard navigation, color contrast
+- Performance testing — load time, Core Web Vitals, API response times
+
+**Mobile applications:**
+- Device fragmentation — test on multiple screen sizes, OS versions, hardware configs
+- Network conditions — test on WiFi, 4G, 3G, offline, poor connectivity
+- Battery and memory — test under constrained resources
+- App lifecycle — test backgrounding, interruptions (calls, notifications), state restoration
+- Platform-specific behaviors — push notifications, deep linking, permissions
+
+**Data pipelines and ETL:**
+- Schema validation — verify column types, nullability, constraints
+- Row count and distribution — test that data volume matches expectations
+- Data quality checks — null rates, unique values, referential integrity
+- Idempotency — re-running the pipeline produces the same result
+
+**Machine learning systems:**
+- Data validation — feature distributions, label quality, train/test skew
+- Model evaluation — accuracy, precision, recall, fairness metrics
+- Model serving — input/output schema, latency, throughput
+- Training reproducibility — same seed and data produce same model
+
+### Session-Based Testing
+
+Session-based test management (SBTM) structures exploratory testing into time-boxed sessions:
+
+**Session structure:**
+1. **Charter** — a mission statement for the session (e.g., "Explore the checkout flow with invalid credit cards")
+2. **Time box** — typically 60-90 minutes
+3. **Session report** — what was tested, what was found, open questions
+
+**Session report template:**
+
+| Field | Description |
+|-------|-------------|
+| Charter | Mission for this session |
+| Tester | Name of tester |
+| Duration | Actual time spent |
+| Test notes | Features tested, data used, techniques applied |
+| Bugs found | Defect IDs or descriptions |
+| Issues | Questions raised, ambiguities discovered |
+| Coverage | Areas tested and not tested |
+
+SBTM is particularly useful for:
+- Testing new features where test cases are not yet written
+- Regression testing with a fresh perspective — finding bugs that scripted tests miss
+- Evaluating usability and user experience
+- Testing under time constraints where full scripted testing is not feasible
+
+### Testing and CI/CD Integration
+
+Modern testing relies on continuous integration to provide rapid feedback:
+
+**CI pipeline stages:**
+1. **Lint** — static analysis, formatting checks (< 1 minute)
+2. **Type check** — type system verification (< 1 minute)
+3. **Unit tests** — fast feedback on logic errors (< 2 minutes)
+4. **Integration tests** — component interaction verification (< 5 minutes)
+5. **Build** — compile, package, containerize (< 5 minutes)
+6. **E2E tests** — critical path verification (< 10 minutes)
+7. **Security scan** — dependency vulnerabilities, SAST (< 5 minutes)
+8. **Deploy to staging** — if all checks pass
+
+**Test selection and parallelization:**
+- Run only tests affected by the change (test impact analysis)
+- Parallelize test execution across multiple CI agents
+- Fail fast — stop the pipeline on the first critical failure
+
+**Gating criteria:**
+- All unit tests must pass
+- Code coverage must not decrease (enforced by CI)
+- New code must have tests (enforced by coverage diff)
+- No critical or high-severity lint violations
+
+### Testing Metrics Deep Dive
+
+Beyond the basic metrics, teams benefit from tracking:
+
+| Metric | What it tells you | How to improve |
+|--------|------------------|----------------|
+| Test suite reliability | Percentage of CI runs with all tests passing | Fix flaky tests, improve test isolation |
+| Time to feedback | Time from commit to test results | Parallelize, optimize slow tests |
+| Defect detection rate | % of bugs found by testing vs. production | Analyze escapes, add targeted tests |
+| Test maintenance cost | Time spent fixing tests vs. writing new ones | Reduce coupling, use better test design |
+| Mutation score | Percentage of mutants (artificial bugs) detected | Strengthen assertions, add edge cases |
+
+**Mutation testing:** Mutation testing introduces small changes (mutants) to the code and checks whether existing tests detect them. A mutant that survives means the test suite missed a potential bug. High mutation scores correlate with lower production defect rates. Tools: Stryker (JavaScript), PIT (Java), MutPy (Python).
+
 ## Glossary
 
 | Term | Definition |

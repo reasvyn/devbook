@@ -297,6 +297,73 @@ for n in [5, 10, 30, 100]:
 
 **Multiple testing:** The CLT applies to each individual test, but across many tests, the distribution of the maximum statistic follows an extreme value distribution, not a normal.
 
+### Applications in Practice
+
+**Financial risk management.** Value at Risk (VaR) and Expected Shortfall rely on the CLT for parametric estimates. A portfolio's daily returns are sums of many small factors. Under the CLT, the portfolio return distribution is approximately normal, allowing calculation of the 1% or 5% worst-case loss. For heavy-tailed assets, Monte Carlo simulation (LLN-based) provides more accurate estimates by drawing from fitted distributions.
+
+**Quality assurance in manufacturing.** Acceptance sampling plans use the CLT to determine whether a batch meets quality standards. A sample of $n$ items is tested; the defect proportion $\hat{p}$ follows an approximately normal distribution. If $\hat{p} + z \times \sqrt{\hat{p}(1-\hat{p})/n}$ exceeds the acceptable quality limit, the batch is rejected. This statistical foundation underpins Six Sigma methodology.
+
+**Monte Carlo simulation.** The LLN justifies estimating expectations via simulation. If we need to compute $E[f(X)]$ and cannot solve it analytically, we draw samples $X_1, \dots, X_n$ and compute $\frac{1}{n} \sum f(X_i)$. By the LLN, this converges to the true expectation.
+
+```python
+import numpy as np
+
+def monte_carlo_pi(n):
+    """Estimate pi using Monte Carlo method."""
+    points = np.random.uniform(-1, 1, (n, 2))
+    inside = np.sum(np.linalg.norm(points, axis=1) <= 1)
+    return 4 * inside / n
+
+for n in [100, 1000, 10000, 100000]:
+    estimate = monte_carlo_pi(n)
+    print(f"n={n:6d}: pi ≈ {estimate:.6f} (error: {abs(estimate - np.pi):.6f})")
+```
+
+**Polling and margin of error.** A poll of $n$ voters estimates the proportion supporting a candidate. The CLT tells us the sampling distribution of $\hat{p}$ is approximately normal with mean $p$ and variance $p(1-p)/n$. The margin of error $1.96 \times \sqrt{p(1-p)/n}$ is derived directly from the CLT. Pollsters report "margin of error $\pm 3\%$" based on $n \approx 1067$, which gives $1.96 \times \sqrt{0.5 \times 0.5 / 1067} \approx 0.03$.
+
+**A/B testing.** In an A/B test comparing two conversion rates, the difference in sample proportions follows (by the CLT) an approximately normal distribution. The $z$-test and associated $p$-value rely on the CLT for validity. This is why A/B tests require a minimum sample size — below that, the normal approximation breaks down and false positives increase.
+
+**Control charts in manufacturing.** Statistical process control uses control limits at $\mu \pm 3\sigma / \sqrt{n}$. Points outside these limits signal that the process has shifted. These limits come from the CLT: if the process is in control, the probability of exceeding 3-sigma limits is around 0.3%. Japanese manufacturing adopted these methods in the 1950s, leading to the quality revolution.
+
+**Delta method for transformations.** The delta method extends the CLT to functions of the sample mean. If $\sqrt{n}(\bar{X}_n - \mu) \xrightarrow{d} N(0, \sigma^2)$ and $g$ is differentiable, then:
+
+$$
+\sqrt{n}(g(\bar{X}_n) - g(\mu)) \xrightarrow{d} N(0, \sigma^2 [g'(\mu)]^2)
+$$
+
+This is used for variance-stabilizing transformations like the log transform for ratios and the Fisher transform for correlations.
+
+**Bootstrap approximation.** The bootstrap resamples from the empirical distribution to approximate sampling distributions. The theoretical justification comes from the LLN and CLT: the empirical distribution converges to the true distribution, so resampling from it approximates sampling from the population. The bootstrap percentile interval relies on the CLT for coverage guarantees.
+
+```python
+import numpy as np
+
+def bootstrap_ci(data, stat_func=np.mean, n_bootstrap=10000, ci=0.95):
+    """Compute bootstrap percentile confidence interval."""
+    n = len(data)
+    bootstrap_stats = np.array([
+        stat_func(np.random.choice(data, n, replace=True))
+        for _ in range(n_bootstrap)
+    ])
+    alpha = (1 - ci) / 2
+    lower, upper = np.percentile(bootstrap_stats, [alpha * 100, (1 - alpha) * 100])
+    return lower, upper
+
+np.random.seed(42)
+data = np.random.exponential(1, 50)
+ci_low, ci_high = bootstrap_ci(data)
+print(f"Sample mean: {np.mean(data):.4f}")
+print(f"95% bootstrap CI: [{ci_low:.4f}, {ci_high:.4f}]")
+```
+
+**The 30-sample rule of thumb.** The guideline $n \geq 30$ comes from the observation that for moderately skewed distributions, the CLT approximation is reasonable by $n = 30$. This is not universal. For log-normal distributions with high variance, $n$ may need to be 300 or more. For symmetric light-tailed distributions like the uniform, $n = 5$ suffices. The required sample size depends on the population distribution's skewness and kurtosis.
+
+**Confidence intervals and the CLT.** The CLT is the foundation for constructing confidence intervals for the population mean. The $z$-interval $\bar{X} \pm z_{\alpha/2} \times \sigma / \sqrt{n}$ relies on the CLT for its coverage guarantee. When $\sigma$ is unknown and estimated by $s$, the $t$-interval $\bar{X} \pm t_{\alpha/2, n-1} \times s / \sqrt{n}$ accounts for the additional uncertainty in the standard error estimate. The $t$-distribution is wider than the normal for small $n$, converging to the normal as $n$ grows. This convergence is itself a CLT result — the $t$-statistic converges in distribution to the standard normal as $n \to \infty$.
+
+**The CLT for proportions.** For binary data, the sample proportion $\hat{p} = \frac{1}{n} \sum X_i$ where $X_i \in \{0, 1\}$ follows the CLT: $\hat{p} \xrightarrow{d} N(p, p(1-p)/n)$. This is the basis for confidence intervals for proportions, sample size calculations for polls, and hypothesis tests for A/B experiments. The normal approximation works well when $np \geq 10$ and $n(1-p) \geq 10$, a guideline derived from the symmetry and boundedness of the binomial distribution.
+
+**Edgeworth expansions.** For improved accuracy beyond the basic CLT, Edgeworth expansions add correction terms involving skewness and kurtosis of the population distribution. These corrections improve the approximation quality for small samples from skewed distributions, reducing coverage error in confidence intervals from $O(1/\sqrt{n})$ to $O(1/n)$. The expansion includes a term proportional to the population skewness divided by $\sqrt{n}$, which shifts the quantiles to account for asymmetry in the sampling distribution.
+
 ## Glossary
 
 | Term | Definition |

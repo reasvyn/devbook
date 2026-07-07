@@ -196,6 +196,130 @@ TypeScript catches entire categories of bugs at compile time — type mismatches
 
 Most modern frontend projects use TypeScript by default. React, Vue, Angular, and Next.js all have first-class TypeScript support.
 
+### The Event Loop in Depth
+
+JavaScript's concurrency model is based on an event loop, which makes single-threaded execution work efficiently for I/O-bound applications.
+
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Timeout callback");
+}, 0);
+
+Promise.resolve().then(() => {
+    console.log("Promise microtask");
+});
+
+console.log("End");
+
+// Output:
+// Start
+// End
+// Promise microtask
+// Timeout callback
+```
+
+The event loop processes tasks in phases:
+
+1. Execute synchronous code on the call stack until it is empty.
+2. Process all microtasks (Promise callbacks, queueMicrotask) in FIFO order.
+3. Process one macrotask (setTimeout, setInterval, I/O callbacks) from the macrotask queue.
+4. Render any pending UI updates (in browser environments).
+5. Repeat.
+
+This means microtasks always execute before the next macrotask, even if the macrotask was scheduled earlier. Promise-based code runs before timer-based code. Understanding this ordering is essential for debugging async code and avoiding subtle timing bugs.
+
+```javascript
+// Practical example: ensuring DOM updates before heavy computation
+button.addEventListener("click", () => {
+    button.textContent = "Processing...";
+
+    // The DOM update will not render until the current task completes.
+    // Use a microtask to yield to the rendering step:
+    setTimeout(() => {
+        // Heavy computation here
+        const result = expensiveCalculation();
+        button.textContent = `Result: ${result}`;
+    }, 0);
+});
+```
+
+### The Module System
+
+JavaScript's module system evolved significantly over time. Understanding the different formats is essential for working with modern codebases.
+
+**IIFE pattern (immediately invoked function expression)** was the pre-module approach to encapsulation:
+
+```javascript
+const myModule = (function() {
+    let privateCounter = 0;
+
+    return {
+        increment() { privateCounter++; },
+        getCount() { return privateCounter; }
+    };
+})();
+```
+
+**CommonJS** is the module system used by Node.js. It uses `require` for imports and `module.exports` for exports. Modules are loaded synchronously, which works fine for server-side code but not for browsers.
+
+```javascript
+// In file math.js
+function add(a, b) { return a + b; }
+module.exports = { add };
+
+// In another file
+const math = require("./math");
+console.log(math.add(2, 3));
+```
+
+**ES modules (ESM)** are the standardized module system defined in ES6. They use `import` and `export` keywords and are loaded asynchronously with support for static analysis, tree-shaking, and cyclic dependencies.
+
+```javascript
+// lib.js
+export const PI = 3.14159;
+export function circumference(radius) {
+    return 2 * PI * radius;
+}
+
+// app.js
+import { circumference } from "./lib.js";
+console.log(circumference(5));
+```
+
+ES modules are supported in all modern browsers and Node.js (since version 12). The ecosystem is transitioning from CommonJS to ESM, but the migration is gradual because it requires changing file extensions (`package.json` type field, `.mjs` extensions).
+
+### Memory Management and Garbage Collection
+
+JavaScript automatically manages memory through garbage collection. The V8 engine (used by Chrome and Node.js) uses a generational garbage collector:
+
+- **Young generation** — newly allocated objects. Most objects die young (function-local variables, temporary objects). The young generation is collected frequently with a fast, scavenging collector.
+- **Old generation** — objects that survive multiple young-generation collections. These are collected less frequently with a mark-sweep-compact collector that can cause noticeable pauses for very large heaps.
+
+Memory leaks occur when objects are unintentionally retained:
+
+```javascript
+// Memory leak example: retained event listeners
+class LeakyComponent {
+    constructor(element) {
+        this.element = element;
+        this.handler = () => console.log("clicked");
+        element.addEventListener("click", this.handler);
+        // If the component is destroyed without removing the listener,
+        // the component and its handler are retained by the element.
+    }
+
+    destroy() {
+        this.element.removeEventListener("click", this.handler);
+    }
+}
+```
+
+Other common leak sources: global variables, forgotten timers (`setInterval` without `clearInterval`), closures that capture large objects, and detached DOM nodes held by JavaScript references.
+
+Tools like Chrome DevTools Memory tab and Node.js `--inspect` help identify leaks by taking heap snapshots and comparing object counts between GC cycles.
+
 ### Modern JavaScript Development
 
 A typical modern JavaScript development workflow includes:
@@ -209,21 +333,66 @@ A typical modern JavaScript development workflow includes:
 
 This workflow is standardized across most modern JavaScript projects, regardless of framework choice.
 
+### JavaScript's Relationship with the Web Platform
+
+JavaScript's unique position as the browser's native language means it is deeply intertwined with web standards. When the web platform gains a new capability — a graphics API, a sensor interface, a storage mechanism — JavaScript is how developers access it.
+
+The Web Hypertext Application Technology Working Group (WHATWG) and the World Wide Web Consortium (W3C) maintain web standards that specify JavaScript APIs. The ECMAScript specification (maintained by TC39) defines the language itself. These standards evolve independently but in coordination: a new JavaScript feature might enable new kinds of APIs, and new platform capabilities might motivate new language features.
+
+This relationship creates a tension. JavaScript must evolve to meet the demands of modern applications, but it cannot break the web — there are billions of existing pages that must continue to work. TC39 takes backward compatibility extremely seriously. No feature has ever been removed from JavaScript. Even deprecated features like `with` statements and `arguments.callee` remain supported for compatibility. This "don't break the web" principle constrains JavaScript's evolution in ways that other languages do not experience.
+
+### Common Criticisms and Defenses
+
+JavaScript attracts both passionate loyalty and intense criticism. Understanding both sides helps you use the language effectively:
+
+**Criticism: Implicit type coercion is unpredictable.** The expression `[] + []` evaluates to an empty string. `[] + {}` evaluates to `"[object Object]"`. `{} + []` evaluates to `0` (because the `{}` is parsed as an empty code block, not an object). These behaviors are technically specified but counterintuitive.
+
+**Defense:** Good JavaScript style avoids relying on coercion quirks. Linters (ESLint) and strict mode catch most problematic patterns. TypeScript eliminates the entire category of coercion bugs.
+
+**Criticism: The event loop is confusing.** Understanding how the event loop, microtasks, and macrotasks interact requires mental models that are not obvious to beginners. The `setTimeout(fn, 0)` pattern for deferring execution seems like a hack.
+
+**Defense:** The event loop makes JavaScript highly predictable for I/O-bound workloads. No other mainstream language makes concurrency as approachable as the async/await pattern does.
+
+**Criticism: The ecosystem changes too fast.** JavaScript frameworks have a reputation for rapid churn. A project started with AngularJS in 2014 would need a complete rewrite to use modern Angular. Tools, patterns, and best practices shift every few years.
+
+**Defense:** The core language changes slowly. Frameworks come and go, but the underlying JavaScript skills — closures, prototypes, the event model — remain relevant. The ecosystem's rapid evolution reflects a healthy, competitive community.
+
+**Criticism: No type safety at scale.** A large JavaScript codebase without types becomes difficult to refactor. Renaming a function parameter requires hunting through every call site manually.
+
+**Defense:** TypeScript solves this problem entirely. Most teams that reach the pain point of large-scale JavaScript adopt TypeScript and never look back.
+
+### Learning Tips
+
+- Practice JavaScript in the browser console (F12 → Console tab) — it is the most immediate REPL environment available.
+- Focus on understanding `this`, closures, and the event loop before learning any framework. These three concepts are the foundation everything else builds on.
+- Use strict mode (`"use strict"`) in all code — it eliminates silent errors and prepares you for modern JavaScript.
+- Read the MDN documentation rather than blog posts when possible. MDN is maintained by Mozilla and reflects the actual specification.
+- Write small programs that exercise each language feature — do not skip to frameworks until you understand the language itself.
+
 ### Glossary
 
 | Term | Definition |
 |------|------------|
 | API | Application Programming Interface — methods and properties exposed by the runtime |
 | Bundler | A tool that combines multiple source files into a single output file for the browser |
+| Closure | A function that retains access to its lexical scope even when executed outside that scope |
 | DOM | Document Object Model — the browser's tree representation of an HTML document |
 | ECMAScript | The standardised specification that JavaScript implements (ES6, ES2024, etc.) |
 | Engine | The program that parses, compiles, and executes JavaScript (V8, SpiderMonkey) |
 | Event Loop | The mechanism that coordinates synchronous execution with async callbacks |
+| First-class function | A function that can be assigned to variables, passed as arguments, and returned from functions |
 | Framework | A pre-built structure for building applications (React, Vue, Angular) |
+| Hoisting | The behavior of moving variable and function declarations to the top of their scope |
+| Microtask | A task queued during event loop processing, executed before the next macrotask |
 | npm | Node Package Manager — the default package manager for JavaScript |
+| Polyfill | Code that implements a newer feature in environments that do not support it |
+| Prototype chain | The inheritance mechanism where objects delegate property lookups to their prototype |
 | Runtime | The environment where JavaScript executes (browser, Node.js, Deno) |
+| Strict mode | A restricted variant of JavaScript that eliminates silent errors and enables optimizations |
 | Superset | A language that extends another — all valid JavaScript is valid TypeScript |
 | Transpile | To convert source code from one language to another (e.g., TypeScript to JavaScript) |
+| Type coercion | The automatic or explicit conversion of a value from one type to another |
+| Web API | Browser-provided interfaces accessible from JavaScript (Fetch, DOM, Canvas, etc.) |
 
 ### Quick References
 
@@ -232,6 +401,8 @@ This workflow is standardized across most modern JavaScript projects, regardless
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/) — official TypeScript documentation
 - [Node.js Documentation](https://nodejs.org/en/docs/) — server-side runtime reference
 - [ECMAScript Specification](https://tc39.es/ecma262/) — the language specification
+- [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) — deep dive into JavaScript's internals
+- [JavaScript Visualized](https://www.lydiahallie.com/blog) — animated explanations of event loop, scope, and closures
 
 ### Next Steps
 

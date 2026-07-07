@@ -340,6 +340,53 @@ $$
 
 **The ongoing conversation.** Mathematics and computing continue to influence each other. Computing provides tools for mathematical discovery (computer-assisted proofs, computational number theory). Mathematics provides the theoretical framework for understanding what computers can and cannot do, and how efficiently they can do it.
 
+### Probability and Statistics: From Gambling to Machine Learning
+
+The history of probability is tightly interwoven with computing:
+
+**Pascal and Fermat (1654).** The modern theory of probability began with a correspondence between Blaise Pascal and Pierre de Fermat about a gambling problem: how to divide the stakes in an unfinished game of chance. Their solution established the foundations of expected value and combinatorial probability.
+
+**Bayes and inverse probability (1763).** Thomas Bayes's posthumously published essay laid the foundation for Bayesian inference — updating beliefs based on evidence. The theorem, now central to machine learning, states:
+
+$$
+P(H|E) = \frac{P(E|H) P(H)}{P(E)}
+$$
+
+Bayesian methods power spam filters, recommendation systems, A/B testing, and neural network regularization.
+
+**Gauss and the normal distribution (1809).** Carl Friedrich Gauss derived the normal distribution as the distribution of measurement errors. The method of least squares, which he developed for astronomical calculations, is the foundation of linear regression — the most widely used statistical modeling technique in data science.
+
+**Fisher and experimental design (1920s).** Ronald Fisher developed the principles of experimental design: randomization, replication, and blocking. He introduced analysis of variance (ANOVA), maximum likelihood estimation, and the concept of sufficient statistics. Fisher's work underpins A/B testing, clinical trials, and any empirical evaluation in computing.
+
+**The probabilistic revolution in computing.** These ideas converge in modern software:
+
+- **Bayesian spam filters** use Bayes' theorem to classify email as spam or ham based on word frequencies.
+- **Recommendation systems** use probabilistic matrix factorization to predict user preferences.
+- **Monte Carlo algorithms** use random sampling to solve problems that are deterministic in theory but intractable in practice — from rendering photorealistic images to pricing financial derivatives.
+- **Probabilistic programming** (Stan, PyMC, TensorFlow Probability) treats probability distributions as first-class language constructs, enabling automatic inference in complex probabilistic models.
+- **Deep learning** uses stochastic gradient descent, which injects randomness into the optimization process to escape local minima and generalize better.
+
+The connection between probability and computing is bidirectional: computing makes probabilistic inference practical at scale, and probabilistic thinking provides the theoretical framework for learning from data.
+
+### Graph Theory: From Bridges to Social Networks
+
+Graph theory began with a practical problem and grew into the language of connected systems:
+
+**Euler and the Seven Bridges of Königsberg (1736).** Leonhard Euler proved that it was impossible to walk through the city crossing each bridge exactly once. In doing so, he founded graph theory. Euler's insight was to abstract the problem into nodes (land masses) and edges (bridges). This abstraction — ignoring irrelevant details to focus on structure — is the essence of mathematical modeling in computing.
+
+**Key developments in graph theory:**
+- **Trees (Cayley, 1857):** Characterized connected acyclic graphs. Trees are the structure of file systems, inheritance hierarchies, and parse trees.
+- **Graph coloring (Appel and Haken, 1976):** The four-color theorem was the first major theorem proved using a computer, signaling the arrival of computing as a tool for mathematical discovery.
+- **Network flow (Ford and Fulkerson, 1956):** The max-flow min-cut theorem models everything from internet routing to supply chains.
+- **Random graphs (Erdos and Renyi, 1959):** Laid the foundation for understanding the structure of real-world networks.
+
+**Graphs in modern computing:**
+- **The internet** is a graph of routers and connections. Routing protocols (OSPF, BGP) find paths through this graph.
+- **The web** is a directed graph of pages and hyperlinks. PageRank and other link analysis algorithms exploit this structure.
+- **Social networks** are graphs of people and relationships. Friend recommendations, community detection, and influence propagation all rely on graph algorithms.
+- **Knowledge graphs** (Google Knowledge Graph, Wikidata) model entities and their relationships as a graph, enabling semantic search and reasoning.
+- **Neural network architectures:** Graph neural networks (GNNs) operate directly on graph-structured data, learning representations of nodes, edges, and entire graphs.
+
 ## Glossary
 
 | Term | Definition |

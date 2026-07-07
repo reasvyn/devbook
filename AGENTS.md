@@ -16,6 +16,7 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 | **Indexes** | Every module, submodule, and `intro/` must have an `index.md`. The root also has an `index.md`. |
 | **No orphans** | A content file must be referenced by its parent `index.md`. |
 | **No build step** | Content is plain Markdown. Do not introduce tooling, bundlers, or generators. |
+| **IT & education context** | Every document must be implicitly connected to IT (software, computing, technology) or education (learning, teaching, skill development). A topic must be framed in a way that relates to how developers learn, build, or grow. Pure content from unrelated fields (e.g., medicine, law, agriculture) must not appear unless it directly serves an IT or educational purpose. |
 
 ## Directory Structure Rules
 

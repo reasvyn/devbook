@@ -2,4 +2,4 @@
 
 ## Description
 
-The fundamentals module maps the landscape of personal transformation before you begin walking it. It answers questions like: How does change actually work? What drives progress? Why do developers face this journey differently? And what happens when you hit a wall? These documents are the map, not the territory — reading them won't transform you, but knowing the terrain makes the journey survivable.
+The fundamentals module starts where you actually are — not where a framework assumes you are. It begins with the raw survival of absolute collapse, moves through the strange silence of the aftermath, and only then offers the map, the mechanism, and the terrain. These documents do not assume you are ready to change. They assume you are still breathing. And they meet you there.

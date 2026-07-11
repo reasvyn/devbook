@@ -23,8 +23,6 @@ Number theory is the mathematical foundation of modern public-key cryptography. 
 - [Key Sizes and Security Levels](#key-sizes-and-security-levels)
 - [Practical Considerations](#practical-considerations)
 - [Implementation Pitfalls](#implementation-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

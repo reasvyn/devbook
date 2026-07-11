@@ -26,8 +26,6 @@ Semantics is the study of meaning — in natural language, what a sentence conve
 - [Domain-Driven Design and Ubiquitous Language](#domain-driven-design-and-ubiquitous-language)
 - [Semantic Versioning](#semantic-versioning)
 - [Semantic Analysis in Compilers](#semantic-analysis-in-compilers)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

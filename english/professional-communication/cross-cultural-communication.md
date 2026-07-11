@@ -20,8 +20,6 @@ Engineering teams are increasingly global and multicultural. Understanding how c
 - [Holidays and Working Hours](#holidays-and-working-hours)
 - [Naming Conventions and Cultural Sensitivity](#naming-conventions-and-cultural-sensitivity)
 - [Building Inclusive Communication Norms](#building-inclusive-communication-norms)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

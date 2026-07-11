@@ -20,8 +20,6 @@ Technical style guides define the rules and conventions for writing clear, consi
 - [Choosing a Style Guide for Your Project](#choosing-a-style-guide-for-your-project)
 - [Maintaining Consistency Within a Project](#maintaining-consistency-within-a-project)
 - [Creating a Custom Style Guide](#creating-a-custom-style-guide)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

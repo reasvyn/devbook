@@ -21,7 +21,6 @@ The SELECT statement is the foundation of reading data from a relational databas
 - [Common Table Expressions (CTEs)](#common-table-expressions-ctes)
 - [Set Operations](#set-operations)
 - [Performance Awareness](#performance-awareness)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

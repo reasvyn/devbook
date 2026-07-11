@@ -29,8 +29,6 @@ The `<template>` and `<slot>` elements enable declarative, reusable markup patte
 - [Nested Templates](#nested-templates)
 - [Templates in the Browser](#templates-in-the-browser)
 - [Template Fragments and Cloning](#template-fragments-and-cloning)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

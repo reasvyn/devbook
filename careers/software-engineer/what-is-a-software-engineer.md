@@ -16,8 +16,6 @@ A precise definition of the software engineering role — the engineering mindse
 - [The Software Engineer's Toolkit](#the-software-engineers-toolkit)
 - [The Software Engineer in the Organization](#the-software-engineer-in-the-organization)
 - [Common Misconceptions](#common-misconceptions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Next Steps](#next-steps)
 

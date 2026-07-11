@@ -22,8 +22,6 @@ Mutual information measures the amount of information one random variable contai
 - [Mutual Information for Continuous Variables](#mutual-information-for-continuous-variables)
 - [Estimation of Mutual Information](#estimation-of-mutual-information)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

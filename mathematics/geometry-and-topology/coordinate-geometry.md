@@ -17,8 +17,6 @@ Coordinate geometry (also called analytic geometry) bridges algebra and geometry
 - [Conic Sections](#conic-sections)
 - [Polar Coordinates](#polar-coordinates)
 - [3D Coordinate Geometry](#3d-coordinate-geometry)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

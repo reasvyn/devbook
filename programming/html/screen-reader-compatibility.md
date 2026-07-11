@@ -26,8 +26,6 @@ Screen readers interpret HTML and the accessibility tree to produce speech or br
 - [Testing Strategies](#testing-strategies)
 - [Common Screen Reader Bugs](#common-screen-reader-bugs)
 - [The Accessibility Tree](#the-accessibility-tree)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

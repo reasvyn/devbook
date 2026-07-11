@@ -20,8 +20,6 @@ Combinatorics is the mathematics of counting. It answers questions like "how man
 - [Pigeonhole Principle](#pigeonhole-principle)
 - [Generating Functions](#generating-functions)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Starting, funding, and growing new ventures.
 
-## Introduction
+## 1. Introduction
 
 - [Entrepreneurship: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. From Idea to Venture (Planned)
 
 - Identifying Opportunities (planned)
 - Business Models & Planning (planned)

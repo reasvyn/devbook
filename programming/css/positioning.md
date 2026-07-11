@@ -24,8 +24,6 @@ CSS positioning controls how elements are placed within the document — whether
 - [Position and Transform](#position-and-transform)
 - [Absolute Centering](#absolute-centering)
 - [Fixed vs Sticky](#fixed-vs-sticky)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

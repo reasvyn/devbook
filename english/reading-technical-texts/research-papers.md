@@ -21,8 +21,6 @@ None — this is a foundational skill for technical reading.
 - [The Paper-to-Code Pipeline](#the-paper-to-code-pipeline)
 - [Common Pitfalls When Reading Papers](#common-pitfalls-when-reading-papers)
 - [Building a Reading Workflow](#building-a-reading-workflow)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

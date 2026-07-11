@@ -27,8 +27,6 @@ Selectors are patterns that match elements in the DOM, determining which styles 
 - [The :not() Selector](#the-not-selector)
 - [Nesting Selectors](#nesting-selectors)
 - [Matching Behavior](#matching-behavior)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

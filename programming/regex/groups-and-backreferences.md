@@ -22,8 +22,6 @@ Groups let you extract, reuse, and transform portions of a match. Capturing grou
 - [Nested Groups and Capture Numbering](#nested-groups-and-capture-numbering)
 - [Capturing vs Non-Capturing Performance](#capturing-vs-non-capturing-performance)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

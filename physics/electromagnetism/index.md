@@ -2,11 +2,11 @@
 
 Electric and magnetic fields, Maxwell's equations, circuits, signal propagation, and electromagnetic waves — essential for understanding networking hardware, antennas, signal processing, and electronics.
 
-## Introduction
+## 1. Introduction
 
 - [Electromagnetism: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Fields, Circuits & Waves (Planned)
 
 - Electric Fields & Forces — Coulomb's law, electric field, Gauss's law, electric potential (planned)
 - Magnetic Fields & Forces — magnetic force, Biot-Savart law, Ampere's law, magnetic materials (planned)

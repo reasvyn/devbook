@@ -19,8 +19,6 @@ The singular value decomposition (SVD) is the fundamental matrix factorization â
 - [Low-Rank Approximation](#low-rank-approximation)
 - [The Pseudoinverse](#the-pseudoinverse)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

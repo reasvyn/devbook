@@ -19,8 +19,6 @@ Changelogs and release notes communicate what changed between versions of a prod
 - [Automated Changelog Generation](#automated-changelog-generation)
 - [Release Announcements](#release-announcements)
 - [Changelog Maintenance Practices](#changelog-maintenance-practices)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -26,8 +26,6 @@ Every element has a display type that determines its layout behavior — whether
 - [Run-In](#run-in)
 - [Changing Display](#changing-display)
 - [Display and Accessibility](#display-and-accessibility)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

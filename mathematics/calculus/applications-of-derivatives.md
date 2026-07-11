@@ -18,8 +18,6 @@ Derivatives are not just theoretical — they power optimization algorithms in m
 - [Newton's Method](#newtons-method)
 - [Convexity and Concavity](#convexity-and-concavity)
 - [Applications in ML, Physics, and Economics](#applications-in-ml-physics-and-economics)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

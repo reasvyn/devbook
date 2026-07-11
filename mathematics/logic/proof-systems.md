@@ -19,8 +19,6 @@ A proof system provides mechanical rules for deriving truths from assumptions. U
 - [Soundness and Completeness](#soundness-and-completeness)
 - [Automated Theorem Proving](#automated-theorem-proving)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

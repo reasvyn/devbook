@@ -23,8 +23,6 @@ Code review is a core engineering practice, and the quality of your comments det
 - [The Anatomy of a Good Comment](#the-anatomy-of-a-good-comment)
 - [Comment Anti-Patterns](#comment-anti-patterns)
 - [Reviewing Different Types of Changes](#reviewing-different-types-of-changes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

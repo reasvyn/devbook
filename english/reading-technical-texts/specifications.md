@@ -23,8 +23,6 @@ Technical specifications define how systems behave, how APIs work, how protocols
 - [Specification vs. Implementation](#specification-vs-implementation)
 - [Versioning and Compatibility](#versioning-and-compatibility)
 - [Writing Effective Specifications](#writing-effective-specifications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -16,8 +16,6 @@ Probability distributions are mathematical models that describe how random varia
 - [Relationships Between Distributions](#relationships-between-distributions)
 - [Choosing the Right Distribution](#choosing-the-right-distribution)
 - [Fitting Distributions to Data](#fitting-distributions-to-data)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

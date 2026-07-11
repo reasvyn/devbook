@@ -24,8 +24,6 @@ Images bring the web to life, but they also account for over 50% of a typical pa
 - [Favicons](#favicons)
 - [Performance Considerations](#performance-considerations)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -17,8 +17,6 @@ Control flow determines the order in which statements are executed. Without it, 
 - [Error Handling as Control Flow](#error-handling-as-control-flow)
 - [Control Flow in Functional Style](#control-flow-in-functional-style)
 - [Common Control Flow Patterns](#common-control-flow-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -21,8 +21,6 @@ Browsers provide three client-side storage mechanisms: localStorage, sessionStor
 - [IndexedDB Overview](#indexeddb-overview)
 - [Security Considerations](#security-considerations)
 - [When to Use What](#when-to-use-what)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -27,8 +27,6 @@ The Fetch API provides a modern, Promise-based interface for making HTTP request
 - [Credentials & Authentication](#credentials--authentication)
 - [Caching & Cache Control](#caching--cache-control)
 - [Progress Events](#progress-events)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

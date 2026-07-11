@@ -23,8 +23,6 @@ HTML tables organize data into rows and columns, enabling clear presentation of 
 - [Responsive Tables](#responsive-tables)
 - [Data Table vs Layout Table](#data-table-vs-layout-table)
 - [Common Table Patterns](#common-table-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

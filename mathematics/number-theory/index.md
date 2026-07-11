@@ -2,11 +2,11 @@
 
 Prime numbers, modular arithmetic, GCD, cryptographic foundations, and the theory of integers — essential for cryptography, hashing, and algorithmic design.
 
-## Introduction
+## 1. Introduction
 
 - [Number Theory: Introduction](intro/index.md)
 
-## Topics
+## 2. Primes, Congruences & Cryptography
 
 - [Number Systems](number-systems/index.md) — natural numbers, integers, rationals, reals, complex numbers, floating-point
 - [Divisibility & Primes](divisibility-and-primes.md) — division algorithm, prime numbers, fundamental theorem of arithmetic, GCD, Euclidean algorithm, Bezout identity

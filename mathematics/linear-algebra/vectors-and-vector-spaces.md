@@ -20,8 +20,6 @@ Vectors are the fundamental building blocks of linear algebra — ordered lists 
 - [Basis and Dimension](#basis-and-dimension)
 - [Coordinate Systems](#coordinate-systems)
 - [Subspaces](#subspaces)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

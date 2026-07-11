@@ -19,8 +19,6 @@ Vectors are the fundamental building blocks for describing positions, directions
 - [Composing Transformations](#composing-transformations)
 - [Inverse Transformations](#inverse-transformations)
 - [Coordinate Systems and Change of Basis](#coordinate-systems-and-change-of-basis)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

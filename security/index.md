@@ -2,11 +2,11 @@
 
 Cryptography, authentication, authorization, secure coding, and threat modeling.
 
-## Introduction
+## 1. Introduction
 
 - [Security: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Cryptography — symmetric/asymmetric encryption, hashing, digital signatures (planned)
 - Authentication & Authorization — OAuth2, JWT, SSO, RBAC (planned)

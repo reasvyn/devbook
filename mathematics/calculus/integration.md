@@ -19,8 +19,6 @@ Integration is the inverse of differentiation — it computes areas under curves
 - [Trigonometric Substitution](#trigonometric-substitution)
 - [Improper Integrals](#improper-integrals)
 - [Numerical Integration](#numerical-integration)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -20,8 +20,6 @@ Before writing a single line of documentation, you must know who will read it. D
 - [Writing for Mixed Audiences](#writing-for-mixed-audiences)
 - [Accessibility in Documentation](#accessibility-in-documentation)
 - [Persona Templates for Documentation Planning](#persona-templates-for-documentation-planning)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

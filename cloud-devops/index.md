@@ -2,11 +2,11 @@
 
 Infrastructure, CI/CD, containerization, orchestration, monitoring, and observability.
 
-## Introduction
+## 1. Introduction
 
 - [Cloud & DevOps: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Containerization & Orchestration — Docker, Kubernetes, container runtimes (planned)
 - CI/CD — pipelines, automation, deployment strategies (planned)

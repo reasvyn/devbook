@@ -22,8 +22,6 @@ Every HTML document follows a predictable skeleton that browsers rely on to rend
 - [Rendering Modes](#rendering-modes)
 - [Validation](#validation)
 - [Common Structural Mistakes](#common-structural-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

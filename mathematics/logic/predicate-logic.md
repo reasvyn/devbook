@@ -19,8 +19,6 @@ Predicate logic (also called first-order logic) extends propositional logic with
 - [Equality](#equality)
 - [Functions and Relations](#functions-and-relations)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -24,8 +24,6 @@ The essential concepts that form the foundation of all programming — understan
 - [Common Patterns](#common-patterns)
 - [Writing Readable Code](#writing-readable-code)
 - [The Debugging Mindset](#the-debugging-mindset)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

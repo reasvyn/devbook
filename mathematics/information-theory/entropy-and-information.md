@@ -22,8 +22,6 @@ Shannon entropy quantifies the average information content of a random source, m
 - [Properties of Entropy](#properties-of-entropy)
 - [Entropy and Coding](#entropy-and-coding)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

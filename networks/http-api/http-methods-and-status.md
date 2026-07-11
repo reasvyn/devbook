@@ -13,7 +13,6 @@ Every HTTP request carries a method that tells the server what action to perform
 - [HTTP Methods](#http-methods)
 - [HTTP Status Codes](#http-status-codes)
 - [Practical Examples](#practical-examples)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -26,8 +26,6 @@ JavaScript brings interactivity to web pages, but how scripts are loaded dramati
 - [Performance Considerations](#performance-considerations)
 - [The `<noscript>` Element](#the-noscript-element)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

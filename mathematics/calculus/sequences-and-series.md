@@ -20,8 +20,6 @@ Sequences are ordered lists of numbers; series are sums of sequences. They are e
 - [Maclaurin Series](#maclaurin-series)
 - [Fourier Series Basics](#fourier-series-basics)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-References)
 - [Next Steps](#next-steps)

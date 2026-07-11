@@ -25,8 +25,6 @@ Internationalization (i18n) in HTML prepares web content for global audiences by
 - [URL and Routing](#url-and-routing)
 - [Testing Internationalization](#testing-internationalization)
 - [Accessibility and i18n](#accessibility-and-i18n)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

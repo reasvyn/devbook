@@ -21,8 +21,6 @@ The internet is full of technical content — blog posts, tutorials, documentati
 - [Using Official Documentation as Source of Truth](#using-official-documentation-as-source-of-truth)
 - [Building a Reliable Information Diet](#building-a-reliable-information-diet)
 - [Common Cognitive Biases in Technical Reading](#common-cognitive-biases-in-technical-reading)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

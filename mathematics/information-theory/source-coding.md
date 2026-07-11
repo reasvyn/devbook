@@ -21,8 +21,6 @@ Shannon's source coding theorem establishes the fundamental limit of lossless da
 - [Comparison of Compression Algorithms](#comparison-of-compression-algorithms)
 - [Redundancy and Code Efficiency](#redundancy-and-code-efficiency)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

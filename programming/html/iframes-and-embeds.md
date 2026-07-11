@@ -23,8 +23,6 @@ The `<iframe>` element embeds another HTML document within the current page. IFr
 - [Performance Impact](#performance-impact)
 - [Security Considerations](#security-considerations)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

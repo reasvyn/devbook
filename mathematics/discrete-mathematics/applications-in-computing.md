@@ -24,8 +24,6 @@ Discrete mathematics is not an abstract pursuit — it is the mathematical subst
 - [Scheduling and Planning](#scheduling-and-planning)
 - [Error Detection and Correction](#error-detection-and-correction)
 - [Artificial Intelligence](#artificial-intelligence)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

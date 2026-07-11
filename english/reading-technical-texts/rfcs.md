@@ -22,8 +22,6 @@ Requests for Comments (RFCs) define the protocols and standards that make the in
 - [Reading RFCs Effectively](#reading-rfcs-effectively)
 - [BCPs, STDs, and FYI Documents](#bcps-stds-and-fyi-documents)
 - [RFC Etiquette and Contribution](#rfc-etiquette-and-contribution)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

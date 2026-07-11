@@ -25,8 +25,6 @@ Media queries apply CSS based on device characteristics — viewport width, reso
 - [Using @media in HTML and CSS](#using-media-in-html-and-css)
 - [Mobile-First vs Desktop-First](#mobile-first-vs-desktop-first)
 - [Media Query Best Practices](#media-query-best-practices)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

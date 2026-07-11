@@ -2,11 +2,11 @@
 
 Limits, derivatives, integrals, and series — the mathematics of change and accumulation, essential for optimization, physics simulation, and machine learning.
 
-## Introduction
+## 1. Introduction
 
 - [Calculus: Introduction](intro/index.md)
 
-## Topics
+## 2. Analysis of Change
 
 - [Limits & Continuity](limits-and-continuity.md) — epsilon-delta, one-sided limits, continuity, asymptotes, limits in computing
 - [Differentiation](differentiation.md) — derivative rules, chain rule, implicit differentiation, higher-order derivatives, automatic differentiation

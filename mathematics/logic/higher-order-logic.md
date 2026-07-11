@@ -19,8 +19,6 @@ Higher-order logic (HOL) extends first-order logic by allowing quantification ov
 - [Inductive Types and Recursion](#inductive-types-and-recursion)
 - [Proof Assistants](#proof-assistants)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

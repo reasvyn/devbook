@@ -21,8 +21,6 @@ Lookahead and lookbehind — collectively called lookaround — are zero-width a
 - [Performance Impact of Assertions](#performance-impact-of-assertions)
 - [Simulating Lookbehind with \K](#simulating-lookbehind-with-k)
 - [Common Pitfalls](#common-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -19,8 +19,6 @@ Incident reports document what went wrong, why it happened, and what the team wi
 - [SRE Best Practices for Incident Reporting](#sre-best-practices-for-incident-reporting)
 - [Examples of Good and Bad Postmortems](#examples-of-good-and-bad-postmortems)
 - [Incident Report Templates](#incident-report-templates)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

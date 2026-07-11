@@ -32,8 +32,6 @@ Shadow DOM provides DOM and style encapsulation for Web Components, isolating co
 - [Accessibility in Shadow DOM](#accessibility-in-shadow-dom)
 - [Testing Shadow DOM](#testing-shadow-dom)
 - [Performance](#performance)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

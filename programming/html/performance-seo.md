@@ -29,8 +29,6 @@ HTML performance and search engine optimization (SEO) are tightly linked — fas
 - [Page Speed Metrics](#page-speed-metrics)
 - [Measuring Performance in HTML](#measuring-performance-in-html)
 - [Performance Budgets](#performance-budgets)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

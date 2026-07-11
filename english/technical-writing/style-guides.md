@@ -22,8 +22,6 @@ Creating and maintaining a project-level style guide goes beyond choosing a refe
 - [Style Guide Versioning](#style-guide-versioning)
 - [Team Adoption of Style Guides](#team-adoption-of-style-guides)
 - [Creating a Style Guide from Scratch](#creating-a-style-guide-from-scratch)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

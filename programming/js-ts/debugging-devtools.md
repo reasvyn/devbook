@@ -24,8 +24,6 @@ Browser Developer Tools are the most powerful debugging toolkit for frontend dev
 - [Application Panel](#application-panel)
 - [Memory & Profiling](#memory--profiling)
 - [Mobile Debugging](#mobile-debugging)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

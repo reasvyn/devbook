@@ -23,8 +23,6 @@ Modular arithmetic -- the mathematics of remainders -- is one of the most practi
 - [Modular Arithmetic with Negative Numbers](#modular-arithmetic-with-negative-numbers)
 - [Avoiding Overflow in Modular Arithmetic](#avoiding-overflow-in-modular-arithmetic)
 - [Applications in Programming](#applications-in-programming)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

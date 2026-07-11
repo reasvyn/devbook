@@ -25,8 +25,6 @@ Web fonts allow custom typefaces to be downloaded and rendered in the browser. T
 - [System Fonts as Fallback](#system-fonts-as-fallback)
 - [Unicode Range](#unicode-range)
 - [Font Display Descriptors](#font-display-descriptors)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

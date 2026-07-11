@@ -24,8 +24,6 @@ Every element in CSS is a rectangular box. The box model defines how width, heig
 - [The Outline Property](#the-outline-property)
 - [Overflow and the Box Model](#overflow-and-the-box-model)
 - [Box Shadows](#box-shadows)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

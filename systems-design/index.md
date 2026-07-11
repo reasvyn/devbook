@@ -2,11 +2,11 @@
 
 Architecture, scalability, trade-offs, distributed systems, and designing for production.
 
-## Introduction
+## 1. Introduction
 
 - [Systems Design: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Distributed Systems — consensus, replication, partitioning, distributed consensus (planned)
 - Caching & CDNs — caching strategies, cache invalidation, edge computing (planned)

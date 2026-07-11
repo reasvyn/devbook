@@ -20,8 +20,6 @@ Documentation rots. Code changes, APIs evolve, screenshots go stale, and links b
 - [Aging Detection](#aging-detection)
 - [Documentation Debt](#documentation-debt)
 - [Metrics](#metrics)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

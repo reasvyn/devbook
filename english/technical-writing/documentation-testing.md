@@ -23,8 +23,6 @@ Documentation needs testing just like code. Broken links, outdated examples, inc
 - [Measuring Documentation Effectiveness](#measuring-documentation-effectiveness)
 - [Documentation Debt](#documentation-debt)
 - [Continuous Improvement Processes](#continuous-improvement-processes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -26,8 +26,6 @@ Primality testing and cryptographic hashing are two fundamental applications of 
 - [Collision Resistance and the Birthday Attack](#collision-resistance-and-the-birthday-attack)
 - [Checksums and Error Detection](#checksums-and-error-detection)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

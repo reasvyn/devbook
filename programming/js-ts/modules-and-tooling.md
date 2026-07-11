@@ -23,8 +23,6 @@ ES Modules (ESM) are the official JavaScript module system built into the langua
 - [Bundlers: Why They Exist](#bundlers-why-they-exist)
 - [Build Scripts](#build-scripts)
 - [Environment Variables](#environment-variables)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

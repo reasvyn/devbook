@@ -2,9 +2,12 @@
 
 How operating systems manage hardware, processes, memory, and files. (Planned — content coming soon.)
 
-## Planned
+## 1. Introduction
 
-- Introduction to Operating Systems — what an OS does
+- Introduction to Operating Systems (planned)
+
+## 2. Planned
+
 - Processes & Threads
 - Memory Management
 - File Systems

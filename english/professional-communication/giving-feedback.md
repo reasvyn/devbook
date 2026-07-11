@@ -21,8 +21,6 @@ Technical feedback is the primary mechanism for improving code quality, architec
 - [Asynchronous vs. Synchronous Feedback](#asynchronous-vs-synchronous-feedback)
 - [Escalation and Mediation](#escalation-and-mediation)
 - [Building a Feedback Culture](#building-a-feedback-culture)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

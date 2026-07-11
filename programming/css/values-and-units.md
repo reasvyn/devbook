@@ -29,8 +29,6 @@ CSS has a rich set of value types and units for sizing, spacing, color, timing, 
 - [Custom Identifiers](#custom-identifiers)
 - [The calc() Function](#the-calc-function)
 - [The min(), max(), clamp() Functions](#the-min-max-clamp-functions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

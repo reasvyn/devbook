@@ -23,8 +23,6 @@ Diataxis is a documentation framework that organizes content into four modes: tu
 - [Applying Diataxis to Real Projects](#applying-diataxis-to-real-projects)
 - [Tools and Templates for Each Mode](#tools-and-templates-for-each-mode)
 - [Case Studies of Docs Restructured with Diataxis](#case-studies-of-docs-restructured-with-diataxis)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -29,8 +29,6 @@ Text is the core of the web. HTML provides a rich set of elements for structurin
 - [Special Characters and Entities](#special-characters-and-entities)
 - [Comments](#comments)
 - [Whitespace and Text Formatting](#whitespace-and-text-formatting)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -17,7 +17,6 @@ HTTP headers control caching, authentication, content negotiation, and more. The
 - [Response Body](#response-body)
 - [Cookies](#cookies)
 - [CORS](#cors-cross-origin-resource-sharing)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

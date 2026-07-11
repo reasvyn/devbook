@@ -8,6 +8,7 @@ This document maps the entire level-up journey — from the lowest point through
 
 - [The Level-Up Philosophy](../intro/the-level-up-philosophy.md) — the game-inspired framework for thinking about personal growth
 - [The Lowest Point](../intro/the-lowest-point.md) — the existential foundation that makes the journey necessary
+- [Mental Models for Change](mental-models-for-change.md) — the cognitive frameworks that make the stages legible
 
 ## Table of Contents
 
@@ -222,6 +223,8 @@ graph LR
 
 The loops are not detours. They are the path. Each time you revisit a stage, you visit it at a deeper level. The first time through awakening, you see one layer of what is wrong. The second time, you see the layer beneath that. The third time, you see the structure that holds all the layers in place.
 
+The second-order consequences of each stage choice often determine whether you advance or recycle — a dynamic explored in depth in [Mental Models for Change](mental-models-for-change.md).
+
 If you treat the nonlinearity as a problem to be solved — if you try to force a linear progression — you will exhaust yourself fighting the nature of the journey. The skill to develop is not linearity but orientation: being able to ask "where am I right now?" and answering without judgment.
 
 ### Why Stages Exist in This Order
@@ -256,7 +259,7 @@ The recycling is not a flaw in you. It is a feature of growth. Growth is not add
 
 ### Relapse as Part of Progress
 
-Relapse — the specific experience of returning to an old behavior pattern that you thought you had overcome — is not optional. You will relapse. Everyone does. The question is not whether it happens but how you interpret it when it does.
+Relapse — the specific experience of returning to an old behavior pattern that you thought you had overcome — is not optional. You will relapse. Everyone does. The question is not whether it happens but how you interpret it when it does. The transtheoretical model describes relapse as a normal and expected part of the change cycle, not a deviation from it (see [Mental Models for Change](mental-models-for-change.md) for the full framework).
 
 The default interpretation is: "I have failed. The change was not real. I am back where I started." This interpretation is wrong, but it is the most natural one. Your brain uses the setback as evidence for the story it already believes — the story that you cannot change, that the journey was a delusion, that the old self is the real self.
 
@@ -321,6 +324,8 @@ def meta_mistake(reading_hours, action_hours):
 ```
 
 The purpose of reading about change is to enable change. If reading is displacing action, stop reading. The map has become an obstacle. Put it down and walk.
+
+The map is one model among several. For frameworks that illuminate specific dynamics — the stages of change, the drama triangle, the stock-and-flow of identity — consult [Mental Models for Change](mental-models-for-change.md).
 
 ### Walkthrough: Following the Map Without Being Trapped by It
 

@@ -2,11 +2,11 @@
 
 Law, policy, ethics, regulation, and compliance for digital technology.
 
-## Introduction
+## 1. Introduction
 
 - [Governance: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Digital Law & Policy — privacy, intellectual property, cybercrime legislation (planned)
 - Ethics in Technology — AI ethics, algorithmic bias, responsible innovation (planned)

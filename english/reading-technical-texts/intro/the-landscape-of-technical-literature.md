@@ -22,7 +22,6 @@ Developers encounter a diverse ecosystem of technical literature: academic paper
 - [Open Access and Its Implications](#open-access-and-its-implications)
 - [Trustworthiness Across Genres](#trustworthiness-across-genres)
 - [Navigating the Landscape](#navigating-the-landscape)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

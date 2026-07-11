@@ -21,8 +21,6 @@ Real-world data rarely involves a single variable. Joint distributions model mul
 - [Law of Total Variance](#law-of-total-variance)
 - [Multivariate Normal Distribution](#multivariate-normal-distribution)
 - [Joint Distributions in Machine Learning](#joint-distributions-in-machine-learning)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

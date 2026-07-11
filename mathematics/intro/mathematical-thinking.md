@@ -17,8 +17,6 @@ None. This is an entry point.
 - [Mathematical Thinking in Debugging and System Design](#mathematical-thinking-in-debugging-and-system-design)
 - [Translating Between Proofs and Code](#translating-between-proofs-and-code)
 - [Developing Mathematical Intuition](#developing-mathematical-intuition)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

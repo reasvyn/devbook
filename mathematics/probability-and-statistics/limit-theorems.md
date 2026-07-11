@@ -19,8 +19,6 @@ The Law of Large Numbers (LLN) and the Central Limit Theorem (CLT) are the twin 
 - [The CLT in Action](#the-clt-in-action)
 - [When the CLT Breaks Down](#when-the-clt-breaks-down)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

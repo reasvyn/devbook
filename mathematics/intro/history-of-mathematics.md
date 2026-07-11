@@ -17,8 +17,6 @@ None. This is an entry point.
 - [Set Theory and Logic: Cantor, Frege, Russell, Godel, Turing](#set-theory-and-logic-cantor-frege-russell-godel-turing)
 - [Information Theory: Claude Shannon](#information-theory-claude-shannon)
 - [Modern Connections](#modern-connections)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

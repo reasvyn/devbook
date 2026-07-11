@@ -22,8 +22,6 @@ Form validation ensures the data submitted by users meets expected formats, rang
 - [Validation Strategy](#validation-strategy)
 - [Common Validation Patterns](#common-validation-patterns)
 - [Accessibility of Validation Messages](#accessibility-of-validation-messages)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

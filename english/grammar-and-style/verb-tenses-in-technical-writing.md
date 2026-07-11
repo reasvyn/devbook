@@ -19,8 +19,6 @@ Verb tense tells the reader when an action occurs. Mastering the twelve English 
 - [Progressive and Perfect Aspects](#progressive-and-perfect-aspects)
 - [Tense Consistency](#tense-consistency)
 - [Special Cases: Conditionals and Modals](#special-cases-conditionals-and-modals)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

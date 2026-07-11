@@ -24,7 +24,7 @@ After the collapse comes something unexpected: silence. Not the silence of peace
 - [The Gap Between Knowing and Feeling](#the-gap-between-knowing-and-feeling)
 - [When the Silence Becomes a Room](#when-the-silence-becomes-a-room)
 - [Glossary](#glossary)
-- [Quick References](#quick References)
+- [Quick References](#quick-references)
 - [Next Steps](#next-steps)
 
 ## Content / Material

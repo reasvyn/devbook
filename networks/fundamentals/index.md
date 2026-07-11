@@ -2,9 +2,12 @@
 
 How computer networks work — from physical cables to the web. (Planned — content coming soon.)
 
-## Planned
+## 1. Introduction
 
-- Introduction to Networking — what networks are and why they exist
+- Introduction to Networking (planned)
+
+## 2. Planned
+
 - IP Addressing & Subnets
 - DNS — Domain Name System
 - TCP & UDP — transport protocols

@@ -22,8 +22,6 @@ Semantic HTML uses elements that convey meaning about their content — telling 
 - [SEO Benefits](#seo-benefits)
 - [Accessibility Benefits](#accessibility-benefits)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

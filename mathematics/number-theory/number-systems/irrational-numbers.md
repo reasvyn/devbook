@@ -30,8 +30,6 @@ Irrational numbers are the real numbers that cannot be written as a ratio of two
 - [Machin-like Formulas](#machin-like-formulas)
 - [The Chudnovsky Algorithm](#the-chudnovsky-algorithm)
 - [Symbolic Computation vs Numeric Approximation](#symbolic-computation-vs-numeric-approximation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

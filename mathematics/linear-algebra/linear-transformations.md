@@ -20,8 +20,6 @@ Linear transformations are functions between vector spaces that preserve the str
 - [Rank-Nullity Theorem](#rank-nullity-theorem)
 - [Invertible Linear Transformations](#invertible-linear-transformations)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

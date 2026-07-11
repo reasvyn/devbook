@@ -2,10 +2,10 @@
 
 SQL, NoSQL, data modeling, storage engines, indexing, and data pipelines.
 
-## Introduction
+## 1. Introduction
 
 - [Data & Databases: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [SQL](sql/index.md) — Structured Query Language, relational databases, data manipulation

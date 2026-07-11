@@ -21,8 +21,6 @@ CSS architecture is how you organize styles at scale. Naming conventions (BEM), 
 - [CSS Preprocessors](#css-preprocessors)
 - [Design Systems and Tokens](#design-systems-and-tokens)
 - [Component CSS](#component-css)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

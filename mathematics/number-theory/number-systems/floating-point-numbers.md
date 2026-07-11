@@ -30,8 +30,6 @@ Floating-point arithmetic is the closest computers get to real-number arithmetic
 - [IEEE 754 Across Languages](#ieee-754-across-languages)
 - [Tools and Libraries](#tools-and-libraries)
 - [When to Use Floating-Point vs Fixed-Point vs Arbitrary Precision](#when-to-use-floating-point-vs-fixed-point-vs-arbitrary-precision)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

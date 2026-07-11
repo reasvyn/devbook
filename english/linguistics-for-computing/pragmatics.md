@@ -23,8 +23,6 @@ Pragmatics is the study of how context shapes meaning in communication. For soft
 - [Readability as a Pragmatic Concern](#readability-as-a-pragmatic-concern)
 - [Principle of Least Astonishment](#principle-of-least-astonishment)
 - [Presupposition and Definiteness](#presupposition-and-definiteness)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

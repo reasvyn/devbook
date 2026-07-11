@@ -2,11 +2,11 @@
 
 Embedded systems, electronics, IoT, firmware, and computer architecture.
 
-## Introduction
+## 1. Introduction
 
 - [Hardware: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Computer Architecture — CPU design, memory hierarchy, pipelining, SIMD (planned)
 - Embedded Systems — microcontrollers, real-time systems, firmware development (planned)

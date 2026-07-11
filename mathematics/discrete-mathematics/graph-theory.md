@@ -22,8 +22,6 @@ Graphs are the mathematical model of networks. Every connection between things â
 - [Planar Graphs](#planar-graphs)
 - [Eulerian and Hamiltonian Paths](#eulerian-and-hamiltonian-paths)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -20,8 +20,6 @@ Descriptive statistics summarize and visualize data — the first step in any da
 - [Correlation Coefficient](#correlation-coefficient)
 - [Data Quality Checks](#data-quality-checks)
 - [Outlier Detection](#outlier-detection)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

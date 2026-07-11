@@ -21,8 +21,6 @@ Collections let you group, organize, and manipulate multiple values as a single 
 - [Comprehensions (Python)](#comprehensions-python)
 - [Destructuring](#destructuring)
 - [Common Patterns](#common-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

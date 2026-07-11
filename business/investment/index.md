@@ -2,11 +2,11 @@
 
 Capital allocation, portfolio management, risk and return, and wealth building.
 
-## Introduction
+## 1. Introduction
 
 - [Investment: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Risk, Portfolios & Markets (Planned)
 
 - Risk & Return (planned)
 - Portfolio Theory (planned)

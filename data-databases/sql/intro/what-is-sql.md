@@ -29,8 +29,6 @@ SQL (Structured Query Language) is the standard language for managing relational
 - [Comments in SQL](#comments-in-sql)
 - [Tools](#tools)
 - [Connecting from Code](#connecting-from-code)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

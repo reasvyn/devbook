@@ -17,8 +17,6 @@ A concrete, ground-level look at what software engineers actually do day to day 
 - [Debugging and Incident Response](#debugging-and-incident-response)
 - [Continuous Learning](#continuous-learning)
 - [A Typical Day](#a-typical-day)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

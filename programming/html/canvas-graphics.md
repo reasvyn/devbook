@@ -24,8 +24,6 @@ The `<canvas>` element provides a bitmap drawing surface controlled entirely by 
 - [Performance Considerations](#performance-considerations)
 - [Accessibility](#accessibility)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Classical mechanics, electromagnetism, optics, thermodynamics, quantum mechanics, and acoustics — the physics foundations for simulation, rendering, game development, hardware-aware programming, and scientific computing.
 
-## Introduction
+## 1. Introduction
 
 - [Physics: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - [Classical Mechanics](classical-mechanics/index.md) — Newton's laws, kinematics, dynamics, rigid bodies, collision, energy, momentum
 - [Electromagnetism](electromagnetism/index.md) — electric fields, magnetic fields, Maxwell's equations, circuits, signal propagation

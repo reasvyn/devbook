@@ -27,8 +27,6 @@ CSS brings interfaces to life with transitions, transforms, and keyframe animati
 - [Will-Change](#will-change)
 - [Performance Best Practices](#performance-best-practices)
 - [Reduced Motion](#reduced-motion)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

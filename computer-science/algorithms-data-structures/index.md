@@ -2,11 +2,15 @@
 
 Fundamental techniques for organizing data and solving computational problems efficiently. (Planned — content coming soon.)
 
-## Content
+## 1. Introduction
 
-- [Introduction to Algorithms](introduction-to-algorithms.md) — what algorithms are, Big O notation, and complexity analysis
+- Introduction to Algorithms (planned)
 
-## Planned
+## 2. Complexity Analysis
+
+1. [Introduction to Algorithms](introduction-to-algorithms.md) — what algorithms are, Big O notation, and complexity analysis
+
+## 3. Planned
 
 - Big O Notation in Depth — analyzing recursive algorithms and amortized analysis
 - Arrays & Linked Lists

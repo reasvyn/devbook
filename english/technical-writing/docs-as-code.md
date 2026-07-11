@@ -25,8 +25,6 @@ Docs as Code is the practice of applying software engineering tools and workflow
 - [Documentation Review Workflows](#documentation-review-workflows)
 - [Automated API Doc Generation](#automated-api-doc-generation)
 - [Hosting and Deployment](#hosting-and-deployment)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

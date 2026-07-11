@@ -20,8 +20,6 @@ Requests for Comments (RFCs) are structured documents for proposing, discussing,
 - [RFC Templates](#rfc-templates)
 - [Common RFC Pitfalls](#common-rfc-pitfalls)
 - [Building an RFC Culture](#building-an-rfc-culture)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -31,8 +31,6 @@ CSS Grid is a two-dimensional layout system for arranging elements in rows and c
 - [Order in Grid](#order-in-grid)
 - [Subgrid](#subgrid)
 - [Masonry](#masonry)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

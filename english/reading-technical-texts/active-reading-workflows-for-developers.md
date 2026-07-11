@@ -24,8 +24,6 @@ Evaluating sources, reading critically, and applying the three-pass method are i
 - [From Reading to Creation](#from-reading-to-creation)
 - [Handling Different Document Types with the Same Workflow](#handling-different-document-types-with-the-same-workflow)
 - [Common Pitfalls](#common-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -24,8 +24,6 @@ If you are unfamiliar with mathematical proofs and induction, consider reviewing
 - [Counting and Cardinality](#counting-and-cardinality)
 - [Number Representations](#number-representations)
 - [Natural Numbers in Computing](#natural-numbers-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

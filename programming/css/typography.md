@@ -29,8 +29,6 @@ Typography is the craft of making text readable, accessible, and visually pleasi
 - [System Font Stack](#system-font-stack)
 - [Readability and Accessibility](#readability-and-accessibility)
 - [Web Safe Fonts](#web-safe-fonts)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

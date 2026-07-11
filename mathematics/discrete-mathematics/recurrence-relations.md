@@ -18,8 +18,6 @@ Recurrence relations define sequences where each term depends on previous terms.
 - [Recursion Trees](#recursion-trees)
 - [Generating Functions for Recurrences](#generating-functions-for-recurrences)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Ray optics, wave optics, reflection, refraction, scattering, and radiometry — the physics that underpins computer graphics rendering, camera systems, and display technology.
 
-## Introduction
+## 1. Introduction
 
 - [Optics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Light, Rendering & Display (Planned)
 
 - Ray Optics — reflection, refraction, Snell's law, lenses, mirrors, ray tracing basics (planned)
 - Wave Optics — interference, diffraction, polarization, coherence (planned)

@@ -18,8 +18,6 @@ Eigenvalues and eigenvectors reveal the fundamental structure of a linear transf
 - [Diagonalization](#diagonalization)
 - [Spectral Theorem for Symmetric Matrices](#spectral-theorem-for-symmetric-matrices)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

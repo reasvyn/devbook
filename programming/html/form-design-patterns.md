@@ -25,8 +25,6 @@ An accessible form works for everyone — keyboard-only users, screen reader use
 - [CAPTCHA Accessibility](#captcha-accessibility)
 - [Testing Forms for Accessibility](#testing-forms-for-accessibility)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

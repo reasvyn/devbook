@@ -19,8 +19,6 @@ Modal logic extends propositional logic with operators for necessity and possibi
 - [Computation Tree Logic (CTL)](#computation-tree-logic-ctl)
 - [Model Checking](#model-checking)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

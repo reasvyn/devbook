@@ -22,8 +22,6 @@ Punctuation guides readers through your technical documentation. Correct punctua
 - [Hyphens: Compound Terms](#hyphens-compound-terms)
 - [Brackets: Editorial Insertions](#brackets-editorial-insertions)
 - [Punctuation in Code Documentation](#punctuation-in-code-documentation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

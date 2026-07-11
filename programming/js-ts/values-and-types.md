@@ -22,8 +22,6 @@ JavaScript has seven primitive types and one object type. Understanding how type
 - [Symbol: The Hidden Primitive](#symbol-the-hidden-primitive)
 - [BigInt: Arbitrary Precision](#bigint-arbitrary-precision)
 - [Common Type Traps](#common-type-traps)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

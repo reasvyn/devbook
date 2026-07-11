@@ -24,8 +24,6 @@ ECMAScript 2015 (ES6) and its yearly updates transformed JavaScript from a simpl
 - [Symbol](#symbol)
 - [Map & Set](#map--set)
 - [WeakMap & WeakSet](#weakmap--weakset)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

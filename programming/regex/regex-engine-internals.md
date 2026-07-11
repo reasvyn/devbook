@@ -22,7 +22,6 @@ How regex engines actually work under the hood — the difference between NFA an
 - [Non-Backtracking Engines: RE2 and Go](#non-backtracking-engines-re2-and-go)
 - [Optimization Techniques in Modern Engines](#optimization-techniques-in-modern-engines)
 - [Debugging Regex Performance](#debugging-regex-performance)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Startups, product strategy, corporate finance, investment, and company-building.
 
-## Introduction
+## 1. Introduction
 
 - [Business & Entrepreneurship: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [Entrepreneurship](entrepreneurship/index.md) — starting, funding, and growing ventures
 - [Financial](financial/index.md) — capital management, valuation, budgeting

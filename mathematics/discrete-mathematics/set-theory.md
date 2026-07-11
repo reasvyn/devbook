@@ -19,8 +19,6 @@ Set theory is the foundation of all modern mathematics and one of the most direc
 - [Venn Diagrams](#venn-diagrams)
 - [Set Identities](#set-identities)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

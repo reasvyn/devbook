@@ -20,8 +20,6 @@ Orthogonality is the geometric foundation of many linear algebra applications â€
 - [Least Squares](#least-squares)
 - [Normal Equations](#normal-equations)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -25,8 +25,6 @@ Real numbers ($\mathbb{R}$) unify rational and irrational numbers into a continu
 - [IEEE 754 and the Finite Representation Problem](#ieee-754-and-the-finite-representation-problem)
 - [Interval Arithmetic](#interval-arithmetic)
 - [Applications of Real Numbers](#applications-of-real-numbers)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

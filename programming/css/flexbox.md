@@ -29,8 +29,6 @@ Flexbox is a one-dimensional layout model for distributing space and aligning it
 - [Nested Flexbox](#nested-flexbox)
 - [Auto Margins in Flexbox](#auto-margins-in-flexbox)
 - [Min-Max Sizing and Flex](#min-max-sizing-and-flex)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

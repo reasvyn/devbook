@@ -24,8 +24,6 @@ Elements, tags, and attributes are the fundamental building blocks of HTML. Ever
 - [Quoting Attributes](#quoting-attributes)
 - [Self-Closing Tag Syntax](#self-closing-tag-syntax)
 - [Common Pitfalls](#common-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

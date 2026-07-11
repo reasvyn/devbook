@@ -22,8 +22,6 @@ REST is the dominant architectural style for web APIs. Designing a RESTful API w
 - [API Documentation](#api-documentation)
 - [Rate Limiting](#rate-limiting)
 - [Best Practices](#best-practices)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

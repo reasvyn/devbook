@@ -20,8 +20,6 @@ Language can be studied at multiple interacting levels — from individual speec
 - [Interactions between Levels](#interactions-between-levels)
 - [Levels of Analysis in Programming Languages](#levels-of-analysis-in-programming-languages)
 - [Relevance to Computing Subfields](#relevance-to-computing-subfields)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

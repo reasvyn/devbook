@@ -2,11 +2,11 @@
 
 Neural networks, gradient descent, transformers, NLP, computer vision, and MLOps.
 
-## Introduction
+## 1. Introduction
 
 - [AI / Machine Learning: Introduction](intro/index.md)
 
-## Modules (Planned)
+## 2. Modules (Planned)
 
 - Neural Networks & Deep Learning — perceptrons, backpropagation, CNNs, RNNs, transformers (planned)
 - Natural Language Processing — tokenization, embeddings, LLMs, sequence models (planned)

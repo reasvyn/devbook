@@ -22,8 +22,6 @@ Channel capacity is the maximum rate at which information can be reliably transm
 - [Channel Coding and Decoding](#channel-coding-and-decoding)
 - [The Channel Coding Gap](#the-channel-coding-gap)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -24,8 +24,6 @@ The story of HTML is the story of the web itself — from a humble document-shar
 - [Key Figures in HTML History](#key-figures-in-html-history)
 - [Timeline Summary](#timeline-summary)
 - [Lessons from History](#lessons-from-history)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

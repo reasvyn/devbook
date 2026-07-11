@@ -22,8 +22,6 @@ Accessible Rich Internet Applications (ARIA) extends HTML to make dynamic conten
 - [ARIA in Dynamic Content](#aria-in-dynamic-content)
 - [Testing ARIA](#testing-aria)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

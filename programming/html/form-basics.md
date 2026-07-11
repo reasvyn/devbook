@@ -21,8 +21,6 @@ Forms are the primary mechanism for user input on the web — collecting data, s
 - [GET vs POST](#get-vs-post)
 - [Form Security Basics](#form-security-basics)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -20,8 +20,6 @@ Technical disagreements are inevitable in engineering teams — over architectur
 - [Mediation Techniques](#mediation-techniques)
 - [Documenting Decisions After Conflict](#documenting-decisions-after-conflict)
 - [Preventing Recurring Conflicts with Process](#preventing-recurring-conflicts-with-process)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

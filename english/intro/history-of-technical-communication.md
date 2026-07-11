@@ -19,8 +19,6 @@ Technical communication has evolved from ancient engineering diagrams to modern 
 - [The API Economy](#the-api-economy)
 - [Docs as Code & Modern Tooling](#docs-as-code--modern-tooling)
 - [The Current Landscape](#the-current-landscape)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

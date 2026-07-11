@@ -20,7 +20,6 @@ Technical writing style has transformed from rigid, print-era manuals to princip
 - [How Open Source Changed Conventions](#how-open-source-changed-conventions)
 - [Agile and Documentation Velocity](#agile-and-documentation-velocity)
 - [The Modern Synthesis](#the-modern-synthesis)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Next Steps](#next-steps)
 

@@ -19,8 +19,6 @@ Differential equations describe how quantities change — the language of physic
 - [Systems of ODEs](#systems-of-odes)
 - [Numerical Methods](#numerical-methods)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

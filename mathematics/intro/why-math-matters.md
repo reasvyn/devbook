@@ -16,8 +16,6 @@ None. This is an entry point.
 - [Math for Debugging and Problem-Solving](#math-for-debugging-and-problem-solving)
 - [Math as a Communication Tool](#math-as-a-communication-tool)
 - [Concrete Examples of Math in Action](#concrete-examples-of-math-in-action)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

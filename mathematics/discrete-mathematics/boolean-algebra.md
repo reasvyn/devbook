@@ -19,8 +19,6 @@ Boolean algebra is the algebra of true and false. It underpins every digital cir
 - [Karnaugh Maps](#karnaugh-maps)
 - [Quine-McCluskey Algorithm](#quine-mccluskey-algorithm)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -25,8 +25,6 @@ The discrete logarithm problem (DLP) is one of the most important computational 
 - [Jacobi Symbol](#jacobi-symbol)
 - [Quadratic Reciprocity](#quadratic-reciprocity)
 - [Applications in Cryptography](#applications-in-cryptography)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

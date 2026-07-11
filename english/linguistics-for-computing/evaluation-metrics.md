@@ -27,8 +27,6 @@ Evaluation is how we measure whether a language system works — and compare com
 - [Statistical Significance](#statistical-significance)
 - [Bootstrap and Approximate Randomization](#bootstrap-and-approximate-randomization)
 - [Evaluation Pitfalls](#evaluation-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

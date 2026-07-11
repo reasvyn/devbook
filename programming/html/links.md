@@ -25,8 +25,6 @@ Links are the defining feature of the web — they connect documents, enable nav
 - [Accessible Links](#accessible-links)
 - [Link Relationships](#link-relationships)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

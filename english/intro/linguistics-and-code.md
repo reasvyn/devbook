@@ -21,8 +21,6 @@ Linguistics — the scientific study of language — shares deep structural para
 - [Computational Linguistics](#computational-linguistics)
 - [Sociolinguistics & Programming Culture](#sociolinguistics--programming-culture)
 - [Writing Systems & Notation](#writing-systems--notation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

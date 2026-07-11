@@ -24,8 +24,6 @@ The `<video>` and `<audio>` elements bring media to the web without requiring th
 - [Accessibility](#accessibility)
 - [Performance Considerations](#performance-considerations)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Entropy, mutual information, channel capacity, compression, and coding theory — the mathematical theory of communication formulated by Claude Shannon, fundamental to data compression, communication protocols, and machine learning.
 
-## Introduction
+## 1. Introduction
 
 - [Information Theory: Introduction](intro/index.md)
 
-## Topics
+## 2. Entropy, Compression & Communication
 
 - [Entropy & Information](entropy-and-information.md) — Shannon entropy, joint entropy, conditional entropy, relative entropy (KL divergence)
 - [Mutual Information](mutual-information.md) — definition, properties, relationship to entropy, applications

@@ -2,11 +2,11 @@
 
 User research, prototyping, usability testing, design thinking, and product validation.
 
-## Introduction
+## 1. Introduction
 
 - [Product Design: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Research, Prototyping & Validation (Planned)
 
 - User Research Methods (planned)
 - Prototyping & Wireframing (planned)

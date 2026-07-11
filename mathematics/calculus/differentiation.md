@@ -19,8 +19,6 @@ The derivative measures how a function changes as its input changes — the inst
 - [Higher-Order Derivatives](#higher-order-derivatives)
 - [Implicit Differentiation](#implicit-differentiation)
 - [The Derivative in Code](#the-derivative-in-code)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

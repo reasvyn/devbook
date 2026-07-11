@@ -26,8 +26,6 @@ Morphology studies the internal structure of words — how prefixes, suffixes, a
 - [Tokenization Pitfalls](#tokenization-pitfalls)
 - [Morphological Analysis for Search](#morphological-analysis-for-search)
 - [Morphological Analysis for Machine Translation](#morphological-analysis-for-machine-translation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

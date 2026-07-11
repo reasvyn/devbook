@@ -2,11 +2,11 @@
 
 Vectors, matrices, linear transformations, eigenvalues, eigenvectors, and decompositions — the mathematics that powers graphics, machine learning, and scientific computing.
 
-## Introduction
+## 1. Introduction
 
 - [Linear Algebra: Introduction](intro/index.md)
 
-## Topics
+## 2. Vectors, Matrices & Decompositions
 
 - [Vectors & Vector Spaces](vectors-and-vector-spaces.md) — vectors, linear combinations, span, basis, dimension
 - [Matrices & Matrix Operations](matrices-and-operations.md) — addition, multiplication, transpose, inverse, determinant

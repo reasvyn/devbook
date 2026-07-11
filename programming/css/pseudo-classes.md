@@ -29,8 +29,6 @@ Pseudo-classes select elements based on state or position. Pseudo-elements selec
 - [The ::selection Pseudo-Element](#the-selection-pseudo-element)
 - [The ::placeholder Pseudo-Element](#the-placeholder-pseudo-element)
 - [The ::part and ::slotted Pseudo-Elements](#the-part-and-slotted-pseudo-elements)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

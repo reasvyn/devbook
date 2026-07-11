@@ -2,11 +2,11 @@
 
 Algorithms, data structures, computation theory, operating systems, and compilers.
 
-## Introduction
+## 1. Introduction
 
 - [Computer Science: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [Fundamentals](fundamentals/index.md) — how computers work, the command line, binary, and the fetch-execute cycle
 - [Algorithms & Data Structures](algorithms-data-structures/index.md) — sorting, searching, trees, graphs, dynamic programming

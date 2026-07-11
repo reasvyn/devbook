@@ -22,8 +22,6 @@ Euler theorem and Fermat little theorem are cornerstones of modern cryptography.
 - [Primality Testing with Fermat](#primality-testing-with-fermat)
 - [Carmichael Numbers](#carmichael-numbers)
 - [Modular Exponentiation Shortcuts](#modular-exponentiation-shortcuts)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

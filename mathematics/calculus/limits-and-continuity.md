@@ -19,8 +19,6 @@ Limits describe the behavior of a function as its input approaches a value — t
 - [Infinite Limits and Asymptotes](#infinite-limits-and-asymptotes)
 - [The Epsilon-Delta Definition](#the-epsilon-delta-definition)
 - [Limits in Computing](#limits-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

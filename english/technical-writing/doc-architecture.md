@@ -19,8 +19,6 @@ Good documentation starts with good architecture. Information design principles 
 - [Versioned Documentation](#versioned-documentation)
 - [Site Maps for Documentation](#site-maps-for-documentation)
 - [Structuring Large Documentation Projects](#structuring-large-documentation-projects)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

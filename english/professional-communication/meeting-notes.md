@@ -19,8 +19,6 @@ Meeting notes capture decisions, action items, and important discussions so that
 - [Templates for Different Meeting Types](#templates-for-different-meeting-types)
 - [Tools for Collaborative Notes](#tools-for-collaborative-notes)
 - [Common Note-Taking Pitfalls](#common-note-taking-pitfalls)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

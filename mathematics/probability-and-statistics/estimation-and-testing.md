@@ -25,8 +25,6 @@ Statistical inference uses data to draw conclusions about populations. Point est
 - [Power Analysis](#power-analysis)
 - [Multiple Testing Correction](#multiple-testing-correction)
 - [Effect Size](#effect-size)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

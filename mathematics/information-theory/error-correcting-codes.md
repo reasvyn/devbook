@@ -21,8 +21,6 @@ Error-correcting codes add structured redundancy to data, enabling the receiver 
 - [Convolutional Codes](#convolutional-codes)
 - [LDPC vs. Turbo vs. Polar](#ldpc-vs-turbo-vs-polar)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

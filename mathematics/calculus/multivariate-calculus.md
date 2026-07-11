@@ -20,8 +20,6 @@ Multivariate calculus extends derivatives and integrals to functions of multiple
 - [Multiple Integrals](#multiple-integrals)
 - [Change of Variables](#change-of-variables)
 - [Applications in Machine Learning](#applications-in-machine-learning)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

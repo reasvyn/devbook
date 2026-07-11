@@ -21,8 +21,6 @@ Engineers communicate across many channels: email, chat, video calls, and face-t
 - [Email Etiquette](#email-etiquette)
 - [Slack Etiquette](#slack-etiquette)
 - [Channel-Specific Patterns](#channel-specific-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

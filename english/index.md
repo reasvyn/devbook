@@ -2,11 +2,11 @@
 
 Technical communication, documentation, grammar, linguistics, and critical reading — the language skills every developer needs to write, speak, and reason clearly.
 
-## Introduction
+## 1. Introduction
 
 - [English: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [Grammar & Style](grammar-and-style/index.md) — English grammar, punctuation, clarity, conciseness, technical style guides
 - [Professional Communication](professional-communication/index.md) — email, reports, meeting notes, code review comments, incident postmortems

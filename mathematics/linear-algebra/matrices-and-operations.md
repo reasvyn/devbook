@@ -22,8 +22,6 @@ Matrices are the workhorses of linear algebra — rectangular arrays of numbers 
 - [Rank](#rank)
 - [Matrix Norms](#matrix-norms)
 - [Special Matrices](#special-matrices)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

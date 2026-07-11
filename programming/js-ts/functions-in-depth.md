@@ -24,8 +24,6 @@ Functions are the fundamental building block of JavaScript. They are values, the
 - [Higher-Order Functions](#higher-order-functions)
 - [Recursion](#recursion)
 - [Pure Functions](#pure-functions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

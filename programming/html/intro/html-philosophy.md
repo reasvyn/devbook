@@ -23,8 +23,6 @@ HTML is not just a technical specification — it is shaped by a set of design p
 - [Principle 9: The Priority of Constituencies](#principle-9-the-priority-of-constituencies)
 - [Principle 10: Don't Break the Web](#principle-10-dont-break-the-web)
 - [Tensions Between Principles](#tensions-between-principles)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

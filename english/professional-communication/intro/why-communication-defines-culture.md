@@ -23,8 +23,6 @@ Engineering culture is communication culture. The way a team writes, reviews, an
 - [The Communication Maturity Model](#the-communication-maturity-model)
 - [Remote & Distributed Communication](#remote--distributed-communication)
 - [Communication Anti-Patterns](#communication-anti-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

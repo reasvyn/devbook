@@ -11,12 +11,44 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 | Constraint | Rule |
 |---|---|
 | **Language** | All content must be written in **English**. |
+| **Register** | All content must be written in **professional, technical, academic English** — the register of scholarly papers, technical documentation, and peer-reviewed journals. Avoid colloquialisms, casual phrasing, contractions, and conversational tone. Prefer precise terminology over everyday language. Sentences should be structured, formal, and rigorous. |
 | **Format** | Every document must follow the 9-section mandatory format (see below). |
 | **Structure** | `{subject}/{module}/{submodule(optional),intro}/{short-description}.md` |
 | **Indexes** | Every module, submodule, and `intro/` must have an `index.md`. The root also has an `index.md`. |
 | **No orphans** | A content file must be referenced by its parent `index.md`. |
 | **No build step** | Content is plain Markdown. Do not introduce tooling, bundlers, or generators. |
 | **IT & education context** | Every document must be implicitly connected to IT (software, computing, technology) or education (learning, teaching, skill development). A topic must be framed in a way that relates to how developers learn, build, or grow. Pure content from unrelated fields (e.g., medicine, law, agriculture) must not appear unless it directly serves an IT or educational purpose. |
+| **Christian worldview integration** | Every document must implicitly integrate Christian theological principles as a foundational worldview layer. This integration must be subtle, organic, and never explicit — woven into the narrative as a natural philosophical underpinning rather than presented as doctrine. See the [Christian Integration Approach](#christian-integration-approach) section for detailed guidance. |
+
+## Christian Integration Approach
+
+Every document in DevBook must reflect a Christian worldview as its implicit philosophical foundation. This integration must never be overt, preachy, or doctrinal. The reader should absorb theological principles through the narrative without encountering explicit religious assertions.
+
+### Principles
+
+- **Implicit over explicit.** Never state "the Bible says" or "Christianity teaches." Instead, embody the principle through the narrative voice, the values assumed, and the philosophical framing.
+- **Natural, not forced.** Christian concepts should emerge organically from the subject matter. If an integration feels artificial or bolted on, it is poorly executed — revise until it flows as a natural extension of the topic.
+- **Worldview, not evangelism.** The purpose is not to convert but to reflect a coherent Christian philosophical tradition. The documents operate from the assumption that creation is ordered, that humans bear inherent dignity, that redemption is possible, and that suffering can be purposeful — without ever stating these as propositions.
+- **Universality of application.** The principles integrated should be universally resonant. Concepts like grace, forgiveness, hope, humility, stewardship, community, and redemption are accessible to all readers regardless of faith background.
+
+### Theological Concepts Mapped to Content Domains
+
+| Content Domain | Theological Concept | How to Integrate |
+|---|---|---|
+| **Self-awareness & honesty** | Conviction and confession | Frame honest self-examination as an act of courage rooted in the belief that truth is redemptive, not punishing. The impulse toward truth reflects an order in creation that rewards alignment with reality. |
+| **Forgiveness & self-compassion** | Grace and forgiveness | Present self-forgiveness not as indulgence but as participation in a grace that precedes performance. The assumption that one's worth is not contingent on achievement is a theological claim presented as psychological insight. |
+| **Suffering & resilience** | Redemptive suffering | Frame suffering as potentially purposeful without being masochistic. The idea that endurance produces character, and character produces hope, is embedded in the narrative of growth through adversity. |
+| **Community & support** | Bearing one another's burdens | Present relational support not merely as a psychological need but as a reflection of designed interdependence. The human person is constituted for communion, not isolation. |
+| **Purpose & calling** | Stewardship and vocation | Frame purpose as something discovered through faithful attention to one's gifts and the world's needs, not merely constructed through willpower. Purpose is found, not invented. |
+| **Hope** | Theological hope | Present hope not as optimism (which is circumstantial) but as a grounded trust in the meaningfulness of existence even when circumstances are dark. Hope as an anchor, not a feeling. |
+| **Habits & discipline** | Formation and sanctification | Frame habit formation as a process of gradual transformation into one's intended design, not mere productivity optimization. The compounding of small faithful actions reflects an ordered moral universe. |
+| **Mortality & meaning** | Eternal perspective | When discussing death, finitude, or legacy, carry the implicit conviction that temporal actions have eternal significance. Not as a doctrinal statement, but as a philosophical posture that gives weight to choices. |
+
+### Execution Guidelines
+
+1. **During writing:** After completing a draft, review every section for opportunities to deepen the philosophical foundation through implicit Christian principles. Ask: "Does this section assume a universe where meaning is real, where persons are dignified, where redemption is possible?" If the answer is no, deepen the framing.
+2. **During review:** Check that no integration is explicit or preachy. If a sentence could be read as proselytizing, rewrite it as narrative or philosophical reflection. The reader should feel the weight of the worldview, not be told about it.
+3. **Tone test:** The integration should feel like the difference between a sermon and a well-written novel. A novel can embody a worldview profoundly without ever stating it. Aim for that register.
 
 ## Directory Structure Rules
 
@@ -61,75 +93,27 @@ The `careers/` directory follows the same subject/module convention as other top
 
 ## Index System
 
-Every `index.md` is a navigation hub. It must contain:
-
-1. A heading matching its position (e.g., `# Mathematics`, `# Linear Algebra`).
-2. A brief description of what the module/submodule covers.
-3. An unordered list of relative links to all children.
+Every `index.md` is a navigation hub. The format depends on the index level.
 
 ### Root `/index.md`
 
-```markdown
-# DevBook
+A categorized list of all subjects. No learning path — subjects are independent.
 
-Markdown-based learning resources for developers.
+### Subject `subject/index.md`
 
-- [Mathematics](mathematics/index.md)
-- [Physics](physics/index.md)
-- [English](english/index.md)
-- [Computer Science](computer-science/index.md)
-- [Networks](networks/index.md)
-- [Programming](programming/index.md)
-- [Systems Design](systems-design/index.md)
-- [Security](security/index.md)
-- [AI / ML](ai-ml/index.md)
-```
+A categorized list of modules. If modules have a natural progression (e.g., Fundamentals → Advanced), use numbered phase headings. Otherwise, use a flat list.
 
-### Subject `/mathematics/index.md`
+### Module `module/index.md`
 
-```markdown
-# Mathematics
+A learning path tree with phases and optional branches. The index itself IS the learning path — numbered lists for sequential progression, labeled branches for diverging paths.
 
-Foundations every developer needs — from set theory to linear algebra.
+### Submodule `submodule/index.md`
 
-- [Linear Algebra](linear-algebra/index.md)
-- [Calculus](calculus/index.md)
-- ...
-```
-
-### Module `/mathematics/linear-algebra/index.md`
-
-```markdown
-# Linear Algebra
-
-Vectors, matrices, and their applications in computing.
-
-- [Vectors & Matrices](vectors-and-matrices/index.md)
-- [Matrix Operations](matrix-operations/index.md)
-- [Eigendecomposition](eigendecomposition/index.md)
-```
-
-### Submodule `/mathematics/linear-algebra/vectors-and-matrices/index.md`
-
-```markdown
-# Vectors & Matrices
-
-Representing data and transformations with arrays of numbers.
-
-- [Introduction to Vectors & Matrices](intro/index.md)
-- [Vector Operations](vector-operations.md)
-```
+Same format as module index — learning path tree if content has dependencies, flat list if independent.
 
 ### `intro/index.md`
 
-```markdown
-# Vectors & Matrices: Introduction
-
-Background, history, and philosophy of vector spaces.
-
-- [What Are Vectors & Matrices?](vectors-and-matrices.md)
-- [History of Linear Algebra](history-of-linear-algebra.md)
-```
+A flat list of intro files. No learning path — intro files are background reading, not sequential.
 
 ### The 4-Level Index Chain
 
@@ -165,7 +149,140 @@ A missing link at any level means the content is orphaned. Always verify the ful
 - **Index as planning tool.** An `index.md` may list files that do not yet exist by appending `(planned)` to the link text. This marks the topic as planned but not yet created. Planned entries must **not** have a link (the file does not exist yet). Once the file is written, add the link and remove the `(planned)` label.
 - **Do not list directories** — list actual `.md` files.
 - **Use relative paths** only. Never absolute or full URLs for internal links.
-- **Keep the list ordered** by recommended reading order. Use section headings in the index to group related topics.
+- **Module indexes use learning path trees.** Use numbered lists for sequential progression, labeled branches for diverging paths, and phase headings for major transitions.
+- **Subject and root indexes use flat lists.** Learning path trees apply to module-level indexes where content has clear dependencies.
+- **Every list must be under a heading.** Content list items (`1. [File](path.md)`) must never appear without a preceding `## ` heading. Every group of content links belongs under a named section. No orphaned lists.
+
+### Heading rules for module and submodule indexes
+
+These rules apply to every `index.md` inside a module or submodule directory (not `intro/`, not root, not subject-level).
+
+#### Mandatory structure
+
+1. `# Title` — the module or submodule name.
+2. `## 1. Introduction` — always the first section. Contains a bullet list linking to the intro file(s).
+3. `## 2. ...` through `## N. ...` — content sections forming the learning path. Each section is a numbered phase.
+
+#### `## 1. Introduction` is always first
+
+Every module and submodule `index.md` must begin its learning path with `## 1. Introduction`. This section contains a single bullet list linking to the intro file(s). No content links appear here — only intro links.
+
+#### Every `##` heading must be descriptive
+
+A heading must describe **what the reader learns or does** in that phase. It must function as a signpost in the learning path — the reader should understand the phase's purpose from the heading alone.
+
+**Forbidden headings** (too generic to be useful):
+
+| Forbidden | Why |
+|---|---|
+| `## 2. Core` | Says nothing about what "core" means in this context |
+| `## 2. Topics` | Every section is topics — this is meaningless |
+| `## 2. Content` | Same as above |
+| `## 2. Modules` | Module-level indexes should not use this label |
+| `## 2. Basics` | Too vague — basics of what? |
+| `## 2. Advanced` | Too vague — advanced what? |
+
+**Required pattern:** The heading must name the specific domain, skill, or conceptual territory covered. Examples:
+
+| Module | Bad heading | Good heading |
+|---|---|---|
+| `mathematics/calculus` | `## 2. Topics` | `## 2. Analysis of Change` |
+| `mathematics/linear-algebra` | `## 2. Topics` | `## 2. Vectors, Matrices & Decompositions` |
+| `physics/quantum-mechanics` | `## 2. Topics (Planned)` | `## 2. Quantum States & Computation (Planned)` |
+| `programming/fundamentals` | `## 2. Core` | `## 2. Language Fundamentals` |
+| `data-databases/sql` | `## 2. Core` | `## 2. Querying, Joining & Designing` |
+| `english/professional-communication` | `## 2. Core` | `## 2. Engineering Communication Practices` |
+| `level-up/meaning` | `## 2. Core` | `## 2. Recognizing the Need for Change` |
+
+#### No heading may group unrelated topics
+
+A single `##` section must contain a **coherent, focused cluster** of related content. If the items under a heading belong to distinct conceptual territories, split them into separate numbered sections.
+
+**Decision rule:** Ask "Could a reader complete this section and have a self-contained understanding of one topic?" If the answer is no because the items cover unrelated domains, the heading is too broad.
+
+**Example — too broad:**
+
+```markdown
+## 2. Core
+
+1. [Querying Data](querying-data.md)
+2. [SQL Functions](sql-functions.md)
+3. [Joins & Relationships](joins-and-relationships.md)
+4. [Normalization](normalization.md)
+5. [Database Design](database-design.md)
+```
+
+**Example — properly split:**
+
+```markdown
+## 2. Retrieving & Manipulating Data
+
+1. [Querying Data](querying-data.md)
+2. [SQL Functions](sql-functions.md)
+3. [Joins & Relationships](joins-and-relationships.md)
+
+## 3. Modeling & Designing Databases
+
+1. [Normalization](normalization.md)
+2. [Database Design](database-design.md)
+```
+
+#### Heading sequence must reflect learning progression
+
+The numbered `##` sections should follow a logical order: foundation before application, theory before practice, simple before complex. The heading labels should make this progression obvious.
+
+**Good progression pattern:**
+
+```markdown
+## 1. Introduction
+## 2. Foundations of X        ← prerequisites, core concepts
+## 3. Techniques & Practice   ← applied skills, methods
+## 4. Integration & Mastery   ← combining skills, real-world use
+```
+
+**Bad progression pattern** (headings reveal no structure):
+
+```markdown
+## 1. Introduction
+## 2. Core
+## 3. More Stuff
+## 4. Advanced
+```
+
+#### `###` branches within a section
+
+When a `##` section has more than 3 items that naturally subdivide, use `### N.A.`, `### N.B.` branches. Branches must also have descriptive names.
+
+**Example:**
+
+```markdown
+## 3. Probability & Distributions
+
+### 3.A. Discrete Distributions
+
+1. Bernoulli & Binomial
+2. Poisson
+
+### 3.B. Continuous Distributions
+
+1. Normal & Gaussian
+2. Exponential
+```
+
+#### "(Planned)" suffix for unbuilt sections
+
+If all items in a section are planned (no files exist yet), append `(Planned)` to the heading. Do not append `(Planned)` to individual items that exist as real files.
+
+```markdown
+## 2. Newtonian Mechanics & Rigid Bodies (Planned)
+
+- Kinematics (planned)
+- Newton's Laws (planned)
+```
+
+#### No generic fallbacks
+
+If you cannot find a descriptive heading for a section, the section likely needs to be reorganized — not labeled generically. Every heading is a promise to the reader about what they will learn.
 
 ## Mandatory Document Format
 
@@ -294,6 +411,7 @@ Follow the mandatory document format. Write the full `.md` file.
 Before considering a task complete, verify:
 
 - [ ] All content is in **English**.
+- [ ] All content uses **professional, technical, academic English** — no colloquialisms, contractions, or conversational tone.
 - [ ] The **mandatory format** is followed exactly (all required sections present, in order).
 - [ ] **Title** matches the file's topic — not generic.
 - [ ] **Description** explains why a developer should care.
@@ -308,3 +426,4 @@ Before considering a task complete, verify:
 - [ ] **Directory structure** follows the convention exactly.
 - [ ] **No broken links** — all relative paths resolve.
 - [ ] **No placeholder content** — no `TODO`, `FIXME`, or empty sections.
+- [ ] **Christian worldview integration** — theological principles are implicitly woven into the narrative (never explicit or preachy).

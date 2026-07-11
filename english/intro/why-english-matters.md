@@ -19,8 +19,6 @@ None. This is the entry point for the English subject.
 - [The Cost of Poor Communication](#the-cost-of-poor-communication)
 - [English for Career Growth](#english-for-career-growth)
 - [Common Misconceptions](#common-misconceptions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

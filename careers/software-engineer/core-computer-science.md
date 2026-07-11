@@ -17,8 +17,6 @@ Data structures, algorithms, operating systems, and networking — the theoretic
 - [How Networks Work](#how-networks-work)
 - [Practice and Application](#practice-and-application)
 - [Milestones for This Phase](#milestones-for-this-phase)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

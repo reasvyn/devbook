@@ -21,8 +21,6 @@ Rate-distortion theory characterizes the fundamental trade-off between compressi
 - [The Blahut-Arimoto Algorithm for Rate-Distortion](#the-blahut-arimoto-algorithm-for-rate-distortion)
 - [Rate-Distortion in Transform Coding](#rate-distortion-in-transform-coding)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

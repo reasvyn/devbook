@@ -2,11 +2,11 @@
 
 Temperature, heat, entropy, the laws of thermodynamics, and statistical ensembles — essential for understanding hardware cooling, energy efficiency, and the fundamental limits of computation.
 
-## Introduction
+## 1. Introduction
 
 - [Thermodynamics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Heat, Entropy & Energy Limits (Planned)
 
 - Temperature & Heat — temperature scales, heat transfer, thermal equilibrium, specific heat (planned)
 - Laws of Thermodynamics — zeroth through third laws, internal energy, entropy (planned)

@@ -20,8 +20,6 @@ Propositional logic is the simplest branch of logic, dealing with propositions (
 - [Normal Forms](#normal-forms)
 - [Satisfiability](#satisfiability)
 - [Applications](#applications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

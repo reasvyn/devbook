@@ -20,8 +20,6 @@ Engineers communicate with peers, managers, product managers, executives, open s
 - [Cultural and Organizational Hierarchy](#cultural-and-organizational-hierarchy)
 - [Practical Frameworks](#practical-frameworks)
 - [Templates for Common Communications](#templates-for-common-communications)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

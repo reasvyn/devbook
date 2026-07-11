@@ -18,8 +18,6 @@ Computational geometry studies algorithms and data structures for solving geomet
 - [Line Intersection Detection](#line-intersection-detection)
 - [Closest Pair of Points](#closest-pair-of-points)
 - [Collision Detection](#collision-detection)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

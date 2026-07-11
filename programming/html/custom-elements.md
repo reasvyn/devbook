@@ -29,8 +29,6 @@ Custom Elements are the foundation of Web Components, allowing you to define new
 - [Multiple Definitions and Conflicts](#multiple-definitions-and-conflicts)
 - [Lifecycle Pitfalls](#lifecycle-pitfalls)
 - [Performance](#performance)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

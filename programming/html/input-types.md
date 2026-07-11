@@ -24,8 +24,6 @@ HTML5 introduced a rich set of input types and attributes that enable native for
 - [Input Mode](#input-mode)
 - [Common Patterns](#common-patterns)
 - [Browser Support Considerations](#browser-support-considerations)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -24,8 +24,6 @@ Computational linguistics (CL) is the scientific study of language using computa
 - [Evaluating CL Systems](#evaluating-cl-systems)
 - [Ethics in Computational Linguistics](#ethics-in-computational-linguistics)
 - [Current Research Directions](#current-research-directions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -21,8 +21,6 @@ Systems of linear equations are the practical interface between abstract linear 
 - [Homogeneous Systems](#homogeneous-systems)
 - [Overdetermined and Underdetermined Systems](#overdetermined-and-underdetermined-systems)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

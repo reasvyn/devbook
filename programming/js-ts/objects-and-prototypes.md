@@ -25,8 +25,6 @@ Objects are JavaScript's fundamental data structure. From plain objects to class
 - [Inheritance with `extends`](#inheritance-with-extends)
 - [Mixin Pattern](#mixin-pattern)
 - [Object Utilities](#object-utilities)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

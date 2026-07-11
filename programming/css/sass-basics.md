@@ -28,8 +28,6 @@ Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that adds variab
 - [Project Structure](#project-structure)
 - [Integration with Build Tools](#integration-with-build-tools)
 - [Sass vs. Modern CSS](#sass-vs-modern-css)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

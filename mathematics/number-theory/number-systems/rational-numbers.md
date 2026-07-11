@@ -37,8 +37,6 @@ Rational numbers are the bridge between integer arithmetic and the full continuu
 - [Computer Algebra Systems](#computer-algebra-systems)
 - [Currency and Financial Calculations](#currency-and-financial-calculations)
 - [Probability and Combinatorics](#probability-and-combinatorics)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

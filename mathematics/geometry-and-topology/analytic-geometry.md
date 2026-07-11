@@ -18,8 +18,6 @@ Analytic geometry uses algebraic equations to describe geometric objects and the
 - [Curve Parametrization](#curve-parametrization)
 - [Splines and Bezier Curves](#splines-and-bezier-curves)
 - [B-Splines and NURBS](#b-splines-and-nurbs)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

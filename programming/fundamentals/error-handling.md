@@ -21,8 +21,6 @@ Errors happen in every program. This document teaches you how to anticipate, cat
 - [Try / Except / Else (Python)](#try--except--else-python)
 - [Error Handling Patterns](#error-handling-patterns)
 - [Assertions](#assertions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

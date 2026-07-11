@@ -20,8 +20,6 @@ The Chinese Remainder Theorem (CRT) is a powerful result that solves systems of 
 - [CRT for RSA Acceleration](#crt-for-rsa-acceleration)
 - [Residue Number Systems](#residue-number-systems)
 - [Secret Sharing with CRT](#secret-sharing-with-crt)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

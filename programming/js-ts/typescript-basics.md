@@ -25,8 +25,6 @@ TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. 
 - [Utility Types](#utility-types)
 - [Modules & Declaration Files](#modules--declaration-files)
 - [TypeScript with React](#typescript-with-react)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -16,7 +16,6 @@ How to write regex that is fast, predictable, and safe against denial-of-service
 - [ReDoS: Regular Expression Denial of Service](#redos-regular-expression-denial-of-service)
 - [Defensive Regex Programming](#defensive-regex-programming)
 - [Writing Regex Tests](#writing-regex-tests)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

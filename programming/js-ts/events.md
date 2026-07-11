@@ -26,8 +26,6 @@ Events are the browser's way of saying "something happened" — a click, a keypr
 - [Scroll & Resize Events](#scroll--resize-events)
 - [Lifecycle Events](#lifecycle-events)
 - [Performance Considerations](#performance-considerations)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

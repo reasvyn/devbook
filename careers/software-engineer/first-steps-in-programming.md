@@ -17,8 +17,6 @@ Your foundations are ready. Now you learn to speak the language of computers. Th
 - [Writing and Running Your First Program](#writing-and-running-your-first-program)
 - [Practice Makes Permanent](#practice-makes-permanent)
 - [Milestones for This Phase](#milestones-for-this-phase)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

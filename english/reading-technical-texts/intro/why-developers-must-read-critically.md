@@ -23,8 +23,6 @@ Software developers consume an enormous volume of written technical content — 
 - [Synthesis: Connecting Multiple Sources](#synthesis-connecting-multiple-sources)
 - [Knowledge Management Systems](#knowledge-management-systems)
 - [Common Reading Traps](#common-reading-traps)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

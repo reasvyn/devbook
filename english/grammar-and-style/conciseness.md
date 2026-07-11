@@ -21,8 +21,6 @@ Conciseness is a cornerstone of good technical writing. Eliminating unnecessary 
 - [Eliminating Weasel Words](#eliminating-weasel-words)
 - [Technical Terminology vs. Unnecessary Terminology](#technical-terminology-vs-unnecessary-terminology)
 - [Tools for Checking Conciseness](#tools-for-checking-conciseness)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

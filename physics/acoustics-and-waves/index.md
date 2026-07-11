@@ -2,11 +2,11 @@
 
 Waves, oscillations, resonance, Fourier analysis, and the physics of sound — essential for audio programming, speech processing, and digital signal processing.
 
-## Introduction
+## 1. Introduction
 
 - [Acoustics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Waves, Sound & Signal Processing (Planned)
 
 - Wave Fundamentals — wave equation, sinusoidal waves, wavelength, frequency, amplitude, phase (planned)
 - Superposition & Interference — constructive/destructive interference, standing waves, beats (planned)

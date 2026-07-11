@@ -22,8 +22,6 @@ Paragraphs are the building blocks of technical documentation. Structuring them 
 - [Headings and Subheadings](#headings-and-subheadings)
 - [Using Whitespace Effectively](#using-whitespace-effectively)
 - [Common Paragraph Errors](#common-paragraph-errors)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

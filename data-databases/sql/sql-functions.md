@@ -15,7 +15,6 @@ SQL provides a rich set of built-in functions for string manipulation, date/time
 - [Date/Time Functions](#datetime-functions)
 - [Numeric Functions](#numeric-functions)
 - [Conditional Expressions](#conditional-expressions)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -26,8 +26,6 @@ CSS tooling — linters, autoprefixers, minifiers, and build tools — improves 
 - [Debouncing with will-change](#debouncing-with-will-change)
 - [CSS Reset vs Normalize](#css-reset-vs-normalize)
 - [Debugging CSS](#debugging-css)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

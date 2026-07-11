@@ -28,8 +28,6 @@ Web Components are a set of browser-native APIs for creating reusable, encapsula
 - [Accessibility](#accessibility)
 - [Testing Web Components](#testing-web-components)
 - [Performance Considerations](#performance-considerations)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

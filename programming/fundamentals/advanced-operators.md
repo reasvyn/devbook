@@ -17,8 +17,6 @@ Type-specific operators, bitwise manipulation, spread/rest syntax, operator over
 - [Spread and Rest](#spread-and-rest)
 - [Bitwise Operators](#bitwise-operators)
 - [Operator Overloading in Python](#operator-overloading-in-python)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -20,8 +20,6 @@ Mobile-first is a design strategy where you build the smallest-screen experience
 - [Progressive Enhancement](#progressive-enhancement)
 - [Performance on Mobile](#performance-on-mobile)
 - [Testing Mobile First](#testing-mobile-first)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

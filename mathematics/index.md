@@ -2,11 +2,11 @@
 
 Linear algebra, calculus, probability, discrete math, number theory, logic, and information theory — the mathematical foundations that underpin all of computing.
 
-## Introduction
+## 1. Introduction
 
 - [Mathematics: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [Linear Algebra](linear-algebra/index.md) — vectors, matrices, linear transformations, eigenvalues, SVD
 - [Calculus](calculus/index.md) — limits, derivatives, integrals, multivariate calculus, Taylor series, optimization

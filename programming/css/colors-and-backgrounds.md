@@ -26,8 +26,6 @@ CSS provides rich controls for color and background styling, from simple solid f
 - [Background Blend Modes](#background-blend-modes)
 - [Opacity and Alpha](#opacity-and-alpha)
 - [Color Schemes](#color-schemes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

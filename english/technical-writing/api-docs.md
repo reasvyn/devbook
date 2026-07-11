@@ -23,8 +23,6 @@ API reference documentation is the contract between your service and its consume
 - [SDK and Client Library Docs](#sdk-and-client-library-docs)
 - [Code Examples and Snippets](#code-examples-and-snippets)
 - [Tools for API Documentation](#tools-for-api-documentation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

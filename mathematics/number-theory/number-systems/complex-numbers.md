@@ -22,8 +22,6 @@ Complex numbers ($\mathbb{C}$) extend the real number line into a two-dimensiona
 - [Complex Functions](#complex-functions)
 - [Applications to Computing](#applications-to-computing)
 - [Quaternions: A Brief Extension](#quaternions-a-brief-extension)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)
@@ -369,11 +367,8 @@ $$
 $$
 
 ```python
-def cos_n_theta(n: int, theta: float) -> float:
-    """Compute cos(n*theta) using De Moivre."""
-    return (cmath.exp(1j * theta) ** n).real
-
-print(cos_n_theta(3, math.pi/6))  # cos(pi/2) ≈ 0
+# cos(nθ) can be computed as Re(e^{iθ}^n):
+print((cmath.exp(1j * math.pi/6) ** 3).real)  # cos(pi/2) ≈ 0
 ```
 
 ### Roots of Unity
@@ -391,16 +386,9 @@ def roots_of_unity(n: int) -> list[complex]:
     """Return all n-th roots of unity."""
     return [cmath.exp(2j * math.pi * k / n) for k in range(n)]
 
-def draw_unit_circle_roots(n: int):
-    """Print the n-th roots of unity."""
-    roots = roots_of_unity(n)
-    for k, z in enumerate(roots):
-        print(f"  z_{k} = {z:.4f}, |z| = {abs(z):.1f}")
-
-draw_unit_circle_roots(5)
-# z_0 = 1.0000+0.0000i,  z_1 = 0.3090+0.9511i, ...
-# z_2 = -0.8090+0.5878i, z_3 = -0.8090-0.5878i, ...
-# z_4 = 0.3090-0.9511i
+roots = roots_of_unity(5)
+for k, z in enumerate(roots):
+    print(f"  z_{k} = {z:.4f}, |z| = {abs(z):.1f}")
 ```
 
 **Primitive roots:** An $n$th root of unity $\omega$ is **primitive** if $\omega^k \neq 1$ for any $k < n$. The primitive $n$th roots are $e^{2\pi i k / n}$ where $\gcd(k, n) = 1$.
@@ -608,34 +596,12 @@ def mandelbrot(c: complex, max_iter: int = 1000) -> int:
         z = z * z + c
     return max_iter
 
-def render_mandelbrot(width: int, height: int, xmin: float, xmax: float,
-                       ymin: float, ymax: float, max_iter: int = 100):
-    """Simple Mandelbrot renderer (conceptual)."""
-    img = [[0] * width for _ in range(height)]
-    for y in range(height):
-        for x in range(width):
-            cx = xmin + (xmax - xmin) * x / width
-            cy = ymin + (ymax - ymin) * y / height
-            c = complex(cx, cy)
-            img[y][x] = mandelbrot(c, max_iter)
-    return img
-
+# Render: iterate over a grid of c values in the complex plane
 # The boundary of the Mandelbrot set is a fractal with infinite detail
 # Coloring based on iteration count produces the characteristic images
 ```
 
-The **Julia set** is similar but fixes $c$ and varies $z_0$:
-
-```python
-def julia(z0: complex, c: complex, max_iter: int = 1000) -> int:
-    """Julia set iteration: z_{n+1} = z_n^2 + c."""
-    z = z0
-    for n in range(max_iter):
-        if abs(z) > 2:
-            return n
-        z = z * z + c
-    return max_iter
-```
+The **Julia set** is similar but fixes $c$ and varies $z_0$: the iteration $z_{n+1} = z_n^2 + c$ produces a fractal whose shape depends on the choice of $c$.
 
 **Graphics — rotations with quaternions:**
 

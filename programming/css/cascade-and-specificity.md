@@ -23,8 +23,6 @@ The cascade resolves conflicts when multiple rules target the same element. Unde
 - [Cascade Layers](#cascade-layers)
 - [Scope](#scope)
 - [Source Order Strategies](#source-order-strategies)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -2,11 +2,11 @@
 
 Newton's laws, kinematics, dynamics, energy, momentum, rigid bodies, and collision physics — the foundation for physics engines, game simulation, and robotics.
 
-## Introduction
+## 1. Introduction
 
 - [Classical Mechanics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Newtonian Mechanics & Rigid Bodies (Planned)
 
 - Kinematics — position, velocity, acceleration, equations of motion, projectile motion (planned)
 - Newton's Laws — inertia, F=ma, action-reaction, free-body diagrams (planned)

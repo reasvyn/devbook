@@ -21,7 +21,6 @@ JavaScript is single-threaded but non-blocking. Promises and async/await are the
 - [The Event Loop](#the-event-loop)
 - [Microtasks vs. Macrotasks](#microtasks-vs-macrotasks)
 - [Promise Anti-Patterns](#promise-anti-patterns)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

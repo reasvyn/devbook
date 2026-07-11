@@ -22,8 +22,6 @@ How values are combined, compared, and transformed into new values — the gramm
 - [Ternary / Conditional Operator](#ternary--conditional-operator)
 - [Expressions vs Statements](#expressions-vs-statements)
 - [Expression Evaluation](#expression-evaluation)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

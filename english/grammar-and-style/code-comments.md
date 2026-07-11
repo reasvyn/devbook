@@ -20,8 +20,6 @@ Code comments and commit messages are a form of technical communication read by 
 - [Code Review Comment Grammar](#code-review-comment-grammar)
 - [TODO and FIXME Conventions](#todo-and-fixme-conventions)
 - [Documentation in Code vs. External Docs](#documentation-in-code-vs-external-docs)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

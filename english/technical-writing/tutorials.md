@@ -22,8 +22,6 @@ Tutorials are the first experience many developers have with your product. A goo
 - [Handling Errors in Tutorials](#handling-errors-in-tutorials)
 - [Screenshot and Diagram Use](#screenshot-and-diagram-use)
 - [Writing for Different Experience Levels](#writing-for-different-experience-levels)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

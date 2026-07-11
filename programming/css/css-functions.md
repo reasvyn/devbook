@@ -24,8 +24,6 @@ CSS includes dozens of built-in functions for calculations, color manipulation, 
 - [Font Functions](#font-functions)
 - [Grid Functions](#grid-functions)
 - [Selector Functions](#selector-functions)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

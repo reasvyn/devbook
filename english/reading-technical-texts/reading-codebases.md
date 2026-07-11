@@ -20,8 +20,6 @@ Reading code is a fundamentally different skill from writing code. Understanding
 - [Code Comprehension Techniques](#code-comprehension-techniques)
 - [Documenting Findings While Reading](#documenting-findings-while-reading)
 - [Building a Code Reading Practice](#building-a-code-reading-practice)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

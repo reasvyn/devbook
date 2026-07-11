@@ -21,7 +21,6 @@ Communication in engineering organizations follows two modes: synchronous (real-
 - [Synchronous Communication Principles](#synchronous-communication-principles)
 - [Hybrid Patterns](#hybrid-patterns)
 - [Organizational Anti-Patterns](#organizational-anti-patterns)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Next Steps](#next-steps)
 

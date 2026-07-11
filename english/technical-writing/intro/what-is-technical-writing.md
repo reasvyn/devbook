@@ -22,8 +22,6 @@ Technical writing is the practice of translating complex technical information i
 - [Tools of the Trade](#tools-of-the-trade)
 - [Measuring Documentation Quality](#measuring-documentation-quality)
 - [Common Anti-Patterns](#common-anti-patterns)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -17,8 +17,6 @@ How data is stored, named, and managed in memory — variables, constants, scope
 - [Constants](#constants)
 - [Scope Basics](#scope-basics)
 - [Variable Shadowing](#variable-shadowing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -18,8 +18,6 @@ The fundamental types that all programs use — numbers, text, booleans, and the
 - [Numbers](#numbers)
 - [Booleans](#booleans)
 - [Null, Undefined, None](#null-undefined-none)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

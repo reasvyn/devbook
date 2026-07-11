@@ -19,8 +19,6 @@ Graph theory and topology converge in the study of planar graphs, the Euler char
 - [Persistent Homology](#persistent-homology)
 - [The Mapper Algorithm](#the-mapper-algorithm)
 - [Applications in Computing](#applications-in-computing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

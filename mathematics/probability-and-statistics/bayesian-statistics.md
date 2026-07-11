@@ -23,8 +23,6 @@ Bayesian statistics is a framework for reasoning under uncertainty that treats p
 - [Markov Chain Monte Carlo](#markov-chain-monte-carlo)
 - [Bayesian A/B Testing](#bayesian-ab-testing)
 - [Bayesian vs Frequentist: Practical Guide](#bayesian-vs-frequentist-practical-guide)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

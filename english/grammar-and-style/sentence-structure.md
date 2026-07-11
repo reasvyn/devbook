@@ -19,8 +19,6 @@ Clear sentences are the foundation of good technical documentation. Understandin
 - [Sentence Length and Readability](#sentence-length-and-readability)
 - [Transitions and Flow](#transitions-and-flow)
 - [Common Sentence Errors in Technical Writing](#common-sentence-errors-in-technical-writing)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

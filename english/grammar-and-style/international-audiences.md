@@ -21,8 +21,6 @@ Technical documentation reaches a global audience. Non-native English speakers, 
 - [Localization vs. Internationalization](#localization-vs-internationalization)
 - [Writing for Non-Native English Speakers](#writing-for-non-native-english-speakers)
 - [Testing with International Readers](#testing-with-international-readers)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

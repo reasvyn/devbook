@@ -23,8 +23,6 @@ Keyboard focus management determines how users navigate interactive elements usi
 - [Skip Links](#skip-links)
 - [Focus in Single-Page Apps](#focus-in-single-page-apps)
 - [Accessibility Requirements](#accessibility-requirements)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

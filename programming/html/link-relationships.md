@@ -23,8 +23,6 @@ The `<link>` element defines relationships between the current document and exte
 - [Link Types Reference](#link-types-reference)
 - [Performance Impact](#performance-impact)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -22,8 +22,6 @@ Reading technical content is wasted if you cannot retrieve and apply what you le
 - [Separating Consumption from Creation](#separating-consumption-from-creation)
 - [Note-Taking for Different Content Types](#note-taking-for-different-content-types)
 - [Developing a Personal Knowledge Management Workflow](#developing-a-personal-knowledge-management-workflow)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

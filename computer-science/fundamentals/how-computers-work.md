@@ -178,9 +178,6 @@ Because binary strings are long and error-prone for humans, programmers use **he
 | 1111 | F | 15 |
 
 A byte like `10101100` is written as `AC` in hex. Memory addresses, color codes (`#FF5733`), and debug output are almost always shown in hex.
-
-
-
 ## The CPU and the Fetch-Execute Cycle
 
 ### CPU Anatomy

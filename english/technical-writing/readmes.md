@@ -24,8 +24,6 @@ README-driven development is the practice of writing the README before writing t
 - [README as Marketing](#readme-as-marketing)
 - [Badge Culture](#badge-culture)
 - [README Generators and Templates](#readme-generators-and-templates)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -23,8 +23,6 @@ Every HTML element has a default display behavior — it is either block-level o
 - [Historic Elements: `<center>`, `<font>`, `<big>`, `<tt>`](#historic-elements-center-font-big-tt)
 - [Hidden and None Elements](#hidden-and-none-elements)
 - [Common Mistakes](#common-mistakes)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

@@ -21,8 +21,6 @@ Technical blogs and tutorials are a major source of learning for developers, but
 - [Following Citation Trails](#following-citation-trails)
 - [Building a Curated Reading List](#building-a-curated-reading-list)
 - [Common Blog Genres and Their Reliability](#common-blog-genres-and-their-reliability)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

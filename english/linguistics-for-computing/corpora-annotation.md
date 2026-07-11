@@ -26,8 +26,6 @@ A corpus is a large, structured collection of text used to train and evaluate la
 - [Bias in Corpora](#bias-in-corpora)
 - [Legal and Ethical Concerns](#legal-and-ethical-concerns)
 - [Creating Your Own Dataset](#creating-your-own-dataset)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

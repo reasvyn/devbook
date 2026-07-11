@@ -2,11 +2,11 @@
 
 Methodologies, testing, project management, code review, and team practices.
 
-## Introduction
+## 1. Introduction
 
 - [Software Engineering: Introduction](intro/index.md)
 
-## Modules
+## 2. Modules
 
 - [Project Management](project-management/index.md) — agile, scrum, estimation, scoping
 - [Version Control](version-control/index.md) — Git, branching, merging, workflows

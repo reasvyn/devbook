@@ -20,8 +20,6 @@ Topology is the study of properties that are preserved under continuous deformat
 - [Compactness](#compactness)
 - [Metric Spaces](#metric-spaces)
 - [Product and Quotient Topology](#product-and-quotient-topology)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

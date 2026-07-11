@@ -2,11 +2,11 @@
 
 Numerical methods, Monte Carlo simulations, finite element analysis, molecular dynamics, and physics engines — using computers to solve physical problems and simulate reality.
 
-## Introduction
+## 1. Introduction
 
 - [Computational Physics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Numerical Simulation (Planned)
 
 - Numerical Differentiation & Integration — finite differences, Euler method, Runge-Kutta, quadrature (planned)
 - Solving Ordinary Differential Equations — initial value problems, boundary value problems, stiff equations (planned)

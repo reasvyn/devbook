@@ -22,8 +22,6 @@ Divisibility and prime numbers form the bedrock of number theory. Every cryptogr
 - [Bezout's Identity](#bezouts-identity)
 - [Relatively Prime Numbers](#relatively-prime-numbers)
 - [Least Common Multiple](#least-common-multiple)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

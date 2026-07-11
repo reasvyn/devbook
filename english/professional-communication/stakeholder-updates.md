@@ -21,8 +21,6 @@ Engineers must communicate project status to a variety of audiences: team member
 - [Weekly vs. Milestone Updates](#weekly-vs-milestone-updates)
 - [Email vs. Dashboard Formats](#email-vs-dashboard-formats)
 - [Status Report Templates](#status-report-templates)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

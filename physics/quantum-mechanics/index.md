@@ -2,11 +2,11 @@
 
 Wave functions, superposition, entanglement, measurement, and quantum information — the physics that makes quantum computing possible.
 
-## Introduction
+## 1. Introduction
 
 - [Quantum Mechanics: Introduction](intro/index.md)
 
-## Topics (Planned)
+## 2. Quantum States & Computation (Planned)
 
 - Origins of Quantum Theory — blackbody radiation, photoelectric effect, Bohr model, wave-particle duality (planned)
 - Wave Functions & Schrödinger Equation — probability amplitude, Schrödinger equation, stationary states (planned)

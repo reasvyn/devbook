@@ -22,8 +22,6 @@ Grammar is not pedantry — it is precision. For developers, grammatical errors 
 - [Voice, Mood & Modality](#voice-mood--modality)
 - [Style Guides & Grammar Rules](#style-guides--grammar-rules)
 - [Grammar Checkers & Tooling](#grammar-checkers--tooling)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

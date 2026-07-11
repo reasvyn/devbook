@@ -24,7 +24,6 @@ CSS is not a programming language — it is a declarative styling system with un
 - [CSS as a Design Tool](#css-as-a-design-tool)
 - [Principle of Least Power](#principle-of-least-power)
 - [Working with the Browser, Not Against It](#working-with-the-browser-not-against-it)
-- [Study Cases](#study-cases)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

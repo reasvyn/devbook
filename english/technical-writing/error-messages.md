@@ -22,8 +22,6 @@ Error messages are the most visible form of technical writing. Every user sees t
 - [Localization of Error Messages](#localization-of-error-messages)
 - [Testing Error Messages with Users](#testing-error-messages-with-users)
 - [Error Message Style Guide](#error-message-style-guide)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

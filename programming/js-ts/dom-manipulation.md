@@ -21,8 +21,6 @@ The Document Object Model (DOM) is the browser's tree representation of an HTML 
 - [Working with Classes](#working-with-classes)
 - [Working with Styles](#working-with-styles)
 - [Text Content & innerHTML](#text-content--innerhtml)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

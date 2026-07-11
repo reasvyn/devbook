@@ -18,8 +18,6 @@ This is the phase where theory meets practice. You have the CS foundations — d
 - [Putting It Together — Full Stack Basics](#putting-it-together--full-stack-basics)
 - [Development Tools and Workflow](#development-tools-and-workflow)
 - [Milestones for This Phase](#milestones-for-this-phase)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

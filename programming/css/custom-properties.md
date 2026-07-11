@@ -22,8 +22,6 @@ Custom properties bring variables to CSS. They hold values that can be reused, c
 - [Performance Considerations](#performance-considerations)
 - [Theming Patterns](#theming-patterns)
 - [Design Tokens](#design-tokens)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

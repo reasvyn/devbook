@@ -20,8 +20,6 @@ Documentation is the primary interface between developers and the tools they use
 - [Documentation Versioning](#documentation-versioning)
 - [Building a Personal Knowledge Base from Documentation](#building-a-personal-knowledge-base-from-documentation)
 - [Documentation Reading Workflow](#documentation-reading-workflow)
-- [Study Cases](#study-cases)
-- [Examples](#examples)
 - [Glossary](#glossary)
 - [Quick References](#quick-references)
 - [Next Steps](#next-steps)

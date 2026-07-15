@@ -11,8 +11,13 @@ A comprehensive exploration of the software engineering profession — what it i
 
 1. [What Is a Software Engineer?](what-is-a-software-engineer.md)
 2. [Responsibilities & Daily Work](responsibilities-and-daily-work.md)
-3. [Types & Specializations](types-and-specializations.md)
-4. [Career Progression](career-progression.md)
+3. [Engineering Ethics](engineering-ethics.md)
+4. [Types & Specializations](types-and-specializations.md)
+5. [Tools & Workflow](tools-and-workflow.md) — editors, version control workflow, containers, cloud, CI/CD, observability, documentation
+6. [Career Progression](career-progression.md)
+7. [Sustainability & Burnout Prevention](sustainability-and-burnout.md)
+8. [Compensation & Negotiation](compensation-and-negotiation.md)
+9. [Methodologies & Processes](methodologies-and-processes.md) — Waterfall, Agile, Scrum, Kanban, XP, Lean, CI/CD, DevOps, and process evaluation
 
 ## 3. The Learning Path
 
@@ -21,3 +26,4 @@ A comprehensive exploration of the software engineering profession — what it i
 3. [Core Computer Science](core-computer-science.md) — data structures, algorithms, OS, networking
 4. [Building Real Software](building-real-software.md) — Git, web, databases, APIs
 5. [Becoming a Professional](becoming-a-professional.md) — testing, projects, portfolio, career
+6. [Interview Preparation](interview-preparation.md) — hiring process, algorithms, system design, behavioral, negotiation

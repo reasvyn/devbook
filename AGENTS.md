@@ -329,13 +329,14 @@ Where to go next. Link to related documents or suggest practice exercises.
 ### 7.A. Do's
 
 - **Be practical.** Connect every concept to how it matters in real development.
-- **Prefer code.** A snippet is worth a paragraph. Use language-identified fenced blocks.
+- **Use code when it clarifies.** A well-chosen snippet can replace a paragraph of explanation. Use language-identified fenced blocks in popular languages (Python, JavaScript, TypeScript, Go, Rust, etc.) — but only when a code example genuinely adds clarity. Do not force code into topics where prose or diagrams communicate better.
 - **Define terms** on first use, then add them to the Glossary.
 - **Link internally** to prerequisites and next steps. Cross-link between related topics.
 - **Use Mermaid** for diagrams (flowcharts, sequence diagrams, graphs).
 - **Use LaTeX** (`$` inline, `$$` display) for math.
 - **Keep files focused.** A single document should cover one coherent topic. Split if it grows too long.
 - **Line count 400–800.** Every content file must be at least 400 lines. If shorter, expand with more depth, examples, or diagrams directly in the Content section. If longer than 800 lines, split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps.
+- **RPG-like learning experience.** Structure content as a quest-based journey. The Description sets the mission, the Prerequisites define what you need before attempting, the Content is the challenge, the Learning Tips and Glossary are the rewards, and the Next Steps point to the next quest. The module index is the world map. Cross-references are the skill tree. This framing makes progression feel natural and rewarding — but never sacrifice scientific accuracy for the sake of the metaphor. All mandatory section headings remain unchanged.
 
 ### 7.B. Don'ts
 

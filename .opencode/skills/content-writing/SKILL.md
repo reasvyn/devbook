@@ -62,8 +62,9 @@ Where to go next. Link to related documents.
 - **No orphans.** Every content file must be referenced by its parent index file. Verify the full index chain: root → subject → module/submodule → file.
 - **No placeholder text.** No `TODO`, `FIXME`, `[planned]`, or empty sections. Write real content or omit the section.
 - **No fluff.** No "in this article", "welcome to", "let's dive in". Get straight to the material.
-- **Code over explanation.** Use language-identified fenced code blocks. A snippet is worth a paragraph.
+- **Code when it clarifies.** Use language-identified fenced code blocks in popular languages (Python, JavaScript, TypeScript, Go, Rust, etc.) when a code example genuinely adds clarity. Do not force code into topics where prose or diagrams communicate better.
 - **Define terms on first use**, then add them to the Glossary.
 - **Use relative paths only** for internal links. Never absolute URLs for internal content.
 - **Mermaid for diagrams**, LaTeX (`$`/`$$`) for math.
 - **Cross-link** between related topics in Prerequisites and Next Steps.
+- **RPG-like learning experience.** Structure content as a quest-based journey. The Description sets the mission, the Prerequisites define what you need before attempting, the Content is the challenge, the Learning Tips and Glossary are the rewards, and the Next Steps point to the next quest. The module index is the world map. Cross-references are the skill tree. This framing makes progression feel natural and rewarding — but never sacrifice scientific accuracy for the sake of the metaphor. All mandatory section headings remain unchanged.

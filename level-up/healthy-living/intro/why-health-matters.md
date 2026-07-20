@@ -465,7 +465,7 @@ This module sits between **Rebuilding** (resilience) and **Systematizing** (habi
 The subsequent documents in this module provide:
 
 1. [Sleep Science](../sleep-science.md) — the neuroscience of sleep and practical sleep hygiene for developers
-2. [Nutrition and Cognitive Performance](../nutrition-and-cognitive-performance.md) — how diet affects brain function and what to eat for sustained focus
+2. [Nutrition for Developers](../nutrition-for-developers.md) — how diet affects brain function and what to eat for sustained focus
 3. [Movement and Exercise](../movement-and-exercise.md) — the neurobiology of exercise and movement strategies for sedentary work
 4. [Hygiene and Environment](../hygiene-and-environment.md) — how physical environment affects cognitive performance
 5. [Ergonomics for Developers](../ergonomics-for-developers.md) — protecting the body from the specific physical demands of software development
@@ -529,5 +529,5 @@ The remaining domains — nutrition, environment, and ergonomics — can be impl
 Begin with the highest-leverage intervention: sleep.
 
 - [Sleep Science](../sleep-science.md) — the neuroscience of sleep architecture and practical implementation strategies
-- [Nutrition and Cognitive Performance](../nutrition-and-cognitive-performance.md) — the gut-brain axis and dietary strategies for sustained focus
+- [Nutrition for Developers](../nutrition-for-developers.md) — the gut-brain axis and dietary strategies for sustained focus
 - [Movement and Exercise](../movement-and-exercise.md) — neurobiology of exercise and movement protocols for sedentary work

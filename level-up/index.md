@@ -1,6 +1,6 @@
 # Level Up
 
-The journey from existential rock bottom to a life of meaning, resilience, and purpose. This subject narrates the stages of personal transformation — understanding the void, finding meaning, building resilience, installing systems, and pursuing purpose. The actual knowledge lives in [philosophy](../philosophy/index.md) and [psychology](../psychology/index.md); this subject describes what the journey feels like and how to navigate each stage.
+The journey from existential rock bottom to a life of meaning, resilience, and purpose. This subject narrates the stages of personal transformation — understanding the void, finding meaning, building resilience, installing systems, and pursuing purpose. The actual knowledge draws from across DevBook — philosophy, psychology, biology, neuroscience, social sciences, and more; this subject describes what the journey feels like and how to navigate each stage.
 
 Read the stages in order. Each stage depends on the capacities built in the previous one. Skipping a stage does not save time — it creates a fragile foundation that collapses under pressure.
 
@@ -19,13 +19,14 @@ Build the cognitive tools that every subsequent stage depends on. Self-awareness
 
 ## 3. The Journey
 
-The five stages of transformation. Each stage is a module with its own introduction, content files, and cross-references to philosophy and psychology.
+The six stages of transformation. Each stage is a module with its own introduction, content files, and cross-references to knowledge across DevBook.
 
 1. [Awakening](meaning/index.md) — recognizing the void and deciding to change
 2. [Rebuilding](resilience/index.md) — getting back up and growing through adversity
 3. [Healthy Living](healthy-living/index.md) — physical health as the foundation of transformation
-4. [Systematizing](habits/index.md) — installing daily routines that compound
-5. [Thriving](purpose/index.md) — finding mission and leaving a legacy
+4. [Digital Wellness](digital-wellness/index.md) — reclaiming attention from engineered distraction
+5. [Systematizing](habits/index.md) — installing daily routines that compound
+6. [Thriving](purpose/index.md) — finding mission and leaving a legacy
 
 ## 4. Biograph — Lessons from Lived Lives
 

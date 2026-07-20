@@ -7,7 +7,9 @@ The second stage — after awakening comes the hard work of getting back up. Thi
 - [What Is Rebuilding?](intro/what-is-rebuilding.md)
 
 ## 2. Foundation
+
 1. [Getting Back Up](getting-back-up.md) — the mechanics of recovery after hitting bottom
+2. [The Myth of Linear Progress](the-myth-of-linear-progress.md) — dismantling the expectation of straight-line recovery and embracing the spiral
 
 ## 3. Practices
 

@@ -24,6 +24,17 @@ Complete these in order — each builds on the previous.
 
 1. [The Developer's Landscape](the-developers-landscape.md) — why this journey is different for software people
 
-## 4. Integration
+## 4. Practical Foundations
+
+The minimum skills that unlock the rest of DevBook. Each document addresses one barrier to entry and provides the narrative scaffolding for rebuilding it.
+
+1. [Why Foundations Matter](why-foundations-matter.md) — the philosophical grounding: what literacy, numeracy, and digital competency are, and why they are prerequisites, not luxuries
+2. Learning to Read Again *(planned)* — rebuilding reading fluency from the foundation, whether starting fresh or resuming after a long pause
+3. Numbers and Reasoning *(planned)* — the beginning of numerical thinking: number sense, arithmetic, and the reasoning that underlies all of mathematics
+4. [Touching the Keyboard](touching-the-keyboard.md) — minimum digital competency: device operation, the terminal, file systems, text editors, and Markdown
+5. The First Hour *(planned)* — a structured, zero-assumption walkthrough of your first hour with a computer and a text editor
+6. [Building Confidence](building-confidence.md) — the psychological dimension of starting from zero: shame, persistence, and the quiet dignity of continuing
+
+## 5. Integration
 
 1. [Navigating Setbacks](navigating-setbacks.md) — what to do when you fall back

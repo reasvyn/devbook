@@ -2,20 +2,22 @@
 
 The journey from existential rock bottom to a life of meaning, resilience, and purpose. This subject narrates the stages of personal transformation — understanding the void, finding meaning, building resilience, installing systems, and pursuing purpose. The actual knowledge draws from across DevBook — philosophy, psychology, biology, neuroscience, social sciences, and more; this subject describes what the journey feels like and how to navigate each stage.
 
-Read the stages in order. Each stage depends on the capacities built in the previous one. Skipping a stage does not save time — it creates a fragile foundation that collapses under pressure.
+Two entry points serve different populations: the absolute beginner starting from zero, and the person at existential crisis who has lost the will to live. Both lead to the same journey through foundations, awakening, rebuilding, and thriving. Read the stages in order. Each stage depends on the capacities built in the previous one. Skipping a stage does not save time — it creates a fragile foundation that collapses under pressure.
 
 ## 1. Introduction
 
-Philosophical foundation. Understand what the lowest point is and why the level-up metaphor applies.
+Philosophical foundation. Two entry points for different starting positions.
 
-- [The Lowest Point](intro/the-lowest-point.md) — the existential vacuum, rock bottom, and why it precedes transformation
-- [The Level-Up Philosophy](intro/the-level-up-philosophy.md) — framing life as deliberate growth: game mechanics, mindset, deliberate practice
+- [The Start Point](intro/the-start-point.md) — the beginning of the level-up journey: what it means to start from zero, why the journey matters, and how DevBook is structured to carry you forward
+- [The Crisis Point](intro/the-crisis-point.md) — for those who have lost the will to live: crisis resources, the nature of suicidal pain, and the first step toward continuation
+- [The Lowest Point](intro/the-lowest-point.md) — existential vacuum, loss of meaning, the abyss
+- [The Level-Up Philosophy](intro/the-level-up-philosophy.md) — framing life as a deliberate growth process
 
-## 2. Foundation
+## 2. Foundations
 
-Build the cognitive tools that every subsequent stage depends on. Self-awareness, mental models, and journey literacy must come first — they are the ground you stand on.
+Build the minimum prerequisite skills before the rest of the journey becomes accessible. Functional literacy, numeracy, and digital competency. These are the ground you stand on.
 
-1. [Fundamentals](foundations/index.md) — self-awareness, mental models, the map, the mechanism, and the developer's landscape
+1. [Foundations](foundations/index.md) — reading, numeracy, digital competency, and the first hour
 
 ## 3. The Journey
 

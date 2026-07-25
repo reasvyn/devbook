@@ -8,7 +8,7 @@ This file defines the workflow for creating, moving, or removing modules, submod
 2. **Justification** — Answer these questions in writing:
    - What specific body of knowledge does this represent?
    - Why is it a distinct unit of study rather than a section within a broader module?
-   - Is it a valid academic discipline? (Exception: `level-up/` and `careers/`)
+   - Is it a valid academic discipline? (Exception: narrative and career-exploration subjects are not academic disciplines but are valid subjects.)
    - What must the reader know before entering this module?
    - What does this module unlock afterward?
 3. **Phase determination** — Assign the new module to a learning phase in the subject index.

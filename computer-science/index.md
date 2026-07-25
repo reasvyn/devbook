@@ -8,7 +8,7 @@ Algorithms, data structures, computation theory, operating systems, and compiler
 
 ## 2. Foundations
 
-- [Fundamentals](foundation/index.md) — how computers work, the command line, binary, and the fetch-execute cycle
+- [Fundamentals](foundations/index.md) — how computers work, the command line, binary, and the fetch-execute cycle
 
 ## 3. Core Theory & Practice
 

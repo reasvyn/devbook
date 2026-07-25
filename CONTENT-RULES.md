@@ -158,7 +158,8 @@ Module indexes organize tiered content under descriptive phase headings:
 - **Subject** — top-level directory (e.g., `mathematics`, `networks`). Must match the Topics table in README.md.
 - **Module** — grouping within a subject (e.g., `linear-algebra` inside `mathematics`). Every subject must consist of one or more modules.
 - **Submodule** — optional grouping within a module (e.g., `vector-spaces` inside `linear-algebra`). A submodule cannot contain deeper submodules. Module and submodule names must not be the same.
-- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory. Every `intro/` must have an `index.md` listing its files.
+- **`intro/`** — a special directory containing background, philosophy, principles, history, ethics, key events, or official organizations about the field. Every subject and module **must** have an `intro/` directory. Every `intro/` must have an `index.md` listing its files. Intro files are narrative and explanatory — they do not follow the mandatory 9-section format and are exempt from the 400–800 line requirement.
+- **`foundations/`** — a prerequisite module that provides the minimum knowledge required before the rest of the subject becomes accessible. Foundations modules sit at the beginning of a subject's learning path and build upward toward core content. Any subject may have a `foundations/` module — it follows the same directory rules as any other module (`index.md`, `intro/`, content files).
 - **Short description** — hyphenated slug, lowercase (e.g., `why-math.md`, `vector-operations.md`).
 - Content files sit directly under the module or submodule (flat). `intro/` is the only directory allowed at these levels.
 
@@ -304,22 +305,19 @@ If you cannot find a descriptive heading for a section, the section likely needs
 
 ## Emoji Usage
 
-Emoji usage is **strongly recommended** across all content files to enhance readability, visual appeal, and engagement.
+Emoji usage is **strongly recommended** across all content files to enhance readability, visual appeal, and engagement. Use them wherever they feel natural — in headings, in lists, in callouts, in tables, or within prose when they add emphasis or visual rhythm.
 
-### Placement Rules
+### Placement
 
-- **Section headings** — Place a single emoji before or after the heading text. Examples: `## 🧠 Cognitive Frameworks`, `## 3. Sleep Architecture 🌙`.
-- **List items** — Use emojis to differentiate list categories or mark priority levels. Examples: `🟢 Low impact`, `🟡 Medium impact`, `🔴 High impact`.
-- **Callout blocks** — Use emojis to signal the type of information. Examples: `💡 Key Insight`, `🔬 Scientific Basis`, `🛠️ Practical Exercise`.
-- **Table headers** — Use emojis in the first column to visually distinguish row categories.
+Emojis work well in section headings, list items, callout blocks, table columns, and inline within paragraphs. There is no strict rule about where they must or must not appear — use your judgment. If an emoji makes the text clearer or more engaging, include it. If it feels forced, leave it out.
 
-### Style Rules
+### Style
 
-- **One emoji per heading or list item.** Never stack multiple emojis.
-- **Relevance over decoration.** Every emoji must thematically match its content.
-- **Consistency within a file.** If a file uses `🌙` for sleep-related sections, do not switch to `😴` elsewhere.
-- **Professional tone preserved.** Emojis supplement the text; they do not replace words or diminish the academic register.
-- **No emojis in code blocks or file paths.**
+- Use one emoji per heading or list item. Stacking multiple emojis looks cluttered.
+- Keep them relevant — an emoji should match the content it accompanies.
+- Stay consistent within a file. If you use 🧠 for cognition sections, do not switch to 🤔 elsewhere for the same concept.
+- Preserve the academic register. Emojis are visual punctuation, not a substitute for clear writing.
+- Do not use emojis in file paths or directory names.
 
 ---
 

@@ -7,7 +7,7 @@ Emotional regulation is the skill of feeling your feelings without being destroy
 ## Prerequisites
 
 - [Getting Back Up](getting-back-up.md) — the foundation of recovery that makes regulation possible
-- [The Mechanism of Change](../foundation/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
+- [The Mechanism of Change](../foundations/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
 
 ## Table of Contents
 

@@ -21,6 +21,7 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 - **Cross-link** between related topics in Prerequisites and Next Steps.
 - **RPG-like learning experience.** Structure content as a quest-based journey — Description as mission, Prerequisites as requirements, Content as challenge, Learning Tips and Glossary as rewards, Next Steps as the next quest.
 - **Tiering.** If the topic spans multiple complexity levels, split into at most 3 tiered files: `{topic}-basic.md`, `{topic}-intermediate.md`, `{topic}-advanced.md`. Not all topics need all three.
+- **Emoji usage.** Use emojis naturally throughout content — in headings, lists, callouts, tables, and within prose where they add visual clarity. One emoji per item, keep them relevant and consistent within a file.
 
 ## Section-Specific Rules
 

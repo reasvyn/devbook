@@ -51,7 +51,7 @@ Before planning any new module or submodule, answer these questions:
 
 1. **What specific body of knowledge does this represent?** Not "a bunch of related topics" — a coherent, named field of study.
 2. **Why does it constitute a distinct unit of study?** Why can it not be a section within a broader module?
-3. **Is it a valid academic discipline?** Does it have its own literature, research traditions, and institutional recognition? (Exception: `level-up/` and `careers/` are special subjects.)
+3. **Is it a valid academic discipline?** Does it have its own literature, research traditions, and institutional recognition? (Exception: narrative and career-exploration subjects are not academic disciplines but are valid subjects.)
 4. **What is the learning dependency?** What must the reader know before entering this module? What does this module unlock afterward?
 
 If any answer is weak or vague, the module should not exist — fold its content into the parent or a sibling.

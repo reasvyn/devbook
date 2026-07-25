@@ -612,7 +612,7 @@ This is the safest usage — it ensures all relative URLs resolve from the root.
 - [MDN: Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Viewport-fit) — viewport documentation
 - [OG Protocol](https://ogp.me/) — Open Graph specification
 - [Twitter Card Documentation](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) — Twitter cards guide
-- [Google Search Central](https://developers.google.com/search/docs/foundation/seo-starter-guide) — SEO starter guide
+- [Google Search Central](https://developers.google.com/search/docs/foundations/seo-starter-guide) — SEO starter guide
 - [Schema.org](https://schema.org/) — structured data vocabulary
 - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) — test OG tags
 - [Twitter Card Validator](https://cards-dev.twitter.com/validator) — test Twitter cards

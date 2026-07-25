@@ -482,4 +482,4 @@ The deep work practice, once established, creates the cognitive infrastructure f
 - [Rebuilding Routines](../habits/rebuilding-routines.md) — integrating deep work into a broader system of daily routines that compound over time
 - [Screen Time Management](screen-time-management.md) — extending the discipline of attention protection to the full scope of screen engagement
 - [Environment Design](../habits/environment-design.md) — structuring your physical and digital surroundings to make deep work the default rather than the exception
-- [Mental Models for Change](../foundation/mental-models-for-change.md) — frameworks for understanding how the shift from fragmented to focused work drives lasting transformation
+- [Mental Models for Change](../foundations/mental-models-for-change.md) — frameworks for understanding how the shift from fragmented to focused work drives lasting transformation

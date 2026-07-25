@@ -73,7 +73,7 @@ You will see debates online about which language is best. Beginners spend weeks 
 
 Every concept you learn in your first language transfers. Once you understand loops and functions in Python, learning them in JavaScript takes an afternoon. The investment is in concepts, not syntax.
 
-For a structured curriculum in either language, see the [Programming Fundamentals](../../programming/foundation/index.md) module.
+For a structured curriculum in either language, see the [Programming Fundamentals](../../programming/foundations/index.md) module.
 
 ### Core Concepts (The Universal Building Blocks)
 
@@ -92,7 +92,7 @@ is_raining = False
 
 Variables let you store data, refer to it by name, and change it later. The name should describe what the variable holds. Well-named variables make code self-documenting. Badly named variables (like `x`, `temp`, `data`) make code impossible to understand.
 
-For the full treatment: [Variables](../../programming/foundation/variables.md).
+For the full treatment: [Variables](../../programming/foundations/variables.md).
 
 #### Data Types
 
@@ -118,7 +118,7 @@ has_permission = False
 
 Python also has `None`, which represents the absence of a value. It is not zero, not an empty string — it is nothing.
 
-For the full treatment: [Data Types](../../programming/foundation/data-types.md).
+For the full treatment: [Data Types](../../programming/foundations/data-types.md).
 
 #### Operators
 
@@ -151,7 +151,7 @@ is_weekend = (day == "Saturday") or (day == "Sunday")
 is_not_finished = not is_done
 ```
 
-For the full treatment: [Operators and Expressions](../../programming/foundation/operators-and-expressions.md).
+For the full treatment: [Operators and Expressions](../../programming/foundations/operators-and-expressions.md).
 
 #### Control Flow
 
@@ -184,7 +184,7 @@ while count < 5:
     count += 1
 ```
 
-For the full treatment: [Control Flow](../../programming/foundation/control-flow.md).
+For the full treatment: [Control Flow](../../programming/foundations/control-flow.md).
 
 #### Functions
 
@@ -204,7 +204,7 @@ Functions are the primary tool for organizing code. They let you:
 - Break complex problems into small, testable pieces
 - Give names to operations, making your code read like a story
 
-For the full treatment: [Functions](../../programming/foundation/functions.md).
+For the full treatment: [Functions](../../programming/foundations/functions.md).
 
 #### Collections
 
@@ -231,7 +231,7 @@ print(person["name"])          # "Alice"
 person["age"] = 26             # Update value
 ```
 
-For the full treatment: [Collections](../../programming/foundation/collections.md).
+For the full treatment: [Collections](../../programming/foundations/collections.md).
 
 #### Error Handling
 
@@ -252,7 +252,7 @@ The `try` block contains code that might fail. If it does, the program jumps to 
 
 Error handling is not punishment — it is a sign that you are thinking like an engineer. Professional software anticipates failure.
 
-For the full treatment: [Error Handling](../../programming/foundation/error-handling.md).
+For the full treatment: [Error Handling](../../programming/foundations/error-handling.md).
 
 ### Problem-Solving and Algorithmic Thinking
 
@@ -423,7 +423,7 @@ The most important skill in debugging is reading the error message. It tells you
 - The type of error.
 - A description of what went wrong.
 
-Always start by reading the error message from top to bottom. The bottom line is the cause. The top lines are the chain of calls that led there. For the full treatment, see [Debugging](../../programming/foundation/debugging.md) and [Programming Fundamentals](../../programming/foundation/intro/programming-fundamentals.md).
+Always start by reading the error message from top to bottom. The bottom line is the cause. The top lines are the chain of calls that led there. For the full treatment, see [Debugging](../../programming/foundations/debugging.md) and [Programming Fundamentals](../../programming/foundations/intro/programming-fundamentals.md).
 
 ### Practice Makes Permanent
 

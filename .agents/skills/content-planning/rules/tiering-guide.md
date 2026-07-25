@@ -48,44 +48,46 @@ The decision is driven by content, not by a rule that every topic must be split.
 
 ## Index Organization
 
-Tiered content should be organized in the module index under descriptive phase headings that reflect the progression:
+Tiered content should be organized in the module index under descriptive phase headings that reflect the progression. Use headings that match your module's learning path.
+
+**Single topic, tiered across phases** (illustrative):
 
 ```markdown
 ## 1. Introduction
 
-- [Why This Topic](intro/why-this-topic.md)
+- [Module intro](intro/your-topic.md)
 
-## 2. Foundations
+## 2. [Descriptive Phase Name]
 
 1. [Topic — Basic](topic-basic.md)
 
-## 3. Applied Techniques
+## 3. [Descriptive Phase Name]
 
 1. [Topic — Intermediate](topic-intermediate.md)
 
-## 4. Advanced Integration
+## 4. [Descriptive Phase Name]
 
 1. [Topic — Advanced](topic-advanced.md)
 ```
 
-Alternatively, if the module covers multiple topics at the same tier level, organize by tier across topics:
+**Multiple topics, organized by tier** (illustrative):
 
 ```markdown
 ## 1. Introduction
 
-- [Why This Topic](intro/why-this-topic.md)
+- [Module intro](intro/your-topic.md)
 
-## 2. Basic Concepts
+## 2. [Descriptive Phase Name]
 
 1. [Topic A — Basic](topic-a-basic.md)
 2. [Topic B — Basic](topic-b-basic.md)
 
-## 3. Intermediate Techniques
+## 3. [Descriptive Phase Name]
 
 1. [Topic A — Intermediate](topic-a-intermediate.md)
 2. [Topic B — Intermediate](topic-b-intermediate.md)
 
-## 4. Advanced Integration
+## 4. [Descriptive Phase Name]
 
 1. [Topic A — Advanced](topic-a-advanced.md)
 2. [Topic B — Advanced](topic-b-advanced.md)
@@ -101,7 +103,10 @@ Each tier file should include:
 - **In Next Steps:** Link to the tier above (for basic and intermediate tiers) and to related topics.
 - **In the Content section:** Explicitly state what knowledge is assumed from the prerequisite tier.
 
-Example chain:
+The tier files form a chain: basic → intermediate → advanced. Each tier's Prerequisites link downward, and its Next Steps link upward. Within each file, the content should be standalone — readable without the other tiers, but enriched by them.
+
+Example chain (illustrative — use your actual file names):
+
 ```
 topic-basic.md
   Prerequisites: [General prerequisite]

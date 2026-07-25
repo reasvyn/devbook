@@ -7,7 +7,7 @@ You have tried to change. You have set goals, made promises to yourself, downloa
 ## Prerequisites
 
 - [Rebuilding Routines](rebuilding-routines.md) — the foundation of small, consistent actions that this technique builds upon
-- [Mental Models for Change](../foundation/mental-models-for-change.md) — frameworks for understanding how transformation actually works
+- [Mental Models for Change](../foundations/mental-models-for-change.md) — frameworks for understanding how transformation actually works
 
 ## Table of Contents
 

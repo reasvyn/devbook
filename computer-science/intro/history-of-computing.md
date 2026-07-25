@@ -395,6 +395,6 @@ While many key figures are mentioned throughout the document, a few deserve spec
 
 ## Next Steps
 
-- [How Computers Work](../foundation/how-computers-work.md) — trace the modern computer's architecture from binary to operating system
-- [Command Line Basics](../foundation/command-line-basics.md) — experience computing's command-line heritage firsthand
+- [How Computers Work](../foundations/how-computers-work.md) — trace the modern computer's architecture from binary to operating system
+- [Command Line Basics](../foundations/command-line-basics.md) — experience computing's command-line heritage firsthand
 - Back to [Computer Science Introduction](index.md)

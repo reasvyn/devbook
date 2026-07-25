@@ -6,7 +6,7 @@ You have built the tools. You understand self-awareness, mental models, the mech
 
 ## Prerequisites
 
-- [What Are the Fundamentals?](../foundation/intro/what-are-the-fundamentals.md) — the cognitive and perceptual tools that make awakening possible
+- [What Are the Fundamentals?](../foundations/intro/what-are-the-fundamentals.md) — the cognitive and perceptual tools that make awakening possible
 - [The Lowest Point](../../intro/the-lowest-point.md) — the philosophical foundation for understanding the existential vacuum
 - [The Level-Up Philosophy](../../intro/the-level-up-philosophy.md) — the framework that frames transformation as deliberate progression
 
@@ -463,5 +463,5 @@ Developers experience the awakening through profession-specific pathways. Unders
 - [Recognizing the Void](../recognizing-the-void.md) — the experience of waking up to the existential vacuum
 - [The Decision to Change](../the-decision-to-change.md) — the moment of commitment that follows recognition
 - [Getting Back Up](../../resilience/getting-back-up.md) — the practical work of rebuilding after the decision
-- [Mental Models for Change](../../foundation/mental-models-for-change.md) — the frameworks that help you process the awakening
+- [Mental Models for Change](../../foundations/mental-models-for-change.md) — the frameworks that help you process the awakening
 - [Existential Crisis](../../../philosophy/existentialism/existential-crisis.md) — the philosophical framework for understanding what you are experiencing

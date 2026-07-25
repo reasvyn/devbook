@@ -7,7 +7,7 @@ You cannot recover alone. This is not a motivational platitude. It is a fact bac
 ## Prerequisites
 
 - [Getting Back Up](getting-back-up.md) — the foundation of recovery that support systems are built upon
-- [The Mechanism of Change](../foundation/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
+- [The Mechanism of Change](../foundations/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
 
 ## Table of Contents
 

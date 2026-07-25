@@ -6,7 +6,7 @@ SQL (Structured Query Language) is the standard language for managing relational
 
 ## Prerequisites
 
-- [Programming Fundamentals](../../programming/foundation/index.md) — variables, functions, conditionals, basic data structures
+- [Programming Fundamentals](../../programming/foundations/index.md) — variables, functions, conditionals, basic data structures
 
 ## Table of Contents
 

@@ -417,7 +417,7 @@ Python and JavaScript satisfy all four criteria, which is why they are the most 
 
 ## Next Steps
 
-- [Programming Fundamentals](../foundation/index.md) — start building practical programming skills
-- [Variables & Data Types](../foundation/variables-and-data-types.md) — the building blocks of data
-- [Control Flow](../foundation/control-flow.md) — making decisions and repeating actions
-- [Functions](../foundation/functions.md) — reusable, composable units of code
+- [Programming Fundamentals](../foundations/index.md) — start building practical programming skills
+- [Variables & Data Types](../foundations/variables-and-data-types.md) — the building blocks of data
+- [Control Flow](../foundations/control-flow.md) — making decisions and repeating actions
+- [Functions](../foundations/functions.md) — reusable, composable units of code

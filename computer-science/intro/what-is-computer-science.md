@@ -564,6 +564,6 @@ Investing in CS fundamentals is the highest-ROI learning a developer can do. Eve
 
 ## Next Steps
 
-- [How Computers Work](../foundation/how-computers-work.md) — CPU, memory, storage, binary, and the fetch-execute cycle
-- [Command Line Basics](../foundation/command-line-basics.md) — navigating and controlling your computer through the terminal
+- [How Computers Work](../foundations/how-computers-work.md) — CPU, memory, storage, binary, and the fetch-execute cycle
+- [Command Line Basics](../foundations/command-line-basics.md) — navigating and controlling your computer through the terminal
 - Back to [Computer Science Introduction](index.md)

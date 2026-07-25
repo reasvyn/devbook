@@ -11,7 +11,7 @@ This skill governs all work in the `level-up/` subject of DevBook.
 
 **Every action begins with the index.** Before creating, editing, or planning any level-up content, the agent must first read and understand the index documents.
 
-1. **Read the root `index.md`** — Understand where `level-up/` sits in the learning path (Personal Foundation phase, first position) and its role as the entry point of the entire journey.
+1. **Read the root `index.md`** — Understand where `level-up/` sits in the learning path and its role as the entry point of the entire journey.
 2. **Read the `level-up/index.md`** — See all existing modules, their phase groupings, and the narrative arc progression.
 3. **Read the target module's `index.md`** — Understand the learning path tree before adding or modifying files.
 4. **Read the `intro/` file** — Understand the module's stated purpose and its place in the journey arc.
@@ -26,7 +26,7 @@ This applies to **all scenarios**:
 
 - **Narrative, not academic.** `level-up/` describes the *experience* of the journey — what it feels like to hit bottom, awaken, rebuild, systematize, and thrive. It does NOT teach academic knowledge.
 - **Reference, don't duplicate.** Every narrative file links to other DevBook subjects for the actual knowledge and theoretical grounding. Use Prerequisites and Next Steps to cross-reference broadly — philosophy, psychology, biology, neuroscience, sociology, or any subject that provides depth to the narrative.
-- **Journey arc.** The stages follow a progression: the lowest point → awakening → rebuilding → systematizing → thriving. Each stage is a module inside `level-up/`.
+- **Journey arc.** The stages follow a progression: the lowest point → awakening → rebuilding → systematizing → thriving. Read the subject index to see which modules correspond to which arc stage.
 - **Narrative voice.** Use first/second-person perspective — the reader is on this journey. Tone is direct, raw, and honest. No fluff, no padding.
 - **RPG-like learning experience.** Structure the content as if the reader is playing a story-driven RPG. Every element should reinforce the feeling of progression, challenge, and reward — while remaining grounded in scientific theory and evidence. All mandatory section headings remain unchanged.
 
@@ -42,11 +42,13 @@ The level-up journey follows the universal RPG learning experience defined in CO
 
 The overall journey follows a classic RPG narrative arc:
 
-1. **The Descent** (intro/fundamentals) — the hero falls. The world is dark. The player learns the controls.
-2. **The Awakening** (meaning) — the hero discovers the quest. The objective becomes clear.
-3. **The Grind** (resilience, healthy-living, digital-wellness) — the hero builds strength through repeated challenges. Stats go up. Skills unlock.
-4. **The System** (habits) — the hero builds automated routines. Progress becomes self-sustaining.
-5. **The Endgame** (purpose, thriving) — the hero discovers their ultimate purpose. The final boss is faced.
+1. **The Descent** — the hero falls. The world is dark. The player learns the controls.
+2. **The Awakening** — the hero discovers the quest. The objective becomes clear.
+3. **The Grind** — the hero builds strength through repeated challenges. Stats go up. Skills unlock.
+4. **The System** — the hero builds automated routines. Progress becomes self-sustaining.
+5. **The Endgame** — the hero discovers their ultimate purpose. The final boss is faced.
+
+Each arc stage maps to modules in `level-up/`. Read the subject index to see which modules correspond to which stage.
 
 ### Tone
 

@@ -36,7 +36,7 @@ Use this checklist before considering any content file complete. Every item must
 
 ## Tiering Quality
 
-- [ ] **Tiered if needed.** If the topic spans multiple complexity levels, split into exactly 3 files.
+- [ ] **Tiered if needed.** If the topic spans multiple complexity levels, split into at most 3 files.
 - [ ] **Tier suffix in filename.** `{topic}-basic.md`, `{topic}-intermediate.md`, `{topic}-advanced.md`.
 - [ ] **Prerequisites chain upward.** Intermediate → basic. Advanced → intermediate.
 - [ ] **Each tier is standalone.** Can be read independently.

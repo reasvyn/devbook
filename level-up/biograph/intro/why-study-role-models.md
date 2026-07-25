@@ -7,7 +7,7 @@ Before examining individual lives, one must understand why biographical learning
 ## Prerequisites
 
 - [The Level-Up Philosophy](../intro/the-level-up-philosophy.md) — framing life as deliberate growth
-- [What Are the Fundamentals](../foundation/intro/what-are-the-fundamentals.md) — self-awareness and mental models
+- [What Are the Fundamentals](../foundations/intro/what-are-the-fundamentals.md) — self-awareness and mental models
 
 ## Table of Contents
 

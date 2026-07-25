@@ -443,4 +443,4 @@ The information diet, once established, creates the cognitive space for deeper w
 - [Screen Time Management](screen-time-management.md) — extending information discipline to the broader pattern of screen engagement
 - [Rebuilding Routines](../habits/rebuilding-routines.md) — integrating information discipline into daily systems that compound over time
 - [Environment Design](../habits/environment-design.md) — shaping your physical and digital surroundings to support intentional information consumption
-- [Mental Models for Change](../foundation/mental-models-for-change.md) — frameworks for understanding how the shift from consumption to production drives lasting transformation
+- [Mental Models for Change](../foundations/mental-models-for-change.md) — frameworks for understanding how the shift from consumption to production drives lasting transformation

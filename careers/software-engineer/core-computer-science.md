@@ -478,7 +478,7 @@ Your browser is a client. The web server (nginx, Apache, a Node.js process) is t
 
 This entire sequence happens in under a second for a typical page. Understanding it gives you a mental model for debugging networking issues — when a page fails to load, you can reason about which step failed.
 
-For more depth, see the planned [Networking Fundamentals](/networks/foundation/index.md) content.
+For more depth, see the planned [Networking Fundamentals](/networks/foundations/index.md) content.
 
 ### Practice and Application
 

@@ -8,7 +8,7 @@ Languages, paradigms, frameworks, and software development practices.
 
 ## 2. Language Foundations
 
-- [Programming Fundamentals](foundation/index.md) — variables, control flow, functions, collections, error handling
+- [Programming Fundamentals](foundations/index.md) — variables, control flow, functions, collections, error handling
 - [Regular Expressions](regex/index.md) — pattern matching, syntax, engines, real-world usage
 
 ## 3. Web Technologies

@@ -8,7 +8,7 @@ Protocols, TCP/IP, HTTP, DNS, routing, and distributed communication.
 
 ## 2. Foundations (Planned)
 
-- [Network Fundamentals](foundation/index.md) — how networks work, from cables to the web (planned)
+- [Network Fundamentals](foundations/index.md) — how networks work, from cables to the web (planned)
 
 ## 3. Application Layer
 

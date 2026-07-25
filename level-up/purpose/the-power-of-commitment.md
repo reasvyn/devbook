@@ -7,7 +7,7 @@ The difference between having a direction and living a purpose is commitment. Th
 ## Prerequisites
 
 - [Finding Your Mission](finding-your-mission.md) — the directional clarity that commitment requires as its starting point
-- [Mental Models for Change](../foundation/mental-models-for-change.md) — the cognitive frameworks that support the psychological shift commitment demands
+- [Mental Models for Change](../foundations/mental-models-for-change.md) — the cognitive frameworks that support the psychological shift commitment demands
 
 ## Table of Contents
 

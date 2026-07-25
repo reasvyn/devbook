@@ -6,11 +6,14 @@ How computer networks work — from physical cables to the web. (Planned — con
 
 - Introduction to Networking (planned)
 
-## 2. Planned
+## 2. Addressing & Naming (Planned)
 
-- IP Addressing & Subnets
-- DNS — Domain Name System
-- TCP & UDP — transport protocols
-- Routing & Switching
-- NAT & DHCP
-- Network Security Basics
+- IP Addressing & Subnets (planned)
+- DNS — Domain Name System (planned)
+- NAT & DHCP (planned)
+
+## 3. Transport & Routing (Planned)
+
+- TCP & UDP — transport protocols (planned)
+- Routing & Switching (planned)
+- Network Security Basics (planned)

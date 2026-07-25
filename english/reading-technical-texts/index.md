@@ -4,7 +4,7 @@ Critical reading skills for developers — how to read academic papers, RFCs, sp
 
 ## 1. Introduction
 
-- [What Is Technical Reading?](intro/what-is-technical-reading.md)
+- [Why Developers Must Read Critically](../intro/why-developers-must-read-critically.md)
 
 ## 2. Foundations
 

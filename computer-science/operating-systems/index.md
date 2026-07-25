@@ -6,10 +6,13 @@ How operating systems manage hardware, processes, memory, and files. (Planned â€
 
 - Introduction to Operating Systems (planned)
 
-## 2. Planned
+## 2. Process Management (Planned)
 
-- Processes & Threads
-- Memory Management
-- File Systems
-- Scheduling
-- Concurrency & Synchronization
+- Processes & Threads (planned)
+- Scheduling (planned)
+
+## 3. Memory & Concurrency (Planned)
+
+- Memory Management (planned)
+- File Systems (planned)
+- Concurrency & Synchronization (planned)

@@ -10,15 +10,18 @@ Fundamental techniques for organizing data and solving computational problems ef
 
 1. [Introduction to Algorithms](introduction-to-algorithms.md) — what algorithms are, Big O notation, and complexity analysis
 
-## 3. Planned
+## 3. Data Structures (Planned)
 
-- Big O Notation in Depth — analyzing recursive algorithms and amortized analysis
-- Arrays & Linked Lists
-- Stacks & Queues
-- Hash Tables
-- Trees & Binary Search Trees
-- Graphs
-- Sorting Algorithms
-- Searching Algorithms
-- Recursion
-- Dynamic Programming
+- Arrays & Linked Lists (planned)
+- Stacks & Queues (planned)
+- Hash Tables (planned)
+- Trees & Binary Search Trees (planned)
+- Graphs (planned)
+
+## 4. Algorithms (Planned)
+
+- Sorting Algorithms (planned)
+- Searching Algorithms (planned)
+- Recursion (planned)
+- Dynamic Programming (planned)
+- Big O Notation in Depth — analyzing recursive algorithms and amortized analysis (planned)

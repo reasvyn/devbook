@@ -6,8 +6,11 @@ Protocols, TCP/IP, HTTP, DNS, routing, and distributed communication.
 
 - [Networks: Introduction](intro/index.md)
 
-## 2. Modules
+## 2. Foundations (Planned)
+
+- [Network Fundamentals](foundation/index.md) — how networks work, from cables to the web (planned)
+
+## 3. Application Layer
 
 - [HTTP & API](http-api/index.md) — HTTP protocol, methods, status codes, headers, and API design
-- [Network Fundamentals](foundation/index.md) — how networks work, from cables to the web (planned)
 

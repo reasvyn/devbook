@@ -4,7 +4,7 @@ How computers work at the hardware level, how to control them through the comman
 
 ## 1. Introduction
 
-- [What Is Computer Science?](intro/what-is-computer-science.md)
+- [What Is Computer Science?](../intro/what-is-computer-science.md)
 
 ## 2. Hardware & the Command Line
 

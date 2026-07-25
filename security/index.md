@@ -6,9 +6,12 @@ Cryptography, authentication, authorization, secure coding, and threat modeling.
 
 - [Security: Introduction](intro/index.md)
 
-## 2. Modules (Planned)
+## 2. Cryptographic Foundations (Planned)
 
 - Cryptography — symmetric/asymmetric encryption, hashing, digital signatures (planned)
+
+## 3. Applied Security (Planned)
+
 - Authentication & Authorization — OAuth2, JWT, SSO, RBAC (planned)
 - Web Security — OWASP Top 10, XSS, CSRF, SQL injection, CSP (planned)
 - Secure Coding — input validation, memory safety, supply chain security (planned)

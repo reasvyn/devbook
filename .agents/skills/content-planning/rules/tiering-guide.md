@@ -6,7 +6,7 @@ This file provides guidance on when and how to apply the 3-level content tiering
 
 A topic requires tiering when:
 
-1. **The content exceeds 800 lines** at a single complexity level and cannot be reasonably shortened.
+1. **The content exceeds 800 lines** at a single complexity level, cannot be reasonably trimmed, and the excess content is genuinely complex enough to warrant a separate document.
 2. **The topic naturally spans multiple audience levels** — from complete beginners to experienced practitioners.
 3. **The prerequisite chain is steep** — understanding the advanced material requires conceptual groundwork that would bloat a single document.
 

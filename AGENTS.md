@@ -74,7 +74,7 @@ Only after this context is established may you proceed to any task.
 
 ## Critical Rules
 
-- **Line count 400–800 lines per content file.** Every content `.md` file must be between 400 and 800 lines. If shorter, expand with more depth, examples, diagrams, or walkthroughs. If longer, split into multiple focused documents and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
+- **Line count 400–800 lines per content file.** Every content `.md` file must be between 400 and 800 lines. If shorter, expand with more depth, examples, diagrams, or walkthroughs. If longer, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
 - **English only, academic register.** No colloquialisms, contractions, or conversational tone.
 - **Mandatory 9-section format.** Every content file follows the structure in [TEMPLATE.md](TEMPLATE.md).
 - **Tiering: maximum 3 levels.** If a topic spans multiple complexity levels, split into at most 3 tiered files (`-basic.md`, `-intermediate.md`, `-advanced.md`). Not all topics require tiering — simple topics that fit within 400–800 lines at a single level do not need to be split.

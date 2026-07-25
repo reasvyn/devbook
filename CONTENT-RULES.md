@@ -341,7 +341,7 @@ Emoji usage is **strongly recommended** across all content files to enhance read
 Every content file must be **400–800 lines**.
 
 - **If shorter than 400 lines:** Expand with more depth, examples, diagrams, or walkthroughs directly in the Content section.
-- **If longer than 800 lines:** Split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
+- **If longer than 800 lines:** First try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents (e.g., a related sub-topic) and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
 
 ---
 

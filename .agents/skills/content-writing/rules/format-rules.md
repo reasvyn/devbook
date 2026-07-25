@@ -10,7 +10,7 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 
 - **Language: English only.** Never write content in any other language.
 - **Register: Academic English.** No colloquialisms, contractions, or conversational tone.
-- **Line count 400–800.** If too short, expand with more depth in the Content section. If too long, split into multiple focused documents and link them via Next Steps.
+- **Line count 400–800.** If too short, expand with more depth in the Content section. If too long, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps.
 - **No orphans.** Every content file must be referenced by its parent index file. Verify the full index chain: root → subject → module/submodule → file.
 - **No placeholder text.** No `TODO`, `FIXME`, `[planned]`, or empty sections. Write real content or omit the section.
 - **No fluff.** No "in this article", "welcome to", "let's dive in". Get straight to the material.

@@ -7,7 +7,7 @@ Functions are the fundamental building block of JavaScript. They are values, the
 ## Prerequisites
 
 - [Values & Types](values-and-types.md) — type system fundamentals
-- [Programming Fundamentals: Functions](../fundamentals/functions.md) — basic function syntax
+- [Programming Fundamentals: Functions](../foundation/functions.md) — basic function syntax
 
 ## Table of Contents
 

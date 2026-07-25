@@ -6,6 +6,8 @@ DevBook is a living library of technical knowledge for developers, by developers
 
 No dependencies. No build step. No `npm install`. Open any `.md` file in your editor or browser and start reading.
 
+> **Ready to begin?** Open the [Master Index](index.md) — your world map for the entire library. Pick a subject that calls to you and start the journey.
+
 ## Who Is This For
 
 - **Working developers** brushing up on fundamentals or exploring unfamiliar territory.
@@ -156,14 +158,11 @@ Sections marked "(Optional)" may be omitted if genuinely not needed. All content
 
 ## For AI Agents
 
-This repository includes [AGENTS.md](AGENTS.md) — a comprehensive guide for AI agents managing content. It covers:
+This repository includes [AGENTS.md](AGENTS.md) — a navigation hub for AI agents managing content. It points to:
 
-- Core constraints and content rules
-- Christian worldview integration approach
-- Directory structure and indexing conventions
-- Mandatory document format and content generation rules
-- Workflows for creating and updating content
-- Quality checklist
+- [CONTENT-RULES.md](CONTENT-RULES.md) — All content rules, conventions, tiering, directory structure, index system
+- [TEMPLATE.md](TEMPLATE.md) — Document template with all 9 sections
+- [AGENTS.md](AGENTS.md) — Index-First Workflow and agent skill navigation
 
 Any AI agent working with DevBook content should read AGENTS.md before making changes.
 
@@ -176,7 +175,7 @@ DevBook thrives on community input. If you'd like to add or improve a topic:
 3. Write your content in Markdown following the existing style.
 4. Open a pull request.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on writing style, document format, directory structure, and the pull request process.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for a quick-start guide and the pull request process. See [CONTENT-RULES.md](CONTENT-RULES.md) for the complete rule set and [TEMPLATE.md](TEMPLATE.md) for the document format.
 
 ## License
 

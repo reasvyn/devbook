@@ -7,6 +7,21 @@ description: Use when the user mentions 'career', 'software engineer', 'professi
 
 This skill governs all work in the `careers/` subject of DevBook.
 
+## Index-First Workflow
+
+**Every action begins with the index.** Before creating, editing, or planning any career content, the agent must first read and understand the index documents.
+
+1. **Read the root `index.md`** — Understand where `careers/` sits in the learning path (Personal Foundation phase) and how it relates to other subjects.
+2. **Read the `careers/index.md`** — See all existing career modules, their phase groupings, and identify gaps or planned entries.
+3. **Read the target career's `index.md`** — Understand the module's learning path tree before adding or modifying files.
+4. **Read the `intro/` file** — Understand the career module's stated purpose and rationale.
+5. **Then act.** Create, edit, or plan career content only after the index context is clear.
+
+This applies to **all scenarios**:
+- **Adding a new career** — the careers index reveals which professions are covered and where the new one fits in the phase structure.
+- **Modifying an existing career** — the index chain shows related careers and cross-references to technical subjects.
+- **Planning career modules** — start from the careers index to justify the module's existence and determine its phase placement.
+
 ## Core Principles
 
 - **Profession, not tutorial.** `careers/` explores what a profession *is* — its history, responsibilities, specializations, progression, industry context, and culture. It does NOT teach the skills needed to enter the profession.
@@ -15,7 +30,7 @@ This skill governs all work in the `careers/` subject of DevBook.
 
 ## When Creating Content
 
-1. Read the parent index files and any existing career files first.
+1. Follow the **Index-First Workflow** above — read the full index chain before any action.
 2. Research the profession thoroughly before writing.
 3. Follow the mandatory 9-section format.
 4. The "Prerequisites" section should reference the learning path or intro files.

@@ -6,7 +6,7 @@ HTTP is the protocol that powers the web. Every API call, every page load, every
 
 ## Prerequisites
 
-- [Programming Fundamentals](../../programming/fundamentals/index.md) — basic programming concepts
+- [Programming Fundamentals](../../programming/foundation/index.md) — basic programming concepts
 
 ## Table of Contents
 

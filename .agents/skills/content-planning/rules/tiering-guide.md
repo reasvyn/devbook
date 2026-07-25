@@ -1,0 +1,107 @@
+# Content Planning — Tiering Guide
+
+This file provides guidance on when and how to apply the 3-level content tiering system. The full tiering rules are in [CONTENT-RULES.md](../../../../CONTENT-RULES.md).
+
+## When to Tier
+
+A topic requires tiering when:
+
+1. **The content exceeds 800 lines** at a single complexity level and cannot be reasonably shortened.
+2. **The topic naturally spans multiple audience levels** — from complete beginners to experienced practitioners.
+3. **The prerequisite chain is steep** — understanding the advanced material requires conceptual groundwork that would bloat a single document.
+
+A topic does **not** require tiering when:
+
+1. It fits within 400–800 lines at a single level.
+2. The audience is uniformly one skill level (e.g., all beginners).
+3. The topic is self-contained and does not have deep prerequisite chains.
+
+## How to Determine Tier Boundaries
+
+### Basic Tier
+- **Audience:** A developer encountering this topic for the first time.
+- **Content:** What is it? Why does it exist? Core definitions. Simple examples. Mental models.
+- **Scope:** The minimum viable understanding. A reader should be able to use the basic concepts in a simple context.
+- **Prerequisites:** Only general prerequisites (e.g., basic programming literacy).
+
+### Intermediate Tier
+- **Audience:** A developer who has read the basic tier or has equivalent prior knowledge.
+- **Content:** How is it used in practice? Real-world patterns. Trade-offs. Common pitfalls. Integration with other tools/concepts.
+- **Scope:** Practical competence. A reader should be able to work with this topic in a real project.
+- **Prerequisites:** The basic tier file, plus any other prerequisites.
+
+### Advanced Tier
+- **Audience:** A developer with working knowledge of the topic.
+- **Content:** Architecture decisions. Edge cases. Performance optimization. Deep integration. Historical context. Research frontiers.
+- **Scope:** Mastery and judgment. A reader should be able to make design decisions and teach others.
+- **Prerequisites:** The intermediate tier file, plus any other prerequisites.
+
+## Index Organization
+
+Tiered content should be organized in the module index under descriptive phase headings that reflect the progression:
+
+```markdown
+## 1. Introduction
+
+- [Why This Topic](intro/why-this-topic.md)
+
+## 2. Foundations
+
+1. [Topic — Basic](topic-basic.md)
+
+## 3. Applied Techniques
+
+1. [Topic — Intermediate](topic-intermediate.md)
+
+## 4. Advanced Integration
+
+1. [Topic — Advanced](topic-advanced.md)
+```
+
+Alternatively, if the module covers multiple topics at the same tier level, organize by tier across topics:
+
+```markdown
+## 1. Introduction
+
+- [Why This Topic](intro/why-this-topic.md)
+
+## 2. Basic Concepts
+
+1. [Topic A — Basic](topic-a-basic.md)
+2. [Topic B — Basic](topic-b-basic.md)
+
+## 3. Intermediate Techniques
+
+1. [Topic A — Intermediate](topic-a-intermediate.md)
+2. [Topic B — Intermediate](topic-b-intermediate.md)
+
+## 4. Advanced Integration
+
+1. [Topic A — Advanced](topic-a-advanced.md)
+2. [Topic B — Advanced](topic-b-advanced.md)
+```
+
+Choose the organization that best serves the learning path. Use topic-first when topics have strong interdependencies. Use tier-first when topics are more independent.
+
+## Cross-Tier Linking
+
+Each tier file should include:
+
+- **In Prerequisites:** Link to the tier below (for intermediate and advanced tiers).
+- **In Next Steps:** Link to the tier above (for basic and intermediate tiers) and to related topics.
+- **In the Content section:** Explicitly state what knowledge is assumed from the prerequisite tier.
+
+Example chain:
+```
+topic-basic.md
+  Prerequisites: [General prerequisite]
+  Next Steps: [topic-intermediate.md]
+
+topic-intermediate.md
+  Prerequisites: [topic-basic.md], [Additional prerequisite]
+  Next Steps: [topic-advanced.md]
+
+topic-advanced.md
+  Prerequisites: [topic-intermediate.md], [Additional prerequisite]
+  Next Steps: [Related advanced topics]
+```

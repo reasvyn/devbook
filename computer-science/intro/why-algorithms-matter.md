@@ -397,5 +397,5 @@ Algorithmic thinking is a skill, not a fact set. You develop it through practice
 ## Next Steps
 
 - [Introduction to Algorithms](../algorithms-data-structures/introduction-to-algorithms.md) — deep dive into Big O, five essential complexity classes, and three algorithm design patterns
-- [How Computers Work](../fundamentals/how-computers-work.md) — understand the machine that executes the algorithms you write
+- [How Computers Work](../foundation/how-computers-work.md) — understand the machine that executes the algorithms you write
 - Back to [Computer Science Introduction](index.md)

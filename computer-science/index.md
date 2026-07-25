@@ -8,7 +8,7 @@ Algorithms, data structures, computation theory, operating systems, and compiler
 
 ## 2. Modules
 
-- [Fundamentals](fundamentals/index.md) — how computers work, the command line, binary, and the fetch-execute cycle
+- [Fundamentals](foundation/index.md) — how computers work, the command line, binary, and the fetch-execute cycle
 - [Algorithms & Data Structures](algorithms-data-structures/index.md) — sorting, searching, trees, graphs, dynamic programming
 - [Operating Systems](operating-systems/index.md) — processes, memory, filesystems, scheduling, concurrency
 - Compilers — lexing, parsing, code generation, optimization (planned)

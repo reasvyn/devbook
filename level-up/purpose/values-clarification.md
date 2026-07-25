@@ -7,7 +7,7 @@ The process of discovering and articulating your core values — the invisible a
 ## Prerequisites
 
 - [Finding Your Mission](finding-your-mission.md) — the directional search that values clarify and support
-- [The Mechanism of Change](../fundamentals/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
+- [The Mechanism of Change](../foundation/the-mechanism-of-change.md) — the interdependent drivers of awareness, agency, and action, including the layers of self-awareness
 
 ## Table of Contents
 

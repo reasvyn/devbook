@@ -7,7 +7,7 @@ You do not rise to the level of your goals. You fall to the level of your enviro
 ## Prerequisites
 
 - [Rebuilding Routines](rebuilding-routines.md) — the foundation of small, consistent actions that environment design reinforces
-- [Mental Models for Change](../fundamentals/mental-models-for-change.md) — frameworks for understanding how transformation actually works
+- [Mental Models for Change](../foundation/mental-models-for-change.md) — frameworks for understanding how transformation actually works
 
 ## Table of Contents
 

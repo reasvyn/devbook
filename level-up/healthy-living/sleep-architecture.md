@@ -7,7 +7,7 @@ Sleep is not rest — it is an active neurological process that determines wheth
 ## Prerequisites
 
 - [Why Physical Health Is the Foundation of Transformation](intro/why-health-matters.md) — establishes the philosophical and scientific rationale for physical health as the substrate of cognitive and emotional function
-- [The Mechanism of Change](../fundamentals/the-mechanism-of-change.md) — understanding how awareness, agency, and action interact to produce sustainable transformation
+- [The Mechanism of Change](../foundation/the-mechanism-of-change.md) — understanding how awareness, agency, and action interact to produce sustainable transformation
 
 ## Table of Contents
 

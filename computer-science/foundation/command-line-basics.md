@@ -739,6 +739,6 @@ Every action in this session can be written into a script and replayed identical
 
 ## Next Steps
 
-- [Programming Fundamentals](../../programming/fundamentals/intro/programming-fundamentals.md) — learn core programming concepts
+- [Programming Fundamentals](../../programming/foundation/intro/programming-fundamentals.md) — learn core programming concepts
 - [Operating Systems](../operating-systems/intro/operating-systems-intro.md) — understand what the OS does behind your terminal
 - Back to [Computer Science Introduction](../intro/index.md)

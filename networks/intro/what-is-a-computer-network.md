@@ -6,8 +6,8 @@ Every time you load a web page, send an API request, or connect a database clien
 
 ## Prerequisites
 
-- [Programming Fundamentals](../../programming/fundamentals/index.md) — basic programming knowledge
-- [How Computers Work](../../computer-science/fundamentals/how-computers-work.md) — how CPUs, memory, and storage operate
+- [Programming Fundamentals](../../programming/foundation/index.md) — basic programming knowledge
+- [How Computers Work](../../computer-science/foundation/how-computers-work.md) — how CPUs, memory, and storage operate
 
 ## Table of Contents
 

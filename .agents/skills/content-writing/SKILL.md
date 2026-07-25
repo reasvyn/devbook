@@ -7,6 +7,22 @@ description: Use when the user asks to write, expand, edit, or review any conten
 
 This skill governs the creation and maintenance of ALL content `.md` files in DevBook. It applies regardless of subject.
 
+## Index-First Workflow
+
+**Every action begins with the index.** Before writing, editing, reviewing, or planning any content, the agent must first read and understand the index documents. This is non-negotiable.
+
+1. **Read the root `index.md`** — Understand the full learning path and where the target subject sits within the horizontal phases.
+2. **Read the subject `index.md`** — Understand the modules, their phase groupings, and the vertical progression within the subject.
+3. **Read the module `index.md`** — Understand the learning path tree, existing files, and where new content fits.
+4. **Read the `intro/` file** — Understand the module's stated purpose and raison d'être before adding to it.
+5. **Then act.** Write, edit, or plan content only after the index context is clear.
+
+This applies to **all scenarios**:
+- **Writing a new content file** — the index chain reveals prerequisites, siblings, and next steps.
+- **Planning a new module or submodule** — start from the subject index to determine the phase, justify the module's existence, and identify where it fits in the learning path.
+- **Reorganizing existing content** — the index chain must be read first to avoid breaking links or orphaning files.
+- **Reviewing content** — check that the file is properly positioned in the index and follows the learning path progression.
+
 ## Mandatory Format
 
 Every content `.md` file must follow this exact structure, in order:

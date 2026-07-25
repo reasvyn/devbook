@@ -8,8 +8,8 @@ You have crossed the threshold. You recognized the void, and you decided to chan
 
 - [The Decision to Change](../../meaning/the-decision-to-change.md) — the commitment that makes rebuilding necessary
 - [Recognizing the Void](../../meaning/recognizing-the-void.md) — the experience that makes rebuilding meaningful
-- [When Everything Stops](../../fundamentals/when-everything-stops.md) — surviving the acute phase of collapse
-- [Navigating Setbacks](../../fundamentals/navigating-setbacks.md) — frameworks for understanding why you fall back
+- [When Everything Stops](../../foundation/when-everything-stops.md) — surviving the acute phase of collapse
+- [Navigating Setbacks](../../foundation/navigating-setbacks.md) — frameworks for understanding why you fall back
 
 ## Table of Contents
 

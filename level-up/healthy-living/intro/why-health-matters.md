@@ -7,7 +7,7 @@ This document establishes the philosophical and scientific rationale for integra
 ## Prerequisites
 
 - [Getting Back Up](../../resilience/getting-back-up.md) — the mechanics of recovery after hitting bottom
-- [The Mechanism of Change](../../fundamentals/the-mechanism-of-change.md) — understanding how transformation happens at the psychological level
+- [The Mechanism of Change](../../foundation/the-mechanism-of-change.md) — understanding how transformation happens at the psychological level
 - [The Lowest Point](../../intro/the-lowest-point.md) — the philosophical foundation for understanding what happens when everything collapses
 
 ## Table of Contents

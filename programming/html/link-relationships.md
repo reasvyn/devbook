@@ -500,7 +500,7 @@ Overuse of `preload` competes for bandwidth. Only preload 1-3 critical resources
 - [MDN: Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) — SRI guide
 - [HTML Spec: Links](https://html.spec.whatwg.org/multipage/links.html) — official specification
 - [web.dev: Preload and Prefetch](https://web.dev/preload-and-prefetch/) — performance guide
-- [Google: Resource Prioritization](https://developers.google.com/web/fundamentals/performance/resource-prioritization) — prioritization guide
+- [Google: Resource Prioritization](https://developers.google.com/web/foundation/performance/resource-prioritization) — prioritization guide
 
 ## Next Steps
 

@@ -15,7 +15,7 @@ Philosophical foundation. Understand what the lowest point is and why the level-
 
 Build the cognitive tools that every subsequent stage depends on. Self-awareness, mental models, and journey literacy must come first — they are the ground you stand on.
 
-1. [Fundamentals](fundamentals/index.md) — self-awareness, mental models, the map, the mechanism, and the developer's landscape
+1. [Fundamentals](foundation/index.md) — self-awareness, mental models, the map, the mechanism, and the developer's landscape
 
 ## 3. The Journey
 

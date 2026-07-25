@@ -9,7 +9,7 @@ You have rebuilt. You have faced the emotional flood, built support systems, lea
 - [Getting Back Up](../../resilience/getting-back-up.md) — the capacity to recover after setbacks
 - [Emotional Regulation](../../resilience/emotional-regulation.md) — the ability to process emotions without being overwhelmed
 - [Building a Support System](../../resilience/building-a-support-system.md) — the relationships that sustain change
-- [The Mechanism of Change](../../fundamentals/the-mechanism-of-change.md) — understanding how transformation happens at the psychological level
+- [The Mechanism of Change](../../foundation/the-mechanism-of-change.md) — understanding how transformation happens at the psychological level
 
 ## Table of Contents
 

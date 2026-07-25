@@ -6,7 +6,7 @@ JavaScript is a high-level, interpreted programming language that runs in every 
 
 ## Prerequisites
 
-- [Programming Fundamentals](../fundamentals/index.md) — core programming concepts
+- [Programming Fundamentals](../foundation/index.md) — core programming concepts
 
 ## Table of Contents
 

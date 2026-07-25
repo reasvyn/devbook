@@ -241,7 +241,7 @@ The 60–90 minute rule is not about exercise. It is about protecting the attent
 
 If you have no exercise habit — if the last time you exercised intentionally was months or years ago — the advice above is useless without a strategy for implementation. Knowing that 150 minutes per week of exercise improves cognitive function does not help if you cannot get yourself off the couch.
 
-Starting from zero requires a specific approach. The approach is not about exercise science. It is about behavior change — the same process described in [The Mechanism of Change](../fundamentals/the-mechanism-of-change.md): awareness, agency, and action.
+Starting from zero requires a specific approach. The approach is not about exercise science. It is about behavior change — the same process described in [The Mechanism of Change](../foundation/the-mechanism-of-change.md): awareness, agency, and action.
 
 **Phase 1: Make it absurdly small (Week 1–2).**
 

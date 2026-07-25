@@ -16,14 +16,28 @@ DevBook is a Markdown-based learning library for developers. All content is in p
 
 ## Agent Skills
 
-Skills provide specialized instructions and workflows for specific tasks. Load the matching skill when a task begins.
+Skills provide specialized instructions and workflows for specific tasks. **Loading the matching skill(s) is mandatory at the start of every task** — the agent must never act without first loading the relevant skill, even if the user does not explicitly request it.
 
 | Skill | When to use | Rules |
 |-------|-------------|-------|
+| **context-awareness** | **Always active** — ensures correct context, rule compliance, and stale-information avoidance for every task | [rules/context-awareness.md](.agents/skills/context-awareness/rules/context-awareness.md) |
 | **content-planning** | Planning, researching, outlining, proposing new modules/submodules, reorganizing index structure | [rules/structural-changes.md](.agents/skills/content-planning/rules/structural-changes.md), [rules/tiering-guide.md](.agents/skills/content-planning/rules/tiering-guide.md) |
 | **content-writing** | Writing, expanding, editing, or reviewing any content `.md` file | [rules/format-rules.md](.agents/skills/content-writing/rules/format-rules.md), [rules/quality-checklist.md](.agents/skills/content-writing/rules/quality-checklist.md) |
 | **career-journey** | Creating or modifying content in `careers/` | [rules/career-rules.md](.agents/skills/career-journey/rules/career-rules.md) |
 | **leveling-up** | Creating or modifying content in `level-up/` | [rules/narrative-rules.md](.agents/skills/leveling-up/rules/narrative-rules.md) |
+
+### Mandatory Skill Loading Protocol
+
+At the **start of every task** — regardless of whether the user mentions skills — the agent must:
+
+1. **Read `AGENTS.md`** — the navigation hub. Always the first action.
+2. **Read `CONTENT-RULES.md`** — the single source of truth for all conventions.
+3. **Read the root `index.md`** — the master learning path.
+4. **Load the `context-awareness` skill** — always active, ensures correct context throughout.
+5. **Identify and load the matching content skill(s)** — `content-writing`, `content-planning`, `career-journey`, or `leveling-up` as applicable.
+6. **Read the subject and module indexes** — the Index-First Workflow.
+
+This protocol is **non-negotiable**. It applies to every task: writing, editing, planning, researching, reorganizing, answering questions, and reviewing content. No task may proceed without completing this protocol.
 
 ## Index-First Workflow
 

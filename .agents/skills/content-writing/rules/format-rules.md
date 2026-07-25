@@ -20,7 +20,7 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 - **Mermaid for diagrams**, LaTeX (`$`/`$$`) for math.
 - **Cross-link** between related topics in Prerequisites and Next Steps.
 - **RPG-like learning experience.** Structure content as a quest-based journey — Description as mission, Prerequisites as requirements, Content as challenge, Learning Tips and Glossary as rewards, Next Steps as the next quest.
-- **Tiering.** If the topic spans multiple complexity levels, split into exactly 3 tiered files: `{topic}-basic.md`, `{topic}-intermediate.md`, `{topic}-advanced.md`.
+- **Tiering.** If the topic spans multiple complexity levels, split into at most 3 tiered files: `{topic}-basic.md`, `{topic}-intermediate.md`, `{topic}-advanced.md`. Not all topics need all three.
 
 ## Section-Specific Rules
 

@@ -82,7 +82,7 @@ Content files use hyphenated slugs, lowercase:
 
 ## Tiered Content
 
-Topics that span multiple complexity levels must be split into exactly three tiers:
+Topics that span multiple complexity levels must be split into at most three tiers. Use one, two, or three tiers as the topic demands — but never more than three.
 
 | Tier | File suffix | Audience | Depth |
 |------|-------------|----------|-------|
@@ -100,7 +100,7 @@ arithmetic-advanced.md       ← combinatorics, number theory applications in CS
 
 ### Tier Rules
 
-- **Exactly three tiers.** No more, no less. This constraint prevents complexity explosion while maintaining sufficient depth coverage.
+- **Maximum three tiers.** Use as many as needed — one, two, or three — but never more than three. A topic that fits in a single 400–800 line file does not need tiering.
 - **Each tier is a standalone document.** A reader should be able to read only the tier they need without depending on other tiers.
 - **Prerequisites chain upward.** The intermediate file lists the basic file as a prerequisite. The advanced file lists the intermediate file.
 - **Not all topics require tiering.** Simple topics that fit within 400–800 lines at a single level do not need to be split. Tiering is required only when a topic naturally spans multiple complexity levels.

@@ -93,7 +93,7 @@ All content must be written in **professional, technical, academic English**. Th
 
 ## Content Tiering: Basic, Intermediate, Advanced
 
-Topics that span multiple complexity levels **must** be split into exactly three tiers. This constraint reduces complexity while maintaining sufficient depth coverage.
+Topics that span multiple complexity levels **must** be split into at most three tiers. Use one, two, or three tiers as the topic demands — but never more than three.
 
 | Tier | File suffix | Audience | Depth |
 |------|-------------|----------|-------|
@@ -103,7 +103,7 @@ Topics that span multiple complexity levels **must** be split into exactly three
 
 ### Tier Rules
 
-1. **Exactly three tiers.** No more, no less. This prevents complexity explosion.
+1. **Maximum three tiers.** Use as many as needed — one, two, or three — but never more than three. A topic that fits in a single 400–800 line file does not need tiering.
 2. **Each tier is a standalone document.** A reader can read only the tier they need without depending on other tiers.
 3. **Prerequisites chain upward.** Intermediate lists basic as prerequisite. Advanced lists intermediate.
 4. **Not all topics require tiering.** Simple topics that fit within 400–800 lines at a single level do not need to be split. Tiering is required only when a topic naturally spans multiple complexity levels.
@@ -366,4 +366,4 @@ Before considering a task complete, verify:
 - [ ] **No broken links** — all relative paths resolve.
 - [ ] **No placeholder content** — no `TODO`, `FIXME`, or empty sections.
 - [ ] **Christian worldview integration** — theological principles are implicitly woven into the narrative (never explicit or preachy).
-- [ ] **Tiering** — if the topic spans multiple complexity levels, it has been split into exactly 3 tiered files.
+- [ ] **Tiering** — if the topic spans multiple complexity levels, it has been split into at most 3 tiered files.

@@ -36,6 +36,16 @@ A topic does **not** require tiering when:
 - **Scope:** Mastery and judgment. A reader should be able to make design decisions and teach others.
 - **Prerequisites:** The intermediate tier file, plus any other prerequisites.
 
+## How Many Tiers?
+
+Use as many tiers as the topic demands — one, two, or three — but never more than three.
+
+- **One tier (no split):** The topic fits within 400–800 lines at a single complexity level. Most topics fall here.
+- **Two tiers:** The topic has a clear beginner vs. advanced distinction but does not need a middle tier. Example: a topic where basic concepts are simple but advanced applications are complex, with no meaningful intermediate ground.
+- **Three tiers:** The topic has three distinct audience levels with different prerequisites and depth requirements. This is the maximum.
+
+The decision is driven by content, not by a rule that every topic must be split. If you are unsure, start with one tier. Split later if the document exceeds 800 lines or the audience levels diverge significantly.
+
 ## Index Organization
 
 Tiered content should be organized in the module index under descriptive phase headings that reflect the progression:

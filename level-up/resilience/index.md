@@ -21,6 +21,11 @@ The second stage — after awakening comes the hard work of getting back up. Thi
 
 1. [Building a Support System](building-a-support-system.md) — the practical work of building relationships that carry you through
 
+### 3.C. Inner work
+
+1. [Self-Discovery](self-discovery.md) — stripping away the masks to find the authentic self beneath performance
+2. [The Compassionate Self](compassionate-self.md) — developing the inner ally that makes self-discovery sustainable
+
 ## 4. Integration
 
 1. [Growing Through Pain](growing-through-pain.md) — transforming suffering into strength

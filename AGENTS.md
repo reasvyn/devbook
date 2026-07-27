@@ -76,6 +76,20 @@ Only after this context is established may you proceed to any task.
 4. If the file's slug or path changes, update all links pointing to it (check `grep -r "old-path"`).
 5. If the file is removed, remove its entry from the parent `index.md`.
 
+### Renaming a Module or Submodule
+
+Module and submodule names may be renamed when the current name **does not accurately reflect the content**. Subject names are **never renamed**. See [CONTENT-RULES.md](CONTENT-RULES.md#module--submodule-renaming) for justification criteria.
+
+1. **Index-First Workflow** — Read the full index chain to understand all affected paths.
+2. **Document the mismatch** — Write a specific justification explaining why the current name is inadequate and why the proposed name is more accurate. The justification must reference the actual content, not aesthetic preference.
+3. **Verify no naming collision** — Confirm the proposed name does not duplicate any existing module or submodule within the same subject.
+4. **Rename the directory** — `git mv old-name new-name`.
+5. **Update the parent `index.md`** — Change the link text and path to reflect the new name.
+6. **Update all cross-references** — Search for every occurrence of the old directory name across all `.md` files: `grep -r "old-name" --include="*.md"`. Update every link.
+7. **Update internal file references** — If the module's own `index.md` or content files reference the old name (e.g., in `# Title` headings), update them.
+8. **Verify the 4-level chain** — Root → subject → module → content must still hold.
+9. **Verify no broken links** — All relative paths must resolve correctly.
+
 ### Reorganizing Content
 
 1. **Index-First Workflow** — Read the full index chain.
@@ -87,6 +101,15 @@ Only after this context is established may you proceed to any task.
 7. **Verify the 4-level chain** — Root → subject → module → content must still hold.
 
 ## Critical Rules
+
+- **DO NOT create new subjects or modules without exhausting existing options.** Before proposing any new subject, module, or submodule, the agent MUST:
+  1. **Search the entire project** for existing content that already covers the topic (use glob and grep).
+  2. **Check every subject's `intro/` directory** — history, biographical, and contextual content belongs in `intro/` files, NOT in new modules.
+  3. **Check every subject's `foundations/` directory** — introductory and prerequisite content belongs in `foundations/`, NOT in new modules.
+  4. **Ask: "Can this content fit within an existing module?"** If yes, add it there. If no, articulate WHY in writing using the justification questions from [structural-changes.md](.agents/skills/content-planning/rules/structural-changes.md).
+  5. **Ask: "Am I creating this module just to group related material?"** If yes, the module should NOT exist — grouping is not justification. Fold the content into the appropriate existing module.
+
+  **Modules exist to delineate distinct bodies of knowledge that require separate study paths — not to organize content by topic.** A folder of related files is not a module. A module is a learning dependency boundary: it defines what you must know before entering and what it unlocks afterward.
 
 - **Line count 400–800 lines per content file.** Every content `.md` file must be between 400 and 800 lines. If shorter, expand with more depth, examples, diagrams, or walkthroughs. If longer, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
 - **English only, academic register.** No colloquialisms, contractions, or conversational tone.
@@ -104,3 +127,4 @@ Only after this context is established may you proceed to any task.
 - **Index format:** Phased headings for root/subject, learning path trees for module/submodule
 - **Language:** English only, academic register
 - **Line count:** 400–800 lines per content file
+- **Module renaming:** Allowed when name does not match content. Subject names are immutable. See [CONTENT-RULES.md](CONTENT-RULES.md#module--submodule-renaming).

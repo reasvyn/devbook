@@ -10,3 +10,7 @@ The philosophical tradition that explores human freedom, choice, meaning, and au
 
 1. [Existential Crisis & the Meaning Vacuum](existential-crisis.md)
 2. [Logotherapy: Finding Meaning in Suffering](logotherapy.md)
+
+## 3. Freedom & Authenticity
+
+1. [Authenticity](authenticity.md) — living in alignment with the true self through existentialist philosophy

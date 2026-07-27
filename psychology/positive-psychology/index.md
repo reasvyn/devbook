@@ -7,6 +7,7 @@ The scientific study of human flourishing — what makes life worth living, how 
 - [What Is Positive Psychology?](intro/what-is-positive-psychology.md)
 
 ## 2. Foundation
+
 1. [What Resilience Really Means](what-is-resilience.md)
 2. [Antifragility: Growing Stronger Through Disorder](antifragility.md)
 
@@ -19,3 +20,7 @@ The scientific study of human flourishing — what makes life worth living, how 
 ### 3.B. Strength
 
 1. [Mental Toughness](mental-toughness.md)
+
+### 3.C. Self-Compassion & Well-Being
+
+1. [Self-Compassion](self-compassion.md) — the science of treating oneself with kindness during suffering and failure

@@ -29,10 +29,10 @@ Complete these in order — each builds on the previous.
 The minimum skills that unlock the rest of DevBook. Each document addresses one barrier to entry and provides the narrative scaffolding for rebuilding it.
 
 1. [Why Foundations Matter](why-foundations-matter.md) — the philosophical grounding: what literacy, numeracy, and digital competency are, and why they are prerequisites, not luxuries
-2. Learning to Read Again *(planned)* — rebuilding reading fluency from the foundation, whether starting fresh or resuming after a long pause
-3. Numbers and Reasoning *(planned)* — the beginning of numerical thinking: number sense, arithmetic, and the reasoning that underlies all of mathematics
+2. [Learning to Read Again](learning-to-read-again.md) — rebuilding reading fluency from the foundation
+3. [Numbers and Reasoning](numbers-and-reasoning.md) — the beginning of numerical thinking: number sense, arithmetic, and the reasoning that underlies all of mathematics
 4. [Touching the Keyboard](touching-the-keyboard.md) — minimum digital competency: device operation, the terminal, file systems, text editors, and Markdown
-5. The First Hour *(planned)* — a structured, zero-assumption walkthrough of your first hour with a computer and a text editor
+5. [The First Hour](the-first-hour.md) — a structured, zero-assumption walkthrough of your first hour with a computer and a text editor
 6. [Building Confidence](building-confidence.md) — the psychological dimension of starting from zero: shame, persistence, and the quiet dignity of continuing
 
 ## 5. Integration

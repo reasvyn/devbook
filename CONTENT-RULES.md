@@ -171,6 +171,25 @@ Subjects, modules, and submodules must represent **established branches of knowl
 
 Every module and submodule must have a justified reason for existing. Before creating one, articulate: *What specific body of knowledge does this represent? Why does it constitute a distinct unit of study rather than a section within a broader module?* If the answer is "it's just a convenient folder," the module should not exist — fold its content into the parent or a sibling. The `intro/` file for each module and submodule must open with a clear statement of purpose that justifies its existence as an independent unit of study.
 
+### Module & Submodule Renaming
+
+Module and submodule names may be proposed for change when the current name **does not accurately reflect the content** the module contains. A rename is justified when:
+
+- The name was chosen before the content was written, and the content evolved to cover a different or broader scope.
+- The name is ambiguous — multiple readers would interpret it differently from its actual content.
+- The name uses terminology that is outdated, imprecise, or non-standard within the field.
+- The name obscures the module's actual learning dependency position in the subject's progression.
+
+A rename is **not** justified when:
+
+- The goal is to group related material under a different label — this is reorganization, not renaming.
+- The name is merely disliked aesthetically — the name must be functionally inadequate, not stylistically displeasing.
+- The rename would create confusion with existing modules — uniqueness must be maintained.
+
+**Subject names are immutable.** Only modules and submodules may be renamed. Subject directories represent established academic disciplines and must not be renamed.
+
+**Renaming requires the same justification rigor as creating a new module.** The agent must demonstrate that the content-context mismatch is real and specific, not speculative or cosmetic. The parent `index.md`, all cross-referencing files, and all internal links must be updated as part of the rename.
+
 ### Careers Directory
 
 The `careers/` directory follows the same subject/module convention. Each career is a module that explores a profession in depth — what the role entails, its responsibilities, specializations, career progression, and industry context. These documents discuss the *profession itself*, not what someone should learn to enter it. Career modules are subjects of study about professions, not learning paths for individuals.

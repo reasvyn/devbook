@@ -6,6 +6,8 @@ A practical hands-on guide to using the command line — the most direct way to 
 
 ## Prerequisites
 
+- [Using a Computer](using-a-computer.md) — basic operation of the desktop, files, and folders
+- [What Is a File](what-is-a-file.md) — files, extensions, directories, and paths
 - [How Computers Work](how-computers-work.md) — understand what a CPU, memory, and storage are
 
 ## Table of Contents

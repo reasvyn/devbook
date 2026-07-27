@@ -23,6 +23,39 @@ This applies to **all scenarios**:
 - **Reorganizing existing content** — the index chain must be read first to avoid breaking links or orphaning files.
 - **Reviewing content** — check that the file is properly positioned in the index and follows the learning path progression.
 
+## Two-Phase Writing Workflow
+
+When creating multiple new content files, **never write and expand one file at a time.** This is extremely slow because the `Write` tool truncates long content (~150 lines) and the `Edit` tool adds only small increments. Instead, use a two-phase approach:
+
+### Phase 1: Write All Files
+
+Write every planned file in a single pass using the `Write` tool. Accept that each file will be truncated at ~150 lines. **Do NOT stop to expand individual files during this phase.** Focus on:
+
+- Correct structure (9-section format)
+- Correct content (real, substantive prose — not placeholders)
+- Correct cross-references (Prerequisites, Next Steps link to real files)
+- Correct directory structure (all parent dirs created first)
+
+This phase produces short files. That is expected and acceptable.
+
+### Phase 2: Expand All Files
+
+After all files are written, expand each file to 400–800 lines using the `Edit` tool. Use `wc -l` to verify each file after expansion. Tips for efficient expansion:
+
+- Use the task tool to expand files in parallel when possible
+- Add new paragraphs within existing sections — do NOT rewrite from scratch
+- Focus expansion on the Content sections, not the boilerplate sections
+- Verify line count after each expansion batch
+
+### Why This Works
+
+The `Write` tool truncates at ~150 lines regardless of how much content you provide. Writing a 600-line file produces the same 150-line output as writing a 150-line file. Expanding requires the `Edit` tool regardless. By separating the phases, you:
+
+1. **Reduce context switching** — write mode and expand mode are different mental states
+2. **Avoid re-reading** — each file is read once for writing, once for expansion
+3. **Enable parallelism** — multiple files can be expanded simultaneously via task tool
+4. **Catch structural issues early** — if a file needs to be restructured, you discover it before investing in expansion
+
 ## Mandatory Format
 
 Every content `.md` file must follow this exact structure, in order:

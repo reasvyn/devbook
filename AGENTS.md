@@ -64,9 +64,10 @@ Only after this context is established may you proceed to any task.
 2. **Load the content-writing skill** for format rules and quality checklist.
 3. **Determine placement** — Identify the subject, module, submodule, and filename.
 4. **Create directory structure** — Create all missing parent directories first.
-5. **Write the content file** — Follow the mandatory document format from [TEMPLATE.md](TEMPLATE.md).
-6. **Update indexes** — Create or update parent `index.md` files to include the new file.
-7. **Verify** — File is reachable from root. All internal links resolve. Format is correct.
+5. **Write all content files** — Write every planned file in a single pass. Accept that the `Write` tool may truncate long files (~150 lines). Do NOT stop to expand individual files during this phase — focus on getting all files created with correct structure, content, and cross-references.
+6. **Expand all files to 400–800 lines** — After all files are written, use the `Edit` tool to expand each file to the required line count. Use `wc -l` to verify each file after expansion. See [format-rules.md](.agents/skills/content-writing/rules/format-rules.md) for the two-phase expansion strategy.
+7. **Update indexes** — Create or update parent `index.md` files to include the new files.
+8. **Verify** — Files are reachable from root. All internal links resolve. Format is correct. Line counts are within 400–800.
 
 ### Updating Existing Content
 

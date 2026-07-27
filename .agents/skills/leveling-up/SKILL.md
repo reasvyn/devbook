@@ -37,7 +37,9 @@ Code examples are **optional** in level-up content. The narrative is primary. Us
 ## When Creating Content
 
 1. Follow the **Index-First Workflow** above — read the full index chain before any action.
-2. Write narrative content following the mandatory 9-section format.
-3. In Prerequisites, link to the relevant knowledge files from ANY subject in DevBook that supports the narrative — not just philosophy or psychology, but also biology, neuroscience, social sciences, or domain-specific knowledge as needed.
-4. In Next Steps, link to the next stage in the journey and to any related knowledge elsewhere in DevBook.
-5. Keep the focus on the *experience* of the stage, not the theory behind it.
+2. **Write all planned files first** using the `Write` tool. Accept truncation (~150 lines). Do NOT expand individual files during this phase. See [content-writing SKILL.md](../content-writing/SKILL.md#two-phase-writing-workflow) for the full two-phase workflow.
+3. **Expand all files to 400–800 lines** using the `Edit` tool after all files are written. Verify with `wc -l`.
+4. Write narrative content following the mandatory 9-section format.
+5. In Prerequisites, link to the relevant knowledge files from ANY subject in DevBook that supports the narrative — not just philosophy or psychology, but also biology, neuroscience, social sciences, or domain-specific knowledge as needed.
+6. In Next Steps, link to the next stage in the journey and to any related knowledge elsewhere in DevBook.
+7. Keep the focus on the *experience* of the stage, not the theory behind it.

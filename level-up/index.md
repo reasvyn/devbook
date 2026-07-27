@@ -21,7 +21,7 @@ Build the minimum prerequisite skills before the rest of the journey becomes acc
 
 ## 3. The Journey
 
-The six stages of transformation. Each stage is a module with its own introduction, content files, and cross-references to knowledge across DevBook.
+The modules below represent stages of personal transformation as they currently exist. This is a living structure — new modules and themes will emerge as the journey deepens. Each stage is a module with its own introduction, content files, and cross-references to knowledge across DevBook.
 
 1. [Awakening](meaning/index.md) — recognizing the void and deciding to change
 2. [Rebuilding](resilience/index.md) — getting back up and growing through adversity

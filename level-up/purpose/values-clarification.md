@@ -396,5 +396,6 @@ The courage builds over time. Each act of alignment makes the next act easier. E
 ## Next Steps
 
 - [The Power of Commitment](the-power-of-commitment.md) — turning clarified values into binding commitments that make purpose tangible
+- [Silent Mover](silent-mover.md) — how values inform the choice to operate quietly and build substance over visibility
 - [Legacy Thinking](legacy-thinking.md) — extending your values beyond your lifetime into the legacy you build
 - [Compounding Wins](../habits/compounding-wins.md) — the systems that turn daily values-aligned actions into long-term transformation

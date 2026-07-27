@@ -167,6 +167,12 @@ Module indexes organize tiered content under descriptive phase headings:
 
 Subjects, modules, and submodules must represent **established branches of knowledge** — fields that have their own academic literature, research traditions, and institutional recognition (e.g., mathematics, linear algebra, vector spaces, operating systems). Do not create entities for job roles, positions, or personas (e.g., `ceo-founders`, `frontend-developers`). Role-based profession explorations belong in `careers/`, not in content modules. The only exceptions are `level-up/` and `careers/`, which are special subjects with custom organizational logic.
 
+### Module Name Academic Grounding
+
+Every module and submodule name must be academically grounded. A name is justified when it corresponds to an established academic discipline, a recognized subfield with its own literature and research traditions, or a distinct unit of study that requires separate learning paths from adjacent modules. A name is NOT justified when it describes a persona, role, or behavioral archetype (e.g., `silent-mover`, `frontend-developer`, `ceo-founders`), when it groups related topics without constituting a distinct body of knowledge, or when it is a popular term that lacks academic standing as a field of study.
+
+**Exception:** `level-up/` and `careers/` are special subjects with custom organizational logic. Module names in these subjects may use non-academic naming when justified by the narrative or career-exploration purpose.
+
 ### Module Raison d'Être
 
 Every module and submodule must have a justified reason for existing. Before creating one, articulate: *What specific body of knowledge does this represent? Why does it constitute a distinct unit of study rather than a section within a broader module?* If the answer is "it's just a convenient folder," the module should not exist — fold its content into the parent or a sibling. The `intro/` file for each module and submodule must open with a clear statement of purpose that justifies its existence as an independent unit of study.

@@ -591,6 +591,8 @@ The mission you have found is not just for you. It is for the people you will se
 
 ## Next Steps
 
+- [The Power of Commitment](the-power-of-commitment.md) — turning your mission into a binding commitment
+- [Silent Mover](silent-mover.md) — pursuing your mission through quiet, consistent, behind-the-scenes work
 - [Legacy Thinking](legacy-thinking.md) — building something that outlasts you, starting from your mission
 - [Long-Term Vision](../../psychology/cognitive-psychology/long-term-vision.md) — turning your direction into a decades-spanning vision
 - [Why Purpose Matters](../../psychology/cognitive-psychology/intro/why-purpose-matters.md) — the science and philosophy behind what you are building

@@ -14,8 +14,9 @@ This file defines the workflow for creating, moving, or removing modules, submod
    - Is it a valid academic discipline? (Exception: narrative and career-exploration subjects are not academic disciplines but are valid subjects.)
    - What must the reader know before entering this module?
    - What does this module unlock afterward?
-3. **Phase determination** — Assign the new module to a learning phase in the subject index.
-4. **Relationship mapping** — Identify prerequisites, siblings, and extensions among existing modules.
+3. **Academic grounding check** — Confirm the proposed module name represents an established branch of knowledge with its own academic literature, research traditions, and institutional recognition. A name is NOT justified when it describes a persona, role, or behavioral archetype (e.g., `silent-mover`, `frontend-developer`), when it groups related topics without constituting a distinct body of knowledge, or when it is a popular term that lacks academic standing. **Exception:** `level-up/` and `careers/` are special subjects with custom organizational logic.
+4. **Phase determination** — Assign the new module to a learning phase in the subject index.
+5. **Relationship mapping** — Identify prerequisites, siblings, and extensions among existing modules.
 5. **Draft the module `index.md`** with:
    - A `# Title` matching the module name.
    - A `## 1. Introduction` section linking to the `intro/` file.

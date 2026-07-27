@@ -645,5 +645,7 @@ The first step is also the step that changes your identity. Before the step, you
 
 ## Next Steps
 
+- [Silent Mover](silent-mover.md) — building legacy through quiet, consistent, behind-the-scenes work
+- [The Cost of Silence](the-cost-of-silence.md) — when the silence that sustains legacy becomes self-erasure
 - [The Lowest Point](../intro/the-lowest-point.md) — full circle: return to the beginning and see how far you have come
 - [The Level-Up Philosophy](../intro/the-level-up-philosophy.md) — the overarching framework that gave this journey its structure

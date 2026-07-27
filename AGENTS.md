@@ -111,6 +111,18 @@ Module and submodule names may be renamed when the current name **does not accur
 
   **Modules exist to delineate distinct bodies of knowledge that require separate study paths — not to organize content by topic.** A folder of related files is not a module. A module is a learning dependency boundary: it defines what you must know before entering and what it unlocks afterward.
 
+- **Module and submodule names must be academically grounded.** Every module and submodule name must represent an established branch of knowledge — a field with its own academic literature, research traditions, and institutional recognition. A name is NOT justified when:
+  - It describes a persona, role, or behavioral archetype (e.g., `silent-mover`, `frontend-developer`, `ceo-founders`).
+  - It groups related topics without constituting a distinct body of knowledge.
+  - It is a popular term that lacks academic standing as a field of study.
+  
+  A name IS justified when:
+  - It corresponds to an established academic discipline (e.g., `linear-algebra`, `cognitive-psychology`).
+  - It represents a recognized subfield with its own literature and research traditions (e.g., `self-compassion`, `ego-state-theory`).
+  - It describes a distinct unit of study that requires separate learning paths from adjacent modules.
+
+  **Exception:** `level-up/` and `careers/` are special subjects with custom organizational logic. Module names in these subjects may use non-academic naming when justified by the narrative or career-exploration purpose.
+
 - **Line count 400–800 lines per content file.** Every content `.md` file must be between 400 and 800 lines. If shorter, expand with more depth, examples, diagrams, or walkthroughs. If longer, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
 - **English only, academic register.** No colloquialisms, contractions, or conversational tone.
 - **Mandatory 9-section format.** Every content file follows the structure in [TEMPLATE.md](TEMPLATE.md).

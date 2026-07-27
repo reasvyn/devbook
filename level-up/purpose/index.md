@@ -19,6 +19,11 @@ The fourth stage — moving beyond recovery into genuine flourishing. This stage
 
 1. [The Power of Commitment](the-power-of-commitment.md) — making binding commitments that make purpose real
 
+### 3.C. Operating Mode
+
+1. [Silent Mover](silent-mover.md) — building significant impact through quiet, consistent, behind-the-scenes work
+2. [The Cost of Silence](the-cost-of-silence.md) — when invisibility becomes erasure, and how to set boundaries around silence
+
 ## 4. Legacy
 
 1. [Legacy Thinking](legacy-thinking.md) — building for the long game

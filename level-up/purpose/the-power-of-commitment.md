@@ -402,5 +402,6 @@ The developer who broke a commitment to contribute to open source starts again w
 ## Next Steps
 
 - [Legacy Thinking](legacy-thinking.md) — extending your commitments beyond your lifetime into the legacy you build
+- [Silent Mover](silent-mover.md) — how commitment sustains quiet work when no one is watching
 - [Compounding Wins](../habits/compounding-wins.md) — how daily commitment to small actions produces transformative results over time
 - [Values Clarification](values-clarification.md) — ensuring your commitments are rooted in genuine values, not borrowed expectations

@@ -24,10 +24,11 @@ This applies to **all scenarios**:
 
 ## Core Principles
 
-- **Narrative, not academic.** `level-up/` describes the *experience* of the journey — what it feels like to hit bottom, awaken, rebuild, systematize, and thrive. It does NOT teach academic knowledge.
-- **Reference, don't duplicate.** Every narrative file links to other DevBook subjects for the actual knowledge and theoretical grounding. Use Prerequisites and Next Steps to cross-reference broadly — philosophy, psychology, biology, neuroscience, sociology, or any subject that provides depth to the narrative.
-- **Open-ended journey.** `level-up/` is a personal journey novel that continues to grow. New modules, themes, and stages may emerge as the journey deepens. Do not assume the current module structure is final. The journey is the destination.
-- **Narrative voice.** Use first/second-person perspective — the reader is on this journey. Tone is direct, raw, and honest. No fluff, no padding.
+- **Literary, not academic.** `level-up/` uses the prose techniques of fiction (vivid scenes, sensory detail, emotional depth) to explore real experience. It does NOT teach academic knowledge through academic prose. The theory lives in other DevBook subjects. Here, we walk the path.
+- **Reference, don't duplicate.** Every file links to other DevBook subjects for the actual knowledge and theoretical grounding. Use Prerequisites and Next Steps to cross-reference broadly — philosophy, psychology, biology, neuroscience, sociology, or any subject that provides depth.
+- **Open-ended journey.** New modules, themes, and stages may emerge as the journey deepens. Do not assume the current structure is final. The journey is the destination.
+
+For the full style definition, perspective rules, and character rules, read [narrative-rules.md](rules/narrative-rules.md).
 
 ## Code Examples
 

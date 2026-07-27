@@ -102,6 +102,10 @@ Module and submodule names may be renamed when the current name **does not accur
 
 ## Critical Rules
 
+- **NEVER mix contributor guides and AI agent guides.** These are separate subjects that serve different audiences. `CONTRIBUTING.md` is for human contributors — it defines project standards, writing conventions, and contribution workflows. `AGENTS.md` and skill files are for AI agents — they define navigation, task execution, and content management logic. Rules, conventions, and workflows must NOT be duplicated or cross-pollinated between the two. When a rule applies to both, it must be defined once in `CONTRIBUTING.md` (the authoritative source) and referenced — not copied — in AI agent files.
+
+- **AI agent guides are fully subordinate to contributor/human guides.** `CONTRIBUTING.md` is the single source of truth for all project standards. If a conflict arises between `CONTRIBUTING.md` and any AI agent file (`AGENTS.md`, skill files, `CONTENT-RULES.md`), `CONTRIBUTING.md` wins. The agent must not override, reinterpret, or simplify human-defined rules.
+
 - **DO NOT create new subjects or modules without exhausting existing options.** Before proposing any new subject, module, or submodule, the agent MUST:
   1. **Search the entire project** for existing content that already covers the topic (use glob and grep).
   2. **Check every subject's `intro/` directory** — history, biographical, and contextual content belongs in `intro/` files, NOT in new modules.
@@ -124,7 +128,7 @@ Module and submodule names may be renamed when the current name **does not accur
   **Exception:** `level-up/` and `careers/` are special subjects with custom organizational logic. Module names in these subjects may use non-academic naming when justified by the narrative or career-exploration purpose.
 
 - **Line count 400–800 lines per content file.** Every content `.md` file must be between 400 and 800 lines. If shorter, expand with more depth, examples, diagrams, or walkthroughs. If longer, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps. Consider whether the topic should be tiered (basic/intermediate/advanced).
-- **English only, academic register.** No colloquialisms, contractions, or conversational tone.
+- **English only, academic register.** No colloquialisms, contractions, or conversational tone. **Exception:** `level-up/` uses literary nonfiction — a prose style that applies techniques of fiction to real experience. See [narrative-rules.md](.agents/skills/leveling-up/rules/narrative-rules.md) for the full style definition.
 - **Mandatory 9-section format.** Every content file follows the structure in [TEMPLATE.md](TEMPLATE.md).
 - **Tiering: maximum 3 levels.** If a topic spans multiple complexity levels, split into at most 3 tiered files (`-basic.md`, `-intermediate.md`, `-advanced.md`). Not all topics require tiering — simple topics that fit within 400–800 lines at a single level do not need to be split.
 - **Every module must have an `intro/` directory.** The `intro/` contains background, philosophy, principles, history, or context about the field. Intro files follow all the same rules as content files — 9-section format, 400–800 lines, English only, academic register. The only difference is content scope: intro files address philosophy, background, history, and context rather than technical material. Every `intro/` must have an `index.md` listing its files.

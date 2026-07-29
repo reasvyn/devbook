@@ -20,9 +20,10 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 - **Use relative paths only** for internal links. Never absolute URLs for internal content.
 - **Mermaid for diagrams**, LaTeX (`$`/`$$`) for math.
 - **Cross-link** between related topics in Prerequisites and Next Steps.
-- **RPG-like learning experience.** Structure content as a quest-based journey — Description as mission, Prerequisites as requirements, Content as challenge, Learning Tips and Glossary as rewards, Next Steps as the next quest.
+- **Narrative-driven learning experience.** Structure content as a self-paced learning journey — Description as premise, Prerequisites as prior knowledge, Content as exposition, Learning Tips and Glossary as reference material, Next Steps as forward pointers to related content.
 - **Tiering.** If the topic spans multiple complexity levels, split into at most 3 tiered files: `{topic}-basic.md`, `{topic}-intermediate.md`, `{topic}-advanced.md`. Not all topics need all three.
 - **Emoji usage.** Use emojis naturally throughout content — in headings, lists, callouts, tables, and within prose where they add visual clarity. One emoji per item, keep them relevant and consistent within a file.
+- **ASCII art usage.** Simple ASCII/Unicode diagrams, graphs, and banners are permitted when they add visual clarity that prose or Mermaid cannot achieve. Must not exceed 25 lines, must render correctly in plain text, and must never be purely decorative. See [CONTENT-RULES.md](../../../../CONTENT-RULES.md#ascii-art-usage) for full rules.
 
 ## Section-Specific Rules
 
@@ -40,7 +41,7 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 - Integrate real-world scenarios, examples, and walkthroughs directly.
 - Use headings to create a logical flow within the section.
 - Code blocks must have language identifiers.
-- Diagrams should use Mermaid syntax.
+- Diagrams should use Mermaid syntax. For simple inline illustrations, ASCII/Unicode box-drawing characters are acceptable.
 - Math should use LaTeX (`$` for inline, `$$` for display).
 
 ### Glossary

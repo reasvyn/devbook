@@ -5,6 +5,8 @@ description: Use when the user asks to write, expand, edit, or review any conten
 
 # Skill: Content Writing
 
+> **About DevBook:** A Markdown-based learning library for developers. Content is narrative-driven, interdisciplinary, and follows a mandatory 9-section format in academic English. See `AGENTS.md` for the full project identity.
+
 This skill governs the creation and maintenance of ALL content `.md` files in DevBook. It applies regardless of subject.
 
 ## Index-First Workflow
@@ -116,4 +118,4 @@ Where to go next. Link to related documents.
 - **Use relative paths only** for internal links. Never absolute URLs for internal content.
 - **Mermaid for diagrams**, LaTeX (`$`/`$$`) for math.
 - **Cross-link** between related topics in Prerequisites and Next Steps.
-- **RPG-like learning experience.** Structure content as a quest-based journey. The Description sets the mission, the Prerequisites define what you need before attempting, the Content is the challenge, the Learning Tips and Glossary are the rewards, and the Next Steps point to the next quest. The module index is the world map. Cross-references are the skill tree. This framing makes progression feel natural and rewarding — but never sacrifice scientific accuracy for the sake of the metaphor. All mandatory section headings remain unchanged.
+- **Narrative-driven learning experience.** Structure content as a self-paced learning journey. The Description sets the premise, the Prerequisites define what the reader must already know, the Content is the core exposition, the Learning Tips and Glossary serve as reference anchors, and the Next Steps point the reader forward to related material. The module index is the curriculum map. Cross-references are the connective tissue across subjects. This framing makes progression feel purposeful and coherent — but never sacrifice academic accuracy for the sake of structure. All mandatory section headings remain unchanged.

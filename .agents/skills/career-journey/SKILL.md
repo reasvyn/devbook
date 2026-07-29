@@ -5,6 +5,8 @@ description: Use when the user mentions 'career', 'software engineer', 'professi
 
 # Skill: Career Journey
 
+> **About DevBook:** A Markdown-based learning library for developers — interdisciplinary, narrative-driven, with a mandatory 9-section content format. The `careers/` subject is one of two special subjects (alongside `level-up/`) with custom organizational logic allowing non-academic module naming. See `AGENTS.md` for the full project identity.
+
 This skill governs all work in the `careers/` subject of DevBook.
 
 ## Index-First Workflow

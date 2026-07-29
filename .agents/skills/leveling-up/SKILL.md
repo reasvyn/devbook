@@ -5,6 +5,8 @@ description: Use when the user mentions 'level-up', 'leveling up', 'awakening', 
 
 # Skill: Leveling Up
 
+> **About DevBook:** A Markdown-based learning library for developers — interdisciplinary, narrative-driven, with a mandatory 9-section content format. The `level-up/` subject uses literary nonfiction (fiction techniques applied to real experience), which is the sole exception to the academic-english rule. The Christian worldview is implicit across all content. See `AGENTS.md` for the full project identity.
+
 This skill governs all work in the `level-up/` subject of DevBook.
 
 ## Index-First Workflow

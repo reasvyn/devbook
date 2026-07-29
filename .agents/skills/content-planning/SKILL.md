@@ -5,6 +5,8 @@ description: Use when the user asks to plan, research, outline, or prepare conte
 
 # Skill: Content Planning
 
+> **About DevBook:** A Markdown-based learning library for developers. Content is organized as narrative-driven learning paths with prerequisites, progressive depth, and next steps — interdisciplinary by design, covering technical skills, personal transformation, and human wisdom. See `AGENTS.md` for the full identity.
+
 This skill governs the entire planning phase of content creation in DevBook — from understanding where content fits in the learning path, through research and synthesis, to producing a writing blueprint. It covers not just individual documents but also structural decisions: new modules, submodules, reorganization, and index maintenance.
 
 ## Index-First Workflow

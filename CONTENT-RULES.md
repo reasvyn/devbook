@@ -315,7 +315,8 @@ If you cannot find a descriptive heading for a section, the section likely needs
 - **Use Mermaid** for diagrams (flowcharts, sequence diagrams, graphs).
 - **Use LaTeX** (`$` inline, `$$` display) for math.
 - **Keep files focused.** A single document should cover one coherent topic. Split if it grows too long.
-- **RPG-like learning experience.** Structure content as a quest-based journey. The Description sets the mission, the Prerequisites define what you need before attempting, the Content is the challenge, the Learning Tips and Glossary are the rewards, and the Next Steps point to the next quest.
+- **Narrative-driven learning experience.** Structure content as a self-paced learning journey. The Description sets the premise, the Prerequisites define what the reader must already know, the Content is the core exposition, the Learning Tips and Glossary serve as reference anchors, and the Next Steps point the reader forward to related material.
+- **Use ASCII art sparingly for visual clarity.** Simple diagrams, graphs, charts, or banners created with Unicode box-drawing and block characters can enhance comprehension when Mermaid or prose alone is insufficient. ASCII art must be readable in plain text and serve a clear communicative purpose — never mere decoration.
 
 ### Don'ts
 
@@ -325,6 +326,7 @@ If you cannot find a descriptive heading for a section, the section likely needs
 - **No placeholder text.** Every section must have real content. If a topic is genuinely too short for a section, omit it rather than fill with filler.
 - **No absolute internal links.** Use `../` relative paths only.
 - **No generated placeholders like `[TODO]`** — if content cannot be written now, do not create the file.
+- **No excessive ASCII art.** ASCII art is a visual tool, not decoration. Do not use it for purely ornamental purposes, in place of substantive content, or in ways that distract from the material. One diagram per concept — multiple variations of the same data create visual noise.
 
 ---
 
@@ -346,12 +348,39 @@ Emojis work well in section headings, list items, callout blocks, table columns,
 
 ---
 
+## ASCII Art Usage
+
+ASCII art is permitted in content files for visual communication when Mermaid diagrams or prose alone are insufficient. It must serve a clear purpose — illustrating structure, relationships, or data — never mere decoration.
+
+### Allowed Uses
+
+- **Diagrams and graphs** — bar charts, timelines, state machines, architecture diagrams using box-drawing characters (`─│┌┐└┘├┤┬┴┼╔╗╚╝║═`).
+- **Banners** — sparingly, for section dividers or module openers. Keep them small and readable.
+- **Flowcharts and pipelines** — simple step sequences or decision trees.
+- **Tree structures** — hierarchies, directory layouts, dependency graphs.
+
+### Restrictions
+
+- **ASCII art must not exceed 25 lines.** Large illustrations waste vertical space and harm readability.
+- **Prefer Mermaid for complex diagrams.** Mermaid renders natively in browsers; ASCII art is a fallback for when Mermaid cannot express the needed structure.
+- **Use shaded blocks (`█▓▒░`) only when grayscale contrast is essential.** Prefer simple box-drawing characters.
+- **ASCII art must render correctly in plain text.** Do not rely on variable-width fonts or platform-specific rendering.
+- **No animated or interactive ASCII.** Static illustrations only.
+- **Never use ASCII art in file paths, directory names, or index files.** Index files must remain scannable.
+- **Do not include ASCII art purely for decoration.** Every illustration must justify its existence by making content clearer.
+
+### Line Counting
+
+ASCII art lines count toward the 400–800 line requirement. Every line of illustration consumes content budget — use them judiciously.
+
+---
+
 ## Style Guide
 
 - **Headings** — ATX-style (`##`, not underlines).
 - **Code** — Fenced with language identifiers. Use `text` or `plain` for non-code blocks.
 - **Math** — LaTeX inline with `$` and display with `$$`.
-- **Diagrams** — Mermaid syntax where helpful.
+- **Diagrams** — Mermaid syntax for complex diagrams; ASCII/Unicode box-drawing for simple inline illustrations.
 - **Links** — Relative links for internal documents, full URLs for external resources.
 - **Lists** — Use `-` for unordered, `1.` for ordered.
 - **Line breaks** — Hard wrap at ~100 characters for readable diffs.
@@ -387,6 +416,7 @@ Before considering a task complete, verify:
 - [ ] **index.md** files are updated — every new file is linked from its parent index.
 - [ ] **Directory structure** follows the convention exactly.
 - [ ] **No broken links** — all relative paths resolve.
+- [ ] **ASCII art (if present)** — serves a clear communicative purpose, does not exceed 25 lines, renders correctly in plain text, and is not purely decorative.
 - [ ] **No placeholder content** — no `TODO`, `FIXME`, or empty sections.
 - [ ] **Christian worldview integration** — theological principles are implicitly woven into the narrative (never explicit or preachy).
 - [ ] **Tiering** — if the topic spans multiple complexity levels, it has been split into at most 3 tiered files.

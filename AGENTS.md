@@ -4,7 +4,34 @@ This file is the entry point for AI agents managing content in DevBook. It is a 
 
 ## Project Identity
 
-DevBook is a Markdown-based learning library for developers. All content is in plain `.md` files — no build tools, no frameworks. Every document must be practical, concise, and developer-focused.
+DevBook is a Markdown-based learning library for developers — a living library of practical knowledge written in plain `.md` files. No build tools, no frameworks, no `npm install`. Open any file in your editor or browser and read.
+
+### What DevBook Is
+
+- **A learning journey**, not a reference manual. Content is organized as narrative-driven learning paths with prerequisites, progressive depth, and next steps — designed for sequential reading, not ad-hoc lookup.
+- **Interdisciplinary by design.** DevBook connects technical skills (mathematics, programming, systems design) with personal transformation (resilience, habits, meaning) and human wisdom (philosophy, psychology, ethics). A developer's growth is not purely technical — and the library reflects that.
+- **Agent-assisted.** AI agents are first-class participants in this project. The skill system, the Index-First Workflow, and this navigation hub exist to make agent-led content creation reliable, consistent, and context-aware.
+
+### What DevBook Values
+
+- **Practicality over abstraction.** Every concept connects to how developers build, learn, or grow. Content stays grounded in real development work.
+- **Plain text over tooling.** Markdown, git, and a text editor are the only requirements. The content is the product — not the platform it runs on.
+- **Depth over breadth.** Topics that need more depth are split into tiered documents rather than truncated. The format demands substance.
+- **Worldview integrity.** Christian theological principles form an implicit philosophical foundation — creation is ordered, persons bear inherent dignity, redemption is possible, suffering can be purposeful. These convictions are woven into the narrative as natural assumptions, never stated as doctrine.
+- **Clarity over cleverness.** Academic English, precise terminology, no fluff. The exception is `level-up/`, which uses literary nonfiction — the prose techniques of fiction applied to real experience.
+- **Structure as affordance.** The mandatory format, the index chain, and the Index-First Workflow exist to make knowledge navigable and maintainable at scale. Convention is not constraint — it is enabling infrastructure.
+
+### How Content Is Organized
+
+Every content file follows a mandatory 9-section format that is universal across all subjects — from linear algebra to existential philosophy to career exploration — ensuring consistent reader experience and predictable agent output. Content is indexed at four linked levels forming a learning grid with horizontal breadth across phases and vertical depth within modules. Every file must be reachable from the root through this index chain.
+
+### What Agents Need to Know
+
+- **`CONTRIBUTING.md` is the single source of truth** for all project standards. Agent files reference it but never duplicate or override it.
+- **The Index-First Workflow is non-negotiable.** Every task begins by reading the relevant index documents. Context is constructed fresh each session — never assumed from memory.
+- **Skills are mandatory.** Load the matching skill before any content task. Each skill contains domain-specific rules, workflows, and quality checklists.
+- **Content is written in English only, academic register.** The `level-up/` subject is the only exception (literary nonfiction).
+- **The Christian worldview is implicit, never explicit.** Do not state doctrine. Embody principles through narrative voice and philosophical framing.
 
 ## Read These First
 
@@ -144,4 +171,5 @@ Module and submodule names may be renamed when the current name **does not accur
 - **Index format:** Phased headings for root/subject, learning path trees for module/submodule
 - **Language:** English only, academic register
 - **Line count:** 400–800 lines per content file
+- **ASCII art:** Permitted for diagrams, graphs, and banners when they add clarity. Max 25 lines, no decoration. See [CONTENT-RULES.md](CONTENT-RULES.md#ascii-art-usage)
 - **Module renaming:** Allowed when name does not match content. Subject names are immutable. See [CONTENT-RULES.md](CONTENT-RULES.md#module--submodule-renaming).

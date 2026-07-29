@@ -5,6 +5,8 @@ description: Always active. Ensures the agent maintains correct context, reads p
 
 # Skill: Context Awareness
 
+> **About DevBook:** This project is a Markdown-based learning library for developers — content is organized as narrative-driven learning paths, not reference docs. It is interdisciplinary (technical + personal development + philosophy), uses academic English (except `level-up/` which uses literary nonfiction), and integrates Christian worldview implicitly. All content follows a mandatory 9-section format and is organized in a 4-level index chain (root → subject → module → content). See `AGENTS.md` for the full project identity.
+
 This skill is **always active**. It is not loaded on demand — it is the foundation on which all other skills operate. It ensures the agent maintains correct context, follows project conventions, and avoids stale assumptions for every task, regardless of type.
 
 ## Purpose

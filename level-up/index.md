@@ -28,7 +28,8 @@ The modules below represent stages of personal transformation as they currently 
 3. [Healthy Living](healthy-living/index.md) — physical health as the foundation of transformation
 4. [Digital Wellness](digital-wellness/index.md) — reclaiming attention from engineered distraction
 5. [Systematizing](habits/index.md) — installing daily routines that compound
-6. [Thriving](purpose/index.md) — finding mission and leaving a legacy
+6. [Professionalism](professionalism/index.md) — navigating the liminal space between amateur and professional
+7. [Thriving](purpose/index.md) — finding mission and leaving a legacy
 
 ## 4. Biograph — Lessons from Lived Lives
 

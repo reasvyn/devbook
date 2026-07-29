@@ -11,7 +11,7 @@ Use this checklist before considering any content file complete. Every item must
 - [ ] **Substantive content.** No fluff, no filler, no placeholder text.
 - [ ] **Code adds clarity.** Code blocks exist only where they genuinely help. Language identifiers present.
 - [ ] **Terms defined on first use.** Then added to Glossary.
-- [ ] **Diagrams use Mermaid.** Math uses LaTeX.
+- [ ] **Diagrams use Mermaid** (or ASCII/Unicode box-drawing for simple inline illustrations). Math uses LaTeX.
 
 ## Structure Quality
 
@@ -20,6 +20,7 @@ Use this checklist before considering any content file complete. Every item must
 - [ ] **Glossary complete.** Every non-trivial term defined.
 - [ ] **Next Steps present.** Links to related documents or practice exercises.
 - [ ] **Line count 400–800.** Meets minimum, not too long.
+- [ ] **ASCII art (if present)** — serves a clear purpose, ≤25 lines, renders correctly in plain text, not decorative.
 
 ## Link Quality
 

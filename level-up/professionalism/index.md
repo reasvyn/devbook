@@ -17,6 +17,10 @@ The professionalism module explores the liminal space between amateur and profes
 - [The Recognition Moment](the-recognition-moment.md) — When competence becomes visible to the community: what recognition looks like, how it arrives, and how to navigate its emotional terrain.
 - [Navigating the Impostor Bridge](navigating-impersonator-bridge.md) — The psychological passage between knowing you are competent and believing you are competent.
 
+## The First Role
+
+- [The First Role](the-first-role.md) — The formal transition from liminal contributor to professional employee: receiving the offer, the first day, the first year, and what changes when you cross from outside to inside.
+
 ## Professional Life
 
 - [Professional Relationships](professional-relationships.md) — The social infrastructure of a career: how professional connections form, deepen, and sustain identity through community.

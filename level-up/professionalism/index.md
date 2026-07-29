@@ -6,6 +6,10 @@ The professionalism module explores the liminal space between amateur and profes
 
 - [Introduction: The Professional Transition](intro/index.md) — Philosophical foundation for understanding the transition from amateur to professional.
 
+## The Threshold
+
+- [The Weight of Judgment](the-weight-of-judgment.md) — The first experience of being evaluated by professional standards: what it means to have your work judged before you have been hired or recognized, and how the threshold of judgment transforms your relationship with professional life.
+
 ## The Liminal Space
 
 - [The Liminal Space](the-liminal-space.md) — The psychological landscape of the professional transition: what liminality means, why the in-between matters, and how identity forms in the absence of formal markers.

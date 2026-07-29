@@ -37,7 +37,8 @@ Every content file follows a mandatory 9-section format that is universal across
 
 | Document | Purpose | When to read |
 |----------|---------|--------------|
-| [CONTENT-RULES.md](CONTENT-RULES.md) | All content rules, conventions, tiering, directory structure, index system, worldview integration | **Always** — before any task |
+| [HOW-TO-USE.md](HOW-TO-USE.md) | Practical guide to reading, navigating, and using DevBook | First time using DevBook |
+| [CONTENT-RULES.md](CONTENT-RULES.md) | All content rules, conventions, tiering, directory structure, index system | **Always** — before any task |
 | [TEMPLATE.md](TEMPLATE.md) | Document template with all 9 sections and tiering guidance | When writing or reviewing content |
 | [index.md](index.md) | Master learning path — the world map of all subjects | **Always** — before any task (Index-First Workflow) |
 

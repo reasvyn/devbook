@@ -24,6 +24,7 @@ Thanks for your interest in contributing! DevBook is a community-driven resource
 ## Getting Started
 
 1. **Read the rules.** Before writing anything, read these documents in order:
+   - [HOW-TO-USE.md](HOW-TO-USE.md) — How to read and navigate DevBook
    - [CONTENT-RULES.md](CONTENT-RULES.md) — All rules, conventions, and requirements
    - [TEMPLATE.md](TEMPLATE.md) — The mandatory document format
    - [AGENTS.md](AGENTS.md) — The Index-First Workflow (you must understand the index before creating content)

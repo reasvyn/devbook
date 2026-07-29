@@ -2,6 +2,8 @@
 
 This file defines the mandatory structure for every content `.md` file in DevBook. Copy this template when creating new documents. All 9 sections are required unless marked optional.
 
+For a practical guide to reading and navigating the library, see [HOW-TO-USE.md](HOW-TO-USE.md).
+
 ---
 
 ## Template

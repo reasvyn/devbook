@@ -78,6 +78,8 @@ cd devbook
 # Open any .md file in your editor or browser — that's it
 ```
 
+New to DevBook? Start with **[HOW-TO-USE.md](HOW-TO-USE.md)** — a practical guide to reading, navigating, and getting the most out of the library.
+
 ### Navigation
 
 - **Browse by subject** — enter any top-level directory and open its `index.md`.

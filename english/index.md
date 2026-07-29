@@ -10,16 +10,20 @@ Technical communication, documentation, grammar, linguistics, and critical readi
 
 - [Foundations](foundations/index.md) — English from absolute zero: reading, vocabulary, writing, and comprehension
 
-## 3. Grammar & Style
+## 3. Academic English
+
+- [Academic English](academic-english/index.md) — bridging from basic technical English to the academic register used across DevBook: vocabulary, complex sentences, reading strategies, and register awareness
+
+## 4. Grammar & Style
 
 - [Grammar & Style](grammar-and-style/index.md) — English grammar, punctuation, clarity, conciseness, technical style guides
 - [Professional Communication](professional-communication/index.md) — email, reports, meeting notes, code review comments, incident postmortems
 
-## 4. Documentation & Research
+## 5. Documentation & Research
 
 - [Technical Writing & Documentation](technical-writing/index.md) — API docs, READMEs, developer guides, documentation systems, style guides
 - [Reading Technical Texts](reading-technical-texts/index.md) — reading academic papers, RFCs, specifications, white papers critically
 
-## 5. Language Science
+## 6. Language Science
 
 - [Linguistics for Computing](linguistics-for-computing/index.md) — syntax, semantics, pragmatics, formal languages, NLP foundations

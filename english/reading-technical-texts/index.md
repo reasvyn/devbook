@@ -23,3 +23,4 @@ Critical reading skills for developers — how to read academic papers, RFCs, sp
 1. [Active Reading Workflows for Developers](active-reading-workflows-for-developers.md)
 2. [Note-Taking & Knowledge Management](note-taking.md)
 3. [Reading Codebases Strategically](reading-codebases.md)
+4. [Reading DevBook](reading-devbook.md) — how to extract maximum value from DevBook's 9-section format, cross-references, and multi-register content

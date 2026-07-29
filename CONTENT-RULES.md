@@ -2,7 +2,7 @@
 
 This document is the single source of truth for all content rules, writing conventions, and structural requirements in DevBook. Read it before writing, editing, or reviewing any content file.
 
-For the document template, see [TEMPLATE.md](TEMPLATE.md). For AI agent workflows, see [AGENTS.md](AGENTS.md). For contributor guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+For a practical guide to reading and navigating the library, see [HOW-TO-USE.md](HOW-TO-USE.md). For the document template, see [TEMPLATE.md](TEMPLATE.md). For AI agent workflows, see [AGENTS.md](AGENTS.md). For contributor guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Table of Contents
 

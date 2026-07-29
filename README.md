@@ -144,7 +144,7 @@ Every content file follows a mandatory 9-section structure:
 | 8 | **Quick References** | Optional | Verified external links to journals, books, blog posts, websites |
 | 9 | **Next Steps** | Yes | Where to go from here — related documents, practice exercises |
 
-Sections marked "(Optional)" may be omitted if genuinely not needed. All content must be written in **English** using professional, technical, academic register. See [AGENTS.md](AGENTS.md) for the complete specification.
+Sections marked "(Optional)" may be omitted if genuinely not needed. All content must be written in **English** using professional, technical, academic register. See [CONTENT-RULES.md](CONTENT-RULES.md) for the complete specification.
 
 ## Why Markdown?
 

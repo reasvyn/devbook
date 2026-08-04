@@ -11,7 +11,7 @@ Every content `.md` file must follow the 9-section structure defined in [TEMPLAT
 - **Language: English only.** Never write content in any other language.
 - **Register: Academic English.** No colloquialisms, contractions, or conversational tone. **Exception:** `level-up/` uses literary nonfiction — see [narrative-rules.md](../../leveling-up/rules/narrative-rules.md).
 - **Line count 400–800.** If too short, expand with more depth in the Content section. If too long, first try trimming redundant or non-essential content. If the topic is genuinely complex and cannot be shortened, split into multiple focused documents and link them via Next Steps.
-- **Two-phase writing workflow.** When creating multiple new files, write ALL files first (accepting ~150-line truncation), THEN expand each to 400–800 lines. See [SKILL.md](../SKILL.md#two-phase-writing-workflow) for details. Never write-and-expand one file at a time.
+- **Two-phase writing workflow.** When creating multiple new files, write ALL files with full, complete content first, THEN verify line counts with `wc -l` and adjust each file to 400–800 lines. Files under 400 lines get expanded with additional depth; files over 800 lines get trimmed or split. See [SKILL.md](../SKILL.md#two-phase-writing-workflow) for details. Never write-and-expand one file at a time.
 - **No orphans.** Every content file must be referenced by its parent index file. Verify the full index chain: root → subject → module/submodule → file.
 - **No placeholder text.** No `TODO`, `FIXME`, `[planned]`, or empty sections. Write real content or omit the section.
 - **No fluff.** No "in this article", "welcome to", "let's dive in". Get straight to the material.

@@ -15,3 +15,7 @@ The scientific study of mind and behavior — how people think, feel, learn, cha
 
 - [Behavioral Psychology](behavioral-psychology/index.md) — habits, identity change, routines, environment design
 - [Behavior Change](behavior-change/index.md) — transtheoretical model, processes of change, self-efficacy, relapse prevention
+
+## 4. Learning & Education
+
+- [Educational Psychology](educational-psychology/index.md) — learning theories, cognitive load, memory, metacognition, study techniques, skill acquisition
